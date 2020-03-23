@@ -6,12 +6,14 @@ import {EvaIconsPack} from '@ui-kitten/eva-icons';
 import {mapping, light as theme} from '@eva-design/eva';
 import {AppNavigator} from './navigation/AppNavigator';
 
+// TODO: Save the theme
+
 const App = () => (
   <React.Fragment>
     <IconRegistry icons={EvaIconsPack} />
     <ApplicationProvider mapping={mapping} theme={theme}>
-      {/* Need to change dynamically the color of the status bar*/}
-      <StatusBar backgroundColor="#222B45" barStyle="light-content" />
+      {/* TODO: Need to change dynamically the color of the status bar */}
+      <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
       <AppNavigator />
     </ApplicationProvider>
   </React.Fragment>
