@@ -1,5 +1,5 @@
 import React from 'react';
-
+// import numjs from 'numjs';
 import {AutomaticActivityRecognitionRules} from '../components/AutomaticActivityRecognitionRules';
 
 export const CalculateWindowFeatures = async (
@@ -74,7 +74,7 @@ export const CalculateWindowFeatures = async (
   // energy.append(np.sum(smv))
   // The ones not inside the numjs library
   // entropy
-  //   console.log(numjs.mean(tenValuesOfAccelerometerX));
+  // console.log(numjs.mean(tenValuesOfAccelerometerX));
   //   console.log(tenValuesOfAccelerometerX);
   //   console.log(tenValuesOfAccelerometerY);
   //   console.log(tenValuesOfAccelerometerZ);
