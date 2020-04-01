@@ -1,3 +1,4 @@
+import React from 'react';
 export const AutomaticActivityRecognitionRules = (
   mean_accel_y,
   mean_accel_z,
