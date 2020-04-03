@@ -1,6 +1,7 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
 import {Layout, Text} from '@ui-kitten/components';
+import AsyncStorage from '@react-native-community/async-storage';
 
 export const Statistics = ({navigation}) => {
   return (

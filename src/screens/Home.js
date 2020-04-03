@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Platform} from 'react-native';
+import {SafeAreaView, Platform} from 'react-native';
 import {
   Text,
   Layout,
@@ -19,15 +19,15 @@ import {
 import VIForegroundService from '@voximplant/react-native-foreground-service';
 import {CalculateWindowFeatures} from '../components/CalculateWindowFeatures';
 
+setUpdateIntervalForType(SensorTypes.accelerometer, 400);
+setUpdateIntervalForType(SensorTypes.gyroscope, 400);
+setUpdateIntervalForType(SensorTypes.magnetometer, 400);
+
 const SettingsIcon = style => <Icon {...style} name="settings-outline" />;
 
 const SettingsAction = props => (
   <TopNavigationAction {...props} icon={SettingsIcon} />
 );
-
-setUpdateIntervalForType(SensorTypes.accelerometer, 400);
-setUpdateIntervalForType(SensorTypes.gyroscope, 400);
-setUpdateIntervalForType(SensorTypes.magnetometer, 400);
 
 var accelerometerX = [];
 var accelerometerY = [];
@@ -44,6 +44,7 @@ export const Home = ({navigation}) => {
     isTrackingActivityChecked,
     setIsTrackingActivityChecked,
   ] = React.useState(false);
+  const [toggleText, setToggleText] = React.useState('Not Tracking');
   const [activityType, setActivityType] = React.useState('None');
   const [
     timerUntilNextAutomaticDetection,
@@ -60,23 +61,19 @@ export const Home = ({navigation}) => {
   );
 
   React.useEffect(() => {
-    // console.log('1.React.useEffect(): MOUNTED');
     var interval = setInterval(
       () => setTimerUntilNextAutomaticDetection(currentTime => currentTime + 1),
       1000,
     );
     const accelerometerSubscription = accelerometer.subscribe(({x, y, z}) => {
       if (accelerometerX.length < 10) {
-        //console.log('A is not full yet.');
         if (x != 0 && x !== currentAccelerometerX) {
           currentAccelerometerX = x;
           accelerometerX.push(x);
           accelerometerY.push(y);
           accelerometerZ.push(z);
-          // console.log('A, ' + x + ', ' + y + ', ' + z);
         }
       } else {
-        //console.log('A is full.');
         setIsAccelerometerDataReady(true);
       }
     });
@@ -87,7 +84,6 @@ export const Home = ({navigation}) => {
           gyroscopeX.push(x);
           gyroscopeY.push(y);
           gyroscopeZ.push(z);
-          // console.log('G, ' + x + ', ' + y + ', ' + z);
         }
       } else {
         setIsGyroscopeDataReady(true);
@@ -100,7 +96,6 @@ export const Home = ({navigation}) => {
           magnetometerX.push(x);
           magnetometerY.push(y);
           magnetometerZ.push(z);
-          // console.log('M, ' + x + ', ' + y + ', ' + z);
         }
       } else {
         setIsMagnetometerDataReady(true);
@@ -113,10 +108,10 @@ export const Home = ({navigation}) => {
       magnetometerSubscription.unsubscribe();
       clearInterval(interval);
       setTimerUntilNextAutomaticDetection(0);
+      setActivityType('None');
     }
 
     return () => {
-      // console.log('1.React.useEffect(): UNMOUNTED');
       accelerometerSubscription.unsubscribe();
       gyroscopeSubscription.unsubscribe();
       magnetometerSubscription.unsubscribe();
@@ -132,11 +127,11 @@ export const Home = ({navigation}) => {
       magnetometerZ.length = 0;
       clearInterval(interval);
       setTimerUntilNextAutomaticDetection(0);
+      setActivityType('None');
     };
   }, [isTrackingActivityChecked]);
 
   React.useEffect(() => {
-    // console.log('2.React.useEffect(): MOUNTED');
     if (
       isAccelerometerDataReady &&
       isGyroscopeDataReady &&
@@ -165,6 +160,7 @@ export const Home = ({navigation}) => {
         setTimerUntilNextAutomaticDetection(0);
         setActivityType(activity);
         console.log(activity);
+
         setIsAccelerometerDataReady(false);
         setIsGyroscopeDataReady(false);
         setIsMagnetometerDataReady(false);
@@ -187,9 +183,10 @@ export const Home = ({navigation}) => {
   const startService = async () => {
     if (Platform.Version >= 26) {
       const channelConfig = {
-        id: 'ForegroundServiceChannel',
+        id: 'RecognitionAppNotificationChannel',
         name: 'Notification Channel',
-        description: 'Notification Channel for Foreground Service',
+        description:
+          'Notification Channel for RecognitionApp background Service',
         enableVibration: false,
         importance: 2,
       };
@@ -197,8 +194,8 @@ export const Home = ({navigation}) => {
     }
     const notificationConfig = {
       id: 3456,
-      title: 'Foreground Service',
-      text: 'γεοψφθ',
+      title: 'RecognitionApp1',
+      text: 'RecognitionApp background service is running',
       icon: 'ic_notification',
       priority: 0,
     };
@@ -214,8 +211,10 @@ export const Home = ({navigation}) => {
 
   const automaticActivityTracking = isChecked => {
     if (isChecked) {
+      setToggleText('Tracking');
       startService();
     } else {
+      setToggleText('Not Tracking');
       stopService();
     }
     setIsTrackingActivityChecked(isChecked);
@@ -225,22 +224,22 @@ export const Home = ({navigation}) => {
     <SafeAreaView style={{flex: 1}}>
       <TopNavigation rightControls={renderSettingsAction()} />
       <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text category="h1">{timerUntilNextAutomaticDetection}</Text>
-        <Text category="h1">{activityType}</Text>
+        <Text category="h4">Current Activity</Text>
+        <Text category="h3" style={{marginBottom: 50}}>
+          {activityType}
+        </Text>
+
         <Toggle
+          textStyle={{color: '#3366FF', fontSize: 20}}
+          text={toggleText}
           checked={isTrackingActivityChecked}
           onChange={automaticActivityTracking}
         />
-
-        <Text>a walking</Text>
-        <Text>b running</Text>
-        <Text>c bicycling</Text>
-        <Text>d car_riding</Text>
-        <Text>e bus_riding</Text>
-        <Text>f train_riding</Text>
+        <Text style={{marginTop: 30, marginBottom: 10}}>
+          Time taken to calculate the next sensor measurement
+        </Text>
+        <Text category="p1">{timerUntilNextAutomaticDetection}</Text>
       </Layout>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({});

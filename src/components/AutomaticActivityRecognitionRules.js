@@ -52,7 +52,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn <= 85.987549 &&
     mean_magn_smv <= 47.205959
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -66,7 +66,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y > -7.993047 &&
     mean_accel_y > -1.662294
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -78,7 +78,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_x <= -2.106962 &&
     max_accel_x > 8.667274
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (
@@ -95,7 +95,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv <= 69.73553 &&
     sma_gyro > 2.043028
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -106,7 +106,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn <= 108.335997 &&
     mean_accel_z > -2.96881
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -120,7 +120,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_gyro_x > 0.946484 &&
     min_accel_y <= -4.559757
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (
@@ -136,7 +136,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z > 0.16305 &&
     sma_magn <= 81.170349
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -152,7 +152,7 @@ export const AutomaticActivityRecognitionRules = (
     std_magn_z <= 5.789372 &&
     range_magn_y <= 17.434998
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -170,7 +170,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_z <= 22.518002 &&
     std_gyro_z > 0.30426
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -185,7 +185,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x > 7.405374 &&
     max_magn_y > 32.312
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -197,7 +197,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y > 13.010489 &&
     range_magn_x > 8.424568
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (
@@ -210,7 +210,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= 7.076996 &&
     min_gyro_z <= -1.09832
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -227,7 +227,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_z > 0.301213 &&
     max_accel_y > 4.810272
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -237,7 +237,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_smv <= 0.619538 &&
     min_accel_z <= 9.853287
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -247,7 +247,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_z <= -9.064636 &&
     rms_accel_x <= 2.526944
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -259,7 +259,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_y <= 1.552872 &&
     min_accel_y > -0.675186
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -271,7 +271,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_smv <= 9.663199 &&
     max_magn_smv > 31.831342
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -290,7 +290,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_smv > 1.085616 &&
     mean_accel_smv <= 9.732357
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -302,7 +302,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y > 3.683472 &&
     range_accel_x > 6.010643
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -316,7 +316,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y > 0.000925 &&
     std_gyro_z <= 0.007518
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -326,7 +326,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_x <= -8.870789 &&
     max_accel_y <= 1.575385
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -342,7 +342,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_smv > 10.309584 &&
     min_accel_x > -2.288857
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -354,7 +354,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_z <= 9.396045 &&
     min_accel_y <= -0.319626
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -366,7 +366,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z > 7.11339 &&
     mean_accel_y <= 3.148136
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -388,7 +388,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z <= 8.500873 &&
     std_accel_y <= 0.94343
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -404,7 +404,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_z > 0.014145 &&
     range_magn_x <= 0.649452
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -427,7 +427,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_x <= -0.509965 &&
     min_accel_z > 4.922629
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -443,7 +443,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_z > -0.000183 &&
     max_accel_x <= 1.632895
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -456,7 +456,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z <= 0.002834 &&
     max_accel_x <= 0.656031
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -482,7 +482,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x > 1.528931 &&
     max_accel_x <= 0.9086
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -492,7 +492,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv > 9.863848 &&
     rms_gyro_x <= 0.003085
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -503,7 +503,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_y <= 0.047004 &&
     min_accel_y > 0.281319
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -521,7 +521,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv <= 10.218571 &&
     max_accel_x <= 3.246537
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -533,7 +533,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= 4.731087 &&
     range_accel_x <= 1.302486
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -548,7 +548,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z <= 6.920919 &&
     range_accel_y <= 2.865947
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -561,7 +561,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > -34.133759 &&
     max_accel_z <= 9.943423
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -571,7 +571,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_gyro <= 1.056467 &&
     mean_accel_z > -6.878302
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -584,7 +584,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= 7.232883 &&
     max_accel_x <= 13.247118
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -600,7 +600,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_y > 3.302541 &&
     min_accel_x <= 2.025495
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -614,7 +614,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y > 7.099264 &&
     min_gyro_smv <= 0.020853
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -626,7 +626,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_smv <= 0.104461 &&
     min_accel_x <= -8.067263
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -640,7 +640,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_x > 1.641793 &&
     std_gyro_z <= 2.043123
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -654,7 +654,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_z <= 0.078979 &&
     max_gyro_x <= 0.088698
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -678,7 +678,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z > 0.011512 &&
     mean_magn_z > 4.720501
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -702,7 +702,7 @@ export const AutomaticActivityRecognitionRules = (
     std_magn_z <= 0.611674 &&
     max_accel_z <= 10.953807
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -717,7 +717,7 @@ export const AutomaticActivityRecognitionRules = (
     range_accel_y > 0.130484 &&
     range_accel_y <= 1.12767
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -730,7 +730,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv > 17.261709 &&
     max_accel_x > 7.108602
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -741,7 +741,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z > 6.178237 &&
     max_gyro_y <= 0.253582
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -752,7 +752,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= 6.780106 &&
     max_magn_y <= 26.033592
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -762,7 +762,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_y > 0.149586 &&
     max_accel_x <= 3.058593
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -777,7 +777,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > -19.4145 &&
     mean_accel_z <= 8.76137
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -791,7 +791,7 @@ export const AutomaticActivityRecognitionRules = (
     range_accel_x > 0.093374 &&
     min_accel_x > -1.17868
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -811,7 +811,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y <= 0.046096 &&
     min_gyro_smv > 0.001685
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -826,7 +826,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y <= -27.252197 &&
     min_gyro_smv > 0.003718
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -843,7 +843,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x <= 3.679001 &&
     mean_accel_smv > 9.807283
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -858,7 +858,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_smv > 0.001992 &&
     min_gyro_z > -0.044876
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -866,7 +866,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y <= -2.571373 &&
     max_magn_y <= 33.5
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -882,7 +882,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv <= 36.79213 &&
     max_gyro_z <= 0.107268
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -903,7 +903,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x <= 2.03175 &&
     range_magn_x > 2.849001
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -919,7 +919,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z <= 0.05113 &&
     rms_gyro_x > 0.018722
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -941,7 +941,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y <= 6.59435 &&
     mean_accel_y > 4.408099
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -961,7 +961,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= 7.228095 &&
     max_accel_y <= 7.846588
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -972,7 +972,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_x <= -0.003433 &&
     mean_accel_y > 3.371156
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -985,7 +985,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x <= 22.927002 &&
     sma_magn > 47.573999
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1000,7 +1000,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > 20.8754 &&
     std_gyro_y > 0.031601
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -1017,7 +1017,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_gyro > 0.051019 &&
     min_accel_x > -0.972046
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1035,7 +1035,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv <= 10.049978 &&
     mean_magn_z > -12.227051
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1054,7 +1054,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_smv <= 3.802134 &&
     range_magn_z > 5.639997
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1065,7 +1065,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_smv > 10.136158 &&
     max_magn_y <= -27.558708
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1087,7 +1087,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x <= 4.501642 &&
     max_gyro_x > 0.093059
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1101,7 +1101,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_y > 7.204803 &&
     mean_magn_z > -14.52306
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -1118,7 +1118,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_y > 0.248379 &&
     std_gyro_y <= 0.527756
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1129,7 +1129,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y <= 5.928522 &&
     max_magn_y <= 29.843002
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -1141,7 +1141,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x > -1.19351 &&
     max_accel_z > 7.403098
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1158,7 +1158,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_smv > 6.25456 &&
     std_gyro_z > 0.094459
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1173,7 +1173,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y > -17.080688 &&
     max_gyro_y > 0.240227
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -1196,7 +1196,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y <= 0.122011 &&
     sma_gyro > 0.223936
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1211,7 +1211,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_y <= 5.190629 &&
     mean_magn_z > -25.349999
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1226,7 +1226,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y > -39.463806 &&
     range_magn_x <= 14.418999
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1241,7 +1241,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y > 11.274002 &&
     mean_accel_y > 4.690241
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1255,7 +1255,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y <= 11.274002 &&
     mean_magn_smv > 42.563091
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1265,7 +1265,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y <= 2.229797 &&
     mean_magn_smv <= 31.371313
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1281,7 +1281,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_x > 0.086994 &&
     mean_accel_smv > 9.656936
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -1296,7 +1296,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_smv > 8.441403 &&
     sma_magn > 40.871999
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1308,7 +1308,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_gyro <= 0.018254 &&
     min_accel_y <= 4.260482
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -1324,7 +1324,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_z <= 4.914001 &&
     max_accel_x > -0.608146
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1337,7 +1337,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_z <= 0.709915 &&
     sma_magn > 28.373999
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1351,7 +1351,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_z <= 0.005508 &&
     rms_gyro_x <= 0.019075
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -1369,7 +1369,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y <= -0.169373 &&
     mean_magn_z <= 18.1624
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1384,7 +1384,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv <= 39.052302 &&
     std_gyro_z <= 0.08421
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1401,7 +1401,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn > 54.665999 &&
     std_gyro_z <= 0.053815
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1418,7 +1418,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_z > 5.905029 &&
     max_gyro_z <= 0.152634
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1437,7 +1437,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_x <= -1.561067 &&
     range_magn_y <= 5.90992
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1456,7 +1456,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv <= 9.949315 &&
     std_gyro_z <= 0.320597
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1477,7 +1477,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= 9.445126 &&
     std_accel_z <= 0.43589
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1496,7 +1496,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > -26.459999 &&
     max_accel_x > -0.573395
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1522,7 +1522,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > -22.506 &&
     std_gyro_z > 0.043244
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1539,7 +1539,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_y > 0.21016 &&
     mean_magn_z <= -0.522
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1556,7 +1556,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y > 8.703247 &&
     mean_magn_smv > 32.736408
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1574,7 +1574,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_z <= 7.533096 &&
     range_magn_z > 1.470947
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1586,7 +1586,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y <= 0.712395 &&
     range_magn_y <= 0.398636
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -1605,7 +1605,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_gyro_x > 0.034886 &&
     std_accel_z > 0.845802
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1617,7 +1617,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z > 7.23071 &&
     min_accel_x > -4.394557
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1634,7 +1634,7 @@ export const AutomaticActivityRecognitionRules = (
     range_accel_z > 2.843115 &&
     min_accel_x > -3.421419
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1649,7 +1649,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn > 63.146515 &&
     range_magn_x > 1.469803
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1665,7 +1665,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x > 3.898213 &&
     mean_accel_z <= 8.30119
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1681,7 +1681,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y > 0.724602 &&
     mean_accel_smv > 10.178652
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1699,7 +1699,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y <= -21.127319 &&
     std_gyro_z > 0.052291
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1716,7 +1716,7 @@ export const AutomaticActivityRecognitionRules = (
     range_accel_y <= 2.936488 &&
     min_gyro_smv <= 0.091106
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1732,7 +1732,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y <= 0.162024 &&
     min_accel_y > -0.742203
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -1751,7 +1751,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z > 11.777438 &&
     range_magn_z <= 14.167023
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1768,7 +1768,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv <= 43.401171 &&
     min_accel_y <= 3.680679
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1779,7 +1779,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_z > -9.124908 &&
     min_accel_y <= 1.93218
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1794,7 +1794,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_smv > 9.562412 &&
     mean_accel_z <= 8.770708
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1814,7 +1814,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn <= 31.440001 &&
     mean_magn_z > -15.978
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1829,7 +1829,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y <= 6.62017 &&
     mean_accel_smv <= 9.89768
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1843,7 +1843,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_x <= 2.831144 &&
     max_gyro_x > 0.617704
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -1852,7 +1852,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y <= 15.839999 &&
     mean_accel_z > 0.117671
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1864,7 +1864,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y > 14.749146 &&
     std_accel_z > 0.123788
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -1877,7 +1877,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= -11.694 &&
     mean_accel_y > 1.418325
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -1894,7 +1894,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_y <= 0.403915 &&
     std_gyro_z <= 0.04503
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1913,7 +1913,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x <= 7.77626 &&
     mean_accel_y > 4.778254
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1931,7 +1931,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x > 6.943917 &&
     mean_accel_y > 4.697903
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -1945,7 +1945,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y > 8.002826 &&
     mean_accel_y <= 8.474775
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -1962,7 +1962,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y > 15.36 &&
     std_accel_smv <= 4.948341
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -1978,7 +1978,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y > 15.208054 &&
     max_gyro_y <= 0.137832
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -1996,7 +1996,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_x > -2.413727 &&
     max_gyro_z > 0.019426
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2013,7 +2013,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_gyro_x <= 0.010586 &&
     max_accel_z > 7.79776
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2030,7 +2030,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > 18.5574 &&
     mean_magn_z > 22.6675
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2049,7 +2049,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y <= 0.051311 &&
     mean_accel_y <= 6.587368
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2070,7 +2070,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv > 9.84283 &&
     min_accel_z > 5.039948
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2091,7 +2091,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z > 0.024947 &&
     std_gyro_y <= 0.076052
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2111,7 +2111,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv <= 38.732934 &&
     max_accel_x <= 0.289698
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2129,7 +2129,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y > 0.017355 &&
     mean_accel_z <= 7.823772
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2139,7 +2139,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z > -0.510085 &&
     max_gyro_z <= 0.028519
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2151,7 +2151,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_smv > 6.604972 &&
     rms_gyro_x <= 0.316601
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2162,7 +2162,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z <= 0.864951 &&
     min_gyro_smv > 0.021967
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -2173,7 +2173,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x > 0.831824 &&
     mean_accel_y > 7.212992
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -2185,7 +2185,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv <= 9.241075 &&
     mean_accel_smv <= 8.891786
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -2202,7 +2202,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= 1.697541 &&
     min_gyro_z <= -0.053671
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2217,7 +2217,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x > 0.179571 &&
     mean_accel_y > 4.092244
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2230,7 +2230,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y > 2.368344 &&
     mean_magn_smv <= 28.787219
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2239,7 +2239,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_smv <= 0.001104 &&
     mean_accel_y > 1.38744
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2254,7 +2254,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x > 0.360327 &&
     range_accel_z <= 1.145626
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2270,7 +2270,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv > 9.85445 &&
     std_gyro_y <= 0.443246
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2285,7 +2285,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv > 10.237212 &&
     min_accel_smv <= 8.894344
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2297,7 +2297,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_gyro_x > 0.023556 &&
     min_accel_x <= -9.028535
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2314,7 +2314,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_gyro > 0.205542 &&
     min_accel_x <= -0.700409
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2332,7 +2332,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y > 7.56 &&
     std_accel_y <= 0.999809
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2351,7 +2351,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_x <= -0.537415 &&
     max_magn_y > -10.419655
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2362,7 +2362,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > 10.9696 &&
     mean_magn_smv <= 36.612223
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2376,7 +2376,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv > 9.743759 &&
     std_accel_x <= 0.119424
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2393,7 +2393,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_gyro_x > 0.038204 &&
     std_gyro_z <= 0.047281
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2413,7 +2413,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_smv <= 8.365922 &&
     min_gyro_y <= -0.037703
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2430,7 +2430,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_x <= 0.935786 &&
     rms_gyro_x <= 0.116364
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2441,7 +2441,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= -8.190826 &&
     mean_accel_y > 2.451256
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2459,7 +2459,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x > -0.866701 &&
     max_gyro_z <= 0.062683
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2473,7 +2473,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_z <= 17.648001 &&
     min_accel_z <= 9.258118
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2489,7 +2489,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > -36.755901 &&
     max_magn_y <= -22.02
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2501,7 +2501,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y > 3.224182 &&
     mean_magn_z <= -33.5921
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -2515,7 +2515,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_y <= -0.047349 &&
     std_accel_x > 0.213104
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2533,7 +2533,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x > 0.589536 &&
     range_magn_z <= 7.049561
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2546,7 +2546,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z > 9.370117 &&
     min_gyro_smv <= 0.018972
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2560,7 +2560,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x <= 18.280029 &&
     max_accel_x <= 1.710657
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2576,7 +2576,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y <= -21.826172 &&
     range_accel_x <= 2.524429
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2594,7 +2594,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_z > 7.952881 &&
     std_accel_y <= 0.315592
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2615,7 +2615,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y > 6.398504 &&
     max_accel_y <= 6.881146
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2625,7 +2625,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x > -5.418244 &&
     max_accel_z <= 8.106767
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -2640,7 +2640,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z > 9.310419 &&
     min_gyro_z > -0.129499
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2652,7 +2652,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= -18.4317 &&
     max_accel_x > -0.375244
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2669,7 +2669,7 @@ export const AutomaticActivityRecognitionRules = (
     range_accel_z > 5.941376 &&
     std_accel_y <= 1.634244
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2682,7 +2682,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x <= 9.458923 &&
     max_gyro_x <= 0.032009
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2699,7 +2699,7 @@ export const AutomaticActivityRecognitionRules = (
     range_accel_y <= 6.059725 &&
     min_gyro_z > -0.486725
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2712,7 +2712,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_x <= 0.688729 &&
     max_accel_z > 10.09994
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2727,7 +2727,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y <= 6.863771 &&
     mean_accel_smv <= 9.929945
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2739,7 +2739,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn <= 18.218899 &&
     mean_magn_z <= -0.4
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2750,7 +2750,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_x > 3.665635 &&
     sma_magn > 50.971301
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -2763,7 +2763,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv <= 40.846173 &&
     mean_accel_y > 9.482767
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2779,7 +2779,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_z > -0.519328 &&
     range_magn_z <= 1.732
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2790,7 +2790,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= 8.36175 &&
     sma_magn <= 25.757999
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2802,7 +2802,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y <= -1.826286 &&
     max_magn_y <= -4.400002
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2814,7 +2814,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv <= 10.21165 &&
     min_accel_z > 8.27077
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2826,7 +2826,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_smv <= 38.307309 &&
     std_accel_z > 1.69571
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2841,7 +2841,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y > 5.177461 &&
     max_accel_x > -0.524346
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2852,7 +2852,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y > 0.699997 &&
     max_accel_y > 5.722317
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2864,7 +2864,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y <= 1.008606 &&
     range_magn_y <= 0.622368
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -2878,7 +2878,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x <= 3.299999 &&
     max_accel_x > -0.188568
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2892,7 +2892,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_smv > 0.13634 &&
     mean_accel_z <= 7.236714
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -2903,7 +2903,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_y > 0.379217 &&
     min_accel_x > -1.817825
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2917,7 +2917,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_smv <= 0.13634 &&
     std_accel_z <= 2.264582
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -2928,7 +2928,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x <= 4.718272 &&
     max_magn_y <= 52.918999
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -2942,7 +2942,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z <= 0.536785 &&
     range_magn_x > 1.811218
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -2955,7 +2955,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= 32.0254 &&
     mean_accel_z > 0.956005
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -2968,7 +2968,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_x > 3.601368 &&
     rms_gyro_x > 1.384721
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (
@@ -2985,7 +2985,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_z > -1.75394 &&
     sma_gyro > 1.768388
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -2998,7 +2998,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_z > -0.491258 &&
     mean_accel_z <= 2.508003
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3012,7 +3012,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_smv > 0.006374 &&
     range_magn_y <= 47.379002
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3028,7 +3028,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y > 3.311996 &&
     sma_gyro > 2.249843
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3044,7 +3044,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y > -21.017265 &&
     max_magn_y <= 34.827805
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (
@@ -3062,7 +3062,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv <= 9.769112 &&
     range_accel_y > 0.858321
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3073,7 +3073,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_x <= 1.913223 &&
     max_accel_y > 2.091335
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -3086,7 +3086,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x > 13.46283 &&
     mean_accel_z > -1.741303
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3097,7 +3097,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_z <= 7.714354 &&
     mean_accel_smv > 9.782575
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -3113,7 +3113,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z <= 0.068402 &&
     std_accel_x <= 2.764582
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3124,7 +3124,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > 33.061085 &&
     max_accel_y <= -2.442086
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -3135,7 +3135,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y > 4.348206 &&
     mean_accel_y <= 9.327319
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -3150,7 +3150,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z > 0.636858 &&
     max_magn_y > -12.761688
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3163,7 +3163,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x <= 10.770889 &&
     range_magn_x <= 12.730408
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3179,7 +3179,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_gyro > 0.460665 &&
     mean_accel_z <= 1.494313
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3191,7 +3191,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y > -5.834961 &&
     max_accel_x > 2.191269
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3203,7 +3203,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z > 0.017754 &&
     max_accel_x <= 8.396722
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -3215,7 +3215,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y <= -6.419094 &&
     max_magn_y <= 41.040001
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3227,7 +3227,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z <= 2.463372 &&
     sma_magn <= 78.3783
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3241,7 +3241,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x > -6.687006 &&
     min_accel_z > -4.955997
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3259,7 +3259,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_smv > 10.299034 &&
     min_gyro_y > -0.062039
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3270,7 +3270,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn <= 80.81 &&
     std_accel_y <= 5.54249
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3282,7 +3282,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv > 37.740362 &&
     sma_gyro > 2.426031
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3295,7 +3295,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv <= 50.112351 &&
     min_gyro_y <= -0.512482
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (
@@ -3307,7 +3307,7 @@ export const AutomaticActivityRecognitionRules = (
     std_magn_z <= 8.438806 &&
     range_magn_x <= 31.157001
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3317,7 +3317,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y <= 2.424004 &&
     mean_accel_z > 1.275751
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -3327,7 +3327,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y <= 6.300003 &&
     std_gyro_z <= 0.232656
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3343,7 +3343,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_y > -2.358361 &&
     std_magn_z <= 8.892674
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3358,7 +3358,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_x > 3.574058 &&
     min_gyro_y > -0.820557
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (
@@ -3377,7 +3377,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > -17.238 &&
     range_magn_y <= 26.046001
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3390,7 +3390,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > -12.024 &&
     max_accel_z <= 10.718292
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3400,7 +3400,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z > 2.030375 &&
     mean_accel_smv <= 10.270198
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -3414,7 +3414,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y <= 12.663269 &&
     range_magn_x <= 24.159
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (
@@ -3423,7 +3423,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y <= 0.819969 &&
     mean_accel_y <= 3.408386
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -3437,7 +3437,7 @@ export const AutomaticActivityRecognitionRules = (
     std_magn_z <= 16.941713 &&
     min_accel_y <= -2.059013
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3454,7 +3454,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_smv <= 8.335969 &&
     range_magn_z > 1.74
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -3463,7 +3463,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x <= 0.716815 &&
     min_gyro_smv <= 0.170655
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3472,7 +3472,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y > 20.5 &&
     range_magn_x > 4.348755
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3482,7 +3482,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y <= -32.984543 &&
     mean_accel_y > 7.408139
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -3500,7 +3500,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y > 8.831238 &&
     max_accel_x <= 1.233276
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -3521,7 +3521,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_z <= 7.599428 &&
     rms_accel_x > 0.629172
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3534,7 +3534,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x > 1.61438 &&
     std_gyro_z > 1.41629
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3548,7 +3548,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn <= 21.342 &&
     min_accel_z > 6.997055
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3557,7 +3557,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z > 9.520355 &&
     rms_accel_x <= 0.471173
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3567,7 +3567,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z <= -8.642829 &&
     sma_gyro <= 0.129194
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3579,7 +3579,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_x <= 0.389744 &&
     mean_accel_z > 0.357695
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -3588,7 +3588,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x > 8.882913 &&
     mean_accel_z > -1.224757
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3599,7 +3599,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y <= 0.060564 &&
     max_gyro_x <= 0.012706
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3614,7 +3614,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_z <= 6.747787 &&
     max_gyro_z <= 0.059037
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -3630,7 +3630,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y > 3.251648 &&
     range_accel_z <= 1.261749
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -3643,7 +3643,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_gyro_x > 0.071758 &&
     mean_magn_smv <= 41.182226
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -3654,7 +3654,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= -29.709167 &&
     mean_accel_smv <= 9.991924
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3666,7 +3666,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_smv <= 43.359897 &&
     std_accel_y <= 0.140872
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3680,7 +3680,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn <= 52.991999 &&
     max_gyro_x > 0.375397
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3690,7 +3690,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_y <= -8.734589 &&
     mean_accel_smv <= 10.197962
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3704,7 +3704,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_smv <= 12.184401 &&
     sma_gyro <= 0.068317
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -3716,7 +3716,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_z > -0.016616 &&
     max_magn_smv <= 34.092569
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3732,7 +3732,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_z <= 8.332825 &&
     rms_accel_x <= 6.034128
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -3744,7 +3744,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y <= 3.800003 &&
     mean_accel_smv <= 10.302293
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -3758,7 +3758,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_y > 0.300326 &&
     mean_accel_z > -1.625064
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3781,7 +3781,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= 26.660728 &&
     rms_accel_x > 4.735086
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -3796,7 +3796,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_z > -1.593893 &&
     std_gyro_y > 0.546201
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3809,7 +3809,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z > -2.016516 &&
     mean_accel_smv <= 10.107141
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -3823,7 +3823,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv > 39.165658 &&
     max_accel_x <= 3.060364
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -3831,7 +3831,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x > 8.514168 &&
     std_accel_smv <= 2.977709
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3839,7 +3839,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_y <= -7.826004 &&
     rms_accel_x > 3.635866
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3847,7 +3847,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= -7.824524 &&
     max_accel_y > 0.912842
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -3856,7 +3856,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x <= -7.005648 &&
     mean_accel_smv > 9.752931
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3869,7 +3869,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y > 43.42804 &&
     max_accel_x <= -0.750582
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -3882,7 +3882,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv > 30.20598 &&
     sma_magn > 71.8805
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -3892,7 +3892,7 @@ export const AutomaticActivityRecognitionRules = (
     range_accel_z > 1.218658 &&
     std_accel_x > 0.591042
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -3905,7 +3905,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > -22.511999 &&
     std_accel_x <= 0.392221
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -3919,7 +3919,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_gyro > 0.045924 &&
     min_accel_x > -0.811634
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -3932,7 +3932,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_smv <= 11.212345 &&
     max_accel_y <= 4.812492
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3945,7 +3945,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_x > 0.346453 &&
     std_accel_x <= 1.056033
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -3958,7 +3958,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x > 7.969366 &&
     min_accel_z > -0.828419
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -3975,7 +3975,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= -36.821999 &&
     std_accel_y > 0.233424
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -3985,7 +3985,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x > 0.668439 &&
     mean_accel_z <= 8.882041
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -3998,7 +3998,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn <= 24.5933 &&
     max_magn_y > -3.577232
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4014,7 +4014,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv > 44.059032 &&
     sma_magn <= 73.817999
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4030,7 +4030,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_z <= 0.725571 &&
     range_magn_y > 8.283997
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4043,7 +4043,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_smv > 0.141284 &&
     mean_accel_smv <= 9.795311
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4052,7 +4052,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn > 53.960002 &&
     min_accel_z > 8.01459
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4062,7 +4062,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= 17.0371 &&
     min_gyro_y <= -0.542252
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4075,7 +4075,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x > 17.800903 &&
     max_gyro_z <= 0.333105
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4088,7 +4088,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv <= 10.029733 &&
     mean_accel_smv <= 9.830517
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4101,7 +4101,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_z > 8.370385 &&
     range_accel_z > 0.59855
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4116,7 +4116,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_x <= 0.537768 &&
     mean_magn_smv > 37.896108
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4128,7 +4128,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_gyro_x > 1.05773 &&
     std_accel_y > 0.500402
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4144,7 +4144,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x > 0.468407 &&
     mean_magn_z > -26.349335
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4154,7 +4154,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_smv > 8.611548 &&
     min_gyro_smv <= 0.022323
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4164,7 +4164,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_y <= -8.309077 &&
     mean_accel_y <= -9.195563
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4177,7 +4177,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x > 1.826477 &&
     min_gyro_z > -0.966474
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4187,7 +4187,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv > 10.074067 &&
     std_accel_x > 0.276383
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4198,7 +4198,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y > 37.773003 &&
     std_accel_x > 0.29396
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4208,7 +4208,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y <= 0.047697 &&
     std_accel_smv <= 3.245731
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4218,7 +4218,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y <= 0.047446 &&
     min_gyro_y > -0.065595
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4230,7 +4230,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_smv > 2.804388 &&
     max_gyro_x <= 0.308604
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4245,7 +4245,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= -7.9183 &&
     mean_magn_smv > 25.12184
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4266,7 +4266,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x <= 7.985 &&
     mean_accel_z <= 8.529844
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4280,7 +4280,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y <= 7.154952 &&
     std_magn_z > 0.45353
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4289,7 +4289,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_x > 0.232247 &&
     mean_accel_smv <= 10.016473
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4301,7 +4301,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= -6.92 &&
     mean_accel_y <= 5.018639
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4312,7 +4312,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_z <= 0.184108 &&
     max_accel_x > 0.096965
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4322,7 +4322,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_y <= 0.920492 &&
     max_magn_y <= 26.119995
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4335,7 +4335,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x > 0.356747 &&
     mean_magn_z <= -10.188
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4346,7 +4346,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z > -4.671806 &&
     rms_accel_x > 0.589326
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4355,7 +4355,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_z > 0.282744 &&
     std_accel_z > 0.561447
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4364,7 +4364,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x > -0.976864 &&
     mean_accel_smv > 10.033437
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4375,7 +4375,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x > 24.96 &&
     min_gyro_y <= -0.530121
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4383,7 +4383,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_gyro <= 0.05313 &&
     min_accel_smv > 8.774033
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4395,7 +4395,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_smv <= 64.984371 &&
     rms_gyro_x > 0.855527
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (
@@ -4407,7 +4407,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= 43.083248 &&
     min_accel_y <= 1.709512
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4416,7 +4416,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > 31.4755 &&
     mean_accel_z > -2.557367
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4431,7 +4431,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn > 71.692322 &&
     mean_accel_z <= 7.119616
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4441,7 +4441,7 @@ export const AutomaticActivityRecognitionRules = (
     std_magn_z > 1.82478 &&
     max_accel_z <= 11.530828
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4451,7 +4451,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_y <= -8.172607 &&
     mean_magn_smv > 47.958437
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4463,7 +4463,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_y <= 1.875132 &&
     std_gyro_y > 0.408862
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4473,7 +4473,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_z > -7.374511 &&
     mean_accel_y <= 5.595899
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4486,7 +4486,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y > 0.821298 &&
     min_accel_z > -7.303512
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4495,7 +4495,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn > 87.105713 &&
     mean_accel_smv <= 9.919347
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4513,7 +4513,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_z <= 1.128158 &&
     std_accel_z > 0.79939
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4528,7 +4528,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y > 36.188 &&
     range_accel_z <= 7.438785
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4542,7 +4542,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_gyro_x <= 0.566415 &&
     min_accel_smv <= 4.772838
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4553,7 +4553,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_smv <= 0.039253 &&
     mean_magn_smv > 43.050582
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4561,11 +4561,11 @@ export const AutomaticActivityRecognitionRules = (
     sma_gyro > 1.574214 &&
     max_accel_y > 10.788605
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (mean_magn_smv <= 38.561301 && std_gyro_z <= 0.013108) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4575,7 +4575,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_smv > 36.904877 &&
     mean_accel_y > 1.492186
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4585,7 +4585,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z > 0.131891 &&
     min_accel_smv > 2.044048
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4594,7 +4594,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y <= -0.496812 &&
     max_accel_z <= 1.368927
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4602,7 +4602,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x > 8.497211 &&
     max_gyro_y > 0.131622
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4612,7 +4612,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > -7.77 &&
     max_accel_z <= 15.177308
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4623,7 +4623,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= 15.316176 &&
     min_accel_x <= -0.300472
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4632,7 +4632,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_z > 8.680832 &&
     min_accel_x <= -2.074576
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4644,11 +4644,11 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y > 9.473999 &&
     min_gyro_smv > 0.01805
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (mean_magn_smv <= 38.373391 && max_magn_y > 32.900002) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4657,7 +4657,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_smv <= 6.107204 &&
     mean_accel_y > 6.665747
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4666,7 +4666,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y > 39.719998 &&
     mean_accel_z > 6.907243
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4680,7 +4680,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_x <= 1.047854 &&
     std_accel_y > 0.446802
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4689,7 +4689,7 @@ export const AutomaticActivityRecognitionRules = (
     range_accel_y <= 2.965225 &&
     max_magn_smv > 45.059734
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4700,7 +4700,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y <= 0.298236 &&
     min_gyro_smv > 0.004021
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4708,7 +4708,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y > 25.380001 &&
     mean_magn_smv > 30.034443
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4717,7 +4717,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv <= 9.416175 &&
     min_gyro_smv > 0.051482
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4729,7 +4729,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > -26.947632 &&
     min_gyro_y > -1.100101
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4740,7 +4740,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= 9.314642 &&
     min_gyro_smv > 0.020517
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4751,7 +4751,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_smv <= 10.852582 &&
     max_magn_smv <= 39.925559
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4759,7 +4759,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv > 36.962824 &&
     std_accel_x <= 0.801385
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4772,7 +4772,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_z > 3.216995 &&
     max_accel_smv > 12.584538
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4782,7 +4782,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y > 7.508336 &&
     max_magn_smv <= 33.403891
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4792,7 +4792,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y > 6.697744 &&
     mean_magn_z <= -4.27
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4800,7 +4800,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y > 6.628789 &&
     range_magn_x <= 15.660002
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4811,7 +4811,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z > 11.121994 &&
     sma_magn > 39.000601
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4819,7 +4819,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y > -4.522003 &&
     range_magn_y > 25.140381
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4828,7 +4828,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_y <= 4.649759 &&
     range_accel_y > 6.59004
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4839,7 +4839,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv <= 28.626452 &&
     max_gyro_z <= 0.220566
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4849,7 +4849,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_y <= -21.934509 &&
     mean_magn_smv <= 33.691614
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -4860,7 +4860,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x > -0.070629 &&
     range_magn_y > 1.422119
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4868,7 +4868,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z > 8.649796 &&
     min_gyro_smv <= 0.044732
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4880,7 +4880,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z <= 0.580256 &&
     mean_accel_smv <= 11.161416
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4893,7 +4893,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv > 11.128068 &&
     std_magn_z <= 5.45096
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4903,7 +4903,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y > 5.683002 &&
     mean_accel_z <= 6.74156
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4914,7 +4914,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_y > -0.103272 &&
     mean_magn_z <= -10.3756
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -4924,7 +4924,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_z <= 8.28 &&
     range_magn_y > 4.135002
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -4942,7 +4942,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_smv > 54.294862 &&
     min_gyro_z > -0.863596
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4954,7 +4954,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_y > 4.115998 &&
     std_gyro_z <= 0.276059
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4964,7 +4964,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x <= 36.780998 &&
     min_gyro_z > -0.96254
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4973,7 +4973,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn > 80.28595 &&
     range_magn_z > 14.820002
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -4987,7 +4987,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_gyro_x > 0.540668 &&
     range_magn_y <= 15.440369
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -4999,7 +4999,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x <= 21.241358 &&
     max_gyro_y > 2.799473
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (
@@ -5008,7 +5008,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_z <= 1.304661 &&
     mean_magn_smv > 42.080732
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5018,7 +5018,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y <= 3.787231 &&
     std_accel_z <= 2.174381
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5031,7 +5031,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_y > 1.818396 &&
     mean_magn_z > -24.371999
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5040,7 +5040,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z > 5.601181 &&
     max_magn_smv > 102.716004
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -5050,11 +5050,11 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_z > 8.513782 &&
     std_gyro_z > 0.027469
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (mean_magn_smv <= 38.561301 && range_accel_z <= 1.177277) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -5065,7 +5065,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn <= 57.551998 &&
     std_magn_z <= 3.646208
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -5074,7 +5074,7 @@ export const AutomaticActivityRecognitionRules = (
     range_accel_y <= 7.458166 &&
     rms_accel_x > 0.808784
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5084,7 +5084,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z <= 0.017943 &&
     rms_accel_x <= 2.403672
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -5098,7 +5098,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn > 89.753326 &&
     mean_accel_y > -1.27168
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -5111,7 +5111,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_x > 3.365311 &&
     mean_accel_z > -5.626254
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5125,7 +5125,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_accel_x > 1.222598 &&
     range_accel_y > 2.916227
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5133,7 +5133,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y > 8.986636 &&
     min_gyro_smv <= 0.003887
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5142,7 +5142,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= -41.293301 &&
     mean_accel_z <= 3.560526
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5153,7 +5153,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn <= 74.199998 &&
     max_gyro_x > 0.347321
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5162,7 +5162,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z <= -1.86209 &&
     mean_accel_smv > 9.415625
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5175,11 +5175,11 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv <= 42.009024 &&
     max_accel_z <= 11.936935
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (min_accel_y <= -9.681824 && max_magn_y <= 3.310997) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5187,7 +5187,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_smv <= 50.207991 &&
     std_accel_y > 0.8047
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5195,7 +5195,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv <= 53.412173 &&
     mean_magn_smv > 48.337885
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5203,7 +5203,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn <= 46.853999 &&
     min_accel_x > -3.446453
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5211,7 +5211,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x > 16.571466 &&
     mean_accel_y <= -1.567747
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -5224,7 +5224,7 @@ export const AutomaticActivityRecognitionRules = (
     range_accel_z > 2.209916 &&
     std_accel_z <= 1.108781
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5233,7 +5233,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_z <= 2.443566 &&
     range_accel_z > 4.257021
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5245,7 +5245,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_x > 1.997374 &&
     max_magn_y > -23.898315
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (
@@ -5253,7 +5253,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= -43.650208 &&
     std_accel_x <= 1.253501
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5263,7 +5263,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_y > 6.927216 &&
     mean_magn_z <= -9.994499
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5276,7 +5276,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_x > 4.799999 &&
     sma_gyro > 0.673517
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5285,7 +5285,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_smv <= 0.028465 &&
     std_magn_z > 0.627022
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -5296,7 +5296,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z <= 0.320728 &&
     std_accel_y > 1.967826
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5308,7 +5308,7 @@ export const AutomaticActivityRecognitionRules = (
     rms_gyro_x <= 0.589088 &&
     std_gyro_y > 0.734949
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5317,7 +5317,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_z <= -3.701795 &&
     mean_accel_smv <= 10.895103
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5326,7 +5326,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z <= -42.036812 &&
     mean_accel_y <= 3.420222
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5336,7 +5336,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv <= 10.821406 &&
     mean_magn_z > -9.27
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5345,7 +5345,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_smv <= 0.004553 &&
     rms_accel_x <= 4.959404
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5359,7 +5359,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_smv > 16.863033 &&
     max_magn_smv <= 70.434854
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5374,7 +5374,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv > 9.982835 &&
     mean_accel_smv <= 10.468973
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5382,7 +5382,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv <= 9.781496 &&
     mean_accel_z > 8.238807
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -5390,7 +5390,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y > 8.986636 &&
     mean_magn_z <= -41.885999
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -5400,7 +5400,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_z <= 1.248306 &&
     max_accel_x > 2.624313
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5413,7 +5413,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_x > -8.482916 &&
     min_gyro_y > -1.444684
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5421,7 +5421,7 @@ export const AutomaticActivityRecognitionRules = (
     sma_magn <= 74.853439 &&
     range_magn_x <= 39.048767
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5430,7 +5430,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y <= -3.985149 &&
     std_accel_smv <= 7.271425
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5441,7 +5441,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_x <= 1.440582 &&
     max_gyro_y > 0.22452
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5453,7 +5453,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv > 9.611404 &&
     std_gyro_y <= 0.250618
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -5461,11 +5461,11 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y <= 11.837585 &&
     mean_magn_z > 32.8837
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (min_accel_z <= 6.763826 && max_accel_y > 11.837585) {
-    return 'b';
+    return 'Running';
   }
 
   if (
@@ -5474,7 +5474,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y > 0.751966 &&
     mean_magn_smv <= 44.126225
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5483,11 +5483,11 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y > 0.751966 &&
     mean_accel_z > 4.584557
   ) {
-    return 'b';
+    return 'Running';
   }
 
   if (min_accel_z <= 6.763826 && range_accel_x <= 0.859545) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5495,7 +5495,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_z > 5.599729 &&
     mean_accel_z > 0.000453
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -5507,7 +5507,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_x > 0.034837 &&
     mean_magn_smv > 48.233416
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5520,7 +5520,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x <= 14.767887 &&
     range_accel_z <= 7.49147
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5528,7 +5528,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x > 2.4767 &&
     mean_accel_y <= 2.258998
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5538,7 +5538,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_y <= 4.249838 &&
     mean_accel_z <= 9.969576
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5546,7 +5546,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_y > -8.768112 &&
     min_accel_z > -5.501282
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -5554,7 +5554,7 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_x > 0.379225 &&
     min_gyro_smv > 0.037932
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5563,7 +5563,7 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y > 4.08783 &&
     mean_magn_smv <= 44.569694
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5571,7 +5571,7 @@ export const AutomaticActivityRecognitionRules = (
     max_accel_x > 6.549911 &&
     mean_accel_y > 0.053
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5579,7 +5579,7 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_smv > 43.466443 &&
     std_accel_x <= 5.648057
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5588,7 +5588,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_smv <= 43.798309 &&
     mean_accel_y <= 6.165258
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -5596,7 +5596,7 @@ export const AutomaticActivityRecognitionRules = (
     std_accel_z > 0.679411 &&
     max_gyro_y <= 1.13164
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -5604,7 +5604,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_magn_z > 0.6549 &&
     std_accel_y > 0.938582
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5613,11 +5613,11 @@ export const AutomaticActivityRecognitionRules = (
     range_accel_y <= 8.214508 &&
     max_gyro_z <= 0.56279
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (min_gyro_smv <= 0.005252 && mean_accel_z <= 7.789534) {
-    return 'a';
+    return 'Walking';
   }
 
   if (
@@ -5625,7 +5625,7 @@ export const AutomaticActivityRecognitionRules = (
     mean_accel_smv <= 10.930152 &&
     min_accel_y <= 4.252899
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5634,19 +5634,19 @@ export const AutomaticActivityRecognitionRules = (
     max_gyro_z > 0.383531 &&
     max_accel_x > 1.075029
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (min_gyro_smv <= 0.005141 && mean_accel_z <= 8.365117) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (mean_magn_smv > 51.173682 && mean_magn_smv > 57.152936) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (mean_magn_smv > 51.173682 && std_accel_x <= 0.522624) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5654,7 +5654,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_z > 8.088913 &&
     std_accel_y <= 0.794358
   ) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5663,7 +5663,7 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_smv <= 0.166652 &&
     mean_accel_y > -0.361775
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -5672,11 +5672,11 @@ export const AutomaticActivityRecognitionRules = (
     std_magn_z <= 8.234839 &&
     mean_accel_smv > 9.673654
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (mean_magn_smv <= 50.540796 && max_gyro_x <= 0.123243) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5685,7 +5685,7 @@ export const AutomaticActivityRecognitionRules = (
     min_accel_x > -3.519852 &&
     std_accel_z > 1.895646
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (
@@ -5693,7 +5693,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_z > 0.451993 &&
     std_accel_x <= 1.312281
   ) {
-    return 'c';
+    return 'Bicycling';
   }
 
   if (
@@ -5701,7 +5701,7 @@ export const AutomaticActivityRecognitionRules = (
     std_gyro_y <= 0.28214 &&
     min_accel_y > 1.564611
   ) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (
@@ -5709,11 +5709,11 @@ export const AutomaticActivityRecognitionRules = (
     range_magn_y <= 6.275002 &&
     min_accel_x > -2.660039
   ) {
-    return 'f';
+    return 'Train Ride';
   }
 
   if (range_magn_y <= 6.275002 && min_accel_x > -4.119224) {
-    return 'd';
+    return 'Car Ride';
   }
 
   if (
@@ -5721,16 +5721,16 @@ export const AutomaticActivityRecognitionRules = (
     min_gyro_smv <= 0.125277 &&
     std_gyro_y <= 0.517398
   ) {
-    return 'a';
+    return 'Walking';
   }
 
   if (range_magn_y <= 12.268066 && std_accel_z <= 1.933925) {
-    return 'e';
+    return 'Bus Ride';
   }
 
   if (min_accel_y <= 2.423006) {
-    return 'f';
+    return 'Train Ride';
   }
 
-  return 'a';
+  return 'Walking';
 };

@@ -12,7 +12,6 @@ import {
 import {Home} from '../screens/Home';
 import {Statistics} from '../screens/Statistics';
 import {Settings} from '../screens/Settings';
-import {About} from '../screens/About';
 
 const HomeIcon = style => <Icon {...style} name="home" />;
 const StatisticsIcon = style => <Icon {...style} name="pie-chart" />;
@@ -24,7 +23,6 @@ const HomeNavigator = () => (
   <Stack.Navigator headerMode="none">
     <Stack.Screen name="Home" component={Home} />
     <Stack.Screen name="Settings" component={Settings} />
-    <Stack.Screen name="About" component={About} />
   </Stack.Navigator>
 );
 

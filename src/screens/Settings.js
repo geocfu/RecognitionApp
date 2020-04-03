@@ -7,7 +7,6 @@ import {
   Text,
   TopNavigation,
   TopNavigationAction,
-  Button,
   Radio,
   RadioGroup,
 } from '@ui-kitten/components';
