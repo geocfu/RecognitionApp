@@ -62,9 +62,8 @@ export const AutomaticActivityRecognitionRules = (
     max_magn_smv > 40.996216 &&
     mean_accel_y <= 2.2381 &&
     std_accel_x > 2.716579 &&
-    entropy_accel <= 2.215727 &&
-    rms_accel_z <= 6.780801 &&
-    max_accel_y > -1.818939 &&
+    max_accel_z <= 7.56112 &&
+    mean_accel_y > -7.993047 &&
     mean_accel_y > -1.662294
   ) {
     return 'a';
@@ -73,37 +72,28 @@ export const AutomaticActivityRecognitionRules = (
   if (
     std_accel_smv > 6.439509 &&
     max_accel_z > 16.385916 &&
-    std_gyro_y > 0.236455 &&
-    mean_accel_y <= 2.412398 &&
-    std_magn_z > 1.580587
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_smv > 6.439509 &&
-    max_accel_z > 16.385916 &&
-    std_gyro_y > 0.236455 &&
-    std_accel_x > 2.475809 &&
-    min_gyro_x <= -1.753326 &&
-    min_accel_y <= -0.399832
+    sma_gyro > 1.250038 &&
+    mean_accel_y > 2.412398 &&
+    std_accel_x > 2.779753 &&
+    min_accel_x <= -2.106962 &&
+    max_accel_x > 8.667274
   ) {
     return 'b';
   }
 
   if (
     std_accel_smv > 6.439509 &&
-    std_gyro_y > 0.228912 &&
-    max_accel_y <= 14.492432 &&
-    max_magn_smv > 43.435421 &&
+    max_magn_smv > 40.016196 &&
+    max_accel_y <= 15.27533 &&
+    sma_gyro > 0.539624 &&
     mean_magn_z > -30.518219 &&
-    std_gyro_z > 0.213191 &&
-    max_accel_y <= 9.499649 &&
-    std_gyro_y > 0.876765 &&
-    min_gyro_smv > 0.028006 &&
-    mean_magn_smv > 36.892116 &&
-    min_magn_y > 8.945 &&
-    mean_magn_z <= 34.5316
+    mean_accel_y <= 5.116805 &&
+    max_gyro_y > 1.215634 &&
+    min_gyro_smv > 0.027762 &&
+    min_accel_x <= -0.655441 &&
+    mean_accel_y <= 2.043691 &&
+    mean_magn_smv <= 69.73553 &&
+    sma_gyro > 2.043028
   ) {
     return 'a';
   }
@@ -111,42 +101,24 @@ export const AutomaticActivityRecognitionRules = (
   if (
     std_accel_smv > 6.439509 &&
     max_magn_smv > 40.016196 &&
-    max_accel_y > 15.508667 &&
-    rms_gyro_x <= 0.733189 &&
-    std_gyro_y > 0.082553 &&
-    min_accel_y <= 7.487167 &&
-    std_magn_smv > 10.399973 &&
-    rms_accel_z <= 9.820543 &&
-    max_accel_x > -0.629675
+    std_accel_y > 5.497898 &&
+    mean_accel_y <= 2.455493 &&
+    sma_magn <= 108.335997 &&
+    mean_accel_z > -2.96881
   ) {
     return 'a';
   }
 
   if (
     std_accel_smv > 6.439509 &&
-    max_accel_y > 15.508667 &&
-    sma_gyro <= 0.930606 &&
-    std_accel_x <= 2.42171
-  ) {
-    return 'd';
-  }
-
-  if (
-    std_accel_smv > 6.439509 &&
-    max_accel_y > 15.508667 &&
-    rms_accel_x > 3.887054 &&
-    std_gyro_z <= 0.223008 &&
-    min_accel_y > -3.452988
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_smv > 6.439509 &&
-    max_accel_y > 15.508667 &&
-    rms_accel_x > 3.887054 &&
-    min_accel_y <= -4.734314 &&
-    max_gyro_x > 1.025299
+    std_accel_y > 5.497898 &&
+    std_gyro_z > 0.223008 &&
+    min_accel_y <= -2.482863 &&
+    mean_accel_y > 2.043691 &&
+    max_accel_y > 15.210828 &&
+    rms_accel_x > 3.801421 &&
+    rms_gyro_x > 0.946484 &&
+    min_accel_y <= -4.559757
   ) {
     return 'b';
   }
@@ -154,28 +126,15 @@ export const AutomaticActivityRecognitionRules = (
   if (
     std_accel_smv > 6.439509 &&
     sma_gyro > 0.490739 &&
-    max_accel_y <= 14.492432 &&
+    std_accel_y <= 5.46388 &&
     max_magn_smv > 43.435421 &&
-    max_accel_z <= 9.938635 &&
-    min_accel_z <= 0.586597 &&
-    std_gyro_y > 0.553582 &&
-    min_accel_y <= 0.416604 &&
-    mean_accel_y <= -6.179384 &&
-    std_accel_smv > 8.051589 &&
-    std_gyro_z <= 0.936925
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_smv > 6.346116 &&
-    sma_gyro > 0.490739 &&
-    max_accel_y <= 14.492432 &&
-    std_magn_smv > 10.090078 &&
-    rms_accel_x > 8.398436 &&
-    mean_accel_y <= -1.301129 &&
+    mean_magn_z > -30.518219 &&
+    std_accel_x > 2.978734 &&
+    std_accel_z <= 5.954483 &&
+    max_accel_y <= 8.68837 &&
+    min_gyro_smv > 0.022615 &&
     mean_accel_z > 0.16305 &&
-    max_magn_y <= 42.659
+    sma_magn <= 81.170349
   ) {
     return 'a';
   }
@@ -183,10 +142,60 @@ export const AutomaticActivityRecognitionRules = (
   if (
     std_accel_smv > 6.346116 &&
     sma_gyro > 0.502945 &&
-    max_accel_y > 15.27533 &&
-    mean_accel_z > 3.418202 &&
-    range_magn_x > 8.913002 &&
-    mean_accel_y <= 9.023256
+    std_accel_y <= 5.356813 &&
+    max_magn_smv > 43.435421 &&
+    max_accel_z <= 9.227535 &&
+    min_accel_z <= 0.595612 &&
+    rms_accel_x > 7.552543 &&
+    mean_accel_z <= 1.531139 &&
+    mean_accel_y > -1.655231 &&
+    std_magn_z <= 5.789372 &&
+    range_magn_y <= 17.434998
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_smv > 6.346116 &&
+    sma_gyro > 0.562692 &&
+    std_accel_y <= 5.356813 &&
+    mean_magn_smv > 38.092408 &&
+    max_accel_z <= 9.860321 &&
+    min_accel_z <= 0.595612 &&
+    rms_accel_x > 7.552543 &&
+    mean_accel_y <= -1.005325 &&
+    max_accel_z <= 7.175642 &&
+    min_gyro_z > -1.09832 &&
+    max_magn_y <= 32.312 &&
+    range_magn_z <= 22.518002 &&
+    std_gyro_z > 0.30426
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_smv > 6.346116 &&
+    sma_gyro > 0.562692 &&
+    std_accel_y <= 5.356813 &&
+    mean_magn_smv > 39.077387 &&
+    max_accel_z <= 9.860321 &&
+    min_accel_z <= 0.595612 &&
+    std_accel_x > 2.853746 &&
+    mean_accel_z <= 1.301967 &&
+    rms_accel_x > 7.405374 &&
+    max_magn_y > 32.312
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_smv > 6.346116 &&
+    sma_gyro > 0.562692 &&
+    std_accel_y > 5.356813 &&
+    mean_accel_z > 3.997721 &&
+    mean_accel_y <= 11.121394 &&
+    max_accel_y > 13.010489 &&
+    range_magn_x > 8.424568
   ) {
     return 'b';
   }
@@ -194,13 +203,12 @@ export const AutomaticActivityRecognitionRules = (
   if (
     std_accel_smv > 6.346116 &&
     sma_gyro > 0.502945 &&
-    max_magn_smv > 41.000484 &&
-    std_accel_x > 2.784445 &&
-    mean_accel_y <= -1.377187 &&
-    max_magn_y <= 41.745998 &&
-    sma_magn <= 78.33374 &&
-    min_accel_x <= -0.038307 &&
-    std_accel_z <= 3.725119
+    max_magn_smv > 43.930532 &&
+    std_accel_z > 2.066234 &&
+    mean_accel_y <= -1.350449 &&
+    rms_accel_x > 7.36895 &&
+    max_accel_z <= 7.076996 &&
+    min_gyro_z <= -1.09832
   ) {
     return 'a';
   }
@@ -208,27 +216,16 @@ export const AutomaticActivityRecognitionRules = (
   if (
     std_accel_smv > 6.346116 &&
     sma_gyro > 0.502945 &&
-    max_magn_smv > 41.000484 &&
-    std_accel_x > 2.784445 &&
-    mean_accel_y <= -1.481293 &&
-    mean_accel_y > -6.508597 &&
-    sma_magn <= 79.354201 &&
-    min_gyro_z <= -1.100257
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_smv > 6.346116 &&
-    sma_gyro > 0.490739 &&
-    max_magn_smv > 43.981567 &&
-    std_accel_x <= 2.433332 &&
-    rms_accel_z > 7.720016 &&
+    max_magn_smv > 43.930532 &&
+    std_accel_x <= 2.748177 &&
+    mean_accel_z > 7.295013 &&
+    std_accel_x <= 2.196418 &&
     std_accel_z > 1.682099 &&
-    min_gyro_smv > 0.025508 &&
-    range_accel_x <= 5.760625 &&
-    std_accel_x > 0.534377 &&
-    max_magn_y <= -0.06
+    range_accel_y <= 9.306262 &&
+    range_magn_z > 2.934265 &&
+    std_accel_smv <= 9.141607 &&
+    max_gyro_z > 0.301213 &&
+    max_accel_y > 4.810272
   ) {
     return 'a';
   }
@@ -254,9 +251,8 @@ export const AutomaticActivityRecognitionRules = (
   }
 
   if (
-    std_accel_smv <= 6.346116 &&
-    mean_accel_y > -4.326933 &&
-    mean_accel_z > 4.032195 &&
+    std_accel_y <= 1.134015 &&
+    max_accel_y > -3.672817 &&
     max_accel_smv <= 10.31438 &&
     mean_magn_z <= -44.36 &&
     min_accel_x <= -1.630451 &&
@@ -267,5423 +263,5474 @@ export const AutomaticActivityRecognitionRules = (
   }
 
   if (
-    std_accel_smv <= 6.346116 &&
-    mean_accel_y > -4.326933 &&
-    max_accel_smv <= 10.31438 &&
-    std_gyro_z > 0.001173 &&
-    min_accel_y > 7.158882 &&
-    min_accel_smv <= 9.663199 &&
-    max_magn_smv > 39.137204 &&
-    range_magn_y <= 22.235004
-  ) {
-    return 'd';
-  }
-
-  if (
-    std_accel_smv <= 6.346116 &&
-    mean_accel_y > -4.326933 &&
+    std_accel_y <= 1.134015 &&
+    max_accel_y > -3.672817 &&
     max_accel_smv <= 10.31438 &&
     sma_gyro > 0.006328 &&
-    min_gyro_smv <= 0.120567 &&
-    mean_magn_smv <= 53.222342 &&
-    range_accel_y <= 1.016342 &&
+    min_accel_y > 7.158882 &&
+    min_accel_smv <= 9.663199 &&
+    max_magn_smv > 31.831342
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 1.134015 &&
+    max_accel_y > -3.672817 &&
+    max_accel_smv <= 10.31438 &&
+    sma_gyro > 0.006328 &&
+    max_magn_smv <= 55.582812 &&
     mean_magn_z <= 8.7913 &&
+    range_accel_y <= 1.016342 &&
     mean_accel_smv <= 9.804566 &&
-    min_accel_x > -7.288173 &&
-    mean_accel_y <= 6.483457 &&
-    max_accel_x <= 6.510406 &&
-    entropy_accel <= 0.6814 &&
+    max_accel_x > -6.773197 &&
+    rms_accel_x <= 6.413573 &&
+    mean_accel_y <= 6.525277 &&
+    std_accel_x <= 0.382593 &&
     std_accel_smv > 1.085616 &&
-    mean_accel_smv <= 9.735766
+    mean_accel_smv <= 9.732357
   ) {
     return 'f';
   }
 
   if (
-    entropy_accel <= 1.540692 &&
-    min_accel_y > -5.568913 &&
-    min_accel_z > 2.851334 &&
+    max_accel_smv > 14.180251 &&
+    std_gyro_y > 0.231752 &&
+    max_magn_smv <= 40.032838 &&
+    mean_accel_z <= 1.717174 &&
+    min_accel_y <= 5.576096 &&
+    range_magn_y > 3.683472 &&
+    range_accel_x > 6.010643
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_y <= 1.134015 &&
+    max_accel_y > -3.672817 &&
+    mean_accel_z > 4.032195 &&
     rms_gyro_x <= 0.014576 &&
     mean_magn_smv > 53.078248 &&
-    std_magn_z > 0.317802 &&
+    std_magn_z > 0.314447 &&
     mean_accel_y > -0.729633 &&
     std_gyro_y > 0.000925 &&
-    min_gyro_x > -0.022812 &&
-    range_magn_x <= 9.7229 &&
-    range_accel_z > 0.577021
+    std_gyro_z <= 0.007518
   ) {
     return 'e';
   }
 
   if (
-    entropy_accel <= 1.540692 &&
-    min_accel_y > -5.568913 &&
-    rms_gyro_x <= 0.013934 &&
-    max_accel_x <= -6.005855 &&
-    rms_accel_z > 1.177009 &&
-    max_accel_z <= 3.743334
+    std_accel_y <= 1.134015 &&
+    mean_accel_y > -4.939118 &&
+    rms_gyro_x <= 0.014576 &&
+    min_accel_x <= -8.870789 &&
+    max_accel_y <= 1.575385
   ) {
     return 'f';
   }
 
   if (
-    entropy_accel <= 1.540692 &&
-    min_accel_y > -5.568913 &&
-    rms_gyro_x <= 0.013522 &&
-    sma_magn <= 86.626289 &&
-    max_accel_y > 2.543839 &&
+    std_accel_y <= 1.134015 &&
+    mean_accel_y > -4.939118 &&
+    rms_gyro_x <= 0.014576 &&
+    mean_magn_smv <= 54.386353 &&
+    max_accel_y > 2.48159 &&
     mean_magn_smv > 19.285982 &&
-    rms_accel_z > 8.685688 &&
+    mean_accel_y <= 4.813929 &&
     max_magn_y > -32.5 &&
     max_accel_x > -0.276306 &&
-    min_accel_x > -2.027951
+    max_accel_smv > 10.309584 &&
+    min_accel_x > -2.288857
   ) {
     return 'd';
   }
 
   if (
-    entropy_accel <= 1.540692 &&
-    mean_accel_y > -4.939118 &&
-    min_accel_z > 2.851334 &&
+    std_accel_y <= 1.134015 &&
+    max_accel_y > -3.672817 &&
+    mean_accel_z > 4.319511 &&
     mean_magn_z <= -47.842407 &&
     mean_accel_y <= 0.381756 &&
-    min_accel_z <= 9.341629 &&
-    mean_magn_smv > 66.678959
+    min_accel_z <= 9.396045 &&
+    min_accel_y <= -0.319626
   ) {
     return 'd';
   }
 
   if (
-    entropy_accel <= 1.540692 &&
-    mean_accel_y > -4.939118 &&
-    min_accel_z > 3.437531 &&
-    mean_accel_smv > 9.85819 &&
-    min_gyro_smv <= 0.000456 &&
-    mean_magn_z <= 64.834747 &&
-    min_magn_y <= 2.254486
+    std_accel_y <= 1.134015 &&
+    max_accel_y > -3.672817 &&
+    mean_accel_z > 4.319511 &&
+    max_accel_smv > 10.646196 &&
+    min_accel_x > 4.629189 &&
+    max_accel_z > 7.11339 &&
+    mean_accel_y <= 3.148136
   ) {
     return 'd';
   }
 
   if (
-    entropy_accel <= 1.540692 &&
-    mean_accel_y > -4.939118 &&
-    max_accel_y <= 8.470944 &&
+    std_accel_y <= 1.134015 &&
+    max_accel_y > -3.672817 &&
+    mean_accel_z > 4.319511 &&
+    max_accel_smv > 10.64291 &&
+    range_magn_x > 0.709534 &&
+    min_gyro_smv <= 0.098452 &&
+    sma_gyro > 0.031195 &&
+    std_accel_x <= 1.116245 &&
+    mean_accel_smv > 9.911272 &&
+    mean_magn_z <= 18.695999 &&
+    rms_accel_x > 0.369087 &&
+    min_accel_y > 2.476802 &&
+    mean_accel_z > 5.99698 &&
+    min_accel_z <= 8.155849 &&
+    max_magn_smv > 51.70235 &&
+    mean_accel_z <= 8.500873 &&
+    std_accel_y <= 0.94343
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_y <= 1.134015 &&
+    max_accel_y > -3.672817 &&
+    mean_accel_z > 4.319511 &&
+    max_accel_smv > 10.646881 &&
+    min_gyro_smv <= 0.098452 &&
+    min_gyro_smv > 0.000894 &&
+    range_magn_x <= 0.709534 &&
+    mean_accel_z <= 9.138753 &&
+    range_magn_y <= 1.167488 &&
+    max_gyro_z > 0.014145 &&
+    range_magn_x <= 0.649452
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 1.134015 &&
+    max_accel_y > -3.672817 &&
+    mean_accel_z > 4.319511 &&
+    max_accel_smv > 10.646881 &&
+    min_gyro_smv <= 0.098452 &&
+    min_gyro_smv > 0.000894 &&
+    std_gyro_z > 0.036311 &&
+    max_magn_smv <= 46.348605 &&
+    min_accel_x <= -0.228646 &&
+    mean_accel_z <= 9.52957 &&
+    std_gyro_y <= 0.240558 &&
+    max_magn_y <= 21.256004 &&
+    sma_magn > 21.005999 &&
+    mean_magn_z <= 8.54 &&
+    std_accel_x <= 1.019869 &&
+    mean_accel_smv > 9.988308 &&
+    min_accel_x <= -0.509965 &&
+    min_accel_z > 4.922629
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_smv <= 6.283571 &&
+    mean_accel_y > -4.94271 &&
+    max_accel_y <= 8.46855 &&
     min_accel_z > -0.713494 &&
-    max_accel_x <= 6.284971 &&
     max_accel_smv > 10.64291 &&
-    range_magn_x > 0.704193 &&
-    min_gyro_smv <= 0.085815 &&
-    sma_gyro > 0.040899 &&
-    rms_accel_z <= 9.169112 &&
-    std_accel_x <= 1.110107 &&
-    mean_accel_smv > 9.966586 &&
-    min_accel_z <= 8.018426 &&
-    min_accel_x > -4.364763 &&
-    mean_magn_z <= 17.024231 &&
-    sma_gyro <= 0.708417 &&
-    max_accel_y > 5.464766 &&
-    min_magn_y <= -17.921997
+    min_gyro_smv <= 0.108512 &&
+    min_gyro_smv <= 0.000894 &&
+    sma_magn <= 194.753997 &&
+    max_gyro_x <= 0.015869 &&
+    max_gyro_z > -0.000183 &&
+    max_accel_x <= 1.632895
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 1.133082 &&
+    max_accel_y > -3.672817 &&
+    mean_accel_z > 3.864598 &&
+    min_accel_x <= -0.634483 &&
+    min_gyro_smv <= 0.104461 &&
+    sma_gyro <= 0.024013 &&
+    std_gyro_z <= 0.002834 &&
+    max_accel_x <= 0.656031
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 1.133082 &&
+    max_accel_y > -3.672817 &&
+    min_accel_z > 2.021903 &&
+    max_accel_smv > 10.64291 &&
+    min_gyro_smv <= 0.098452 &&
+    std_gyro_z > 0.028323 &&
+    max_magn_smv <= 47.820753 &&
+    mean_accel_y <= 7.188092 &&
+    mean_accel_z <= 9.116008 &&
+    min_accel_x <= -0.221573 &&
+    rms_accel_x <= 1.755508 &&
+    mean_magn_z <= -0.042 &&
+    range_magn_z <= 4.388 &&
+    sma_magn <= 67.0704 &&
+    min_accel_z <= 8.195602 &&
+    mean_magn_smv <= 40.401539 &&
+    max_accel_x > -0.779313 &&
+    max_accel_smv > 11.02721 &&
+    std_accel_x <= 0.905586 &&
+    range_magn_x > 1.528931 &&
+    max_accel_x <= 0.9086
   ) {
     return 'e';
   }
 
   if (
-    entropy_accel <= 1.540692 &&
+    std_accel_y <= 1.086676 &&
     mean_accel_y > -4.939118 &&
-    mean_accel_y <= 7.360329 &&
-    mean_accel_z > 0.499599 &&
-    max_accel_x <= 6.284971 &&
-    max_accel_smv > 10.64291 &&
-    range_magn_x > 0.704193 &&
-    min_gyro_smv <= 0.08578 &&
-    std_gyro_z > 0.036496 &&
-    mean_accel_z <= 9.18042 &&
-    min_accel_x <= -0.232238 &&
-    std_gyro_y <= 0.099014 &&
-    max_magn_y <= 23.059082 &&
-    mean_accel_z > 4.15287 &&
-    max_gyro_x > 0.021423 &&
-    mean_magn_z <= 16.134 &&
-    std_accel_x <= 1.018996 &&
-    entropy_accel > 0.898502 &&
-    range_magn_x <= 16.889954 &&
-    max_magn_smv > 22.829805 &&
-    std_gyro_z > 0.039876
+    min_accel_z > 2.021903 &&
+    mean_accel_smv > 9.863848 &&
+    rms_gyro_x <= 0.003085
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 1.086676 &&
+    mean_accel_y > -4.939118 &&
+    min_accel_z > 2.021903 &&
+    mean_accel_smv > 9.862382 &&
+    std_accel_y <= 0.047004 &&
+    min_accel_y > 0.281319
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_smv <= 6.298823 &&
+    mean_accel_y > -4.94271 &&
+    max_accel_y <= 8.46669 &&
+    min_accel_z > -0.713494 &&
+    max_accel_smv > 10.504015 &&
+    max_accel_x <= 6.483765 &&
+    min_gyro_smv <= 0.106058 &&
+    mean_magn_smv > 58.833189 &&
+    range_magn_y > 0.700005 &&
+    range_magn_z > 1.344299 &&
+    sma_gyro <= 0.666197 &&
+    mean_accel_smv <= 10.218571 &&
+    max_accel_x <= 3.246537
   ) {
     return 'e';
   }
 
   if (
-    std_accel_smv > 6.308512 &&
-    max_magn_smv > 42.47908 &&
+    std_accel_y <= 1.086676 &&
+    mean_accel_y > -4.939118 &&
+    min_accel_z > 2.021903 &&
+    mean_accel_smv > 9.862382 &&
+    std_accel_z <= 1.922451 &&
+    max_accel_z <= 4.731087 &&
+    range_accel_x <= 1.302486
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 1.086676 &&
+    mean_accel_y > -4.939118 &&
+    min_accel_z > 2.021903 &&
+    mean_accel_smv > 9.862382 &&
+    std_accel_z <= 1.922451 &&
+    min_accel_x <= -0.384888 &&
+    min_gyro_smv <= 0.108547 &&
+    mean_magn_z > 9.063263 &&
+    mean_accel_z <= 6.920919 &&
+    range_accel_y <= 2.865947
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 1.086676 &&
+    mean_accel_y > -4.939118 &&
+    mean_magn_z <= 10.89 &&
+    min_accel_x <= -0.588992 &&
+    min_gyro_smv <= 0.103071 &&
+    range_magn_x <= 0.709534 &&
+    mean_magn_z > -34.133759 &&
+    max_accel_z <= 9.943423
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_smv > 6.298823 &&
+    max_magn_smv > 40.016196 &&
     max_accel_z <= -1.256027 &&
-    sma_gyro <= 1.122841 &&
+    sma_gyro <= 1.056467 &&
     mean_accel_z > -6.878302
   ) {
     return 'c';
   }
 
   if (
-    entropy_accel > 1.551023 &&
-    sma_gyro > 0.453627 &&
-    max_magn_smv > 40.168913 &&
-    std_accel_x > 2.784445 &&
-    mean_accel_y <= 0.391093 &&
-    mean_magn_z <= 35.29007 &&
-    max_magn_y > 32.312 &&
-    mean_accel_z > -2.915898 &&
-    max_magn_y <= 110.691833 &&
-    max_magn_smv <= 58.226316
-  ) {
-    return 'a';
-  }
-
-  if (
-    entropy_accel > 1.551023 &&
-    sma_gyro > 0.453627 &&
-    max_magn_smv > 40.168913 &&
-    std_accel_x > 2.784445 &&
-    mean_accel_y <= -1.461062 &&
-    mean_magn_z <= 36.352081 &&
-    max_magn_y <= 40.312 &&
-    max_accel_x <= 12.568253 &&
-    max_magn_y > -12.079002
-  ) {
-    return 'a';
-  }
-
-  if (
-    entropy_accel > 1.545928 &&
-    sma_gyro > 0.453627 &&
-    max_magn_smv > 40.168913 &&
-    std_accel_x > 2.784445 &&
-    mean_accel_y <= -1.461062 &&
-    mean_magn_z > 37.530327 &&
-    std_accel_y > 1.698822
-  ) {
-    return 'd';
-  }
-
-  if (
-    entropy_accel > 1.545928 &&
-    sma_gyro > 0.486532 &&
-    max_magn_smv > 41.000484 &&
-    std_accel_x > 2.784445 &&
-    mean_accel_y <= -0.774113 &&
-    mean_accel_y <= -6.429779 &&
-    min_magn_y > 4.962002 &&
-    std_gyro_z <= 0.846008 &&
-    max_gyro_x > 0.500092 &&
-    rms_accel_x > 3.509668
-  ) {
-    return 'a';
-  }
-
-  if (
-    entropy_accel > 1.545928 &&
-    sma_gyro > 0.486532 &&
-    max_magn_smv > 41.000484 &&
-    std_accel_x > 2.784445 &&
-    mean_accel_y <= -0.774113 &&
-    max_accel_y > -2.539051 &&
-    min_magn_y <= 37.626648 &&
-    max_accel_z <= 9.218918 &&
-    entropy_gyro > 2.080684 &&
-    max_magn_y > -10.973999 &&
-    std_magn_smv <= 28.980916 &&
-    std_gyro_y <= 1.307591 &&
-    entropy_accel > 1.853827 &&
-    min_gyro_x <= -0.443369
-  ) {
-    return 'a';
-  }
-
-  if (
     std_accel_smv > 6.346116 &&
-    min_gyro_x <= -0.13176 &&
-    std_magn_smv > 12.053915 &&
-    std_accel_smv > 8.953491 &&
-    mean_accel_y <= 1.725131 &&
+    max_magn_smv > 40.016196 &&
+    rms_gyro_x > 0.080934 &&
+    std_accel_smv > 9.013853 &&
+    mean_accel_y <= 1.713822 &&
     max_magn_y <= 33.801998 &&
-    entropy_accel <= 2.202679 &&
-    max_magn_y <= -10.900002 &&
-    max_accel_z <= 6.993677
+    max_accel_z <= 7.232883 &&
+    max_accel_x <= 13.247118
   ) {
     return 'a';
   }
 
   if (
     std_accel_smv > 6.346116 &&
-    min_gyro_x <= -0.13176 &&
-    mean_magn_smv > 38.114126 &&
-    std_accel_x > 2.199917 &&
-    rms_accel_z <= 7.658929 &&
-    mean_accel_y > -1.748195 &&
-    min_gyro_z > -1.675139 &&
-    std_accel_y > 9.443281 &&
-    std_gyro_y <= 0.853762
-  ) {
-    return 'b';
-  }
-
-  if (
-    std_accel_smv > 6.346116 &&
-    min_gyro_x <= -0.13176 &&
-    mean_magn_smv > 38.114126 &&
-    sma_gyro > 2.423401 &&
-    mean_magn_z <= -31.445999 &&
-    mean_accel_y > 2.055496 &&
-    max_gyro_y > 1.355272 &&
-    min_accel_y <= 2.020768
-  ) {
-    return 'b';
-  }
-
-  if (
-    std_accel_smv > 6.346116 &&
-    sma_gyro > 0.502945 &&
-    mean_magn_smv > 39.902692 &&
-    std_accel_x <= 2.199917 &&
-    min_magn_y <= -43.287659 &&
-    std_accel_y > 1.268787 &&
-    min_gyro_x <= -1.36593 &&
-    max_gyro_z <= 1.314297
-  ) {
-    return 'c';
-  }
-
-  if (
-    std_accel_smv > 6.346116 &&
-    sma_gyro > 0.502945 &&
-    mean_magn_smv > 39.304625 &&
-    mean_accel_y <= -1.319873 &&
-    max_magn_y > 35.476002 &&
-    max_accel_z > 1.34195 &&
-    mean_accel_y <= -2.753452 &&
-    mean_magn_smv <= 48.138819 &&
-    range_magn_z <= 33.104
+    max_magn_smv > 40.016196 &&
+    rms_gyro_x > 0.080934 &&
+    std_accel_smv > 9.013853 &&
+    mean_accel_y <= 1.713822 &&
+    rms_accel_x > 7.903702 &&
+    max_accel_z <= 7.076996 &&
+    max_magn_y > -11.556999 &&
+    max_magn_y > -1.737976 &&
+    std_accel_y > 3.302541 &&
+    min_accel_x <= 2.025495
   ) {
     return 'a';
   }
 
   if (
-    std_accel_smv > 6.447286 &&
-    min_gyro_x <= -0.13176 &&
-    std_magn_smv > 12.053915 &&
-    sma_gyro > 1.363169 &&
-    mean_accel_y <= -1.336873 &&
-    max_magn_y <= 37.115002 &&
-    max_accel_z <= 8.60117 &&
-    mean_magn_smv <= 36.389985
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_smv > 6.447286 &&
-    min_gyro_x <= -0.13176 &&
-    max_magn_smv > 39.896098 &&
-    sma_gyro > 1.362396 &&
-    mean_accel_y <= -1.319873 &&
-    max_magn_y <= 37.115002 &&
-    max_magn_y > -15.509033 &&
-    mean_magn_smv > 36.025595 &&
-    entropy_gyro <= 2.086451
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_y <= 1.086794 &&
+    std_accel_smv <= 6.346116 &&
     mean_accel_y > -4.94271 &&
-    mean_magn_z <= 9.0632 &&
-    max_accel_x <= 5.346416 &&
-    min_gyro_smv <= 0.000357 &&
-    max_magn_y <= 28.570999
+    max_accel_y <= 8.46669 &&
+    min_accel_z > -0.713494 &&
+    min_accel_x <= -0.588992 &&
+    min_gyro_smv <= 0.105422 &&
+    mean_magn_z > 6.864 &&
+    mean_accel_y > 7.099264 &&
+    min_gyro_smv <= 0.020853
   ) {
     return 'd';
   }
 
   if (
-    std_accel_y <= 1.086794 &&
+    std_accel_smv <= 6.346116 &&
     mean_accel_y > -4.94271 &&
-    mean_magn_z <= 9.0632 &&
-    max_accel_x <= 5.346416 &&
-    mean_magn_z <= -45.358734 &&
-    max_accel_smv > 10.31396 &&
-    range_magn_x > 1.103401 &&
-    max_accel_z <= 11.290909 &&
-    min_accel_y > -0.429759 &&
-    max_gyro_y <= 0.521836 &&
-    mean_accel_smv > 9.736798 &&
-    rms_accel_x <= 2.55853
+    mean_magn_z <= 16.9575 &&
+    mean_accel_z > 3.883753 &&
+    min_accel_x <= -0.634483 &&
+    min_gyro_smv <= 0.104461 &&
+    min_accel_x <= -8.067263
   ) {
     return 'e';
   }
 
   if (
-    std_accel_smv > 6.447286 &&
-    min_gyro_x <= -0.13176 &&
-    max_magn_smv > 39.896098 &&
-    sma_gyro > 1.362396 &&
-    mean_accel_y > -1.336873 &&
-    std_accel_z > 1.734101 &&
-    mean_magn_z > -30.606 &&
-    min_gyro_z > -1.665952 &&
-    rms_gyro_x <= 1.341879 &&
-    range_magn_z <= 26.671 &&
-    min_gyro_smv > 0.063246 &&
-    max_accel_z > 0.718109 &&
-    rms_accel_z <= 10.285973 &&
-    range_magn_z <= 15.955002
+    std_accel_smv > 6.346116 &&
+    max_magn_smv > 40.016196 &&
+    rms_gyro_x > 0.080934 &&
+    std_accel_smv > 9.013853 &&
+    mean_accel_y <= 1.713822 &&
+    rms_accel_x <= 7.903702 &&
+    max_magn_y > 10.306999 &&
+    max_gyro_x > 1.641793 &&
+    std_gyro_z <= 2.043123
   ) {
     return 'a';
   }
 
   if (
-    std_accel_y <= 1.086794 &&
+    std_accel_y <= 1.133082 &&
+    max_accel_y > -3.672817 &&
+    mean_magn_z <= 16.584473 &&
+    min_accel_x <= -0.383084 &&
+    min_gyro_smv <= 0.103071 &&
+    max_accel_y <= 0.590171 &&
+    max_magn_smv <= 63.847237 &&
+    max_gyro_z <= 0.078979 &&
+    max_gyro_x <= 0.088698
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_smv <= 6.346116 &&
     mean_accel_y > -4.94271 &&
-    mean_magn_z <= 9.0632 &&
-    max_accel_x <= 5.346416 &&
-    min_accel_x <= -0.639271 &&
-    min_gyro_smv <= 0.100092 &&
-    range_magn_x <= 0.646973 &&
-    mean_magn_z > -35.450001 &&
-    max_gyro_z > 0.008255
-  ) {
-    return 'f';
-  }
-
-  if (
-    std_accel_y <= 1.086794 &&
-    mean_accel_y > -4.94271 &&
-    mean_magn_z <= 9.0632 &&
-    max_accel_x <= 5.346416 &&
-    min_accel_x <= -0.639271 &&
-    min_gyro_smv <= 0.100092 &&
-    mean_magn_z <= -44.984886 &&
-    std_gyro_z <= 0.013017 &&
-    max_accel_y <= 2.229797 &&
-    max_accel_x <= -1.371878 &&
-    mean_magn_z > -57.96526
-  ) {
-    return 'e';
-  }
-
-  if (
-    std_accel_y <= 1.086794 &&
-    mean_accel_y > -4.94271 &&
-    mean_magn_z <= 9.0632 &&
-    max_accel_x <= 5.346416 &&
-    min_accel_x <= -0.639271 &&
-    mean_magn_z > -43.296444 &&
-    min_gyro_smv <= 0.100092 &&
-    std_gyro_z > 0.027695 &&
-    range_accel_x > 0.541092 &&
-    mean_accel_y <= 7.208702 &&
-    mean_accel_z <= 9.471462 &&
-    max_magn_smv <= 47.480663 &&
-    mean_accel_z > -1.673667 &&
-    mean_accel_smv > 9.943008 &&
-    min_accel_z > 3.102737 &&
-    max_magn_y <= 18.932999 &&
-    range_magn_z <= 7.14 &&
-    max_magn_smv > 22.107692
-  ) {
-    return 'e';
-  }
-
-  if (
-    entropy_accel <= 1.495163 &&
-    mean_accel_y <= -4.94271 &&
-    min_accel_z > 4.285752 &&
-    min_magn_y <= -3.353882
-  ) {
-    return 'd';
-  }
-
-  if (
-    entropy_accel <= 1.495163 &&
-    min_accel_y <= -6.442797 &&
-    max_magn_smv > 39.716374 &&
-    sma_gyro <= 0.949211 &&
-    sma_magn <= 101.602783 &&
-    min_magn_y > 10.680008 &&
-    std_gyro_z <= 0.192542 &&
-    rms_accel_x > 2.123654 &&
-    max_accel_y > -8.454468
-  ) {
-    return 'c';
-  }
-
-  if (
-    std_accel_y <= 1.133082 &&
-    mean_accel_z > 0.654216 &&
-    sma_gyro <= 0.674599 &&
-    max_accel_x <= 6.284971 &&
-    mean_accel_y <= 7.596555 &&
-    std_accel_y <= 0.251136 &&
-    sma_gyro <= 0.024507 &&
-    mean_accel_smv > 9.818188 &&
-    min_magn_y > -7.403374
+    mean_magn_z <= 17.1863 &&
+    min_accel_z > 2.043451 &&
+    mean_accel_smv > 9.85819 &&
+    min_accel_y > 0.488417 &&
+    min_accel_x <= -0.433351 &&
+    min_gyro_smv <= 0.105186 &&
+    min_accel_z > 3.698486 &&
+    mean_accel_y > 3.328806 &&
+    max_magn_smv <= 54.401341 &&
+    max_accel_x > -1.309052 &&
+    std_accel_x <= 1.360489 &&
+    mean_magn_z > -30.933301 &&
+    mean_accel_y <= 6.83733 &&
+    max_gyro_x > 0.016602 &&
+    mean_magn_smv > 23.627874 &&
+    std_gyro_z > 0.011512 &&
+    mean_magn_z > 4.720501
   ) {
     return 'e';
   }
 
   if (
     std_accel_y <= 1.133082 &&
-    mean_accel_z > 0.654216 &&
-    std_accel_y <= 0.251136 &&
-    mean_magn_z <= -47.940369 &&
-    min_accel_x <= -3.098191 &&
-    std_magn_z > 0.509883
-  ) {
-    return 'e';
-  }
-
-  if (
-    std_accel_y <= 1.133082 &&
-    mean_accel_z > 0.654216 &&
-    std_accel_y <= 0.251136 &&
-    mean_magn_smv <= 53.291536 &&
-    mean_magn_z <= 10.495605 &&
-    mean_accel_smv <= 9.804566 &&
-    min_accel_x > -7.851785 &&
-    max_accel_x <= 4.828735 &&
-    min_accel_z > 7.221848 &&
-    min_accel_x > -0.877475 &&
-    max_gyro_y > 0.023026 &&
-    std_accel_smv > 1.030067 &&
-    range_accel_x <= 1.066617
-  ) {
-    return 'f';
-  }
-
-  if (
-    std_accel_y <= 1.133082 &&
+    max_accel_y > -3.672817 &&
+    min_accel_z > 0.016205 &&
+    min_accel_x <= -0.383084 &&
     min_gyro_smv <= 0.098452 &&
-    mean_accel_z > 0.648083 &&
-    mean_accel_y <= 7.517065 &&
-    max_accel_x <= 6.268845 &&
-    mean_magn_z > 8.694 &&
-    max_gyro_x <= -0.003433 &&
-    mean_magn_smv <= 31.333612
-  ) {
-    return 'f';
-  }
-
-  if (
-    std_accel_y <= 1.133082 &&
-    min_gyro_smv <= 0.098452 &&
-    mean_accel_z > 0.648083 &&
-    mean_accel_y <= 7.517065 &&
-    min_accel_x <= 4.629189 &&
-    mean_magn_z > 9.0632 &&
-    max_accel_smv > 10.140501 &&
-    min_gyro_smv <= 0.000393 &&
-    mean_magn_z <= 55.633392
-  ) {
-    return 'd';
-  }
-
-  if (
-    std_accel_y <= 1.133082 &&
-    min_gyro_smv <= 0.098452 &&
-    mean_accel_z > 0.648083 &&
-    mean_accel_y <= 7.517065 &&
-    min_accel_x <= 4.629189 &&
-    min_accel_y <= -0.826553 &&
-    min_gyro_x > -0.318108 &&
-    max_magn_y > -58.434868 &&
-    mean_magn_z > -52.081604 &&
-    mean_magn_smv > 18.126957 &&
-    std_gyro_z > 0.010534 &&
-    max_magn_y <= 25.859999 &&
-    min_accel_z <= 7.35379
-  ) {
-    return 'e';
-  }
-
-  if (
-    std_accel_y <= 1.133082 &&
-    max_magn_smv <= 45.056034 &&
-    max_accel_x > 6.268845 &&
-    max_magn_smv > 20.534271 &&
-    std_accel_z <= 0.225269 &&
-    max_accel_x > 7.117962 &&
-    max_accel_smv <= 10.824789 &&
-    min_accel_x > 6.700173
-  ) {
-    return 'f';
-  }
-
-  if (
-    std_accel_y <= 1.133082 &&
-    min_gyro_smv <= 0.098452 &&
-    mean_magn_z <= 9.0632 &&
-    max_accel_x <= 6.225114 &&
+    mean_magn_z <= 8.664 &&
+    mean_magn_smv <= 48.544208 &&
     mean_accel_y > 3.504154 &&
-    mean_accel_y <= 7.722864 &&
-    rms_gyro_x > 0.019262 &&
-    mean_magn_smv <= 41.390273 &&
-    min_accel_x <= -0.245406 &&
-    std_accel_smv > 3.501227 &&
-    std_gyro_z > 0.022208 &&
-    rms_accel_x <= 1.830544 &&
-    range_magn_z <= 3.489998 &&
-    range_accel_z > 1.898602 &&
-    mean_magn_smv > 21.409592 &&
-    std_accel_smv > 4.271984 &&
-    range_magn_z <= 3.379822 &&
-    range_magn_z > 1.689148
+    max_accel_x > -1.175553 &&
+    mean_accel_smv > 9.824539 &&
+    range_accel_z <= 7.540538 &&
+    std_gyro_z > 0.011527 &&
+    mean_accel_z > 6.589284 &&
+    mean_magn_z > -30.933301 &&
+    max_magn_smv > 21.929205 &&
+    min_accel_x <= -0.66082 &&
+    std_gyro_y <= 0.317376 &&
+    std_magn_z <= 0.611674 &&
+    max_accel_z <= 10.953807
   ) {
     return 'e';
   }
 
   if (
-    entropy_accel <= 1.495163 &&
-    min_accel_z > 4.100723 &&
-    min_accel_x > 4.629189 &&
-    max_accel_y > -0.071826 &&
-    max_accel_y <= 3.871542
-  ) {
-    return 'd';
-  }
-
-  if (
-    entropy_accel <= 1.495163 &&
-    min_accel_z > 4.100723 &&
-    mean_magn_z > 8.88 &&
-    max_accel_y > 0.010774 &&
-    mean_accel_y <= 7.369669 &&
-    min_gyro_smv > 0.09032 &&
-    max_gyro_x <= 1.64728 &&
-    mean_magn_z > 10.976257 &&
-    max_accel_z > 7.32506
-  ) {
-    return 'd';
-  }
-
-  if (
-    entropy_accel <= 1.495163 &&
-    min_accel_z > 4.100723 &&
-    mean_magn_z > 8.88 &&
-    min_accel_x <= 3.932373 &&
-    mean_accel_y <= 7.369669 &&
-    min_gyro_smv <= 0.105241 &&
-    max_accel_smv > 10.156478 &&
-    std_magn_z <= 3.490639 &&
-    min_magn_y <= -28.893997 &&
-    mean_magn_z <= 22.493999
+    std_accel_y <= 1.086676 &&
+    mean_accel_y > -4.939118 &&
+    min_accel_z > 0.080856 &&
+    std_accel_smv <= 3.532655 &&
+    mean_magn_z <= -47.842407 &&
+    range_magn_x > 1.147842 &&
+    mean_magn_smv <= 236.536665 &&
+    min_gyro_z > -0.347107 &&
+    range_accel_y > 0.130484 &&
+    range_accel_y <= 1.12767
   ) {
     return 'e';
   }
 
   if (
-    entropy_accel <= 1.495163 &&
-    min_accel_z > 4.100723 &&
-    mean_magn_z <= 8.898621 &&
-    mean_accel_z <= 8.79058 &&
-    min_magn_y > -39.416504 &&
-    mean_accel_smv > 9.841786 &&
-    rms_gyro_x <= 0.013195 &&
-    min_accel_y <= 4.710592
-  ) {
-    return 'd';
-  }
-
-  if (
-    entropy_accel <= 1.495163 &&
-    mean_magn_z <= 9.0632 &&
-    min_gyro_smv <= 0.093285 &&
-    min_accel_z > 4.103787 &&
-    mean_accel_z <= 8.79058 &&
-    mean_accel_smv > 9.841786 &&
-    mean_magn_smv <= 9.093844 &&
-    std_accel_z <= 0.948196
+    max_magn_smv <= 43.967482 &&
+    min_accel_z > -0.270553 &&
+    std_accel_smv <= 3.223152 &&
+    mean_accel_smv <= 9.862862 &&
+    sma_gyro > 0.029346 &&
+    max_accel_x > 5.747849 &&
+    mean_magn_smv > 17.261709 &&
+    max_accel_x > 7.108602
   ) {
     return 'f';
   }
 
   if (
-    entropy_accel <= 1.495163 &&
-    mean_magn_z <= 9.0632 &&
-    min_gyro_smv <= 0.093285 &&
-    min_accel_z > 4.103787 &&
-    mean_accel_z <= 8.79058 &&
-    mean_accel_smv > 9.841786 &&
-    min_magn_y > -39.303589 &&
-    max_accel_x > -0.921768 &&
-    rms_accel_z > 7.199872 &&
-    min_accel_x <= -0.578308 &&
-    range_accel_x <= 2.705531 &&
-    std_gyro_z > 0.012471 &&
-    range_magn_z <= 4.167175 &&
-    max_magn_smv > 22.859041
-  ) {
-    return 'e';
-  }
-
-  if (
-    std_accel_y <= 1.133082 &&
-    min_gyro_smv <= 0.084542 &&
-    mean_magn_z <= 9.0632 &&
-    rms_accel_z > 1.976101 &&
-    max_magn_smv <= 53.665796 &&
-    mean_accel_z <= 4.697542 &&
-    range_accel_x <= 1.503559 &&
-    mean_accel_z > -8.916228 &&
-    rms_accel_x > 2.729039 &&
-    mean_accel_smv > 9.785868 &&
-    mean_accel_smv <= 10.037055
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.682567 &&
-    mean_magn_z <= 8.77182 &&
-    mean_accel_smv <= 9.877879 &&
-    max_magn_smv <= 49.67394 &&
-    std_gyro_z <= 0.022335 &&
-    max_gyro_y > 0.037935 &&
-    min_accel_z > 7.301118 &&
-    std_magn_smv <= 17.519809 &&
-    range_magn_z > 1.449585
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.682567 &&
-    mean_magn_z <= 6.8923 &&
-    rms_accel_z <= 8.747181 &&
-    min_magn_y > -35.34 &&
-    mean_accel_smv > 9.855822 &&
-    sma_gyro > 1.829965 &&
-    min_accel_y > 4.501892
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.682567 &&
-    mean_magn_z <= 6.8923 &&
-    rms_accel_z <= 8.747181 &&
-    min_magn_y > -35.34 &&
-    mean_accel_smv > 9.855822 &&
-    max_accel_x > -1.142034 &&
-    std_gyro_y <= 0.466607 &&
-    std_gyro_z > 0.036399 &&
-    sma_magn > 15.311101 &&
-    min_accel_y > 2.248489 &&
-    mean_accel_z > 7.03904 &&
-    mean_magn_z > -39.577332 &&
-    min_accel_x > -3.804503 &&
-    min_accel_x <= -0.739831 &&
-    range_magn_y <= 3.189659 &&
-    std_gyro_z > 0.072969
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.682567 &&
-    min_gyro_smv <= 0.063293 &&
-    max_magn_smv > 85.924291 &&
-    mean_magn_z > -55.223351 &&
-    range_magn_z <= 10.418999
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.682567 &&
-    mean_magn_z <= 9.0632 &&
-    mean_accel_z <= 8.800726 &&
-    min_magn_y > -35.131645 &&
-    mean_magn_smv <= 41.390273 &&
-    std_accel_z <= 0.535552 &&
-    max_accel_x > 0.574626 &&
-    mean_accel_smv <= 9.866196 &&
-    rms_gyro_x > 0.008681 &&
-    range_accel_y <= 1.778892 &&
-    max_accel_y <= 7.850827 &&
-    std_accel_z <= 0.32087 &&
-    mean_accel_y > 4.82614
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.609786 &&
-    mean_accel_smv <= 10.52323 &&
-    rms_gyro_x <= 0.019262 &&
-    mean_accel_y > 1.525944 &&
-    max_magn_smv <= 19.974233 &&
-    min_accel_x <= -0.529135
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.609786 &&
-    mean_accel_smv <= 10.52323 &&
-    rms_gyro_x <= 0.019262 &&
-    mean_accel_y > 0.71012 &&
-    min_accel_y <= 4.072769 &&
-    std_gyro_y <= 0.060015 &&
-    std_magn_smv > 3.43368 &&
-    min_gyro_z > -0.02507 &&
-    max_magn_smv > 33.11631
+    max_magn_smv <= 43.967482 &&
+    min_accel_z > -0.270553 &&
+    std_accel_smv <= 3.223152 &&
+    max_accel_x > 5.231491 &&
+    max_accel_z > 6.178237 &&
+    max_gyro_y <= 0.253582
   ) {
     return 'd';
   }
 
   if (
-    max_magn_smv <= 44.609786 &&
-    mean_accel_smv <= 10.52323 &&
-    max_magn_y <= 23.039999 &&
+    max_magn_smv <= 43.967482 &&
+    min_accel_z > -0.270553 &&
+    std_accel_smv <= 3.222427 &&
+    min_accel_y <= -1.884294 &&
+    max_accel_z <= 6.780106 &&
+    max_magn_y <= 26.033592
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 43.967482 &&
+    std_accel_smv <= 3.222427 &&
+    mean_accel_z <= -8.914195 &&
+    std_accel_y > 0.149586 &&
+    max_accel_x <= 3.058593
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 43.967482 &&
+    std_accel_smv <= 3.222427 &&
+    max_magn_y <= 28.33252 &&
+    mean_accel_smv <= 9.886332 &&
+    mean_magn_z <= 5.352 &&
+    min_accel_x > -0.33493 &&
+    std_accel_z <= 0.468642 &&
+    sma_magn <= 50.669999 &&
+    mean_magn_z > -19.4145 &&
+    mean_accel_z <= 8.76137
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 43.967482 &&
+    max_magn_y <= 20.16 &&
     min_accel_z > -1.127669 &&
-    mean_accel_y <= 7.676045 &&
-    rms_gyro_x > 0.020293 &&
-    mean_magn_z <= 5.226 &&
-    mean_accel_z <= 8.672063 &&
-    std_accel_smv <= 3.205298 &&
-    min_accel_x <= -8.407239 &&
-    min_accel_smv <= 9.443235
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.682567 &&
-    max_magn_smv <= 49.100167 &&
-    sma_gyro > 0.041824 &&
-    min_accel_y > 2.263947 &&
-    mean_magn_z <= 7.55 &&
-    max_accel_x <= -1.175553 &&
-    max_accel_z <= 10.02916 &&
-    std_magn_smv > 4.959978 &&
-    mean_magn_z <= 2.4029 &&
-    min_magn_y <= 6.318665 &&
-    max_accel_x <= -1.46166
+    std_accel_y <= 0.251136 &&
+    mean_accel_smv <= 9.870816 &&
+    min_accel_z > 8.652909 &&
+    mean_magn_z <= 6.10878 &&
+    range_accel_x > 0.093374 &&
+    min_accel_x > -1.17868
   ) {
     return 'f';
   }
 
   if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.682567 &&
-    min_gyro_smv <= 0.063293 &&
-    mean_magn_z <= 5.91 &&
-    mean_magn_z <= -54.245758 &&
-    min_accel_y <= 3.039439 &&
-    std_magn_z <= 1.21328
+    max_magn_smv <= 43.967482 &&
+    max_accel_smv <= 13.930034 &&
+    max_magn_y <= 20.16 &&
+    rms_gyro_x > 0.019239 &&
+    mean_magn_z <= 6.9147 &&
+    std_accel_smv > 3.204255 &&
+    mean_accel_y <= 7.69935 &&
+    mean_accel_y > 3.509289 &&
+    std_gyro_z > 0.039165 &&
+    std_gyro_y <= 0.239913 &&
+    max_magn_smv > 23.234923 &&
+    min_accel_x <= -0.184359 &&
+    std_accel_x <= 1.466822 &&
+    std_gyro_y <= 0.046096 &&
+    min_gyro_smv > 0.001685
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 43.967482 &&
+    max_accel_smv <= 13.930034 &&
+    max_magn_y <= 17.879999 &&
+    mean_magn_z <= 6.9147 &&
+    sma_gyro > 0.049617 &&
+    std_gyro_z <= 0.02381 &&
+    mean_accel_z <= 8.839393 &&
+    range_accel_z <= 3.033546 &&
+    max_magn_y <= -27.252197 &&
+    min_gyro_smv > 0.003718
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 43.967482 &&
+    max_accel_smv <= 13.930034 &&
+    max_magn_y <= 17.879999 &&
+    mean_magn_z <= 6.9147 &&
+    min_accel_z <= 8.309723 &&
+    std_gyro_z > 0.023921 &&
+    mean_accel_y <= 7.792646 &&
+    range_accel_z <= 1.142044 &&
+    max_gyro_y <= 0.065445 &&
+    max_accel_z > 0.033371 &&
+    range_magn_x <= 3.679001 &&
+    mean_accel_smv > 9.807283
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 43.967482 &&
+    max_accel_smv <= 13.930034 &&
+    max_magn_y <= 17.879999 &&
+    rms_gyro_x > 0.019239 &&
+    mean_magn_z <= 6.864 &&
+    max_accel_smv > 10.642138 &&
+    mean_accel_y <= 7.718262 &&
+    max_gyro_x <= 0.020538 &&
+    min_gyro_smv > 0.001992 &&
+    min_gyro_z > -0.044876
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_accel_z > 4.194769 &&
+    max_accel_y <= -2.571373 &&
+    max_magn_y <= 33.5
   ) {
     return 'd';
   }
 
   if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.682567 &&
-    min_gyro_smv <= 0.063293 &&
-    mean_magn_z <= 5.91 &&
-    max_accel_y > 5.176264 &&
-    min_magn_y > -39.761353 &&
-    mean_accel_smv <= 9.977562 &&
-    max_magn_y <= -27.700806 &&
-    range_magn_y > 2.316284
+    min_accel_z > 4.194769 &&
+    max_accel_z <= 11.176475 &&
+    max_magn_smv <= 51.157624 &&
+    min_accel_y > 2.263947 &&
+    max_accel_smv > 10.642138 &&
+    rms_gyro_x > 0.02226 &&
+    max_accel_x <= -1.251587 &&
+    mean_magn_z <= 6.882 &&
+    max_accel_z <= 10.075998 &&
+    mean_magn_smv <= 36.79213 &&
+    max_gyro_z <= 0.107268
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_accel_z > 4.194769 &&
+    max_accel_z <= 11.176475 &&
+    max_magn_smv <= 51.157624 &&
+    min_accel_y > 2.263947 &&
+    max_accel_smv > 10.642138 &&
+    rms_gyro_x > 0.022567 &&
+    mean_magn_z > -0.2285 &&
+    max_magn_y <= 8.178001 &&
+    mean_magn_z <= 20.3738 &&
+    max_magn_smv > 21.163495 &&
+    max_gyro_x > 0.008186 &&
+    range_magn_z <= 11.400002 &&
+    min_gyro_smv <= 0.062789 &&
+    min_gyro_y > -0.413406 &&
+    rms_accel_x <= 2.03175 &&
+    range_magn_x > 2.849001
   ) {
     return 'e';
   }
 
   if (
     min_accel_z > 4.09421 &&
-    std_accel_z <= 1.682567 &&
-    mean_magn_z <= 5.338745 &&
-    min_gyro_smv <= 0.063293 &&
-    mean_accel_smv <= 9.866246 &&
-    min_accel_z > 7.910684 &&
-    max_magn_y <= -35.838318 &&
-    max_gyro_x <= 0.08254
+    max_accel_z <= 11.176475 &&
+    max_magn_smv <= 48.473959 &&
+    mean_accel_smv <= 9.809179 &&
+    std_accel_z <= 0.417177 &&
+    min_accel_y <= 6.273132 &&
+    min_accel_z <= 8.875306 &&
+    max_magn_y > -22.514343 &&
+    range_magn_z > 3.189087 &&
+    std_gyro_z <= 0.05113 &&
+    rms_gyro_x > 0.018722
   ) {
     return 'f';
   }
 
   if (
     min_accel_z > 4.09421 &&
-    std_accel_z <= 1.682567 &&
-    min_magn_y > -34.410095 &&
-    min_gyro_smv <= 0.115214 &&
-    mean_magn_z <= 6.03 &&
-    mean_accel_z <= 8.699598 &&
-    mean_magn_smv <= 41.390273 &&
-    energy_accel > 9652.388274 &&
-    range_magn_y <= 0.737953 &&
-    mean_accel_y > 3.841018
+    std_accel_z <= 1.741032 &&
+    max_magn_smv <= 48.463844 &&
+    rms_gyro_x > 0.019239 &&
+    mean_magn_z <= 10.674 &&
+    min_accel_y > 2.253013 &&
+    mean_accel_smv > 9.877708 &&
+    min_accel_x <= -0.232864 &&
+    max_accel_y > 5.380968 &&
+    range_magn_y <= 17.289734 &&
+    mean_magn_z <= 0.78 &&
+    min_gyro_smv <= 0.126415 &&
+    range_accel_y <= 4.972908 &&
+    rms_accel_x <= 1.805979 &&
+    std_accel_y > 0.348171 &&
+    mean_accel_y <= 6.59435 &&
+    mean_accel_y > 4.408099
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 43.964771 &&
+    mean_accel_y > 0.814116 &&
+    max_accel_smv <= 13.619992 &&
+    std_gyro_z > 0.014056 &&
+    mean_magn_z <= 6.9147 &&
+    max_magn_y <= 19.92 &&
+    mean_accel_y <= 7.792646 &&
+    mean_accel_y > 3.509289 &&
+    mean_accel_smv <= 9.974562 &&
+    std_accel_smv <= 3.133493 &&
+    max_gyro_y > 0.065582 &&
+    mean_accel_smv <= 9.864185 &&
+    mean_accel_z > 1.717174 &&
+    max_accel_z <= 7.228095 &&
+    max_accel_y <= 7.846588
   ) {
     return 'f';
   }
 
   if (
+    min_accel_z > 4.194769 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.103153 &&
+    mean_magn_z > 9.852 &&
+    max_gyro_x <= -0.003433 &&
+    mean_accel_y > 3.371156
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_accel_z > 4.194769 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.103153 &&
+    mean_magn_z > 9.852 &&
+    max_accel_z > 8.001666 &&
+    min_accel_x > -0.514753 &&
+    range_magn_x <= 22.927002 &&
+    sma_magn > 47.573999
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 4.194769 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.103153 &&
+    mean_magn_z > 9.882 &&
+    max_accel_x <= 4.437653 &&
+    max_accel_z > 8.001666 &&
+    min_accel_x <= -0.128204 &&
+    max_magn_smv <= 135.499355 &&
+    mean_magn_z > 20.8754 &&
+    std_gyro_y > 0.031601
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z > 4.194769 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.103153 &&
+    max_gyro_y > 0.037323 &&
+    std_gyro_z <= 0.03622 &&
+    mean_accel_smv <= 9.921093 &&
+    mean_accel_z > 8.461128 &&
+    mean_magn_smv <= 54.23805 &&
+    max_accel_x > -0.756591 &&
+    max_accel_y <= 5.042984 &&
+    sma_gyro > 0.051019 &&
+    min_accel_x > -0.972046
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 43.102347 &&
+    mean_accel_y > 0.814116 &&
+    min_accel_z > -1.096817 &&
+    rms_gyro_x > 0.019239 &&
+    mean_magn_z <= 9.8378 &&
+    max_accel_smv <= 13.459519 &&
+    mean_accel_y > 3.28686 &&
+    mean_accel_y <= 7.722864 &&
+    max_magn_y > 18.569946 &&
+    mean_magn_z > -16.596 &&
+    min_accel_y <= 6.158676 &&
+    mean_accel_smv <= 10.049978 &&
+    mean_magn_z > -12.227051
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 43.964771 &&
+    mean_accel_y > 0.814116 &&
+    max_accel_smv <= 13.619992 &&
+    std_gyro_z > 0.014056 &&
+    mean_magn_z <= 6.9147 &&
+    min_accel_z <= 8.354567 &&
+    min_accel_y <= 7.145096 &&
+    mean_accel_y > 3.82785 &&
+    range_accel_z <= 1.126472 &&
+    mean_accel_smv > 9.583026 &&
+    mean_accel_smv <= 9.818929 &&
+    max_gyro_y > 0.093992 &&
+    std_accel_smv <= 3.802134 &&
+    range_magn_z > 5.639997
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 43.1915 &&
+    max_magn_y <= 20.172119 &&
+    min_accel_z > -1.458113 &&
+    mean_magn_z > 9.732 &&
+    max_accel_smv > 10.136158 &&
+    max_magn_y <= -27.558708
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 43.964771 &&
+    mean_accel_y > 0.814116 &&
+    max_accel_smv <= 13.619992 &&
+    std_gyro_z > 0.014056 &&
+    max_accel_x <= 6.553497 &&
+    mean_magn_z <= 6.9147 &&
+    min_accel_y <= 7.145096 &&
+    min_accel_z <= 8.334471 &&
+    std_gyro_y <= 0.207322 &&
+    max_magn_y <= 19.639778 &&
+    std_accel_x <= 1.329323 &&
+    range_accel_z <= 1.124078 &&
+    mean_accel_smv > 9.577045 &&
+    std_gyro_y > 0.015963 &&
+    max_accel_x > 0.59378 &&
+    rms_accel_x <= 4.501642 &&
+    max_gyro_x > 0.093059
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 43.089191 &&
+    max_magn_y <= 20.172119 &&
+    min_accel_z > -1.458113 &&
+    mean_magn_z <= 9.732 &&
+    std_gyro_z > 0.015993 &&
+    std_accel_smv <= 6.710926 &&
+    min_accel_z <= 8.334471 &&
+    min_accel_y > 7.204803 &&
+    mean_magn_z > -14.52306
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 43.089191 &&
+    max_magn_y <= 20.172119 &&
+    min_accel_z > -1.458113 &&
+    mean_magn_z <= 9.732 &&
+    std_gyro_z > 0.015993 &&
+    std_accel_smv <= 6.710926 &&
+    min_accel_z <= 8.334471 &&
+    mean_accel_smv <= 9.949718 &&
+    mean_accel_smv <= 9.453665 &&
+    mean_accel_smv > 8.633824 &&
+    std_accel_y > 0.248379 &&
+    std_gyro_y <= 0.527756
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 4.194769 &&
+    std_accel_smv <= 6.734085 &&
+    min_gyro_smv <= 0.103153 &&
+    mean_magn_z <= -55.242634 &&
+    mean_accel_y <= 5.928522 &&
+    max_magn_y <= 29.843002
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z > 4.194769 &&
+    std_accel_smv <= 6.734085 &&
+    min_gyro_smv <= 0.103153 &&
+    mean_accel_z <= 8.689542 &&
+    max_magn_y > 35.476002 &&
+    max_accel_x > -1.19351 &&
+    max_accel_z > 7.403098
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_accel_z > 4.194769 &&
+    std_accel_smv <= 6.734085 &&
+    min_gyro_smv <= 0.103153 &&
+    mean_accel_z <= 8.689542 &&
+    max_magn_smv <= 51.081045 &&
+    min_accel_y > 2.015918 &&
+    mean_magn_z <= -0.204 &&
+    max_gyro_z > 0.010898 &&
+    mean_accel_smv > 9.975132 &&
+    max_accel_x <= 1.483208 &&
+    min_accel_smv > 6.25456 &&
+    std_gyro_z > 0.094459
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 43.099214 &&
+    max_magn_y <= 20.172119 &&
+    min_accel_z > -1.179144 &&
+    mean_magn_z > 9.882 &&
+    max_accel_smv > 10.010175 &&
+    mean_magn_z <= 24.760616 &&
+    max_magn_y <= 7.745552 &&
+    mean_magn_z <= 19.6391 &&
+    max_magn_y > -17.080688 &&
+    max_gyro_y > 0.240227
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 43.964771 &&
+    mean_accel_y > 0.814116 &&
+    max_accel_smv <= 13.619992 &&
+    std_gyro_z > 0.014056 &&
+    mean_magn_z <= 6.9147 &&
+    min_accel_z <= 8.354567 &&
+    mean_accel_y <= 7.69935 &&
+    mean_accel_y > 3.82785 &&
+    std_gyro_y <= 0.239837 &&
+    std_accel_x <= 1.329323 &&
+    max_accel_x > -0.914613 &&
+    mean_magn_smv > 20.901661 &&
+    max_magn_y <= 20.16 &&
+    std_gyro_z > 0.06465 &&
+    min_accel_x <= -0.751779 &&
+    range_accel_y <= 3.902557 &&
+    std_gyro_y <= 0.122011 &&
+    sma_gyro > 0.223936
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 43.099214 &&
+    max_magn_y <= 20.172119 &&
+    min_accel_z > -1.179144 &&
+    rms_gyro_x > 0.019239 &&
+    max_accel_smv <= 13.459519 &&
+    mean_accel_z <= 8.801594 &&
+    max_accel_x <= 6.290146 &&
+    mean_accel_z <= 1.891238 &&
+    min_accel_y <= 5.190629 &&
+    mean_magn_z > -25.349999
+  ) {
+    return 'e';
+  }
+
+  if (
     min_accel_z > 4.09421 &&
-    std_accel_z <= 1.679321 &&
-    min_magn_y > -34.410095 &&
-    min_gyro_smv <= 0.115214 &&
-    mean_magn_z <= 6.03 &&
-    mean_accel_z <= 8.699598 &&
-    mean_magn_smv <= 41.390273 &&
-    range_magn_z <= 2.888489 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.103153 &&
+    rms_gyro_x > 0.030129 &&
+    max_magn_smv <= 51.157624 &&
+    mean_accel_y > 3.286028 &&
+    mean_magn_smv > 21.826087 &&
+    max_magn_y <= -29.514503 &&
+    max_magn_y > -39.463806 &&
+    range_magn_x <= 14.418999
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 4.173221 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.103153 &&
+    rms_gyro_x > 0.030129 &&
+    max_magn_smv <= 51.157624 &&
+    mean_accel_y > 3.286028 &&
+    mean_magn_smv > 21.826087 &&
+    mean_magn_z <= -33.162 &&
+    max_magn_y > 11.274002 &&
+    mean_accel_y > 4.690241
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 4.173221 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.103153 &&
+    rms_gyro_x > 0.030129 &&
+    max_magn_smv <= 51.157624 &&
+    mean_magn_z <= -33.162 &&
+    sma_magn > 56.5066 &&
+    max_magn_y <= 11.274002 &&
+    mean_magn_smv > 42.563091
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 41.596358 &&
+    max_accel_y > 1.593341 &&
+    rms_gyro_x <= 0.019239 &&
+    max_accel_y <= 2.229797 &&
+    mean_magn_smv <= 31.371313
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 41.596358 &&
+    max_accel_y > 1.593341 &&
+    sma_gyro <= 0.040918 &&
+    min_gyro_smv > 0.000389 &&
+    mean_accel_y <= 4.952406 &&
+    max_accel_y > 2.300898 &&
+    range_magn_x > 0.695929 &&
+    min_gyro_z <= 0.003299 &&
+    max_gyro_z <= 0.036713 &&
+    std_accel_x > 0.086994 &&
+    mean_accel_smv > 9.656936
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 41.596358 &&
+    max_accel_y > 1.593341 &&
+    std_accel_smv <= 6.923187 &&
+    min_gyro_smv > 0.000378 &&
+    min_accel_z > -0.442941 &&
+    max_accel_x <= -1.3414 &&
+    max_magn_y <= 12.609001 &&
+    mean_accel_z <= 8.666531 &&
+    min_accel_smv > 8.441403 &&
+    sma_magn > 40.871999
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_accel_z > 4.173221 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.051265 &&
+    std_gyro_z <= 0.006285 &&
+    max_magn_smv <= 63.417628 &&
+    sma_gyro <= 0.018254 &&
+    min_accel_y <= 4.260482
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z > 4.173221 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.051265 &&
+    max_accel_smv <= 10.052913 &&
+    mean_accel_z <= 9.887694 &&
+    mean_accel_smv <= 9.803238 &&
+    range_accel_y <= 0.948133 &&
+    range_accel_x > 0.065841 &&
+    min_gyro_smv > 0.000466 &&
+    range_magn_z <= 4.914001 &&
+    max_accel_x > -0.608146
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_accel_z > 4.173221 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.051265 &&
+    max_magn_smv <= 55.319335 &&
+    mean_accel_z <= 8.80336 &&
+    range_magn_z <= 3.483582 &&
+    range_magn_z <= 0.709915 &&
+    sma_magn > 28.373999
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_accel_z > 4.173221 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.051265 &&
+    mean_accel_z <= 8.73309 &&
+    mean_magn_smv <= 46.250683 &&
+    range_magn_z <= 3.483582 &&
+    range_magn_y > 0.712395 &&
+    max_gyro_z <= 0.005508 &&
+    rms_gyro_x <= 0.019075
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z > 4.173221 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.051265 &&
+    max_magn_smv <= 55.319335 &&
+    mean_accel_z <= 8.73309 &&
+    range_magn_z <= 3.483582 &&
+    range_magn_y > 0.712395 &&
+    mean_magn_smv > 21.828169 &&
+    max_magn_y <= 20.327995 &&
+    range_magn_x <= 11.248779 &&
+    mean_magn_z > 3.452301 &&
+    max_magn_y <= -0.169373 &&
+    mean_magn_z <= 18.1624
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 4.173221 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.103153 &&
+    mean_magn_z <= 1.8852 &&
+    mean_accel_z <= 8.718991 &&
+    mean_accel_y > 3.208589 &&
+    max_magn_y > -27.877235 &&
+    min_accel_x <= -4.103394 &&
+    mean_magn_smv <= 39.052302 &&
+    std_gyro_z <= 0.08421
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_accel_z > 4.173221 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.051265 &&
+    mean_magn_z <= 3.4725 &&
+    mean_accel_z <= 8.73309 &&
+    max_magn_y <= 27.146 &&
+    sma_magn <= 74.3933 &&
+    std_gyro_y <= 0.224309 &&
+    mean_magn_z <= -33.085175 &&
+    max_magn_smv > 39.673794 &&
+    sma_magn > 54.665999 &&
+    std_gyro_z <= 0.053815
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 41.460738 &&
+    max_accel_y > 1.593341 &&
+    std_accel_smv <= 6.923187 &&
+    mean_magn_z <= 6.9147 &&
+    mean_magn_smv <= 38.954426 &&
+    mean_accel_smv <= 9.966647 &&
+    mean_accel_y > 3.286028 &&
+    min_accel_x <= -0.2742 &&
+    std_accel_y <= 1.155217 &&
+    min_gyro_y > -0.002869 &&
+    min_accel_z > 5.905029 &&
+    max_gyro_z <= 0.152634
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 41.460738 &&
+    max_accel_y > 1.593341 &&
+    std_accel_smv <= 6.923187 &&
+    mean_magn_z <= 6.9147 &&
+    mean_magn_smv <= 38.954426 &&
+    mean_accel_smv <= 9.966647 &&
+    mean_accel_y > 3.286028 &&
+    min_accel_x <= -0.288501 &&
+    std_accel_y <= 1.155217 &&
+    std_gyro_y <= 0.239837 &&
+    std_accel_x > 1.286986 &&
+    min_gyro_smv <= 0.033847 &&
+    min_accel_x <= -1.561067 &&
+    range_magn_y <= 5.90992
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 41.460738 &&
+    max_accel_y > 1.593341 &&
+    std_accel_smv <= 6.923187 &&
+    mean_magn_z <= 6.9147 &&
+    mean_magn_smv <= 38.954426 &&
+    mean_accel_smv <= 9.966647 &&
+    mean_accel_y > 3.286028 &&
+    min_accel_x <= -0.288501 &&
+    std_accel_y <= 1.155217 &&
+    std_gyro_y <= 0.239837 &&
+    sma_gyro > 0.402925 &&
+    mean_magn_smv > 14.464848 &&
+    mean_accel_smv <= 9.949315 &&
+    std_gyro_z <= 0.320597
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 4.194769 &&
+    std_accel_smv <= 6.630677 &&
+    min_gyro_smv <= 0.052778 &&
+    mean_magn_z <= 3.4725 &&
+    mean_accel_z <= 8.73309 &&
+    max_magn_y <= 27.146 &&
+    sma_magn <= 74.3933 &&
+    std_gyro_y <= 0.224309 &&
+    sma_magn > 17.38208 &&
+    min_gyro_z <= -0.015129 &&
+    max_gyro_y <= 0.056139 &&
+    max_accel_x > -0.837996 &&
+    range_accel_x <= 2.104507 &&
+    max_accel_x <= -0.274765 &&
+    max_accel_z <= 9.445126 &&
+    std_accel_z <= 0.43589
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 41.460738 &&
+    max_accel_y > 1.593341 &&
+    std_accel_smv <= 6.923187 &&
+    mean_magn_z <= 6.9147 &&
+    mean_magn_smv <= 38.954426 &&
+    mean_accel_smv <= 9.966647 &&
+    mean_accel_y > 3.286028 &&
+    min_accel_x <= -0.2742 &&
+    std_accel_y <= 1.155217 &&
+    mean_accel_smv > 9.491723 &&
+    range_magn_z <= 3.372192 &&
     range_magn_y <= 0.622368 &&
     mean_magn_z > -26.459999 &&
-    mean_accel_smv <= 9.875683
+    max_accel_x > -0.573395
   ) {
     return 'f';
   }
 
   if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.679321 &&
-    min_gyro_smv <= 0.063293 &&
-    mean_magn_z <= 5.91 &&
-    max_accel_y > 5.093664 &&
-    min_magn_y > -38.490486 &&
-    mean_magn_smv <= 41.390273 &&
-    range_magn_z <= 2.64492 &&
-    min_gyro_z <= -0.015129 &&
-    max_accel_x > -1.127243 &&
-    max_accel_x <= 2.135628 &&
-    range_magn_z > 0.819206 &&
-    max_accel_z > 9.490616 &&
-    min_accel_z <= 8.303091 &&
-    mean_magn_z <= -3.162
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.679321 &&
-    min_magn_y > -34.410095 &&
-    min_gyro_smv <= 0.115214 &&
-    mean_magn_z <= 6.03 &&
-    mean_accel_z <= 8.699598 &&
-    mean_magn_smv <= 41.390273 &&
-    range_magn_z <= 2.888489 &&
-    std_gyro_z > 0.011399 &&
-    max_gyro_y <= 0.078425 &&
-    range_accel_x > 0.20231 &&
-    range_magn_y > 1.008606 &&
-    min_gyro_z <= -0.006836 &&
-    rms_accel_x <= 1.318547 &&
-    mean_accel_smv > 9.457366 &&
-    range_magn_x <= 4.277
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.679321 &&
-    min_magn_y > -34.410095 &&
-    min_gyro_smv <= 0.115214 &&
-    mean_magn_z <= 5.9783 &&
-    mean_accel_smv <= 9.877879 &&
-    max_gyro_z > 0.028735 &&
-    mean_accel_smv > 9.461976 &&
-    min_accel_z > 7.912837 &&
-    mean_magn_smv <= 21.357458 &&
-    sma_magn <= 33.42041 &&
-    mean_magn_z > -11.335754
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.679321 &&
-    min_magn_y > -34.410095 &&
-    min_gyro_smv <= 0.115214 &&
-    mean_magn_z <= 5.9783 &&
-    mean_accel_z <= 8.800726 &&
-    mean_magn_smv <= 41.390273 &&
-    std_gyro_z > 0.036408 &&
-    std_gyro_y <= 0.222257 &&
-    max_magn_y <= 21.24 &&
-    std_gyro_y <= 0.068981 &&
-    max_gyro_y <= 0.199474 &&
-    range_magn_z > 3.891998 &&
-    max_gyro_x <= 0.164937 &&
-    std_gyro_y <= 0.044913
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    mean_accel_smv <= 10.52323 &&
-    mean_accel_y > 0.719305 &&
-    mean_accel_y <= 7.081068 &&
-    min_accel_z > -0.186753 &&
-    rms_gyro_x > 0.028941 &&
-    max_accel_y > 3.679001 &&
-    mean_magn_z <= 5.226 &&
-    std_gyro_z <= 0.039 &&
-    mean_accel_z <= 9.034128 &&
-    std_accel_x <= 1.356942 &&
-    max_accel_x <= -0.914585 &&
-    min_accel_z <= 8.303345 &&
-    max_gyro_z <= 0.068473
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.679321 &&
-    min_magn_y > -34.410095 &&
-    min_gyro_smv <= 0.115214 &&
-    mean_magn_z <= 5.9783 &&
-    rms_gyro_x > 0.030129 &&
-    rms_accel_z <= 9.193612 &&
-    mean_magn_smv <= 41.390273 &&
-    std_accel_z > 0.586604 &&
-    min_accel_x > -3.215511 &&
-    std_accel_y <= 1.42456 &&
-    mean_magn_z <= -0.0947 &&
-    max_accel_z > 8.309077 &&
-    min_gyro_y <= 0.001999 &&
-    max_accel_x > -0.498009 &&
-    min_accel_z <= 7.410281 &&
-    mean_accel_y <= 6.853094 &&
-    range_magn_z <= 11.340332 &&
-    mean_accel_smv <= 9.981935 &&
-    min_accel_x <= -0.29329 &&
-    max_gyro_z > 0.029126 &&
-    max_gyro_y <= 0.605988 &&
-    range_magn_z <= 3.379822
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.681088 &&
-    min_magn_y > -34.410095 &&
-    min_gyro_smv <= 0.115214 &&
-    mean_magn_z <= 5.9783 &&
-    mean_accel_z <= 8.800726 &&
-    mean_accel_smv > 9.823548 &&
-    range_magn_y <= 1.994324 &&
-    range_magn_y > 0.689888 &&
-    max_accel_smv <= 12.317462 &&
-    range_magn_y <= 1.924133 &&
-    max_gyro_z > 0.006104 &&
-    min_magn_y > -30.296997 &&
-    mean_magn_z > -17.280426
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.681088 &&
-    min_magn_y > -34.410095 &&
-    min_gyro_smv <= 0.115214 &&
-    mean_magn_z <= 5.9783 &&
-    mean_accel_smv <= 9.866104 &&
-    std_gyro_z <= 0.020879 &&
-    max_accel_x > -1.996185 &&
-    range_accel_x > 2.146393 &&
-    rms_gyro_x > 0.006658
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.609786 &&
-    mean_accel_smv <= 10.52323 &&
-    mean_accel_y > 0.719305 &&
-    mean_accel_y <= 7.122737 &&
-    rms_gyro_x > 0.033961 &&
-    mean_accel_z > 0.559046 &&
-    mean_magn_z <= 6.864 &&
-    std_accel_smv <= 3.22197 &&
-    std_accel_z > 0.107344 &&
-    rms_accel_z <= 8.750825 &&
-    mean_accel_smv <= 9.798276 &&
-    std_magn_z > 1.209297 &&
-    mean_magn_z <= 5.159912 &&
-    mean_magn_smv <= 29.62239
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    mean_accel_smv <= 10.52323 &&
-    max_magn_y <= 27.747002 &&
-    sma_gyro <= 0.05365 &&
-    min_gyro_z > 0.002932 &&
-    max_accel_x <= 0.986441
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    mean_accel_smv <= 10.52323 &&
-    mean_accel_y > 0.719305 &&
-    mean_accel_y <= 7.122737 &&
-    rms_gyro_x > 0.033961 &&
-    mean_accel_z > 0.559046 &&
-    mean_magn_z <= 6.864 &&
-    max_accel_smv <= 13.450864 &&
-    std_magn_smv > 5.321314 &&
-    min_accel_z <= 8.106767 &&
-    mean_accel_smv > 10.049531 &&
-    mean_magn_smv <= 40.177193 &&
-    min_accel_y > 2.256535 &&
-    range_accel_y > 0.676362 &&
-    range_accel_z > 1.843536 &&
-    range_accel_z <= 4.295197
-  ) {
-    return 'e';
-  }
-
-  if (
-    std_accel_smv > 7.052864 &&
-    std_magn_z > 0.836155 &&
-    mean_magn_smv > 39.161245 &&
-    std_gyro_z > 0.663399 &&
-    std_gyro_y <= 0.271184 &&
-    mean_accel_y <= 7.61331
-  ) {
-    return 'c';
-  }
-
-  if (
-    std_accel_smv > 7.052864 &&
-    std_magn_z > 0.836155 &&
-    mean_magn_smv > 39.161245 &&
-    std_gyro_z > 0.663399 &&
-    mean_magn_smv > 48.397008 &&
-    entropy_gyro > 2.088113 &&
-    min_gyro_smv > 0.030968 &&
-    max_gyro_y > 0.310242 &&
-    mean_magn_z <= -0.4351
-  ) {
-    return 'a';
-  }
-
-  if (
-    max_magn_smv <= 44.609786 &&
-    mean_accel_smv <= 10.52323 &&
-    max_magn_y <= 27.747002 &&
-    sma_gyro <= 0.042213 &&
-    mean_magn_z <= 24.551999 &&
-    mean_accel_y <= 6.897287 &&
-    rms_accel_z > 8.544116 &&
-    max_accel_smv > 10.207317 &&
-    mean_accel_y <= 4.915446 &&
-    std_gyro_z <= 0.012913 &&
-    std_magn_z <= 2.507461
-  ) {
-    return 'd';
-  }
-
-  if (
-    max_magn_smv <= 44.609786 &&
-    mean_accel_smv <= 10.52323 &&
-    mean_accel_y > 0.719305 &&
-    mean_accel_y <= 6.949862 &&
+    max_magn_smv <= 41.460738 &&
+    max_accel_y > 1.593341 &&
     std_accel_smv <= 6.923187 &&
-    max_accel_z > -8.256405 &&
-    mean_magn_z <= 5.226 &&
-    min_accel_x <= -0.584185 &&
-    max_accel_y > 3.757699 &&
-    std_magn_smv > 5.321314 &&
-    mean_accel_smv <= 9.45754 &&
-    mean_accel_smv > 8.812194 &&
-    mean_magn_smv > 19.837713
+    mean_magn_z <= 6.9147 &&
+    mean_magn_smv <= 38.954426 &&
+    mean_accel_smv <= 9.966647 &&
+    mean_accel_y > 3.286028 &&
+    min_accel_x <= -0.2742 &&
+    std_accel_y <= 1.155217 &&
+    mean_accel_smv > 9.491723 &&
+    range_magn_z <= 3.372192 &&
+    min_gyro_z <= -0.01413 &&
+    range_accel_z > 1.083389 &&
+    mean_magn_smv > 24.045719 &&
+    mean_accel_y > 3.955534 &&
+    sma_magn > 38.779999 &&
+    range_magn_z <= 2.788162 &&
+    mean_magn_z > -25.613999 &&
+    mean_accel_y <= 6.308914 &&
+    mean_magn_z > -22.506 &&
+    std_gyro_z > 0.043244
   ) {
     return 'e';
   }
 
   if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.681088 &&
-    min_magn_y > -34.410095 &&
-    min_gyro_smv <= 0.115214 &&
-    max_accel_smv <= 10.031086 &&
-    mean_accel_smv <= 9.801296 &&
-    range_accel_x <= 2.834821 &&
-    min_accel_z <= 9.272476 &&
-    mean_magn_z <= 16.53 &&
-    max_magn_y > -14.636421
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.681088 &&
-    min_magn_y > -34.410095 &&
-    min_gyro_smv <= 0.115214 &&
-    mean_magn_z <= 5.916 &&
-    mean_accel_smv <= 9.977562 &&
-    max_accel_smv > 10.029061 &&
-    min_accel_y > 3.198653 &&
-    min_magn_y > 18.867493 &&
-    mean_magn_z > -17.156677 &&
-    max_accel_z <= 10.106234
-  ) {
-    return 'f';
-  }
-
-  if (
-    std_accel_smv > 7.161875 &&
-    std_magn_z > 0.831579 &&
-    mean_magn_smv > 39.161245 &&
-    std_gyro_z > 0.663399 &&
-    mean_magn_smv > 48.587394 &&
-    sma_gyro > 2.569409 &&
-    std_gyro_z <= 1.974706
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.681088 &&
-    min_magn_y > -34.410095 &&
-    min_gyro_smv <= 0.115214 &&
-    mean_magn_z <= 1.878 &&
-    rms_accel_z <= 8.813206 &&
-    rms_gyro_x > 0.021044 &&
-    min_accel_smv > 6.540058 &&
-    std_magn_smv > 5.130615 &&
-    mean_magn_smv <= 41.366888 &&
-    min_accel_y <= 6.498184 &&
-    min_accel_x <= -0.586597 &&
-    min_accel_x > -2.916763 &&
-    max_accel_x > -0.835576 &&
-    range_accel_z > 2.985661 &&
-    max_magn_y > -9.42 &&
-    max_magn_y > -7.86 &&
-    mean_accel_z > 6.658718 &&
-    std_accel_y > 0.558266
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_z <= 1.681088 &&
-    min_magn_y > -34.410095 &&
-    min_gyro_smv <= 0.115214 &&
-    mean_magn_z <= 4.9837 &&
-    mean_accel_smv <= 9.977562 &&
-    max_accel_smv > 10.029061 &&
-    sma_magn > 85.575447
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    mean_accel_smv > 10.52323 &&
-    rms_accel_z <= 5.152897 &&
-    min_accel_y <= 6.706159 &&
-    std_accel_x > 1.227891 &&
-    min_gyro_z > -1.73259 &&
-    max_gyro_x > 0.135197 &&
-    max_accel_z > 0.758698
-  ) {
-    return 'a';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    min_gyro_smv <= 0.075099 &&
-    max_magn_y <= 27.747002 &&
-    mean_accel_y <= 7.128474 &&
-    mean_accel_z > -0.616068 &&
-    mean_accel_z <= 9.03312 &&
-    mean_accel_y > -2.595075 &&
-    rms_gyro_x > 0.017851 &&
-    max_accel_z <= 11.780669 &&
-    mean_accel_z <= 0.733224 &&
-    min_accel_y <= 5.194443 &&
-    range_accel_x <= 5.112818 &&
-    min_accel_x <= -7.039581
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.609786 &&
-    min_gyro_smv <= 0.075099 &&
-    max_magn_y <= 27.747002 &&
-    mean_accel_z > 0.168796 &&
-    mean_accel_y <= 7.358085 &&
-    rms_accel_z <= 9.045557 &&
-    mean_accel_y <= -3.644805 &&
-    max_magn_smv <= 37.226633 &&
-    min_accel_y <= -8.797494
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.609786 &&
-    mean_accel_y > 0.719305 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_z > 0.633745 &&
-    rms_gyro_x <= 0.020293 &&
-    entropy_accel > 1.243015 &&
-    sma_magn > 30.701999 &&
-    mean_accel_smv > 9.771887
-  ) {
-    return 'd';
-  }
-
-  if (
-    max_magn_smv <= 44.609786 &&
-    mean_accel_y > 0.719305 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_z > 0.633745 &&
-    max_accel_z <= 11.777079 &&
-    mean_accel_y <= 7.358085 &&
-    min_accel_z <= 8.334471 &&
-    mean_magn_z <= 5.226 &&
-    rms_gyro_x > 0.02697 &&
-    std_accel_y <= 1.089551 &&
-    max_magn_smv > 23.78853 &&
-    mean_magn_smv <= 41.253284 &&
-    range_magn_z <= 2.668762 &&
-    max_gyro_x > 0.016328 &&
-    min_accel_x <= -0.531513 &&
-    max_accel_x > -7.817307 &&
-    min_gyro_y > -0.153119 &&
-    min_gyro_y <= -0.036957
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.609786 &&
-    mean_accel_y > 0.719305 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_z > 0.544561 &&
-    max_accel_z <= 11.777079 &&
-    mean_accel_y <= 7.358085 &&
-    mean_magn_z > 4.9837 &&
-    max_magn_y <= 8.889 &&
-    max_gyro_x <= 0.008453 &&
-    max_gyro_z > 0.039874
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.609786 &&
-    mean_accel_y > 0.719305 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_z > 0.544561 &&
-    max_accel_z <= 11.777079 &&
-    mean_accel_y <= 7.358085 &&
-    mean_magn_z > 4.9837 &&
-    max_magn_y <= 6.66 &&
-    std_gyro_z <= 0.009921 &&
-    max_accel_x <= 0.609324
-  ) {
-    return 'd';
-  }
-
-  if (
-    max_magn_smv <= 44.609786 &&
-    mean_accel_y > 0.719305 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_z > 0.633745 &&
-    max_accel_z <= 11.777079 &&
-    mean_accel_y <= 7.358085 &&
-    mean_magn_z > 4.9837 &&
-    min_magn_y <= -2.488998 &&
-    mean_magn_z <= 21.0136 &&
-    mean_magn_smv > 18.946002 &&
-    range_accel_y > 0.433351 &&
-    std_magn_smv <= 19.18476 &&
-    min_magn_y <= -15.878998 &&
-    range_magn_z <= 8.639999 &&
-    range_accel_x <= 5.299565 &&
-    max_accel_x <= 0.390267
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    min_gyro_smv <= 0.075099 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_y <= 7.358085 &&
-    mean_magn_z <= 5.226 &&
-    rms_gyro_x > 0.028501 &&
-    std_magn_smv > 5.321314 &&
-    max_accel_smv <= 13.587093 &&
-    min_accel_z <= 8.108612 &&
-    mean_accel_y > 3.238517 &&
-    mean_accel_y <= 6.83733 &&
-    std_accel_x <= 0.846651 &&
-    max_accel_smv <= 10.588746 &&
-    max_gyro_z > 0.169105 &&
-    entropy_gyro <= 2.251355 &&
-    entropy_gyro > 2.180887
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    min_gyro_smv <= 0.075099 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_y <= 7.358085 &&
-    mean_magn_z <= 5.226 &&
-    rms_gyro_x > 0.028501 &&
-    std_magn_smv > 5.321314 &&
-    max_accel_smv <= 13.587093 &&
-    rms_accel_z <= 8.750825 &&
-    min_accel_y > 2.24217 &&
-    mean_accel_y <= 6.83733 &&
-    max_accel_smv <= 10.588746 &&
-    max_accel_x > 0.306396 &&
-    min_gyro_smv > 0.024328
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    min_gyro_smv <= 0.075099 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_y <= 7.358085 &&
-    mean_magn_z <= 5.226 &&
-    rms_gyro_x > 0.028501 &&
-    std_magn_smv > 5.321314 &&
-    max_accel_z <= 10.720963 &&
-    min_accel_z <= 8.108612 &&
-    min_accel_x <= -0.288501 &&
-    mean_magn_z <= -0.0947 &&
-    std_accel_z > 3.32707 &&
-    max_accel_x > -0.428562
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    min_gyro_smv <= 0.075099 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_y <= 7.358085 &&
-    mean_magn_z <= 5.226 &&
-    rms_gyro_x > 0.028501 &&
-    max_accel_smv <= 14.04989 &&
-    std_magn_smv > 5.321314 &&
-    rms_accel_z <= 8.750306 &&
-    min_accel_y > 2.24217 &&
-    mean_accel_smv > 10.122335 &&
-    min_accel_y <= 5.535563 &&
-    rms_accel_x > 0.891672
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    min_gyro_smv <= 0.075099 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_y <= 7.358085 &&
-    mean_magn_z <= 5.226 &&
-    rms_gyro_x > 0.028501 &&
-    max_accel_smv <= 14.04989 &&
-    std_magn_smv > 5.321314 &&
-    rms_accel_z <= 8.750306 &&
-    min_accel_x <= -0.288501 &&
-    std_accel_x <= 0.784518 &&
-    std_accel_smv > 3.596587 &&
-    std_magn_smv > 7.27497 &&
-    max_accel_x <= 1.389725 &&
-    min_gyro_smv <= 0.051795 &&
-    min_gyro_z <= -0.093815 &&
-    std_gyro_y <= 0.80028 &&
-    rms_gyro_x > 0.077467 &&
-    std_gyro_y <= 0.224716 &&
-    mean_accel_smv > 9.507062
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    min_accel_y > -3.137601 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_z > 0.633745 &&
-    min_gyro_smv <= 0.077222 &&
-    mean_accel_y > 7.553826 &&
-    min_magn_y > -41.578674 &&
-    mean_accel_z <= 6.128369 &&
-    mean_magn_z > -13.9978
-  ) {
-    return 'd';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    min_accel_y > -3.974496 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_z > 0.633745 &&
-    std_accel_smv <= 6.931428 &&
-    min_accel_z <= 8.334471 &&
-    min_accel_y <= 6.268341 &&
-    min_gyro_smv > 0.003666 &&
-    mean_magn_z <= -0.204 &&
-    max_gyro_y > 0.073471 &&
-    mean_accel_smv > 10.236213 &&
-    min_gyro_y <= -0.07943 &&
-    min_accel_y <= 5.505467
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    min_gyro_smv <= 0.075026 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.519661 &&
-    max_accel_z <= 11.780669 &&
-    mean_accel_y > 1.25585 &&
-    mean_magn_z <= -0.222 &&
-    rms_gyro_x > 0.019285 &&
-    min_accel_x <= -0.337582 &&
-    rms_accel_z > 9.323862 &&
-    max_gyro_x > 0.018607 &&
-    min_accel_y <= 2.352303 &&
-    min_accel_x > -2.267378 &&
-    min_gyro_smv <= 0.019381
-  ) {
-    return 'd';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    min_gyro_smv <= 0.075026 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.519661 &&
-    max_accel_z <= 11.780669 &&
-    mean_accel_y > 1.25585 &&
-    rms_gyro_x <= 0.018118 &&
-    mean_accel_y <= 4.751652 &&
-    std_accel_x <= 1.119646 &&
-    rms_accel_x <= 0.959027
-  ) {
-    return 'd';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    min_gyro_smv <= 0.075026 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.519661 &&
-    max_accel_z <= 11.780669 &&
-    max_accel_y > 1.367089 &&
-    max_gyro_x <= 0.012619 &&
-    max_gyro_x <= -0.00647
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    std_accel_smv <= 7.090723 &&
-    min_accel_y <= -7.683548 &&
-    max_accel_z > -3.561646 &&
-    max_gyro_y > 0.576725
-  ) {
-    return 'a';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    max_accel_smv <= 14.108888 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.528091 &&
-    mean_magn_z <= -0.2 &&
-    min_accel_x <= -0.337582 &&
-    min_accel_z <= 8.921992 &&
-    std_accel_y <= 1.089551 &&
-    std_magn_smv > 5.121817 &&
-    min_accel_y > 1.512589 &&
-    mean_magn_z > -35.591999 &&
-    max_gyro_z > 0.014885 &&
-    std_accel_x > 1.173091 &&
-    max_accel_smv <= 11.738863
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    std_accel_smv <= 7.090723 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.528091 &&
-    mean_magn_z <= -0.222 &&
-    min_accel_x <= -0.337582 &&
-    min_accel_z <= 8.953117 &&
-    std_magn_smv > 5.121817 &&
-    range_magn_z <= 16.086998 &&
-    mean_magn_z > -35.574 &&
-    mean_accel_smv > 10.219679 &&
-    max_gyro_z > 0.026102 &&
-    mean_accel_y <= 6.585252 &&
-    std_accel_x <= 2.457439
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    max_accel_smv <= 14.108888 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.528091 &&
-    mean_magn_z <= -0.2 &&
-    min_accel_x <= -0.337582 &&
-    min_accel_z <= 8.921992 &&
-    std_magn_smv > 4.904945 &&
-    std_accel_y <= 1.089551 &&
-    max_magn_y <= 20.143509 &&
-    max_gyro_z > 0.016373 &&
-    max_gyro_y <= 0.065892 &&
-    sma_gyro > 0.41506 &&
-    mean_accel_smv <= 9.752931
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    max_accel_smv <= 14.108888 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.528091 &&
-    mean_magn_z <= -0.114 &&
-    min_accel_x <= -0.337582 &&
-    min_accel_z <= 8.921992 &&
-    std_magn_smv > 4.904945 &&
-    std_accel_y <= 1.089551 &&
-    max_magn_y <= 20.143509 &&
-    max_gyro_y > 0.065892 &&
-    mean_magn_smv > 41.218202 &&
-    range_magn_x <= 4.348755
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    max_accel_smv <= 14.108888 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.528091 &&
-    mean_magn_z <= -0.114 &&
-    min_accel_x <= -0.337582 &&
-    min_accel_z <= 8.921992 &&
-    std_magn_smv > 4.904945 &&
-    std_accel_y <= 1.089551 &&
-    max_magn_y <= 20.143509 &&
-    max_gyro_y > 0.067673 &&
-    std_magn_z <= 0.653118 &&
-    max_gyro_x > 0.021591 &&
-    std_accel_y > 0.248775 &&
-    mean_accel_smv <= 10.065929 &&
-    std_accel_x <= 0.680897 &&
-    mean_magn_smv > 25.60871
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    max_accel_smv <= 14.108888 &&
-    max_magn_y <= 27.641998 &&
-    mean_accel_z > 0.528091 &&
-    mean_magn_z <= -0.114 &&
-    min_accel_x <= -0.337582 &&
-    min_accel_z <= 8.921992 &&
-    std_magn_smv > 5.121817 &&
-    max_accel_smv <= 13.39187 &&
-    mean_accel_smv > 9.475109 &&
-    max_accel_y > 3.790665 &&
-    max_gyro_z > 0.014885 &&
-    max_gyro_y <= 0.070168 &&
-    mean_accel_z <= 8.838315 &&
-    std_gyro_y <= 0.247594 &&
-    max_accel_x > -0.799688 &&
-    std_accel_y <= 1.280637 &&
-    max_gyro_z <= 0.105985 &&
-    std_magn_smv > 6.151114
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    max_accel_smv <= 14.108888 &&
-    max_magn_y <= 24.742126 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    mean_magn_z <= -0.2 &&
-    max_gyro_y > 0.067673 &&
-    mean_accel_smv <= 10.077631 &&
-    mean_accel_smv > 9.462656 &&
-    std_accel_y <= 1.103261 &&
-    std_gyro_z <= 0.060226 &&
-    rms_accel_x <= 7.711626 &&
-    range_magn_x <= 5.310059 &&
-    min_magn_y > -9.332001 &&
-    std_magn_z > 1.56904
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    max_accel_smv <= 14.108888 &&
-    max_magn_y <= 24.742126 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    mean_magn_z <= -0.2 &&
-    max_gyro_y > 0.067673 &&
-    mean_accel_smv <= 10.077631 &&
-    std_accel_y <= 1.089551 &&
-    max_accel_y > 5.044737 &&
-    std_magn_smv <= 4.940111 &&
-    min_gyro_smv > 0.007073 &&
-    mean_accel_smv > 9.684192
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    max_accel_smv <= 14.108888 &&
-    max_magn_y <= 24.742126 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    mean_magn_z <= -0.2 &&
-    max_gyro_y > 0.067673 &&
-    mean_accel_smv <= 10.077631 &&
-    std_accel_y <= 1.089551 &&
-    range_magn_y > 1.989937 &&
-    rms_accel_x > 0.34148 &&
-    std_gyro_z <= 0.034028 &&
-    max_magn_smv > 20.61965 &&
-    std_magn_smv <= 9.482698
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    max_accel_smv <= 14.108888 &&
-    max_magn_y <= 24.742126 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    std_gyro_z <= 0.021892 &&
-    min_accel_x <= -2.726425 &&
-    mean_magn_smv <= 38.306622
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    std_accel_smv <= 6.931428 &&
-    max_magn_y <= 24.664307 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.25585 &&
-    std_gyro_z <= 0.021779 &&
-    min_accel_y <= 2.924118 &&
-    max_magn_smv <= 33.708947
-  ) {
-    return 'd';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    std_accel_smv <= 6.931428 &&
-    max_magn_y <= 24.664307 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.25585 &&
-    mean_magn_z <= -0.222 &&
-    mean_accel_smv <= 9.972291 &&
-    max_gyro_y > 0.055601 &&
-    mean_accel_smv > 9.462656 &&
-    range_magn_x <= 22.111511 &&
-    mean_magn_z > -36.6 &&
-    std_accel_y > 1.124932 &&
-    std_gyro_z > 0.216427
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    std_accel_smv <= 6.710926 &&
-    max_magn_y <= 24.664307 &&
-    mean_accel_z > 0.528091 &&
-    max_gyro_x <= 0.017609 &&
-    min_gyro_smv <= 0.001818
-  ) {
-    return 'd';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    std_accel_smv <= 6.601405 &&
-    max_magn_y <= 24.664307 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.25585 &&
-    min_accel_y <= 6.232758 &&
-    mean_magn_z > 4.9837 &&
-    std_gyro_z <= 0.917177 &&
-    std_gyro_z > 0.010135 &&
-    min_magn_y <= 11.16 &&
-    mean_magn_z > 20.418 &&
-    max_accel_z > 8.147469
-  ) {
-    return 'd';
-  }
-
-  if (
-    max_magn_smv <= 44.914357 &&
-    std_accel_smv <= 6.601405 &&
-    max_magn_y <= 24.664307 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.25585 &&
-    min_accel_y <= 6.232758 &&
-    mean_accel_smv <= 10.041107 &&
-    mean_magn_z <= 4.9837 &&
-    mean_accel_smv > 9.481354 &&
-    max_gyro_z > 0.076175 &&
-    max_accel_smv <= 13.233561 &&
-    std_gyro_y <= 0.059142 &&
-    range_magn_z > 3.189087 &&
-    rms_gyro_x > 0.078195
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    std_accel_smv <= 6.601405 &&
-    max_magn_y <= 24.664307 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.25585 &&
-    min_accel_y <= 6.232758 &&
-    mean_accel_smv <= 10.041107 &&
-    mean_magn_z <= 4.9837 &&
-    mean_accel_smv > 9.481281 &&
-    std_accel_y <= 1.129213 &&
-    std_magn_z > 0.912343 &&
-    std_gyro_z > 0.018525 &&
-    range_accel_z > 4.114435 &&
-    rms_gyro_x > 0.033146 &&
-    min_accel_x > -4.103394
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    std_accel_smv <= 6.601405 &&
-    max_magn_y <= 24.664307 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.25585 &&
-    min_accel_y <= 6.264023 &&
-    mean_magn_z > 4.9837 &&
-    min_magn_y <= 10.44 &&
-    mean_magn_smv <= 18.946002 &&
-    min_gyro_smv > 0.010294
-  ) {
-    return 'd';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    std_accel_smv <= 6.601405 &&
-    max_magn_y <= 24.664307 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.25585 &&
-    min_accel_y <= 6.264023 &&
-    mean_magn_z > 4.9837 &&
-    min_magn_y <= 10.44 &&
-    entropy_accel > 0.773655 &&
-    range_accel_x <= 4.942841 &&
-    range_magn_z <= 9.378052
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    std_accel_smv <= 6.447755 &&
-    min_magn_y > -39.699997 &&
+    min_accel_z > 4.194769 &&
+    std_accel_smv <= 6.674064 &&
     min_gyro_smv <= 0.063132 &&
-    mean_magn_z <= 2.1267 &&
-    mean_accel_smv <= 9.867206 &&
-    max_accel_z <= 10.63118 &&
-    range_magn_y <= 18.055004 &&
-    min_accel_z > 8.628966 &&
-    max_accel_x > -2.025864 &&
-    range_accel_z > 0.317232 &&
-    mean_accel_y > -0.704635 &&
-    min_gyro_y > -1.508361 &&
-    range_accel_y <= 1.819649
+    mean_magn_z <= 3.3439 &&
+    mean_accel_smv <= 9.865658 &&
+    range_magn_y <= 14.397003 &&
+    mean_accel_z <= 8.967363 &&
+    max_magn_smv <= 48.41171 &&
+    std_gyro_y > 0.21349 &&
+    std_accel_z <= 0.427827 &&
+    std_accel_y > 0.21016 &&
+    mean_magn_z <= -0.522
   ) {
     return 'f';
   }
 
   if (
-    max_magn_smv <= 44.914357 &&
-    std_accel_smv <= 6.710926 &&
-    min_magn_y > 26.739998 &&
-    mean_accel_y <= -6.11055 &&
-    min_magn_y <= 30.811001
-  ) {
-    return 'c';
-  }
-
-  if (
-    max_magn_smv <= 44.544291 &&
-    max_accel_smv <= 13.413636 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.218019 &&
-    mean_accel_smv <= 10.041107 &&
-    min_accel_y <= 6.264023 &&
-    min_accel_z <= 8.697586 &&
-    min_accel_y > 1.937698 &&
-    std_magn_z > 0.894463 &&
-    mean_accel_y <= 6.781217 &&
-    min_accel_x > -0.587479 &&
-    mean_magn_z > -11.6385 &&
-    rms_accel_x > 0.931176
+    max_magn_smv <= 41.460738 &&
+    max_accel_y > 1.593341 &&
+    std_accel_smv <= 6.923187 &&
+    mean_magn_z <= 6.9147 &&
+    mean_magn_smv <= 38.954426 &&
+    max_magn_y <= 17.524719 &&
+    mean_accel_smv <= 9.966647 &&
+    min_accel_z <= 8.65863 &&
+    std_accel_y <= 1.087434 &&
+    range_magn_z > 3.372192 &&
+    max_accel_y > 8.703247 &&
+    mean_magn_smv > 32.736408
   ) {
     return 'f';
   }
 
   if (
-    max_magn_smv <= 44.544291 &&
-    std_accel_smv <= 6.601405 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_y <= 6.833021 &&
-    rms_accel_z <= 8.729743 &&
-    max_magn_smv > 27.266468 &&
-    mean_accel_smv > 9.471095 &&
-    min_accel_y > 1.960851 &&
-    min_gyro_smv > 0.128688 &&
-    range_magn_z <= 18.784714
+    max_magn_smv <= 41.460738 &&
+    max_accel_y > 1.593341 &&
+    std_accel_smv <= 6.923187 &&
+    mean_accel_z > 5.840489 &&
+    mean_accel_z <= 8.815294 &&
+    mean_magn_z <= -0.09 &&
+    range_magn_z <= 3.372192 &&
+    mean_accel_smv > 9.779725 &&
+    max_magn_y <= 19.359001 &&
+    max_magn_y > -1.002884 &&
+    mean_magn_z <= -4.8091 &&
+    min_accel_z <= 7.533096 &&
+    range_magn_z > 1.470947
   ) {
     return 'e';
   }
 
   if (
-    max_magn_smv <= 44.544291 &&
-    std_accel_smv <= 6.601405 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_y <= 6.833021 &&
-    rms_accel_z <= 8.729743 &&
-    max_magn_smv > 27.266468 &&
-    mean_accel_smv > 9.471095 &&
-    max_gyro_y > 2.073912 &&
-    min_gyro_smv <= 0.109177
+    max_magn_smv <= 41.460738 &&
+    max_magn_y <= 24 &&
+    mean_accel_y > 1.274314 &&
+    min_accel_z > -0.191542 &&
+    mean_accel_smv <= 9.952922 &&
+    range_magn_y <= 0.712395 &&
+    range_magn_y <= 0.398636
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 41.460738 &&
+    min_accel_y > -4.639963 &&
+    max_accel_y <= 10.659317 &&
+    mean_magn_z <= 5.9375 &&
+    std_accel_smv <= 6.927757 &&
+    min_accel_z <= 8.329428 &&
+    mean_accel_smv <= 9.955921 &&
+    std_accel_y <= 1.087434 &&
+    min_accel_x <= -0.2742 &&
+    range_magn_z > 2.888489 &&
+    max_accel_z > 9.825256 &&
+    range_accel_x > 0.77213 &&
+    rms_gyro_x > 0.034886 &&
+    std_accel_z > 0.845802
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 4.09421 &&
+    std_accel_smv <= 6.674064 &&
+    min_gyro_smv <= 0.052778 &&
+    mean_accel_smv <= 9.964981 &&
+    sma_magn > 100.333405 &&
+    max_accel_z > 7.23071 &&
+    min_accel_x > -4.394557
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 4.280289 &&
+    std_accel_smv <= 6.630677 &&
+    max_magn_smv <= 49.186423 &&
+    min_accel_y > 2.253013 &&
+    mean_accel_smv <= 9.974592 &&
+    mean_magn_z <= 0.522 &&
+    mean_accel_z <= 8.689542 &&
+    mean_magn_smv <= 39.342009 &&
+    mean_accel_smv > 9.514121 &&
+    range_magn_z > 2.668762 &&
+    range_accel_z > 2.843115 &&
+    min_accel_x > -3.421419
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 5.219519 &&
+    min_accel_smv > 6.684788 &&
+    min_gyro_smv <= 0.109107 &&
+    mean_accel_smv <= 9.881239 &&
+    mean_magn_z <= 6.93 &&
+    min_accel_z > 8.652909 &&
+    max_accel_x > -2.025864 &&
+    mean_accel_smv <= 9.837261 &&
+    sma_magn > 63.146515 &&
+    range_magn_x > 1.469803
   ) {
     return 'f';
   }
 
   if (
-    max_magn_smv <= 44.544291 &&
-    std_accel_smv <= 6.601405 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_y <= 6.833021 &&
-    rms_accel_z <= 8.690171 &&
-    max_magn_smv > 27.266468 &&
-    mean_accel_smv > 9.467154 &&
-    min_accel_y > 1.960851 &&
-    mean_magn_z <= 10.662 &&
-    min_gyro_z <= -0.146515 &&
-    range_magn_z <= 20.019001 &&
-    mean_accel_smv <= 10.050329 &&
-    min_gyro_smv <= 0.011368 &&
-    min_accel_x <= -1.606509 &&
-    max_magn_smv <= 43.779809
+    min_accel_z > 5.219519 &&
+    min_accel_smv > 6.684788 &&
+    min_gyro_smv <= 0.109107 &&
+    max_magn_smv <= 50.059598 &&
+    mean_accel_z <= 8.80336 &&
+    mean_accel_y <= 6.624756 &&
+    mean_magn_smv > 21.808946 &&
+    max_gyro_x > 0.012527 &&
+    mean_magn_z <= 9.012 &&
+    rms_accel_x > 3.898213 &&
+    mean_accel_z <= 8.30119
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 5.219519 &&
+    min_accel_smv > 6.684788 &&
+    min_gyro_smv <= 0.109107 &&
+    max_magn_smv <= 50.059598 &&
+    mean_accel_z <= 8.80336 &&
+    mean_accel_y <= 6.624756 &&
+    max_magn_smv > 24.029232 &&
+    max_gyro_x > 0.01273 &&
+    mean_accel_smv > 9.964981 &&
+    range_magn_y > 0.724602 &&
+    mean_accel_smv > 10.178652
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 5.219519 &&
+    std_accel_z <= 1.224384 &&
+    min_gyro_smv <= 0.115214 &&
+    max_magn_smv <= 53.727459 &&
+    mean_accel_z <= 8.73309 &&
+    mean_magn_z <= 1.332 &&
+    std_magn_z > 0.909377 &&
+    min_accel_y > 3.050306 &&
+    mean_accel_smv <= 10.089676 &&
+    max_gyro_z > 0.016907 &&
+    std_accel_x > 0.682475 &&
+    max_magn_y <= -21.127319 &&
+    std_gyro_z > 0.052291
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 5.219519 &&
+    std_accel_z <= 1.224384 &&
+    min_gyro_smv <= 0.115214 &&
+    max_magn_smv <= 53.727459 &&
+    mean_accel_z <= 8.73309 &&
+    mean_magn_z <= 1.332 &&
+    std_magn_z > 0.909377 &&
+    min_accel_y > 2.770889 &&
+    mean_accel_smv <= 10.040227 &&
+    std_accel_x > 0.720089 &&
+    range_accel_y <= 2.936488 &&
+    min_gyro_smv <= 0.091106
   ) {
     return 'f';
   }
 
   if (
-    max_magn_smv <= 44.914357 &&
-    std_accel_smv <= 6.710926 &&
-    mean_accel_z > 0.528091 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_y <= 6.833021 &&
-    rms_accel_z <= 8.690171 &&
-    max_magn_smv > 27.266468 &&
-    mean_accel_smv > 9.458626 &&
-    mean_magn_z > -36.755901 &&
-    range_magn_y <= 18.626404 &&
-    max_gyro_y <= 1.700018 &&
-    min_gyro_z <= -0.146995 &&
-    std_accel_smv > 3.780066 &&
-    rms_gyro_x > 0.082169
+    max_magn_smv <= 44.622294 &&
+    max_magn_y <= 24.53289 &&
+    mean_accel_smv <= 10.54297 &&
+    max_accel_y > 1.743301 &&
+    max_accel_y <= 10.23313 &&
+    mean_magn_z <= 6.9147 &&
+    min_accel_x <= -0.337582 &&
+    min_gyro_smv <= 0.052778 &&
+    range_magn_z <= 0.709915 &&
+    std_gyro_y <= 0.162024 &&
+    min_accel_y > -0.742203
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_magn_y <= 24.53289 &&
+    mean_accel_smv <= 10.54297 &&
+    max_accel_y > 1.743301 &&
+    max_accel_y <= 10.23313 &&
+    mean_magn_z <= 6.9147 &&
+    min_accel_x <= -0.337582 &&
+    min_gyro_smv <= 0.052778 &&
+    max_accel_y > 3.239685 &&
+    std_gyro_z > 0.02241 &&
+    max_magn_smv > 23.344808 &&
+    min_gyro_smv > 0.003115 &&
+    max_accel_z > 11.777438 &&
+    range_magn_z <= 14.167023
   ) {
     return 'e';
   }
 
   if (
     min_accel_z > 5.229096 &&
-    range_accel_z <= 3.965988 &&
-    min_gyro_smv <= 0.114212 &&
-    range_magn_y <= 28.430176 &&
-    min_magn_y > -39.402771 &&
-    min_accel_z <= 8.593052 &&
-    mean_accel_y <= 6.605243 &&
-    rms_accel_z <= 9.328466 &&
-    max_magn_smv > 27.266468 &&
-    mean_accel_smv <= 9.85935 &&
-    entropy_gyro > 2.110583 &&
-    sma_magn <= 75.725998 &&
-    std_gyro_y > 0.29331 &&
-    mean_accel_smv > 9.436119 &&
-    max_accel_x > 0.342941 &&
-    max_accel_z <= 9.68013 &&
-    max_gyro_z > 0.079209
+    max_accel_z <= 11.327314 &&
+    min_gyro_smv <= 0.109107 &&
+    max_magn_smv <= 50.095833 &&
+    min_accel_z <= 8.38475 &&
+    mean_accel_z > 7.177557 &&
+    std_accel_z <= 0.670088 &&
+    max_gyro_x > 0.012817 &&
+    std_accel_x > 0.889564 &&
+    mean_magn_z <= 7.7952 &&
+    mean_magn_smv <= 43.401171 &&
+    min_accel_y <= 3.680679
   ) {
     return 'f';
   }
 
   if (
-    sma_gyro > 0.535013 &&
-    max_magn_smv > 41.028111 &&
-    std_accel_smv > 8.953491 &&
-    mean_accel_y > -1.653555 &&
-    std_accel_smv > 20.661296 &&
-    min_gyro_x <= -1.396249 &&
-    max_magn_y <= 2.593231
+    max_magn_smv <= 41.305754 &&
+    max_magn_y <= 24.53289 &&
+    max_accel_smv <= 13.775681 &&
+    max_accel_z <= -1.522712 &&
+    min_accel_z > -9.124908 &&
+    min_accel_y <= 1.93218
   ) {
-    return 'b';
+    return 'f';
   }
 
   if (
-    max_magn_smv <= 42.772132 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.675604 &&
-    mean_accel_smv <= 9.887941 &&
-    max_accel_y <= 2.825158 &&
-    std_accel_y <= 0.479444
+    min_accel_z > 4.857984 &&
+    std_accel_smv <= 6.618604 &&
+    min_gyro_smv <= 0.109107 &&
+    max_magn_smv <= 49.508425 &&
+    max_magn_y <= 17.436218 &&
+    mean_accel_y > 3.280635 &&
+    mean_magn_smv > 21.826087 &&
+    mean_magn_z <= 9.912 &&
+    min_accel_smv > 9.562412 &&
+    mean_accel_z <= 8.770708
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 4.857984 &&
+    std_accel_smv <= 6.618604 &&
+    min_gyro_smv <= 0.109107 &&
+    max_magn_smv <= 49.508425 &&
+    max_magn_y <= 17.436218 &&
+    min_accel_z <= 8.503007 &&
+    mean_accel_smv <= 9.973833 &&
+    mean_magn_z <= 4.332 &&
+    std_magn_z <= 0.682657 &&
+    max_accel_x > -0.984047 &&
+    mean_accel_y > 4.740593 &&
+    std_accel_x <= 0.657144 &&
+    range_magn_x <= 6.459808 &&
+    sma_magn <= 31.440001 &&
+    mean_magn_z > -15.978
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z > 4.857984 &&
+    std_accel_smv <= 6.618604 &&
+    min_gyro_smv <= 0.109107 &&
+    max_magn_smv <= 49.508425 &&
+    std_gyro_z <= 0.014056 &&
+    max_gyro_y > 0.022995 &&
+    mean_accel_z <= 8.622262 &&
+    max_accel_z <= 10.691308 &&
+    max_accel_y <= 6.62017 &&
+    mean_accel_smv <= 9.89768
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    min_accel_y <= -3.869148 &&
+    sma_gyro > 0.794534 &&
+    max_accel_y <= 9.900345 &&
+    mean_accel_z <= 8.211405 &&
+    mean_accel_z > -2.842636 &&
+    max_magn_y > -23.995972 &&
+    min_accel_x <= 2.831144 &&
+    max_gyro_x > 0.617704
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_y <= -6.389765 &&
+    max_magn_y <= 15.839999 &&
+    mean_accel_z > 0.117671
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_y <= -6.389765 &&
+    max_accel_x <= 7.91164 &&
+    max_gyro_z <= 0.440125 &&
+    range_accel_x <= 6.452377 &&
+    max_magn_y > 14.749146 &&
+    std_accel_z > 0.123788
+  ) {
+    return 'c';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078279 &&
+    std_gyro_z <= 0.014056 &&
+    min_accel_x > -0.320679 &&
+    mean_magn_z <= -11.694 &&
+    mean_accel_y > 1.418325
   ) {
     return 'd';
   }
 
   if (
-    max_magn_smv <= 42.772132 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.675604 &&
-    mean_accel_smv <= 9.887941 &&
-    rms_accel_x <= 8.176261 &&
-    mean_magn_z <= 6.972 &&
-    max_gyro_y > 0.05736 &&
-    std_magn_smv > 7.29064 &&
-    rms_gyro_x > 0.029926 &&
-    range_magn_z > 10.089001 &&
-    range_magn_x <= 10.477638 &&
-    sma_gyro > 0.143198 &&
-    sma_magn <= 52.527901
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078279 &&
+    max_magn_y <= 17.412186 &&
+    mean_accel_z <= 9.320511 &&
+    max_magn_smv > 24.029756 &&
+    max_accel_z <= 11.868988 &&
+    mean_accel_y <= 6.831364 &&
+    max_gyro_x <= 0.012817 &&
+    std_accel_y <= 0.403915 &&
+    std_gyro_z <= 0.04503
   ) {
     return 'f';
   }
 
   if (
-    sma_gyro > 0.535013 &&
-    max_magn_smv > 41.028111 &&
-    min_accel_z <= 6.677632 &&
-    max_accel_z > 10.745505 &&
-    sma_gyro <= 1.111798 &&
-    min_gyro_x > -1.261536 &&
-    std_accel_z > 1.682099 &&
-    std_accel_z <= 6.459593 &&
-    min_accel_x <= -0.39447 &&
-    min_accel_smv > 1.106413 &&
-    mean_magn_z > -35.369999
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078279 &&
+    max_magn_y <= 17.412186 &&
+    min_accel_z <= 8.652909 &&
+    max_magn_smv > 24.029756 &&
+    max_accel_z <= 11.868988 &&
+    mean_accel_y <= 6.831364 &&
+    mean_magn_z <= 11.29776 &&
+    mean_accel_z <= 8.730935 &&
+    mean_magn_z <= -31.469999 &&
+    range_magn_x <= 7.77626 &&
+    mean_accel_y > 4.778254
   ) {
-    return 'a';
+    return 'e';
   }
 
   if (
-    max_magn_smv <= 42.973781 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.675604 &&
-    mean_accel_smv <= 9.908562 &&
-    max_magn_y > 20.542999 &&
-    mean_accel_smv <= 9.860485 &&
-    std_gyro_y > 0.066264
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078279 &&
+    max_magn_y <= 17.412186 &&
+    mean_accel_z <= 9.320511 &&
+    max_magn_smv > 24.029756 &&
+    max_accel_z <= 11.868988 &&
+    mean_accel_y <= 7.722864 &&
+    std_gyro_y <= 0.106661 &&
+    mean_magn_z <= 8.4 &&
+    rms_accel_x > 6.943917 &&
+    mean_accel_y > 4.697903
   ) {
     return 'f';
   }
 
   if (
-    max_magn_smv <= 42.973781 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.675604 &&
-    mean_accel_y <= 6.797346 &&
-    mean_magn_z <= 10.578 &&
-    max_gyro_z > 0.089974 &&
-    sma_magn > 17.664 &&
-    rms_gyro_x > 0.035407 &&
-    std_gyro_z > 0.116244 &&
-    std_gyro_z <= 0.41427 &&
-    max_gyro_x <= 0.982064 &&
-    range_magn_x <= 20.249557 &&
-    mean_magn_smv <= 26.824948 &&
-    range_magn_z <= 5.231094
-  ) {
-    return 'e';
-  }
-
-  if (
-    sma_gyro > 0.525373 &&
-    mean_magn_smv > 36.335376 &&
-    min_accel_z <= 5.648094 &&
-    max_accel_z > 9.804108 &&
-    min_gyro_smv > 0.025684 &&
-    mean_magn_smv > 48.380251 &&
-    max_magn_smv <= 130.903467 &&
-    max_accel_x <= 2.610877
-  ) {
-    return 'a';
-  }
-
-  if (
-    sma_gyro > 0.525373 &&
-    mean_magn_smv > 36.335376 &&
-    std_accel_smv > 8.953491 &&
-    mean_accel_y > -1.653555 &&
-    rms_accel_z > 9.107622 &&
-    min_gyro_x <= -0.557495 &&
-    std_gyro_z <= 1.259577 &&
-    min_accel_smv > 3.616053 &&
-    min_gyro_y > -1.590907 &&
-    mean_accel_y <= 4.752875 &&
-    std_accel_y <= 2.981026
-  ) {
-    return 'b';
-  }
-
-  if (
-    min_accel_z > 3.686707 &&
-    sma_gyro <= 0.674047 &&
-    min_magn_y > -31.700005 &&
-    sma_magn <= 73.829999 &&
-    mean_magn_z <= -31.658833 &&
-    sma_magn <= 55.067999 &&
-    range_accel_z > 1.63529 &&
-    std_gyro_y <= 0.336522
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 3.686707 &&
-    min_gyro_smv <= 0.051079 &&
-    min_magn_y > -35.89325 &&
-    max_accel_z <= 11.891403 &&
-    mean_accel_y <= 6.736053 &&
-    max_accel_smv > 10.030584 &&
-    mean_magn_z <= -31.667999 &&
-    mean_magn_smv > 48.928366 &&
-    max_magn_y > -20.52
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 4.067873 &&
-    std_gyro_z <= 0.225596 &&
-    max_magn_smv <= 53.806489 &&
-    mean_magn_z <= -31.658833 &&
-    max_magn_y <= 14.513588 &&
-    rms_accel_x <= 2.106691 &&
-    min_gyro_smv <= 0.06981 &&
-    max_magn_y > -19.128418 &&
-    sma_magn > 54.671999
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 42.973781 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.675604 &&
-    mean_accel_smv <= 9.908562 &&
-    range_magn_y > 18.321228 &&
-    range_magn_y <= 29.023003
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 42.973781 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.675604 &&
-    mean_accel_smv <= 9.908562 &&
-    range_magn_y <= 0.743103 &&
-    std_accel_y <= 1.346125
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078279 &&
+    max_magn_y <= 17.412186 &&
+    mean_accel_z <= 9.320511 &&
+    max_accel_z <= 11.868988 &&
+    mean_accel_y > 8.002826 &&
+    mean_accel_y <= 8.474775
   ) {
     return 'd';
   }
 
   if (
-    max_magn_smv <= 42.973781 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.675604 &&
-    mean_accel_smv <= 9.908562 &&
-    range_magn_y <= 16.25824 &&
-    min_accel_x <= -8.488642 &&
-    mean_accel_smv <= 9.84947
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078279 &&
+    max_magn_y <= 17.412186 &&
+    min_accel_z <= 8.652909 &&
+    max_magn_smv > 24.029756 &&
+    max_accel_z <= 11.868988 &&
+    std_gyro_y <= 0.106076 &&
+    mean_magn_z <= 11.29776 &&
+    range_magn_y > 15.36 &&
+    std_accel_smv <= 4.948341
   ) {
     return 'e';
   }
 
   if (
-    max_magn_smv <= 42.973781 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.675604 &&
-    mean_accel_smv <= 9.908562 &&
-    std_magn_smv > 17.140411 &&
-    range_magn_y <= 17.34 &&
-    max_gyro_z > 0.038541 &&
-    max_magn_smv <= 41.037649
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 42.973781 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.675604 &&
-    mean_accel_smv <= 9.908562 &&
-    std_magn_smv <= 17.748905 &&
-    mean_magn_z <= 10.528831 &&
-    mean_magn_smv > 21.828169 &&
-    max_gyro_z > 0.011108 &&
-    std_gyro_y > 0.163692 &&
-    max_accel_y > 3.86065 &&
-    mean_accel_smv <= 9.893095 &&
-    sma_magn <= 60.02 &&
-    max_gyro_z <= 0.194341 &&
-    rms_accel_x > 0.313925
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 42.973781 &&
-    std_accel_smv <= 6.706497 &&
-    max_accel_y <= 1.451218 &&
-    rms_accel_z <= 1.815503 &&
-    mean_accel_y > -9.609967
-  ) {
-    return 'a';
-  }
-
-  if (
-    max_magn_smv <= 42.973781 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.677901 &&
-    max_accel_x <= -6.064698 &&
-    mean_magn_smv > 33.901109
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 42.786352 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.677901 &&
-    min_accel_x <= -0.268524 &&
-    range_magn_x <= 15.400001 &&
-    mean_magn_z <= 0.501709 &&
-    max_gyro_y > 0.044451 &&
-    mean_magn_z > -29.537999 &&
-    sma_gyro <= 0.09939 &&
-    max_gyro_y <= 0.090153 &&
-    entropy_gyro <= 2.278875
-  ) {
-    return 'f';
-  }
-
-  if (
-    max_magn_smv <= 42.786352 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    max_accel_z > 12.040808 &&
-    max_gyro_y > 1.945007 &&
-    mean_accel_smv <= 11.04739
-  ) {
-    return 'a';
-  }
-
-  if (
-    max_magn_smv <= 42.786352 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.677901 &&
-    min_accel_x <= -0.268524 &&
-    range_magn_x <= 18.702 &&
-    mean_magn_z <= 0.501709 &&
-    max_gyro_y > 0.077499 &&
-    mean_magn_smv > 26.81606 &&
-    max_accel_y <= 4.564148 &&
-    max_gyro_y <= 0.589497
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 42.786352 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    sma_gyro <= 0.677901 &&
-    max_accel_z > 11.751101 &&
-    mean_accel_y > 2.480861 &&
-    mean_magn_smv > 13.186739 &&
-    max_gyro_y <= 1.259659 &&
-    entropy_gyro > 2.214173
-  ) {
-    return 'e';
-  }
-
-  if (
-    max_magn_smv <= 42.786352 &&
-    max_accel_y <= 10.659317 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.633745 &&
-    max_accel_z <= 11.839689 &&
-    min_accel_x > -0.281319 &&
-    mean_accel_smv <= 9.844317 &&
-    rms_accel_x <= 3.525383 &&
-    max_accel_z <= 9.624542 &&
-    range_magn_x > 2.822876
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 37.74843 &&
-    sma_gyro > 1.12029 &&
-    range_magn_z > 6.700001 &&
-    min_accel_z > 7.530962 &&
-    min_gyro_smv <= 0.051808
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 37.74843 &&
-    sma_gyro > 1.12029 &&
-    max_accel_y > 16.137253 &&
-    std_gyro_y > 0.506941
-  ) {
-    return 'a';
-  }
-
-  if (
-    max_magn_smv <= 42.786352 &&
-    max_accel_smv <= 13.790337 &&
-    max_accel_y <= 1.367089 &&
-    std_gyro_y > 0.013651 &&
-    max_magn_y <= 23.381001 &&
-    mean_accel_z > -8.057566 &&
-    max_magn_y > -1.026917 &&
-    std_magn_z <= 4.991927
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z <= 3.686707 &&
-    mean_magn_z > 39.949856 &&
-    min_accel_y > -10.074158 &&
-    range_magn_x <= 58.244324 &&
-    rms_accel_x <= 4.645347 &&
-    max_accel_z <= 7.737503
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078279 &&
+    max_magn_y <= 17.412186 &&
+    min_accel_z <= 8.652909 &&
+    max_magn_smv > 24.029756 &&
+    max_accel_z <= 11.868988 &&
+    std_gyro_y <= 0.106076 &&
+    range_magn_y > 15.208054 &&
+    max_gyro_y <= 0.137832
   ) {
     return 'd';
   }
 
   if (
-    min_accel_z <= 3.686707 &&
-    max_magn_smv > 42.633598 &&
-    sma_gyro > 1.604829 &&
-    mean_accel_y <= 0.399904 &&
-    max_magn_y <= 36.886597 &&
-    std_gyro_z <= 2.217823 &&
-    range_accel_x <= 9.937134 &&
-    std_gyro_z > 0.352917 &&
-    entropy_gyro <= 2.283051
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 3.686707 &&
-    mean_magn_smv > 38.563038 &&
-    sma_gyro > 1.60557 &&
-    mean_accel_y > -1.748195 &&
-    mean_magn_smv <= 48.380251 &&
-    rms_accel_x > 2.854109 &&
-    min_accel_smv > 3.698226 &&
-    range_accel_y <= 23.276428 &&
-    range_magn_z <= 52.665997
-  ) {
-    return 'a';
-  }
-
-  if (
-    mean_magn_smv <= 37.74843 &&
-    min_gyro_x > -0.827965 &&
-    max_accel_y > 1.748093 &&
-    mean_accel_z > 0.519661 &&
-    max_accel_z <= 11.791803 &&
-    min_accel_x <= -0.281319 &&
-    mean_accel_smv <= 9.36069 &&
-    mean_magn_smv <= 35.003534
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078279 &&
+    max_magn_y <= 17.412186 &&
+    min_accel_z <= 8.652909 &&
+    max_magn_smv > 24.029756 &&
+    max_accel_z <= 11.868988 &&
+    std_gyro_y <= 0.106076 &&
+    mean_magn_z <= 11.29776 &&
+    rms_gyro_x <= 0.015649 &&
+    min_accel_x > -2.413727 &&
+    max_gyro_z > 0.019426
   ) {
     return 'e';
   }
 
   if (
-    min_accel_z <= 3.686707 &&
-    mean_magn_smv > 39.019923 &&
-    rms_accel_x > 7.751086 &&
-    mean_accel_y > -1.748195 &&
-    mean_magn_z > -79.362946 &&
-    min_gyro_z > -1.694755 &&
-    min_accel_x <= -0.013382 &&
-    max_magn_smv > 46.216551 &&
-    max_accel_z <= 12.747119 &&
-    entropy_gyro <= 2.285371
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 3.686707 &&
-    mean_magn_smv > 39.019923 &&
-    min_accel_smv <= 3.698226 &&
-    sma_magn <= 81.0745 &&
-    mean_accel_y <= 0.325611 &&
-    max_magn_y > 33.674 &&
-    mean_accel_z > -2.582748 &&
-    max_gyro_z <= 0.66624
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 3.686707 &&
-    mean_magn_smv > 39.019923 &&
-    min_accel_smv <= 3.698226 &&
-    mean_magn_smv <= 48.604324 &&
-    mean_accel_y <= 0.238103 &&
-    max_accel_x <= 8.837265 &&
-    mean_accel_z <= 4.538827 &&
-    std_magn_z <= 11.459601
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 3.686707 &&
-    mean_magn_smv > 39.019923 &&
-    min_accel_smv > 3.698226 &&
-    max_magn_smv > 84.031084 &&
-    mean_accel_smv > 10.54297
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z > 4.09421 &&
-    max_accel_z <= 11.439224 &&
-    min_gyro_smv <= 0.093285 &&
-    min_magn_y > -34.410095 &&
-    min_accel_y > 2.244564 &&
-    max_gyro_y <= 0.01532 &&
-    entropy_gyro <= 2.225074
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078279 &&
+    max_magn_y <= 17.412186 &&
+    min_accel_z <= 8.652909 &&
+    max_magn_smv > 24.029756 &&
+    max_accel_z <= 11.868988 &&
+    mean_accel_z <= 8.730935 &&
+    std_gyro_y <= 0.106638 &&
+    rms_gyro_x <= 0.010586 &&
+    max_accel_z > 7.79776
   ) {
     return 'd';
   }
 
   if (
-    min_accel_z > 4.09421 &&
-    max_accel_z <= 11.439224 &&
-    min_gyro_smv <= 0.093285 &&
-    min_magn_y > -34.410095 &&
-    min_accel_y > 2.244564 &&
-    max_accel_x > -1.312023 &&
-    mean_accel_smv <= 10.058157 &&
-    sma_magn <= 74.085101 &&
-    mean_accel_y <= 6.601255 &&
-    std_accel_x > 1.36575 &&
-    entropy_accel <= 1.631869
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078279 &&
+    max_magn_y <= 17.412186 &&
+    min_accel_z <= 8.652909 &&
+    max_magn_smv > 24.029756 &&
+    max_accel_z <= 11.868988 &&
+    mean_accel_z <= 8.730935 &&
+    std_gyro_y <= 0.136786 &&
+    mean_magn_z > 18.5574 &&
+    mean_magn_z > 22.6675
   ) {
     return 'f';
   }
 
   if (
-    min_accel_z > 3.686707 &&
-    min_gyro_smv <= 0.063132 &&
-    max_accel_z <= 11.852495 &&
-    min_magn_y > -35.89325 &&
-    rms_accel_z <= 9.323862 &&
-    mean_accel_y <= 6.601255 &&
-    mean_accel_smv > 9.411718 &&
-    sma_magn <= 73.055999 &&
-    range_magn_z <= 13.140001 &&
-    min_accel_x <= -0.268524 &&
-    mean_magn_smv > 21.869501 &&
-    mean_magn_z <= 8.736 &&
-    mean_accel_y > 3.283748 &&
-    mean_magn_z > -33.887999 &&
-    mean_magn_smv <= 43.449082 &&
-    mean_magn_smv <= 42.542681 &&
-    sma_magn > 52.3002 &&
-    rms_accel_x > 0.265146 &&
-    mean_magn_z > -16.87
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078279 &&
+    max_magn_y <= 17.412186 &&
+    min_accel_z <= 8.652909 &&
+    max_magn_smv > 24.029756 &&
+    max_accel_z <= 11.868988 &&
+    mean_accel_z <= 8.730935 &&
+    std_gyro_y <= 0.136786 &&
+    mean_magn_z <= 11.29776 &&
+    std_gyro_z > 0.032464 &&
+    std_gyro_y <= 0.051311 &&
+    mean_accel_y <= 6.587368
   ) {
     return 'e';
   }
 
   if (
-    mean_magn_smv <= 37.74843 &&
-    std_accel_smv <= 6.805717 &&
-    mean_accel_y > 1.203893 &&
-    mean_accel_z > 0.528091 &&
-    min_gyro_smv <= 0.078009 &&
-    mean_accel_smv > 10.066802 &&
-    std_gyro_y > 0.191236 &&
-    max_accel_x > 0.353302 &&
-    max_accel_x <= 3.305195 &&
-    rms_gyro_x > 0.127138
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078186 &&
+    max_magn_y <= 17.412186 &&
+    min_accel_z <= 8.652909 &&
+    max_magn_smv > 24.029756 &&
+    max_accel_z <= 11.868988 &&
+    mean_accel_z <= 8.730935 &&
+    mean_magn_z <= -2.166 &&
+    mean_magn_z > -34.763999 &&
+    max_accel_x <= 1.140837 &&
+    max_accel_x > -0.711078 &&
+    range_magn_z <= 3.379822 &&
+    mean_accel_smv > 9.84283 &&
+    min_accel_z > 5.039948
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078186 &&
+    max_magn_y <= 17.412186 &&
+    min_accel_z <= 8.652909 &&
+    mean_magn_smv > 22.452654 &&
+    mean_magn_z <= 11.29776 &&
+    mean_magn_z > -31.872201 &&
+    mean_accel_z <= 8.730935 &&
+    min_accel_y <= 6.608322 &&
+    max_magn_y <= 8.783722 &&
+    max_accel_x <= 1.140837 &&
+    max_accel_x > -0.599625 &&
+    std_gyro_z > 0.024947 &&
+    std_gyro_y <= 0.076052
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078186 &&
+    max_magn_y <= 17.412186 &&
+    min_accel_z <= 8.652909 &&
+    max_magn_smv > 27.219287 &&
+    max_accel_z <= 11.868988 &&
+    mean_accel_z > 8.730935 &&
+    mean_magn_z <= 11.166 &&
+    max_accel_x > -0.964893 &&
+    range_magn_z <= 5.479002 &&
+    min_gyro_smv > 0.003906 &&
+    mean_magn_smv <= 38.732934 &&
+    max_accel_x <= 0.289698
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv <= 10.54297 &&
+    min_accel_z > -0.184952 &&
+    min_gyro_smv <= 0.078186 &&
+    mean_accel_z <= 8.717555 &&
+    max_magn_smv > 24.017908 &&
+    range_magn_y <= 16.395004 &&
+    mean_accel_y <= 6.581622 &&
+    mean_magn_z <= 10.92 &&
+    mean_magn_z > -34.829998 &&
+    std_gyro_z <= 0.03784 &&
+    std_gyro_y > 0.017355 &&
+    mean_accel_z <= 7.823772
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv > 10.54297 &&
+    rms_gyro_x <= 0.075046 &&
+    mean_accel_z > -0.510085 &&
+    max_gyro_z <= 0.028519
   ) {
     return 'd';
   }
 
   if (
-    mean_magn_smv <= 37.74843 &&
-    min_gyro_x > -0.827965 &&
-    max_accel_y > 1.789666 &&
-    min_accel_x <= -8.063671 &&
-    min_accel_x <= -10.719169
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv > 10.54297 &&
+    max_magn_smv > 39.901262 &&
+    mean_magn_z > -39.210001 &&
+    range_accel_y <= 18.687315 &&
+    min_accel_smv > 6.604972 &&
+    rms_gyro_x <= 0.316601
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_smv > 10.54297 &&
+    max_magn_smv > 40.09081 &&
+    mean_magn_z > -39.210001 &&
+    std_gyro_z <= 0.864951 &&
+    min_gyro_smv > 0.021967
   ) {
     return 'a';
   }
 
   if (
-    mean_magn_smv <= 37.74843 &&
-    sma_gyro <= 1.098174 &&
-    max_magn_y <= 23.639999 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_z <= 9.515685 &&
-    max_accel_z > 12.061386 &&
-    entropy_accel <= 1.844822
+    max_magn_smv <= 44.622294 &&
+    mean_magn_z <= -35.206001 &&
+    max_accel_y > 5.485283 &&
+    min_gyro_z > -1.175165 &&
+    rms_accel_x > 0.831824 &&
+    mean_accel_y > 7.212992
+  ) {
+    return 'c';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.930034 &&
+    mean_accel_y > 0.935922 &&
+    mean_magn_z <= 5.837173 &&
+    mean_accel_z <= 8.709028 &&
+    mean_accel_smv <= 9.241075 &&
+    mean_accel_smv <= 8.891786
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.930034 &&
+    mean_accel_y > 0.935922 &&
+    mean_magn_z <= 5.837173 &&
+    max_gyro_z > 0.016758 &&
+    mean_accel_smv <= 9.96582 &&
+    mean_accel_z <= 8.689542 &&
+    mean_magn_smv > 24.214315 &&
+    mean_magn_z > -36.6 &&
+    mean_accel_y <= 6.83733 &&
+    max_accel_z <= 1.697541 &&
+    min_gyro_z <= -0.053671
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.930034 &&
+    mean_accel_y > 0.945557 &&
+    mean_accel_z > 0.489253 &&
+    mean_magn_z <= 2.1252 &&
+    max_accel_y > 5.17387 &&
+    mean_magn_z > -35.683441 &&
+    min_accel_z > 8.251616 &&
+    max_accel_x > 0.179571 &&
+    mean_accel_y > 4.092244
   ) {
     return 'd';
   }
 
   if (
-    mean_magn_smv <= 37.74843 &&
-    min_gyro_x > -0.826157 &&
-    max_accel_y > 1.789666 &&
-    mean_accel_z > 0.519661 &&
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.930034 &&
+    mean_accel_y > 0.945557 &&
+    min_accel_x > 3.734329 &&
+    sma_magn <= 51.501399 &&
+    min_gyro_z <= -0.021857 &&
+    mean_accel_y > 2.368344 &&
+    mean_magn_smv <= 28.787219
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.930034 &&
+    min_gyro_smv <= 0.001104 &&
+    mean_accel_y > 1.38744
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.930034 &&
+    mean_accel_y > 0.945557 &&
+    mean_magn_z <= 2.1252 &&
+    max_accel_y > 5.17387 &&
+    mean_magn_z > -35.683441 &&
+    range_magn_x <= 18.26992 &&
+    std_accel_smv <= 3.624323 &&
+    max_accel_x > 0.360327 &&
+    range_accel_z <= 1.145626
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 1.017763 &&
+    mean_accel_z > 0.322908 &&
+    mean_magn_z <= 1.24958 &&
+    max_accel_smv <= 14.04989 &&
+    min_accel_y > 1.022659 &&
+    std_gyro_y > 0.043955 &&
+    mean_magn_smv <= 41.390273 &&
+    mean_accel_z > 9.374667 &&
+    mean_accel_smv > 9.85445 &&
+    std_gyro_y <= 0.443246
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.930034 &&
+    mean_accel_y > 0.945557 &&
+    mean_magn_z <= 2.1252 &&
+    max_accel_y > 5.17387 &&
+    mean_magn_z > -35.683441 &&
+    range_magn_x <= 18.206999 &&
+    mean_magn_z <= -0.138 &&
+    mean_accel_smv > 10.237212 &&
+    min_accel_smv <= 8.894344
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 1.017763 &&
+    mean_accel_z > 0.322908 &&
+    mean_accel_z <= 9.308462 &&
+    min_accel_y > -4.689044 &&
+    rms_gyro_x > 0.023556 &&
+    min_accel_x <= -9.028535
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_z > 3.519596 &&
+    max_accel_smv <= 13.450864 &&
+    min_accel_smv <= 9.48426 &&
+    mean_magn_z <= 2.1252 &&
+    std_gyro_y > 0.055005 &&
+    mean_magn_z > -35.683441 &&
+    min_accel_z <= 7.929838 &&
+    max_magn_y > 14.967003 &&
+    range_magn_z <= 17.035 &&
+    sma_gyro > 0.205542 &&
+    min_accel_x <= -0.700409
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_z > 3.519596 &&
+    max_accel_smv <= 13.450864 &&
+    min_accel_smv <= 9.48426 &&
+    mean_magn_z <= 2.1252 &&
+    max_magn_y <= 19.667 &&
+    mean_accel_z <= 9.320511 &&
+    mean_magn_z > -34.763999 &&
+    range_magn_z > 3.295898 &&
+    range_magn_y <= 16.440001 &&
+    sma_magn > 53.201601 &&
+    range_magn_y > 7.56 &&
+    std_accel_y <= 0.999809
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_z > 3.519596 &&
+    max_accel_smv <= 13.450864 &&
+    min_accel_smv <= 9.48426 &&
+    mean_magn_z <= 2.1252 &&
+    max_magn_y <= 19.667 &&
+    mean_accel_z <= 9.320511 &&
+    mean_magn_z > -35.155501 &&
+    range_magn_z > 3.360001 &&
+    range_magn_y <= 20.591736 &&
+    min_gyro_smv <= 0.00401 &&
+    std_accel_x > 0.19422 &&
+    min_accel_x <= -0.537415 &&
+    max_magn_y > -10.419655
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.930034 &&
+    mean_accel_y > 0.945557 &&
+    mean_accel_z > 8.709028 &&
+    mean_magn_z > 10.9696 &&
+    mean_magn_smv <= 36.612223
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.930034 &&
+    mean_accel_y > 0.945557 &&
+    max_magn_y <= 15.139771 &&
+    max_accel_z > 0.781707 &&
+    mean_magn_smv > 21.826087 &&
+    std_accel_smv <= 1.908137 &&
+    mean_accel_smv > 9.743759 &&
+    std_accel_x <= 0.119424
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.930034 &&
+    mean_accel_y > 0.945557 &&
+    max_magn_y <= 17.464005 &&
+    max_accel_z > 0.781707 &&
+    mean_magn_smv > 21.826087 &&
+    mean_magn_smv <= 40.653255 &&
+    mean_magn_z <= 9.912 &&
+    std_magn_z <= 0.812219 &&
+    max_accel_smv <= 10.430717 &&
+    rms_gyro_x > 0.038204 &&
+    std_gyro_z <= 0.047281
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.930034 &&
+    mean_accel_y > 0.945557 &&
+    max_magn_y <= 17.464005 &&
+    max_accel_z > 0.781707 &&
+    mean_magn_smv > 21.826087 &&
+    mean_magn_smv <= 40.653255 &&
+    std_magn_z <= 0.812219 &&
+    mean_magn_z <= 18.7364 &&
+    max_accel_z <= 11.034876 &&
+    min_accel_x <= -0.567426 &&
+    max_accel_y > 3.712494 &&
+    std_magn_z > 0.225952 &&
+    min_accel_smv <= 8.365922 &&
+    min_gyro_y <= -0.037703
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 14.116488 &&
+    mean_accel_y > 0.945557 &&
+    max_magn_y <= 17.464005 &&
+    max_accel_z > 0.781707 &&
+    mean_magn_smv > 21.826087 &&
+    mean_magn_smv <= 39.424515 &&
+    mean_magn_z <= 4.626 &&
+    range_magn_z <= 2.29187 &&
+    max_accel_z <= 9.223662 &&
+    std_accel_x <= 0.935786 &&
+    rms_gyro_x <= 0.116364
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 14.086943 &&
+    mean_accel_y > 0.945557 &&
+    std_gyro_y <= 0.074784 &&
+    max_accel_z <= -8.190826 &&
+    mean_accel_y > 2.451256
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 14.086943 &&
+    mean_accel_y > 0.945557 &&
+    rms_gyro_x <= 0.469278 &&
+    min_accel_z > 0 &&
+    max_magn_y <= 17.474998 &&
+    mean_magn_z <= -0.2975 &&
+    mean_accel_z <= 9.370117 &&
+    max_magn_smv > 39.491668 &&
+    mean_magn_z > -36.755901 &&
+    mean_accel_smv > 9.543027 &&
+    max_accel_x > -0.866701 &&
+    max_gyro_z <= 0.062683
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 14.108124 &&
+    mean_accel_y > 0.945557 &&
+    rms_gyro_x <= 0.469278 &&
+    min_accel_z > 0 &&
+    std_gyro_y > 0.043955 &&
+    max_accel_smv <= 10.164721 &&
+    range_magn_z <= 17.648001 &&
+    min_accel_z <= 9.258118
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 14.116488 &&
+    mean_accel_y > 0.945557 &&
+    rms_gyro_x <= 0.469278 &&
+    min_accel_z > 0 &&
+    max_magn_y <= 17.474998 &&
+    mean_magn_z <= -0.2975 &&
+    mean_accel_z <= 9.370117 &&
+    max_magn_smv > 39.491668 &&
+    mean_magn_z > -36.755901 &&
+    max_magn_y <= -22.02
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_z > 3.519596 &&
+    max_accel_smv <= 13.450864 &&
+    mean_accel_y > 1.268538 &&
+    max_magn_y <= 15.131001 &&
+    max_magn_y > 3.224182 &&
+    mean_magn_z <= -33.5921
+  ) {
+    return 'c';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_z > 3.519596 &&
+    max_accel_smv <= 13.450864 &&
+    mean_accel_y > 1.268538 &&
+    max_magn_y <= 15.131001 &&
+    mean_magn_smv > 21.826087 &&
+    mean_accel_z > 9.445724 &&
+    min_gyro_y <= -0.047349 &&
+    std_accel_x > 0.213104
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_z > 3.519596 &&
+    max_accel_smv <= 13.450864 &&
+    mean_accel_z <= 9.313205 &&
+    max_magn_y <= 15.131001 &&
+    max_magn_smv > 21.929205 &&
+    std_gyro_y > 0.042203 &&
+    mean_magn_z <= 10.296 &&
+    range_magn_x <= 10.465 &&
+    mean_accel_y <= 6.78261 &&
+    mean_accel_smv > 9.967368 &&
+    rms_accel_x > 0.589536 &&
+    range_magn_z <= 7.049561
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_z > 3.519596 &&
+    max_accel_smv <= 13.450864 &&
+    max_magn_y <= 15.131001 &&
+    mean_accel_y > 1.268538 &&
+    range_magn_z > 2.833557 &&
+    mean_accel_z > 9.370117 &&
+    min_gyro_smv <= 0.018972
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_z > 3.519596 &&
+    max_accel_smv <= 13.450864 &&
+    mean_accel_z <= 9.520355 &&
+    max_magn_y <= 15.131001 &&
+    std_magn_z > 0.870684 &&
+    std_accel_x > 1.371702 &&
+    range_magn_x <= 18.280029 &&
+    max_accel_x <= 1.710657
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_z > 3.519596 &&
+    std_accel_smv <= 6.935815 &&
+    min_accel_z <= 8.728063 &&
+    max_magn_y <= 15.131001 &&
+    std_magn_z > 0.671193 &&
+    max_accel_y <= 8.758224 &&
+    mean_magn_z <= -0.2975 &&
+    max_magn_smv <= 42.729016 &&
+    max_magn_y <= -21.826172 &&
+    range_accel_x <= 2.524429
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_z > 3.519596 &&
+    max_accel_smv <= 13.450864 &&
+    mean_accel_z <= 9.520355 &&
+    max_magn_y <= 15.131001 &&
+    range_magn_z > 2.833557 &&
+    mean_accel_smv <= 10.060758 &&
+    mean_magn_z <= 2.1252 &&
+    mean_accel_smv > 9.491723 &&
+    mean_magn_smv <= 38.072437 &&
+    range_magn_x <= 11.388016 &&
+    range_magn_z > 7.952881 &&
+    std_accel_y <= 0.315592
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    mean_accel_z > 3.519596 &&
+    std_accel_smv <= 6.935815 &&
+    min_accel_z <= 8.728063 &&
+    max_magn_y <= 15.131001 &&
+    std_magn_z > 0.671193 &&
+    max_accel_y <= 8.758224 &&
+    mean_magn_z <= -0.327 &&
+    max_magn_smv <= 42.729016 &&
+    mean_accel_smv <= 9.977158 &&
+    mean_accel_smv > 9.491723 &&
+    max_magn_y > -21.277 &&
+    mean_accel_z <= 8.666531 &&
+    rms_accel_x <= 1.001878 &&
+    max_accel_y > 6.398504 &&
+    max_accel_y <= 6.881146
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 1.017763 &&
+    min_accel_x <= -9.198257 &&
+    max_accel_x > -5.418244 &&
+    max_accel_z <= 8.106767
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 1.017763 &&
+    max_accel_y > 2.229002 &&
+    max_accel_z <= 11.808563 &&
+    min_accel_z > 0.023943 &&
+    max_magn_y <= 17.464005 &&
+    mean_magn_z <= -0.327 &&
+    std_gyro_y > 0.043955 &&
+    mean_accel_z > 9.310419 &&
+    min_gyro_z > -0.129499
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 1.017763 &&
+    max_accel_y > 2.435547 &&
+    max_accel_z <= 11.808563 &&
+    rms_gyro_x <= 0.029497 &&
+    mean_magn_z <= -18.4317 &&
+    max_accel_x > -0.375244
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 1.017763 &&
+    max_accel_y > 2.435547 &&
+    max_accel_z <= 11.808563 &&
+    min_accel_z > 0.023943 &&
+    range_magn_x <= 9.80835 &&
+    range_magn_z > 3.489998 &&
+    min_gyro_y > -1.19577 &&
+    std_accel_z > 0.164891 &&
+    max_magn_smv <= 40.761777 &&
+    range_accel_z > 5.941376 &&
+    std_accel_y <= 1.634244
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 1.017763 &&
+    max_accel_y > 2.435547 &&
+    max_accel_z <= 11.808563 &&
+    mean_magn_z <= -0.66 &&
+    mean_magn_z > -8.406 &&
+    range_magn_x <= 9.458923 &&
+    max_gyro_x <= 0.032009
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 1.017763 &&
+    max_accel_y > 2.435547 &&
+    max_accel_z <= 11.808563 &&
+    min_accel_z > 0.023943 &&
+    range_magn_x <= 9.80835 &&
+    range_magn_z > 3.489998 &&
+    min_gyro_y > -1.19577 &&
+    mean_accel_z > 7.177557 &&
+    max_magn_smv > 40.761777 &&
+    range_accel_y <= 6.059725 &&
+    min_gyro_z > -0.486725
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 1.017763 &&
+    max_accel_y > 2.435547 &&
+    max_accel_z <= 11.808563 &&
+    min_accel_z > 0.023943 &&
+    mean_accel_z > 9.347967 &&
+    std_accel_x <= 0.688729 &&
+    max_accel_z > 10.09994
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 1.017763 &&
+    max_accel_y > 2.435547 &&
+    max_accel_z <= 11.808563 &&
+    min_accel_z > 0.023943 &&
+    range_magn_x <= 9.80835 &&
+    range_magn_z > 3.489998 &&
+    min_gyro_y <= -0.866665 &&
+    mean_accel_y <= 6.863771 &&
+    mean_accel_smv <= 9.929945
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    min_gyro_smv <= 0.053067 &&
+    max_accel_y > 1.302446 &&
+    std_magn_z <= 2.85231 &&
+    range_magn_x > 1.61438 &&
+    sma_magn <= 18.218899 &&
+    mean_magn_z <= -0.4
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    rms_gyro_x <= 0.479891 &&
+    mean_accel_y > 1.203893 &&
+    sma_gyro <= 0.720911 &&
+    min_accel_x > 3.665635 &&
+    sma_magn > 50.971301
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    rms_gyro_x <= 0.479891 &&
+    max_accel_y > 1.689758 &&
+    max_accel_z <= 11.775881 &&
+    sma_gyro <= 0.720911 &&
+    range_magn_z > 3.142002 &&
+    mean_magn_smv <= 40.846173 &&
+    mean_accel_y > 9.482767
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    min_gyro_smv <= 0.053067 &&
+    max_accel_y > 1.302446 &&
+    mean_magn_smv <= 24.103412 &&
+    max_magn_y > 3.617996 &&
+    max_magn_y <= 20.039999 &&
+    mean_magn_smv > 14.517316 &&
+    range_magn_y > 1.058197 &&
+    sma_magn > 25.891201 &&
+    min_gyro_z > -0.519328 &&
+    range_magn_z <= 1.732
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    min_gyro_smv <= 0.053067 &&
+    max_accel_y > 1.302446 &&
+    mean_magn_smv <= 24.103412 &&
+    max_accel_z <= 8.36175 &&
+    sma_magn <= 25.757999
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
     sma_gyro <= 0.670728 &&
-    min_accel_y > 7.118286 &&
-    std_gyro_z <= 0.163329 &&
-    max_accel_smv > 10.680338
+    max_accel_y > 1.318008 &&
+    max_magn_smv <= 26.358376 &&
+    mean_magn_z <= -10.89 &&
+    max_magn_y <= -1.826286 &&
+    max_magn_y <= -4.400002
   ) {
     return 'd';
   }
 
   if (
-    mean_magn_smv <= 37.74843 &&
-    min_gyro_x > -0.826157 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.236931 &&
-    range_magn_x <= 26.165771 &&
-    mean_magn_z <= 10.528831 &&
-    min_accel_x <= -0.281319 &&
-    max_accel_y <= 3.807978 &&
-    std_gyro_z > 0.036786 &&
-    max_gyro_x <= 0.738723 &&
-    mean_magn_smv > 23.615073
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 0.709153 &&
+    max_accel_y > 1.689758 &&
+    mean_magn_z <= -0.168 &&
+    min_accel_smv > 9.550224 &&
+    mean_accel_smv <= 10.21165 &&
+    min_accel_z > 8.27077
   ) {
     return 'd';
   }
 
   if (
-    mean_magn_smv <= 37.74843 &&
-    min_gyro_x > -0.826157 &&
-    mean_accel_y > 1.236931 &&
-    mean_accel_z > 0.528091 &&
-    range_magn_y <= 37.773003 &&
-    mean_magn_z <= 10.528831 &&
-    min_accel_x <= -0.281319 &&
-    mean_magn_smv > 21.808946 &&
-    mean_accel_smv <= 10.899961 &&
-    mean_accel_smv > 9.420249 &&
-    std_magn_smv <= 16.156342 &&
-    range_magn_y > 13.298004 &&
-    max_accel_y > 5.130774
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 0.709153 &&
+    max_accel_y > 1.689758 &&
+    mean_magn_z <= -0.168 &&
+    max_accel_z > 13.335159 &&
+    max_magn_smv <= 38.307309 &&
+    std_accel_z > 1.69571
   ) {
     return 'e';
   }
 
   if (
-    mean_magn_smv <= 37.74843 &&
-    min_gyro_x > -0.826157 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.236931 &&
-    range_magn_x <= 26.165771 &&
-    mean_magn_z <= 10.528831 &&
-    min_accel_x <= -0.405243 &&
-    mean_magn_smv > 21.95115 &&
-    mean_accel_smv <= 10.572685 &&
-    mean_accel_smv <= 9.405978 &&
-    mean_accel_y <= 6.058473
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 0.709153 &&
+    max_accel_y > 1.689758 &&
+    max_accel_z <= 11.868988 &&
+    range_magn_y > 0.622368 &&
+    mean_magn_z <= -0.2033 &&
+    max_magn_smv <= 20.251682 &&
+    mean_magn_z > -15.62 &&
+    max_accel_y > 5.177461 &&
+    max_accel_x > -0.524346
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 0.709153 &&
+    max_magn_smv <= 20.37996 &&
+    max_magn_y <= 5.366516 &&
+    range_magn_y > 0.699997 &&
+    max_accel_y > 5.722317
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    sma_gyro <= 0.709153 &&
+    max_accel_y > 1.689758 &&
+    max_accel_z <= 11.868988 &&
+    mean_magn_smv <= 40.863082 &&
+    range_magn_y <= 1.008606 &&
+    range_magn_y <= 0.622368
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    std_accel_smv <= 6.699972 &&
+    max_accel_y > 2.24217 &&
+    mean_accel_y <= 6.619212 &&
+    range_magn_y <= 24.637001 &&
+    min_gyro_smv <= 0.143885 &&
+    mean_magn_z > 9.916534 &&
+    range_magn_x <= 3.299999 &&
+    max_accel_x > -0.188568
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.913059 &&
+    mean_accel_y > 0.945557 &&
+    mean_accel_y <= 6.592636 &&
+    range_magn_y <= 25.163002 &&
+    max_accel_z <= 11.040001 &&
+    mean_magn_z > 9.8378 &&
+    min_gyro_smv > 0.13634 &&
+    mean_accel_z <= 7.236714
   ) {
     return 'a';
   }
 
   if (
-    mean_magn_smv <= 37.74843 &&
-    sma_gyro <= 1.098174 &&
-    min_accel_z > 0.017957 &&
-    mean_accel_y > 1.236931 &&
-    max_accel_x > 7.558495 &&
-    mean_magn_z > -14.478302
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.913059 &&
+    mean_accel_y > 0.945557 &&
+    range_magn_y > 25.163002 &&
+    std_accel_y > 0.379217 &&
+    min_accel_x > -1.817825
   ) {
     return 'd';
   }
 
   if (
-    mean_magn_smv <= 37.74843 &&
-    sma_gyro <= 1.098174 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.236931 &&
-    mean_accel_smv > 10.865621 &&
-    min_gyro_smv > 0.008124 &&
-    range_magn_y <= 5.426998
+    max_magn_smv <= 44.622294 &&
+    max_accel_smv <= 13.913059 &&
+    mean_accel_y > 0.945557 &&
+    mean_accel_y <= 6.592636 &&
+    mean_magn_z > 9.8378 &&
+    max_magn_y <= 3.515625 &&
+    min_gyro_z <= -0.02356 &&
+    min_gyro_smv <= 0.13634 &&
+    std_accel_z <= 2.264582
   ) {
     return 'e';
   }
 
   if (
-    mean_magn_smv <= 37.74843 &&
-    sma_gyro <= 1.098174 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_smv > 10.95808 &&
-    mean_magn_z <= 7.842 &&
-    max_accel_smv <= 19.838142
+    min_accel_z <= 5.183605 &&
+    mean_magn_z > 40.01339 &&
+    max_accel_y > -4.536362 &&
+    range_magn_x <= 58.244324 &&
+    rms_accel_x <= 4.718272 &&
+    max_magn_y <= 52.918999
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z <= 5.183605 &&
+    mean_magn_smv > 39.397609 &&
+    std_accel_x > 1.924283 &&
+    std_gyro_y > 0.246922 &&
+    mean_accel_y <= 1.510814 &&
+    mean_accel_y <= -6.220256 &&
+    mean_magn_z <= 51.499126 &&
+    std_gyro_z <= 0.536785 &&
+    range_magn_x > 1.811218
   ) {
     return 'a';
   }
 
   if (
-    mean_magn_smv <= 37.74843 &&
-    sma_gyro <= 1.098174 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.236931 &&
-    mean_magn_z <= -0.0947 &&
-    std_gyro_y > 0.044002 &&
-    mean_accel_smv <= 10.128229 &&
-    std_gyro_z <= 0.388088 &&
-    max_accel_x > -0.838898 &&
-    min_gyro_z > -0.314224 &&
-    range_accel_x <= 2.248224 &&
-    rms_accel_x <= 0.17795 &&
-    std_accel_z <= 0.550315
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 37.74843 &&
-    sma_gyro <= 1.098174 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.236931 &&
-    mean_magn_z <= -0.0947 &&
-    std_gyro_y > 0.044002 &&
-    mean_accel_smv <= 10.128229 &&
-    std_gyro_z <= 0.388088 &&
-    max_accel_x > -0.838898 &&
-    min_gyro_z > -0.314224 &&
-    range_accel_x <= 2.248224 &&
-    min_magn_y <= 15.719999 &&
-    mean_accel_smv > 9.508386 &&
-    min_accel_x > -2.022018 &&
-    max_accel_z <= 7.787141 &&
-    rms_gyro_x <= 0.22143
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 37.74843 &&
-    sma_gyro <= 1.098174 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.236931 &&
-    mean_magn_z <= -0.0947 &&
-    min_accel_x <= -0.37589 &&
-    min_magn_y > -2.670998 &&
-    range_magn_y <= 17.485001 &&
-    sma_magn <= 56.844499 &&
-    mean_magn_z > -26.573999 &&
-    mean_magn_smv <= 35.053781 &&
-    min_gyro_z <= -0.314718 &&
-    min_accel_z <= 8.083072 &&
-    mean_magn_z <= -3.96244
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 5.225345 &&
-    std_gyro_z <= 0.287271 &&
-    max_magn_smv <= 51.595743 &&
-    mean_accel_y > 3.286401 &&
-    min_accel_y <= 6.201767 &&
-    mean_magn_z > 10.528831 &&
-    max_gyro_y > 0.062775 &&
-    mean_accel_smv > 9.689117
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 37.74843 &&
-    sma_gyro <= 1.098174 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.236931 &&
-    mean_magn_z <= -0.0947 &&
-    min_accel_x <= -0.37589 &&
-    min_magn_y > -2.279663 &&
-    sma_magn <= 56.844499 &&
-    mean_magn_z > -26.573999 &&
-    rms_accel_x <= 3.919054 &&
-    std_gyro_y > 0.094345 &&
-    mean_accel_smv <= 9.799737
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z > 5.225345 &&
-    std_gyro_z <= 0.287271 &&
-    mean_magn_z <= -41.909999 &&
-    sma_magn > 72.551998 &&
-    mean_accel_y <= 6.675633
-  ) {
-    return 'd';
-  }
-
-  if (
-    min_accel_z > 5.225345 &&
-    std_gyro_z <= 0.287271 &&
-    min_magn_y > -38.511658 &&
-    max_accel_x > -1.475204 &&
-    entropy_accel <= 1.547299 &&
-    max_accel_smv <= 10.046766 &&
-    mean_accel_smv <= 9.90714 &&
-    mean_accel_z <= 9.073905
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z > 5.225345 &&
-    std_gyro_z <= 0.287271 &&
-    min_magn_y > -38.511658 &&
-    max_accel_x > -1.475204 &&
-    entropy_accel <= 1.547299 &&
-    min_accel_y <= 6.201767 &&
-    max_accel_smv > 10.06718 &&
-    rms_accel_x > 0.277254 &&
-    mean_accel_y > 0.682898 &&
-    rms_accel_z <= 9.328466 &&
-    mean_magn_smv > 21.917007 &&
-    min_accel_smv > 9.623195 &&
-    mean_magn_z <= -20.02
-  ) {
-    return 'd';
-  }
-
-  if (
-    min_accel_z > 5.225345 &&
-    std_gyro_z <= 0.287271 &&
-    min_magn_y > -31.332397 &&
-    max_accel_smv <= 10.06718 &&
-    mean_accel_z <= 9.887694 &&
-    std_magn_smv > 7.508887
-  ) {
-    return 'd';
-  }
-
-  if (
-    min_accel_z > 5.225345 &&
-    std_gyro_z <= 0.287271 &&
-    rms_gyro_x <= 0.566108 &&
-    min_magn_y > -31.332397 &&
-    max_accel_x > -1.693898 &&
-    mean_accel_y > 0.846677 &&
-    mean_accel_y <= 6.601255 &&
-    range_accel_z <= 7.07486 &&
-    max_magn_smv > 21.858733 &&
-    rms_gyro_x > 0.028603 &&
-    min_accel_z > 9.071075 &&
-    max_accel_x > -0.5435
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z > 5.225345 &&
-    min_gyro_smv <= 0.063132 &&
-    min_magn_y > -39.402771 &&
-    std_accel_z <= 1.846672 &&
-    mean_accel_y > 1.046355 &&
-    min_magn_y > 29.342003 &&
-    min_gyro_x <= -0.354796
-  ) {
-    return 'd';
-  }
-
-  if (
-    min_accel_z > 5.225345 &&
-    min_gyro_smv <= 0.063132 &&
-    min_magn_y > -39.402771 &&
-    std_accel_z <= 1.846672 &&
-    mean_accel_y > 1.046355 &&
-    min_accel_y <= 6.201767 &&
-    range_magn_y <= 13.62 &&
-    range_magn_z > 2.62661 &&
-    mean_accel_z > 9.667124 &&
-    rms_accel_x <= 1.853502
-  ) {
-    return 'd';
-  }
-
-  if (
-    min_accel_z > 5.225345 &&
-    std_gyro_z <= 0.287271 &&
-    rms_gyro_x <= 0.566108 &&
-    min_magn_y > -37.254997 &&
-    max_accel_x > -1.693898 &&
-    mean_accel_y > 0.846677 &&
-    mean_magn_z > -36.4304 &&
-    mean_accel_y <= 6.601255 &&
-    std_magn_smv <= 24.614377 &&
-    max_magn_smv > 21.858733 &&
-    rms_accel_x > 0.25269 &&
-    mean_accel_z <= 9.312416 &&
-    std_gyro_z > 0.036971 &&
-    std_gyro_y <= 0.04751
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 37.74843 &&
-    sma_gyro <= 1.098174 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.02312 &&
-    range_magn_y <= 19.259999 &&
-    mean_magn_z <= 1.9059 &&
-    std_magn_smv > 7.37027 &&
-    rms_accel_x > 0.407627 &&
-    std_accel_z <= 0.573095 &&
-    min_gyro_smv > 0.002852 &&
-    range_magn_z > 12.42981 &&
-    entropy_accel <= 0.926652
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 37.74843 &&
-    sma_gyro <= 1.098174 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.02312 &&
-    range_magn_y <= 19.259999 &&
-    mean_magn_z <= 1.9059 &&
-    std_magn_smv > 7.37027 &&
-    range_magn_x <= 17.956999 &&
-    max_gyro_z > 0.440916
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.941649 &&
-    sma_gyro <= 1.098174 &&
-    max_magn_y <= 23.639999 &&
-    mean_accel_z > 1.03289 &&
-    rms_accel_z <= 9.522872 &&
-    std_gyro_y <= 0.47842 &&
-    mean_magn_smv > 21.869501 &&
-    min_magn_y > 16.148003 &&
-    min_magn_y > 16.452026
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.941649 &&
-    sma_gyro <= 1.098174 &&
-    max_magn_y <= 23.639999 &&
-    mean_accel_z > 1.03289 &&
-    rms_accel_z <= 9.522872 &&
-    std_gyro_y <= 0.47842 &&
-    mean_magn_smv > 21.869501 &&
-    range_magn_y <= 37.773003 &&
-    rms_gyro_x > 0.023801 &&
-    mean_accel_y <= 6.581143 &&
-    sma_gyro > 0.646725 &&
-    mean_magn_z <= 17.052
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.941649 &&
-    min_gyro_x > -0.826157 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.098309 &&
-    range_magn_y <= 37.439999 &&
-    range_magn_z > 2.62661 &&
-    entropy_gyro <= 2.150663 &&
-    max_accel_z <= 9.419077
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.941649 &&
-    min_gyro_x > -0.826157 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.098309 &&
-    range_magn_y <= 37.439999 &&
-    range_magn_z > 2.62661 &&
-    entropy_gyro <= 2.161671 &&
-    min_accel_y > 2.234589
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.515242 &&
-    min_gyro_smv > 0.082233 &&
-    mean_accel_smv <= 15.604801 &&
-    range_magn_z > 6.825256 &&
-    min_accel_z <= 7.332242 &&
-    std_accel_z <= 6.355872 &&
-    sma_gyro > 1.050327 &&
-    max_accel_z > -0.6608 &&
-    rms_accel_x > 4.917326 &&
-    std_accel_y <= 3.535208
+    min_accel_z <= 5.183605 &&
+    mean_magn_smv > 39.397609 &&
+    std_accel_x > 1.924283 &&
+    mean_accel_y <= -1.421797 &&
+    max_magn_y <= 35.476002 &&
+    max_magn_y > -9.599998 &&
+    mean_magn_z <= 32.0254 &&
+    mean_accel_z > 0.956005
   ) {
     return 'a';
   }
 
   if (
-    mean_magn_smv <= 36.515242 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.098309 &&
-    std_gyro_y <= 0.580901 &&
-    range_magn_y <= 20.419312 &&
-    range_magn_z > 2.62661 &&
-    std_gyro_z <= 0.063407 &&
-    range_magn_z > 12.780001
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.515242 &&
-    mean_accel_z > 0.519661 &&
-    mean_accel_y > 1.098309 &&
-    std_gyro_y <= 0.580901 &&
-    range_magn_y <= 20.419312 &&
-    mean_magn_smv > 21.95115 &&
-    sma_magn <= 32.897999
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.515242 &&
-    mean_accel_z > 0.519661 &&
-    max_accel_y > 2.278732 &&
-    sma_gyro <= 1.131801 &&
-    rms_gyro_x <= 0.430163 &&
-    max_gyro_z <= 0.407013 &&
-    std_gyro_y > 0.044002 &&
-    mean_accel_smv <= 10.141331 &&
-    mean_magn_z <= -22.83905 &&
-    std_gyro_y <= 0.335709 &&
-    range_magn_z <= 6.906128
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.515242 &&
-    mean_accel_y > 1.098309 &&
-    max_accel_y <= 11.626892 &&
-    min_accel_x > -0.407027 &&
-    mean_magn_z > 22.9288
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.515242 &&
-    max_magn_y <= 18.099998 &&
-    max_accel_y > 11.626892 &&
-    std_accel_y <= 2.591424
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.509024 &&
-    max_magn_y <= 18.099998 &&
-    max_accel_y > 11.626892 &&
-    mean_accel_smv > 12.211472 &&
-    mean_accel_y > 7.446138
+    min_accel_z <= 5.183605 &&
+    mean_magn_smv > 39.397609 &&
+    std_accel_smv > 8.923853 &&
+    mean_accel_y > -1.385715 &&
+    std_magn_z > 0.8645 &&
+    mean_magn_z > -30.611999 &&
+    max_gyro_x > 3.601368 &&
+    rms_gyro_x > 1.384721
   ) {
     return 'b';
   }
 
   if (
-    mean_magn_smv <= 36.509024 &&
-    max_accel_z <= -7.208008 &&
-    max_accel_x <= 3.028758
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.098309 &&
-    sma_gyro <= 1.131801 &&
-    rms_accel_z <= 1.364615 &&
-    sma_magn <= 47.551399 &&
-    min_accel_y > 4.19105
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.098309 &&
-    min_gyro_smv > 0.070596 &&
-    std_magn_z <= 1.826568 &&
-    std_accel_z > 0.653842
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.098309 &&
-    min_gyro_smv <= 0.071015 &&
-    rms_accel_x > 4.953108 &&
-    max_magn_smv <= 26.969715 &&
-    mean_accel_y > 3.368522
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.098309 &&
-    min_gyro_smv <= 0.071015 &&
-    min_accel_x > 4.362503 &&
-    mean_magn_smv > 31.931346
-  ) {
-    return 'a';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.098309 &&
-    min_gyro_smv <= 0.071015 &&
-    max_accel_x <= -2.562164 &&
-    rms_accel_x > 6.7476 &&
-    entropy_gyro > 2.213201 &&
-    mean_accel_z <= 2.136466
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.098309 &&
-    min_gyro_smv <= 0.070951 &&
-    max_accel_x > -2.562164 &&
-    min_accel_z > -9.437332 &&
-    range_magn_z <= 10.414001 &&
-    std_magn_z > 0.686207 &&
-    mean_magn_z <= 2.0505 &&
-    mean_magn_z > -9.606 &&
-    max_magn_y <= 12.934113 &&
-    std_accel_y <= 1.591727 &&
-    min_magn_y <= -15.711975 &&
-    mean_accel_z <= 9.09818 &&
-    sma_magn <= 40.819999
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.098309 &&
-    min_gyro_smv <= 0.070951 &&
-    max_accel_x > -2.562164 &&
-    range_magn_z <= 10.414001 &&
-    std_magn_z > 0.702308 &&
-    min_accel_z <= -9.437332
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.098309 &&
-    min_gyro_smv <= 0.070951 &&
-    max_accel_x > -2.562164 &&
-    min_gyro_y > -0.515606 &&
-    std_magn_smv > 6.779494 &&
-    std_magn_z <= 14.168362 &&
-    std_gyro_y <= 0.014529
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.02312 &&
-    min_gyro_smv > 0.070951 &&
-    std_magn_z <= 1.594646 &&
-    mean_accel_smv <= 10.063914 &&
-    std_accel_z > 0.260811
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    min_gyro_smv > 0.070951 &&
-    max_accel_y <= 1.22224 &&
-    std_magn_smv <= 14.151677
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    min_gyro_smv > 0.070951 &&
-    max_accel_y > 1.22224 &&
-    max_magn_y <= -19.894409 &&
-    std_accel_y <= 4.726078
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    min_gyro_smv > 0.070951 &&
-    max_magn_y <= -18.287659 &&
-    mean_accel_y <= -0.812062
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    min_gyro_smv > 0.070951 &&
-    entropy_gyro <= 2.229202 &&
-    max_magn_y <= 17.412186
-  ) {
-    return 'a';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    max_accel_y > 1.525436 &&
-    min_gyro_smv > 0.070951 &&
-    min_magn_y > 7.051086
-  ) {
-    return 'a';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    max_accel_y > 1.786407 &&
-    sma_gyro > 1.273404 &&
-    max_magn_y <= 27.099998 &&
-    min_accel_z <= 8.324097 &&
-    entropy_gyro > 2.226619 &&
-    max_gyro_y <= 1.845974 &&
-    mean_accel_smv > 9.73974
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.02312 &&
-    std_magn_z <= 4.594621 &&
-    std_magn_z <= 0.686207 &&
-    min_accel_x <= -2.714767 &&
-    max_accel_y > 6.818895
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.02312 &&
-    std_magn_z <= 4.594621 &&
-    mean_magn_z > 10.608 &&
-    std_magn_smv <= 13.083832
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.02312 &&
-    std_magn_z <= 4.594621 &&
-    mean_magn_z > 4.572 &&
-    min_magn_y <= 3.099998 &&
-    std_magn_smv > 9.592785
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.02312 &&
-    std_magn_z <= 4.569487 &&
-    std_magn_z <= 0.702308 &&
-    min_gyro_smv <= 0.002451 &&
-    mean_accel_z <= 8.938837
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.02312 &&
-    std_magn_z <= 4.569487 &&
-    std_magn_z <= 0.702308 &&
-    range_magn_x <= 1.56 &&
-    entropy_gyro <= 2.244964 &&
-    max_gyro_y <= 0.330872
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.02312 &&
-    std_magn_z <= 4.569487 &&
-    std_magn_z <= 0.702308 &&
-    min_magn_y <= -16.898003
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.02312 &&
-    std_magn_z <= 4.569487 &&
-    mean_magn_z > 4.572 &&
-    mean_accel_y <= 6.429748
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.02312 &&
-    mean_magn_z > 4.332 &&
-    mean_accel_y > 2.123243 &&
-    min_magn_y > -1.527
-  ) {
-    return 'a';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.02312 &&
-    sma_gyro <= 1.295023 &&
-    rms_accel_z > 2.165978 &&
-    range_magn_x > 26.165771 &&
-    rms_accel_z > 7.079581 &&
-    mean_accel_y <= 4.969405 &&
-    max_magn_smv > 38.087146
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.097382 &&
-    max_accel_x > -2.562164 &&
-    std_gyro_y <= 0.580901 &&
-    sma_magn > 37.26 &&
-    mean_accel_smv > 9.556959 &&
-    max_gyro_z <= 0.018784 &&
-    mean_accel_z <= 8.306936
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.097382 &&
-    max_accel_x > -2.562164 &&
-    range_magn_z <= 14.784241 &&
-    std_magn_z <= 0.726867 &&
-    max_gyro_z > 0.293335 &&
-    std_accel_z > 0.325344
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.097382 &&
-    max_accel_x > -2.562164 &&
-    std_gyro_y <= 0.580901 &&
-    std_magn_z <= 0.705407 &&
-    mean_magn_z > -14.694 &&
-    std_accel_z <= 1.201544 &&
-    std_accel_x <= 0.901894 &&
-    mean_magn_z <= -4.0003
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.097382 &&
-    max_accel_x > -2.562164 &&
-    std_gyro_y <= 0.580901 &&
-    std_magn_z <= 0.688721 &&
-    min_accel_z > 3.292027 &&
-    std_accel_x > 0.167091 &&
-    max_gyro_y <= 0.114244 &&
-    min_magn_y <= 0.923157
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.097382 &&
-    max_accel_x > -2.562164 &&
-    std_gyro_y <= 0.580901 &&
-    rms_gyro_x <= 0.559143 &&
-    max_gyro_y <= 0.951129 &&
-    range_accel_z <= 1.984787 &&
-    max_gyro_z > 0.161122 &&
-    min_gyro_y > -0.714081 &&
-    mean_accel_smv > 9.825916
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.097382 &&
-    max_accel_x > -2.562164 &&
-    range_magn_z <= 14.784241 &&
-    max_magn_smv > 26.411043 &&
-    range_magn_z <= 2.34 &&
-    range_magn_x > 2.139282
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y > 1.097382 &&
-    max_accel_x > -2.562164 &&
-    range_magn_z <= 14.784241 &&
-    max_magn_smv > 26.411043 &&
-    min_accel_x <= -0.773351 &&
-    max_magn_y > 10.758003 &&
-    range_accel_x > 0.817627 &&
-    min_gyro_x > -0.816837
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    max_magn_y <= 18.099998 &&
-    mean_accel_z > 9.515685 &&
-    max_magn_y <= -7.800293 &&
-    mean_magn_z <= -6.666
-  ) {
-    return 'c';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_accel_y <= -6.263471 &&
-    std_accel_x <= 2.004891 &&
-    min_magn_y > -16.152 &&
-    max_gyro_y > 0.145031
-  ) {
-    return 'c';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    min_accel_x <= -6.660872 &&
-    rms_accel_z > 1.727116 &&
-    min_gyro_x > -1.151566 &&
-    std_magn_smv > 5.158608 &&
-    mean_magn_smv <= 36.385114
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    min_accel_x <= -6.660872 &&
-    mean_accel_y <= 6.880816 &&
-    mean_accel_smv > 9.773949 &&
-    mean_accel_smv <= 11.482785
-  ) {
-    return 'f';
-  }
-
-  if (mean_magn_smv <= 36.501975 && min_accel_x <= -6.660872) {
-    return 'a';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    mean_magn_z > 9.024 &&
-    mean_accel_y > -3.858256 &&
-    mean_magn_smv > 31.784956
-  ) {
-    return 'a';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    min_accel_y > -5.461174 &&
-    range_magn_x <= 28.38 &&
-    max_accel_x <= -0.976864 &&
-    mean_accel_smv > 9.635604 &&
-    std_accel_smv <= 3.91121
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    min_accel_y > -5.461174 &&
-    range_magn_x <= 28.38 &&
-    max_accel_x > -0.976864 &&
-    std_gyro_y > 0.046395 &&
-    min_gyro_x > -0.370478 &&
-    min_gyro_x > -0.031097
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.501975 &&
-    range_accel_x > 7.078461 &&
-    entropy_accel <= 2.144161 &&
-    mean_accel_y > -5.863228 &&
-    rms_accel_z > 3.068189
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    range_accel_x > 6.659472 &&
-    std_gyro_z > 0.091852 &&
-    max_accel_y <= 4.131195
-  ) {
-    return 'a';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    max_accel_x <= -0.976864 &&
-    mean_magn_smv <= 30.607009 &&
-    entropy_accel <= 1.106046
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    max_accel_x > -1.018158 &&
-    min_gyro_smv > 0.115368 &&
-    mean_accel_z <= 6.316576
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    max_accel_x > -1.018158 &&
-    range_magn_x <= 33.094 &&
-    min_gyro_x > -0.860404 &&
-    std_accel_z <= 0.315564 &&
-    min_accel_x <= -1.046266 &&
-    range_magn_x > 1.989746
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    max_accel_x > -1.018158 &&
-    range_magn_x <= 33.094 &&
-    min_gyro_x > -0.816837 &&
-    std_gyro_y > 0.046395 &&
-    max_gyro_z > 0.668941 &&
-    mean_accel_smv > 9.681134 &&
-    max_accel_x <= 1.941956
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    min_gyro_smv > 0.090806 &&
-    std_accel_y <= 1.272878
-  ) {
-    return 'a';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    range_magn_y <= 39.361572 &&
-    max_accel_x <= -1.018158 &&
-    mean_accel_z <= 5.442426
-  ) {
-    return 'c';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    range_magn_y <= 39.361572 &&
-    std_gyro_y > 0.046395 &&
-    std_gyro_z <= 0.098081 &&
-    std_accel_x > 1.098962
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    range_magn_x <= 33.094 &&
-    std_gyro_y <= 0.046395 &&
-    min_accel_y <= 4.800521 &&
-    min_magn_y <= -4.877998
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    range_magn_y <= 40.397003 &&
-    min_gyro_z > -0.225328 &&
-    max_accel_smv <= 10.515427 &&
-    max_accel_x > -0.730232
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z <= 5.444581 &&
-    sma_gyro > 1.551483 &&
-    mean_accel_y <= -1.381574 &&
-    max_magn_y <= 36.731998 &&
-    range_magn_x <= 7.48806 &&
-    sma_magn <= 70.12 &&
-    std_accel_y <= 4.408007
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z <= 4.873397 &&
-    sma_gyro > 1.551483 &&
-    mean_magn_smv > 48.587394 &&
-    max_magn_smv <= 109.573862 &&
-    std_gyro_y > 1.051673 &&
-    max_gyro_z <= 2.166592 &&
-    mean_magn_smv > 49.055704
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 4.873397 &&
-    sma_gyro > 1.551483 &&
-    mean_magn_smv <= 48.587394 &&
-    mean_accel_y <= -1.036003 &&
-    max_magn_y > 36.731998 &&
-    max_gyro_x > 1.014816
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 4.873397 &&
-    min_accel_smv <= 3.698226 &&
-    mean_magn_smv <= 48.615917 &&
-    mean_accel_y <= 0.238103 &&
-    mean_accel_y > -7.819223 &&
-    max_magn_y > -17.256165 &&
-    min_accel_x <= 0.276749
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 4.873397 &&
-    min_accel_smv <= 3.698226 &&
-    mean_magn_smv <= 48.615917 &&
-    mean_accel_y <= -1.03313 &&
-    max_accel_x > 8.372523 &&
-    mean_accel_z <= -0.519781 &&
-    max_magn_y <= 21.539999 &&
-    mean_magn_z > 9.1245
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 4.873397 &&
-    min_accel_smv <= 3.698226 &&
-    mean_magn_smv <= 48.615917 &&
-    mean_accel_y > -1.03313 &&
-    max_magn_smv > 43.57983 &&
-    sma_gyro <= 1.089334 &&
-    mean_magn_smv > 39.510382 &&
-    range_magn_y <= 13.880005
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 4.873397 &&
-    sma_gyro > 1.117709 &&
-    mean_accel_y > -1.305438 &&
-    std_accel_x > 2.749229 &&
-    mean_magn_smv <= 49.623826 &&
-    mean_accel_z <= 1.387321 &&
-    std_gyro_y <= 0.457889 &&
-    std_magn_smv <= 27.256801
-  ) {
-    return 'b';
-  }
-
-  if (
-    min_accel_z <= 4.873397 &&
-    sma_gyro > 1.551483 &&
-    mean_magn_smv > 48.587394 &&
-    mean_magn_z <= 45.415192 &&
-    max_gyro_z <= 4.671922 &&
-    rms_accel_x <= 6.164289 &&
-    sma_magn > 68.135998 &&
-    std_magn_z > 1.804995 &&
-    mean_magn_smv <= 56.728051
-  ) {
-    return 'c';
-  }
-
-  if (
-    min_accel_z <= 5.444581 &&
-    sma_gyro > 1.551483 &&
-    mean_accel_y > -0.344047 &&
-    mean_magn_smv <= 37.925832 &&
-    entropy_gyro <= 2.275403 &&
-    min_gyro_y <= -0.805907
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 5.444581 &&
-    sma_gyro > 1.551483 &&
-    min_gyro_smv > 0.029073 &&
-    mean_accel_y > -1.748195 &&
-    mean_magn_smv > 38.035101 &&
-    std_accel_z > 1.724097 &&
-    min_gyro_z <= -0.801129 &&
-    max_magn_y > 20.223 &&
-    mean_accel_z > -1.315614
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 3.648605 &&
-    sma_gyro > 1.575008 &&
-    mean_accel_y > -1.748195 &&
-    mean_magn_smv <= 37.836848 &&
-    std_accel_y > 1.983168
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z <= 3.631454 &&
-    sma_gyro > 1.575008 &&
-    mean_accel_y > -0.344047 &&
-    min_accel_smv <= 3.698226 &&
-    rms_gyro_x <= 2.07742 &&
-    rms_accel_z > 9.030423 &&
-    mean_accel_y <= 10.121477
-  ) {
-    return 'b';
-  }
-
-  if (
-    min_accel_z <= 3.648605 &&
-    sma_gyro > 1.575008 &&
-    mean_accel_y > -0.344047 &&
-    rms_gyro_x > 2.07742
-  ) {
-    return 'b';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    range_magn_y <= 18.154007 &&
-    mean_magn_z <= -0.2596 &&
-    range_magn_z <= 1.449585 &&
-    max_gyro_z > 0.094391
-  ) {
-    return 'e';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    range_magn_y <= 18.154007 &&
-    mean_magn_z <= -0.2596 &&
-    range_magn_z > 1.449585 &&
-    range_magn_x > 17.956999 &&
-    mean_accel_z <= 7.634956
-  ) {
-    return 'd';
-  }
-
-  if (
-    min_accel_z <= 3.648605 &&
-    sma_gyro > 1.552271 &&
-    mean_accel_y > -0.344047 &&
-    mean_magn_smv <= 38.035101 &&
-    mean_accel_y <= 8.744191
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z <= 3.648605 &&
-    sma_gyro > 1.575008 &&
-    mean_accel_y > -0.344047 &&
+    min_accel_z <= 5.183605 &&
+    mean_magn_smv > 39.397609 &&
+    std_gyro_z > 0.190526 &&
+    mean_magn_z > -30.611999 &&
     std_accel_x > 3.002307 &&
-    std_accel_x <= 8.157431 &&
-    min_accel_z > -0.888519 &&
-    entropy_gyro <= 2.269643
+    max_accel_y > 3.175909 &&
+    std_accel_y <= 9.443281 &&
+    sma_magn <= 78.830719 &&
+    std_accel_z > 1.657739 &&
+    rms_gyro_x <= 1.254379 &&
+    min_gyro_z > -1.75394 &&
+    sma_gyro > 1.768388
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 5.370358 &&
+    max_magn_smv > 44.622294 &&
+    std_accel_smv > 8.923853 &&
+    mean_accel_y > -1.385715 &&
+    min_gyro_smv > 0.030106 &&
+    mean_magn_smv > 48.512285 &&
+    min_gyro_z > -0.491258 &&
+    mean_accel_z <= 2.508003
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 5.370358 &&
+    max_magn_smv > 44.622294 &&
+    std_gyro_z > 0.187853 &&
+    max_accel_z > 10.770316 &&
+    mean_magn_smv <= 48.512285 &&
+    sma_gyro <= 1.413568 &&
+    std_accel_z <= 6.534938 &&
+    min_gyro_smv > 0.006374 &&
+    range_magn_y <= 47.379002
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 5.087834 &&
+    max_magn_smv > 44.623863 &&
+    sma_gyro > 1.298691 &&
+    mean_magn_z > -30.611999 &&
+    std_accel_x <= 3.251805 &&
+    min_gyro_y <= -1.783136 &&
+    sma_magn <= 102.844391 &&
+    min_gyro_z > -3.460083 &&
+    max_accel_x <= 9.489304 &&
+    range_magn_y > 3.311996 &&
+    sma_gyro > 2.249843
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 5.087834 &&
+    max_magn_smv > 44.623863 &&
+    std_accel_smv > 8.923853 &&
+    mean_accel_y > -1.305438 &&
+    min_gyro_smv > 0.03014 &&
+    mean_magn_smv <= 48.730904 &&
+    mean_accel_z > 6.742072 &&
+    min_gyro_z <= -0.624127 &&
+    min_accel_y > -1.742979 &&
+    max_magn_y > -21.017265 &&
+    max_magn_y <= 34.827805
   ) {
     return 'b';
   }
 
   if (
-    mean_magn_smv <= 36.489729 &&
-    range_magn_x > 32.064 &&
-    max_magn_y <= 15.280151
-  ) {
-    return 'd';
-  }
-
-  if (
-    min_accel_z <= 3.648605 &&
-    min_accel_smv <= 2.694748 &&
-    sma_gyro > 1.15428 &&
-    mean_accel_y > -1.748195 &&
-    std_magn_z <= 15.506526 &&
-    std_gyro_z <= 0.542568
-  ) {
-    return 'a';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    range_magn_x <= 32.064 &&
-    min_gyro_x <= -1.87882
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    range_magn_x <= 32.064 &&
-    mean_accel_smv <= 9.51898 &&
-    mean_accel_smv > 9.335114
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    range_magn_x <= 32.064 &&
-    max_gyro_y > 0.523254 &&
-    mean_magn_smv > 28.735978 &&
-    min_magn_y <= 4.834
+    max_magn_smv <= 40.782084 &&
+    max_accel_y > 1.593341 &&
+    max_accel_smv <= 13.503778 &&
+    range_magn_x <= 9.80835 &&
+    std_gyro_y > 0.047731 &&
+    mean_accel_smv <= 10.074067 &&
+    mean_magn_z <= 2.1252 &&
+    mean_accel_y > 1.049908 &&
+    std_magn_z > 0.646529 &&
+    min_accel_smv > 8.523807 &&
+    range_magn_y > 1.38855 &&
+    mean_accel_smv <= 9.769112 &&
+    range_accel_y > 0.858321
   ) {
     return 'f';
   }
 
   if (
-    min_accel_z <= 3.648605 &&
-    sma_gyro > 1.575008 &&
-    max_accel_y > 5.916253 &&
-    min_gyro_z <= -0.748208 &&
-    entropy_accel > 1.912716 &&
-    std_accel_x <= 8.157431 &&
-    min_gyro_x > -1.725369 &&
-    mean_magn_smv > 43.623913
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.403489 &&
+    range_accel_x <= 9.05249 &&
+    min_gyro_smv <= 0.001444 &&
+    min_accel_x <= 1.913223 &&
+    max_accel_y > 2.091335
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z <= 4.081558 &&
+    max_magn_smv > 44.623863 &&
+    std_accel_x > 2.332756 &&
+    mean_accel_y <= -1.305438 &&
+    rms_accel_x > 7.101328 &&
+    max_accel_z <= 7.082265 &&
+    range_magn_x > 13.46283 &&
+    mean_accel_z > -1.741303
   ) {
     return 'a';
   }
 
   if (
-    mean_magn_smv <= 36.489729 &&
-    range_magn_x <= 32.064 &&
-    std_gyro_y > 0.314989 &&
-    mean_magn_smv <= 32.131788 &&
-    mean_accel_y > 4.645133 &&
-    max_gyro_x > 0.289719 &&
-    std_gyro_z > 0.13032
+    max_magn_smv <= 40.782084 &&
+    max_accel_y > 1.593341 &&
+    min_gyro_smv <= 0.082915 &&
+    rms_gyro_x <= 0.017945 &&
+    min_accel_z <= 7.714354 &&
+    mean_accel_smv > 9.782575
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.403489 &&
+    range_accel_x <= 9.476242 &&
+    mean_magn_smv <= 71.021941 &&
+    rms_accel_x > 7.556314 &&
+    mean_accel_y <= -2.150711 &&
+    min_gyro_z > -0.799134 &&
+    max_magn_y <= 38.074001 &&
+    max_accel_z > -0.770933 &&
+    mean_accel_z <= 0.068402 &&
+    std_accel_x <= 2.764582
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.403489 &&
+    range_accel_x <= 9.476242 &&
+    mean_magn_smv <= 71.021941 &&
+    mean_magn_z > 33.061085 &&
+    max_accel_y <= -2.442086
+  ) {
+    return 'c';
+  }
+
+  if (
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.403489 &&
+    std_accel_x <= 3.007815 &&
+    sma_magn > 112.577897 &&
+    max_accel_y > 4.348206 &&
+    mean_accel_y <= 9.327319
   ) {
     return 'e';
   }
 
   if (
-    min_accel_z <= 4.873397 &&
-    min_gyro_x > -0.054363 &&
-    mean_accel_y <= 2.088582 &&
-    mean_accel_z > 3.4207 &&
-    min_accel_x > -6.582858
-  ) {
-    return 'd';
-  }
-
-  if (
-    min_accel_z <= 4.873397 &&
-    min_gyro_z <= -1.254249 &&
-    std_gyro_y <= 0.32772 &&
-    mean_accel_smv <= 11.084169
-  ) {
-    return 'c';
-  }
-
-  if (
-    min_accel_z <= 4.873397 &&
-    min_gyro_z <= -1.254249 &&
-    max_accel_y > 6.071881 &&
-    range_magn_y <= 38.032005 &&
-    min_accel_smv <= 6.900877 &&
-    min_accel_y <= 2.260651 &&
-    std_gyro_z <= 1.932761 &&
-    mean_magn_smv > 43.479205 &&
-    mean_magn_smv <= 46.441627
-  ) {
-    return 'b';
-  }
-
-  if (
-    mean_magn_smv <= 36.489729 &&
-    range_magn_x <= 32.064 &&
-    std_gyro_y > 0.314989 &&
-    max_accel_z > 7.932922
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.403489 &&
+    std_accel_smv > 11.811299 &&
+    mean_accel_y <= -1.511027 &&
+    mean_accel_y > -10.417564 &&
+    rms_accel_x > 8.937126 &&
+    max_accel_z <= 7.196976 &&
+    std_gyro_y > 0.902575 &&
+    max_accel_z > 0.636858 &&
+    max_magn_y > -12.761688
   ) {
     return 'f';
   }
 
   if (
-    min_accel_z <= 3.648605 &&
-    max_magn_smv > 84.347908 &&
-    max_accel_y > 4.43047 &&
-    rms_accel_z > 2.169222
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z <= 3.631454 &&
-    std_gyro_y <= 0.030133 &&
-    mean_accel_y <= 2.043691 &&
-    mean_magn_smv > 36.18662 &&
-    std_accel_z <= 3.426114
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.403489 &&
+    range_accel_x <= 9.476242 &&
+    rms_accel_x > 8.512805 &&
+    max_accel_z <= 6.404685 &&
+    max_accel_x <= 10.826911 &&
+    max_accel_x <= 10.770889 &&
+    range_magn_x <= 12.730408
   ) {
     return 'a';
   }
 
   if (
-    range_accel_y > 2.875524 &&
-    rms_gyro_x > 0.080934 &&
-    rms_accel_x > 7.556314 &&
-    mean_accel_y <= -1.345182 &&
-    max_accel_z <= 6.821289 &&
-    mean_accel_z > -0.479199 &&
-    min_magn_y <= 15.52124
-  ) {
-    return 'a';
-  }
-
-  if (
-    range_accel_y > 2.875524 &&
-    rms_gyro_x > 0.080934 &&
-    rms_accel_x > 7.556314 &&
-    mean_accel_y <= -1.345182 &&
-    max_accel_z <= 6.821289 &&
-    max_magn_smv <= 66.123816 &&
-    std_magn_z <= 12.015363 &&
-    std_magn_smv > 19.235254
-  ) {
-    return 'f';
-  }
-
-  if (
-    range_accel_y > 2.875524 &&
-    rms_gyro_x > 0.080934 &&
-    max_magn_smv > 44.844329 &&
-    sma_gyro > 1.538052 &&
-    sma_magn <= 66.749999 &&
-    max_accel_y > 2.03148 &&
-    max_gyro_y > 1.089185 &&
-    mean_magn_z > -40.016327 &&
-    min_magn_y > -42.424011 &&
-    rms_accel_z > 3.100924
-  ) {
-    return 'a';
-  }
-
-  if (
-    range_accel_y > 2.875524 &&
-    rms_gyro_x > 0.080934 &&
-    max_magn_smv > 44.844329 &&
-    sma_gyro <= 1.458461 &&
-    mean_accel_y > 9.315208 &&
-    max_magn_y <= -27.59552 &&
-    mean_magn_z <= -4.377
-  ) {
-    return 'a';
-  }
-
-  if (
-    range_accel_y > 2.875524 &&
-    min_accel_y > 6.810307 &&
-    max_accel_x <= 1.284489 &&
-    min_gyro_z <= -0.031662 &&
-    max_accel_z <= 3.717926 &&
-    range_magn_z <= 12.853999
-  ) {
-    return 'c';
-  }
-
-  if (
-    range_accel_y > 2.875524 &&
-    min_accel_y > 6.810307 &&
-    max_magn_y > -33.299999 &&
-    mean_magn_smv > 38.400367 &&
-    rms_accel_z <= 3.118365 &&
-    min_accel_x > -3.34053
-  ) {
-    return 'd';
-  }
-
-  if (
-    range_accel_y > 2.875524 &&
-    rms_gyro_x > 0.080934 &&
-    max_magn_smv > 44.844329 &&
-    std_gyro_z > 0.675301 &&
-    rms_gyro_x <= 0.503655 &&
-    mean_accel_y <= 7.942046 &&
-    rms_accel_x > 2.006839
-  ) {
-    return 'c';
-  }
-
-  if (
-    range_accel_y > 2.875524 &&
-    rms_gyro_x > 0.080934 &&
-    std_gyro_z > 0.683158 &&
-    range_magn_z <= 33.227999 &&
-    max_accel_y > 5.579687 &&
-    min_accel_y > -0.407562 &&
-    sma_magn > 56.379603
-  ) {
-    return 'a';
-  }
-
-  if (
-    range_accel_y > 2.875524 &&
-    rms_gyro_x > 0.080934 &&
-    std_gyro_z <= 0.675301 &&
-    mean_magn_smv > 39.264881 &&
-    max_accel_x <= -4.376601 &&
-    min_accel_smv <= 7.675754
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_y > 0.881056 &&
-    rms_gyro_x > 0.080934 &&
-    std_gyro_z <= 0.675301 &&
-    mean_magn_smv > 39.264881 &&
-    std_magn_smv <= 35.741467 &&
-    rms_accel_x > 8.495451 &&
-    mean_accel_y > -3.415089 &&
-    max_accel_z <= 6.147705 &&
-    std_magn_z <= 6.697925
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 3.631454 &&
-    max_accel_z <= -7.078457 &&
-    rms_accel_x <= 4.568136 &&
-    min_magn_y <= -14
-  ) {
-    return 'd';
-  }
-
-  if (
-    min_accel_z <= 4.096604 &&
-    max_accel_x <= -6.133945 &&
-    mean_magn_smv <= 39.537016
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z <= 4.096604 &&
-    max_gyro_x <= 0.029907 &&
-    std_accel_y > 0.197185 &&
-    max_magn_smv > 41.186666 &&
-    min_gyro_y > -0.095252 &&
-    max_accel_x > -1.344971 &&
-    rms_accel_x <= 7.447846 &&
-    mean_magn_smv > 37.621809
-  ) {
-    return 'd';
-  }
-
-  if (
-    min_accel_z <= 4.096604 &&
-    max_magn_smv > 45.048054 &&
-    min_accel_x > 7.476715 &&
-    max_accel_x > 9.026416 &&
-    std_accel_x <= 2.238118 &&
-    rms_gyro_x > 0.204612 &&
-    mean_accel_y > -1.683073
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 4.096604 &&
-    max_magn_smv > 45.276571 &&
-    sma_gyro <= 1.459483 &&
-    std_gyro_z > 0.18797 &&
-    min_accel_y > 7.68338 &&
-    mean_magn_smv > 39.795517 &&
-    entropy_gyro <= 2.269113
-  ) {
-    return 'd';
-  }
-
-  if (
-    min_accel_z <= 4.096604 &&
-    max_magn_smv > 45.276571 &&
-    min_accel_smv > 2.694748 &&
-    min_accel_x <= 7.476715 &&
-    rms_accel_z <= 7.509443 &&
-    max_accel_x > -4.788549 &&
-    sma_magn <= 78.8422 &&
-    std_gyro_z > 0.192177 &&
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.403489 &&
+    range_accel_x <= 9.476242 &&
+    std_gyro_z > 0.188491 &&
+    mean_magn_smv <= 48.884782 &&
+    min_accel_y <= 7.520676 &&
+    min_gyro_smv > 0.019191 &&
     rms_gyro_x <= 0.251223 &&
-    mean_accel_z > -2.253662 &&
-    sma_gyro > 0.512289 &&
-    min_accel_z <= 0.26337 &&
-    max_gyro_y <= 1.0937
+    max_accel_z <= 7.435194 &&
+    sma_gyro > 0.460665 &&
+    mean_accel_z <= 1.494313
   ) {
     return 'a';
   }
 
   if (
-    min_accel_z <= 4.096604 &&
-    std_gyro_z <= 0.675301 &&
-    mean_magn_smv > 39.810584 &&
-    rms_accel_z <= 7.509443 &&
-    entropy_accel > 1.085912 &&
-    sma_magn <= 78.8422 &&
-    mean_accel_y > 7.354015 &&
-    min_gyro_smv > 0.006593 &&
-    min_magn_y > -33.773804 &&
-    min_gyro_x > -1.943997 &&
-    min_gyro_y <= -0.090139 &&
-    mean_magn_smv <= 47.373171
-  ) {
-    return 'c';
-  }
-
-  if (
-    min_accel_z <= 4.096604 &&
-    max_magn_smv > 44.922854 &&
-    std_gyro_z <= 0.675301 &&
-    max_accel_x <= -4.788549 &&
-    mean_accel_z > 0.78116
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z <= 4.096604 &&
-    max_magn_smv > 44.922854 &&
-    std_gyro_z <= 0.675301 &&
-    rms_accel_z <= 7.509443 &&
-    min_accel_x <= -7.9691 &&
-    mean_accel_z <= 2.678954 &&
-    mean_accel_y <= 6.995857 &&
-    min_accel_z <= -0.627281
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.403489 &&
+    range_accel_x <= 9.059659 &&
+    mean_accel_z <= -6.588125 &&
+    max_accel_x <= 5.669739 &&
+    max_magn_y > -5.834961 &&
+    max_accel_x > 2.191269
   ) {
     return 'a';
   }
 
   if (
-    min_accel_z <= 4.096604 &&
-    max_magn_smv > 44.922854 &&
-    std_gyro_z <= 0.675301 &&
-    min_accel_x <= 7.517166 &&
-    mean_accel_z <= -6.291962 &&
-    max_magn_smv <= 66.711312
-  ) {
-    return 'e';
-  }
-
-  if (
-    min_accel_z <= 4.096604 &&
-    max_magn_smv > 44.922854 &&
-    std_gyro_z <= 0.675301 &&
-    min_accel_x <= 7.517166 &&
-    rms_accel_z <= 7.383114 &&
-    sma_magn <= 79.4104 &&
-    max_accel_y > -4.96524 &&
-    range_accel_x <= 10.874796 &&
-    min_accel_y <= 8.945068 &&
-    entropy_gyro <= 2.231821 &&
-    max_gyro_y <= 1.848952 &&
-    rms_accel_x > 1.833926 &&
-    std_accel_z <= 1.908708
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.403489 &&
+    range_accel_x <= 9.059659 &&
+    max_accel_z <= -2.037466 &&
+    min_accel_z > -8.192958 &&
+    std_gyro_z > 0.017754 &&
+    max_accel_x <= 8.396722
   ) {
     return 'c';
   }
 
   if (
-    min_accel_z <= 3.631454 &&
-    max_magn_smv > 45.979865 &&
-    range_accel_x <= 14.121002 &&
-    min_accel_x <= 6.695385 &&
-    rms_accel_z <= 7.631912 &&
-    min_accel_smv > 1.640962 &&
-    sma_magn <= 78.151102 &&
-    max_gyro_x <= 0.033508 &&
-    std_accel_x <= 0.878214
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.403489 &&
+    range_accel_x > 9.059659 &&
+    sma_magn <= 80.28595 &&
+    mean_accel_y <= 1.59382 &&
+    mean_accel_y <= -6.419094 &&
+    max_magn_y <= 41.040001
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.403489 &&
+    range_accel_x <= 9.476242 &&
+    sma_gyro > 0.687162 &&
+    sma_gyro > 2.561403 &&
+    std_gyro_z <= 2.463372 &&
+    sma_magn <= 78.3783
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.405851 &&
+    range_accel_x <= 9.476242 &&
+    max_accel_z > -2.067393 &&
+    min_accel_y <= 5.818088 &&
+    mean_magn_smv <= 65.053022 &&
+    max_accel_x <= -4.237866 &&
+    max_accel_x > -6.687006 &&
+    min_accel_z > -4.955997
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_magn_smv <= 44.912233 &&
+    std_accel_smv <= 6.699972 &&
+    max_accel_y > 2.24217 &&
+    mean_magn_smv <= 40.722549 &&
+    std_magn_z <= 4.804405 &&
+    mean_magn_z <= 9.8378 &&
+    mean_accel_y <= 6.819613 &&
+    mean_accel_z <= 8.672542 &&
+    sma_magn > 24.84 &&
+    std_gyro_z <= 0.036681 &&
+    sma_magn > 32.26 &&
+    max_accel_smv > 10.299034 &&
+    min_gyro_y > -0.062039
   ) {
     return 'f';
   }
 
   if (
-    min_accel_z <= 3.631454 &&
-    max_magn_smv > 45.979865 &&
-    min_accel_x <= 6.695385 &&
-    std_gyro_z <= 0.675301 &&
-    rms_accel_z <= 7.629985 &&
-    std_gyro_y > 0.437121 &&
-    std_gyro_z <= 0.530118 &&
-    min_accel_x > 4.182671 &&
-    max_accel_z > 4.610035
-  ) {
-    return 'c';
-  }
-
-  if (
-    min_accel_z <= 4.843618 &&
-    max_magn_smv > 45.979865 &&
-    min_accel_x > 6.71813 &&
-    max_accel_y <= 1.789666 &&
-    mean_accel_y <= -3.98874
-  ) {
-    return 'f';
-  }
-
-  if (
-    min_accel_z <= 3.631454 &&
-    max_magn_smv > 45.979865 &&
-    std_gyro_z <= 0.675301 &&
-    min_accel_x <= 7.960721 &&
-    std_gyro_y <= 0.437121 &&
-    range_magn_x > 5.460001 &&
-    min_accel_x > -9.261055 &&
-    std_magn_smv <= 15.77885 &&
-    max_accel_z <= 6.229903 &&
-    min_accel_x <= -1.303643 &&
-    sma_gyro <= 0.808068
+    sma_gyro > 1.302844 &&
+    std_accel_x > 2.778576 &&
+    mean_accel_y <= -1.456153 &&
+    rms_accel_x > 6.492159 &&
+    sma_magn <= 80.81 &&
+    std_accel_y <= 5.54249
   ) {
     return 'a';
   }
 
   if (
-    min_accel_z <= 3.631454 &&
-    max_magn_smv > 45.979865 &&
-    std_gyro_z <= 0.675301 &&
-    min_accel_x <= 7.960721 &&
-    std_gyro_y <= 0.437121 &&
-    entropy_accel <= 2.018553 &&
-    range_magn_x > 5.319 &&
-    min_accel_x <= -9.261055
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 3.631454 &&
-    max_magn_smv > 45.979865 &&
-    std_gyro_z <= 0.675301 &&
-    std_gyro_y <= 0.437121 &&
-    min_accel_x > 8.416702 &&
-    max_magn_y <= 32.200813
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 3.631454 &&
-    max_magn_smv > 45.979865 &&
-    std_gyro_z <= 0.675301 &&
-    std_gyro_y <= 0.437121 &&
-    entropy_accel <= 2.018553 &&
-    min_accel_x <= 8.374298 &&
-    range_magn_x > 5.456999 &&
-    mean_magn_smv <= 38.636742 &&
-    rms_accel_x > 4.033938
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 3.631454 &&
-    max_magn_smv > 45.979865 &&
-    std_gyro_z <= 0.675301 &&
-    std_gyro_y <= 0.437121 &&
-    entropy_accel <= 2.018553 &&
-    min_accel_x <= 8.374298 &&
-    range_magn_x > 5.456999 &&
-    mean_accel_smv > 8.901273 &&
-    range_magn_z > 4.872131 &&
-    rms_accel_x > 3.443769 &&
-    max_accel_smv > 10.141464 &&
-    max_accel_z > -2.009003 &&
-    std_gyro_z <= 0.308254 &&
-    std_gyro_z <= 0.176153 &&
-    mean_accel_z <= 2.003229
-  ) {
-    return 'c';
-  }
-
-  if (
-    std_accel_y > 0.881056 &&
-    max_magn_smv > 44.825128 &&
-    sma_gyro > 1.054468 &&
-    max_magn_smv > 105.639093 &&
-    max_gyro_z <= 0.923905
-  ) {
-    return 'd';
-  }
-
-  if (
-    std_accel_y > 0.881056 &&
-    max_magn_smv > 44.825128 &&
-    sma_gyro > 1.054468 &&
-    std_gyro_z <= 0.694135 &&
-    mean_accel_y > 7.798871 &&
-    min_magn_y <= -33.992004 &&
-    min_accel_x > -7.192551
-  ) {
-    return 'c';
-  }
-
-  if (
-    std_accel_y > 0.881056 &&
-    sma_gyro > 1.134998 &&
-    min_accel_x <= -2.471191 &&
-    sma_magn <= 79.880799 &&
-    max_accel_x > 12.703634 &&
-    mean_accel_z > -2.145085
-  ) {
-    return 'b';
-  }
-
-  if (
-    range_accel_y > 2.851582 &&
-    sma_gyro > 1.148405 &&
-    min_accel_x <= -2.471191 &&
-    sma_magn <= 79.880799 &&
-    rms_accel_x <= 2.335626
-  ) {
-    return 'a';
-  }
-
-  if (
-    min_accel_z <= 3.631454 &&
-    max_magn_smv > 45.979865 &&
-    std_gyro_y <= 0.435157 &&
-    min_gyro_z <= -0.545631 &&
-    min_gyro_z > -1.329994 &&
-    mean_accel_y <= 7.995437 &&
-    max_accel_z <= 9.971298 &&
-    entropy_accel > 1.152532
-  ) {
-    return 'c';
-  }
-
-  if (
-    mean_accel_y <= -6.366133 &&
-    max_magn_y <= 1.900002 &&
-    mean_accel_z <= 3.282072 &&
-    max_accel_x <= 5.009872
-  ) {
-    return 'd';
-  }
-
-  if (
-    mean_accel_y <= -6.402643 &&
-    max_gyro_y > 0.978484 &&
-    min_accel_x <= 1.325191 &&
-    max_magn_smv <= 52.456934
-  ) {
-    return 'a';
-  }
-
-  if (
-    mean_accel_y <= -6.402643 &&
-    min_accel_x <= 1.291565 &&
-    entropy_accel > 1.068329 &&
-    sma_magn > 66.970062 &&
-    std_magn_smv <= 44.985662 &&
-    std_accel_z <= 2.470062
-  ) {
-    return 'c';
-  }
-
-  if (
-    std_accel_y <= 0.881056 &&
-    mean_accel_z > 4.691581 &&
-    min_gyro_smv <= 0.141384 &&
-    min_accel_y > 6.564901 &&
-    mean_magn_z > 5.837173
-  ) {
-    return 'd';
-  }
-
-  if (
-    std_accel_y <= 0.881056 &&
-    mean_accel_z > 4.691581 &&
-    min_gyro_smv <= 0.141384 &&
-    sma_magn > 106.435738 &&
-    min_accel_z <= 8.877151
-  ) {
-    return 'e';
-  }
-
-  if (
-    std_accel_y <= 0.881056 &&
-    mean_accel_z > 4.691581 &&
-    sma_gyro <= 1.139683 &&
-    range_magn_y > 28.873997 &&
-    range_magn_y <= 73.415005 &&
-    std_accel_y <= 0.63706
-  ) {
-    return 'd';
-  }
-
-  if (
-    std_accel_y <= 0.881056 &&
-    mean_accel_z > 4.691581 &&
-    mean_magn_z <= -44.014282 &&
-    mean_accel_y <= 4.656722
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    max_accel_y > 9.838972 &&
-    min_magn_y <= -33.732605 &&
-    std_gyro_z > 0.022167
-  ) {
-    return 'c';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    mean_accel_y <= -6.06559 &&
-    mean_magn_smv <= 44.064891 &&
-    max_accel_x > 1.520365
-  ) {
-    return 'e';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    max_accel_y <= -0.815226 &&
-    min_accel_z <= 4.829252 &&
-    mean_accel_z <= -2.532467
-  ) {
-    return 'c';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    range_magn_y > 23.880001 &&
-    min_gyro_smv > 0.000338 &&
-    std_magn_z > 11.959485 &&
-    std_accel_x > 0.350409
-  ) {
-    return 'e';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    range_magn_y > 23.880001 &&
-    min_gyro_x <= -0.01967 &&
-    max_gyro_x > 0.021591
-  ) {
-    return 'c';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    min_accel_z > 1.192349 &&
-    max_accel_x <= -1.604164 &&
-    mean_accel_z <= 9.531723 &&
-    std_accel_z <= 0.57993
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    min_accel_z > 1.192349 &&
-    min_magn_y > -41.168213 &&
-    max_accel_x <= -1.647211 &&
-    mean_accel_z <= 9.21724
-  ) {
-    return 'c';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    min_magn_y > -41.168213 &&
-    min_accel_y <= -3.809291 &&
-    mean_accel_y <= 0.814557 &&
-    std_accel_x <= 4.957223
-  ) {
-    return 'a';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    min_magn_y > -41.168213 &&
-    min_accel_z > 1.150414 &&
-    std_gyro_z <= 0.010378 &&
-    std_magn_smv > 9.896435
-  ) {
-    return 'f';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    sma_magn <= 71.897221 &&
-    min_accel_x > -4.066552 &&
-    std_accel_x > 1.432493 &&
-    min_magn_y <= -15.96
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    min_magn_y > -41.168213 &&
-    mean_magn_smv <= 48.972632 &&
-    min_accel_x <= -0.509965 &&
-    min_accel_x > -3.94841 &&
-    max_accel_x <= 2.691165 &&
-    max_gyro_y > 0.01358 &&
-    max_magn_y > 7.86 &&
-    mean_magn_smv > 30.15058
-  ) {
-    return 'e';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    min_magn_y > -41.168213 &&
-    sma_magn <= 71.270752 &&
-    range_accel_z <= 9.115004 &&
-    max_magn_y <= -29.4 &&
-    min_gyro_smv > 0.002972
-  ) {
-    return 'e';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    min_magn_y > -40.02 &&
-    sma_magn <= 71.270752 &&
-    range_accel_z <= 9.115004 &&
-    min_magn_y > 14.985001 &&
-    min_accel_z > 3.06398 &&
-    mean_magn_z <= -14.633999
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    mean_accel_smv <= 9.494552 &&
-    max_accel_y <= 9.793482 &&
-    std_magn_z > 1.86178
-  ) {
-    return 'c';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    max_magn_y > -25.627136 &&
-    sma_magn <= 70.951538 &&
-    range_accel_z > 9.115004 &&
-    std_gyro_z > 0.10107
-  ) {
-    return 'a';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    max_accel_y > 10.225967 &&
-    mean_magn_smv > 38.728512
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    max_magn_y > -25.378418 &&
-    sma_magn <= 65.331701 &&
-    max_gyro_z > 0.014087 &&
-    entropy_gyro <= 2.295513 &&
-    min_gyro_z > -0.209262 &&
-    max_accel_y <= 7.838913 &&
-    min_gyro_x > -0.48764 &&
-    mean_accel_smv <= 10.020838 &&
-    max_magn_y <= 11.299 &&
-    mean_magn_z > -35.987998 &&
-    range_accel_x <= 2.293715 &&
-    min_accel_smv <= 8.592693
-  ) {
-    return 'e';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    max_magn_y > -25.627136 &&
-    sma_magn <= 65.331701 &&
-    mean_accel_smv <= 9.741405 &&
-    min_gyro_x > -0.095051
-  ) {
-    return 'f';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    max_magn_y > -25.627136 &&
-    sma_magn <= 65.331701 &&
-    entropy_gyro <= 2.295513 &&
-    min_gyro_z > -0.203317 &&
-    mean_accel_smv > 10.020838 &&
-    max_accel_y <= 7.837419
-  ) {
-    return 'e';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    max_magn_y > -25.627136 &&
-    sma_magn <= 65.331701 &&
-    std_magn_smv > 4.939346 &&
-    mean_magn_z <= -23.664 &&
-    std_gyro_y <= 0.145725
-  ) {
-    return 'f';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    max_magn_smv <= 51.564999 &&
-    max_accel_x > -1.389834 &&
-    max_gyro_x <= 0.021088 &&
-    mean_magn_smv > 34.238409
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    max_magn_smv <= 51.564999 &&
-    max_accel_x > -1.389834 &&
-    std_magn_smv <= 7.263462 &&
-    mean_magn_z > -14.59 &&
-    max_accel_y > 6.869751
-  ) {
-    return 'f';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    max_magn_smv <= 51.564999 &&
-    max_accel_x > -1.389834 &&
-    mean_magn_z <= -25.260001 &&
-    mean_accel_smv <= 10.188097
-  ) {
-    return 'f';
-  }
-
-  if (
-    std_accel_y <= 0.638212 &&
-    min_accel_z > 2.724685 &&
-    range_accel_x <= 0.126221
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_y <= 0.638212 &&
-    min_accel_z > 2.724685 &&
-    min_gyro_x <= -1.93576 &&
-    mean_accel_y <= 4.474643
-  ) {
-    return 'c';
-  }
-
-  if (
-    std_accel_y <= 0.638212 &&
-    min_accel_z > 2.724685 &&
-    min_gyro_x > -2.033265 &&
-    max_accel_x <= 1.71784 &&
-    max_gyro_y > 0.03006 &&
-    mean_magn_z <= 4.572 &&
-    max_gyro_x <= 1.2798 &&
-    rms_accel_x <= 0.520279 &&
-    min_accel_y <= 4.11683
-  ) {
-    return 'f';
-  }
-
-  if (
-    std_accel_y <= 0.638212 &&
-    min_accel_z > 2.724685 &&
-    max_gyro_x > 1.2798 &&
-    rms_accel_x <= 2.201617 &&
-    max_gyro_y > 0.151611
-  ) {
-    return 'f';
-  }
-
-  if (
-    mean_magn_smv <= 37.598419 &&
-    min_gyro_y > -0.825878 &&
-    mean_accel_smv > 9.486394 &&
-    range_magn_x <= 26.547623 &&
-    max_accel_x > -0.84635 &&
-    mean_magn_z <= -0.2596 &&
-    max_magn_y <= 13.099998 &&
-    max_gyro_x > 0.222814 &&
-    min_gyro_y <= -0.194695
-  ) {
-    return 'e';
-  }
-
-  if (
-    std_accel_y <= 0.638212 &&
-    min_accel_z > 3.277115 &&
-    min_gyro_x > -2.033265 &&
-    max_accel_x <= 1.71784 &&
-    max_accel_smv > 10.208307 &&
-    min_magn_y > -31.25 &&
-    mean_magn_z > 27.188599 &&
-    mean_accel_y <= 1.108127
-  ) {
-    return 'e';
-  }
-
-  if (
-    std_accel_y > 0.638212 &&
-    sma_gyro > 1.150775 &&
-    max_magn_y > 69.874001 &&
-    mean_accel_y <= -3.696597
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 0.458211 &&
-    sma_magn <= 62.256201 &&
-    min_accel_x > -3.047485 &&
-    std_accel_z <= 0.76693 &&
-    max_accel_y > 0.657208 &&
-    max_magn_y <= 7.38 &&
-    range_magn_x > 3.167725 &&
-    range_magn_y <= 14.904785 &&
-    max_gyro_z > 0.076012
-  ) {
-    return 'e';
-  }
-
-  if (
-    std_accel_y > 0.638212 &&
-    sma_gyro > 1.150775 &&
-    std_accel_z <= 0.705322 &&
-    mean_accel_y > 3.144185
-  ) {
-    return 'c';
-  }
-
-  if (
-    sma_gyro > 1.150775 &&
-    std_accel_smv > 4.322842 &&
-    min_accel_x > -2.499623 &&
+    sma_gyro > 1.334993 &&
+    std_accel_x > 2.787185 &&
     std_gyro_z <= 2.043123 &&
-    max_accel_y <= 9.412262 &&
-    max_accel_x > 15.006856 &&
-    max_accel_x <= 22.742521
-  ) {
-    return 'f';
-  }
-
-  if (
-    sma_gyro > 1.150775 &&
-    std_accel_smv > 4.322842 &&
-    std_accel_x <= 2.228525 &&
-    max_accel_y <= 9.466963 &&
-    min_accel_z <= 6.980942 &&
-    min_accel_z > -4.012805 &&
-    rms_gyro_x > 0.390306 &&
-    sma_gyro > 1.184172
+    mean_accel_y > -2.081399 &&
+    range_magn_z > 41.219999 &&
+    mean_magn_smv > 37.740362 &&
+    sma_gyro > 2.426031
   ) {
     return 'a';
   }
 
   if (
-    std_accel_smv > 7.459732 &&
-    min_gyro_smv > 0.10671 &&
-    sma_gyro <= 1.451887 &&
-    min_gyro_smv <= 0.268665
-  ) {
-    return 'a';
-  }
-
-  if (
-    sma_gyro > 1.463877 &&
-    mean_magn_smv <= 61.178922 &&
-    min_gyro_smv <= 0.077159 &&
-    sma_magn > 64.707947 &&
-    max_accel_x > 2.608368
-  ) {
-    return 'c';
-  }
-
-  if (
-    sma_gyro > 1.463877 &&
-    mean_magn_smv <= 61.178922 &&
-    std_accel_x > 2.220728 &&
-    min_gyro_smv > 0.075905 &&
-    mean_magn_z > -33.689999 &&
-    range_magn_z <= 28.204346 &&
-    mean_magn_smv > 41.96956
-  ) {
-    return 'a';
-  }
-
-  if (
-    sma_gyro <= 1.463877 &&
-    mean_magn_smv <= 32.458565 &&
-    sma_gyro <= 0.348565 &&
-    min_accel_z > 6.908469 &&
-    min_accel_smv <= 9.078846 &&
-    range_magn_y > 3.410999
-  ) {
-    return 'e';
-  }
-
-  if (
-    sma_gyro <= 1.463877 &&
-    mean_magn_smv <= 32.458565 &&
-    std_gyro_z > 0.098081
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 1.463877 &&
-    min_accel_z > 7.059304 &&
-    rms_accel_z <= 9.312903 &&
-    entropy_accel <= 0.447755 &&
-    mean_accel_smv <= 9.841297
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 1.463877 &&
-    min_accel_z > 7.059304 &&
-    max_accel_y > 3.919428 &&
-    range_magn_y > 13.510132 &&
-    std_accel_z > 0.477435 &&
-    std_accel_smv <= 5.573313
-  ) {
-    return 'c';
-  }
-
-  if (
-    sma_gyro <= 1.463877 &&
-    mean_accel_y > 8.025931 &&
-    mean_magn_smv <= 51.126343 &&
-    std_magn_z > 0.447553 &&
-    mean_magn_smv > 38.829238 &&
-    max_gyro_x > 0.141569 &&
-    range_magn_y > 2.089691
-  ) {
-    return 'c';
-  }
-
-  if (
-    sma_gyro <= 1.463877 &&
-    min_accel_z > 7.059304 &&
-    rms_accel_z <= 9.312903 &&
-    std_gyro_z > 0.010624 &&
-    max_magn_y <= -21.464539 &&
-    mean_accel_y > 4.550779
-  ) {
-    return 'e';
-  }
-
-  if (
-    sma_gyro <= 1.463877 &&
-    min_accel_z > 7.38731 &&
-    min_magn_y <= -26.34 &&
-    max_accel_y <= 5.879196 &&
-    sma_magn <= 77.4876 &&
-    std_gyro_z <= 0.314695
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 1.463877 &&
-    std_accel_y <= 0.638212 &&
-    mean_magn_z > 33.897915 &&
-    mean_accel_y > -3.832518
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 1.463877 &&
-    mean_magn_smv <= 36.489729 &&
-    std_gyro_y <= 0.281406 &&
-    max_gyro_z > 0.078007
-  ) {
-    return 'f';
-  }
-
-  if (
-    sma_gyro <= 1.463877 &&
-    std_accel_y <= 0.638212 &&
-    min_accel_y > 6.604004 &&
-    max_accel_z <= 6.326416
-  ) {
-    return 'f';
-  }
-
-  if (
-    sma_gyro <= 1.463877 &&
-    min_accel_z <= 5.699127 &&
-    min_gyro_x <= -1.492556 &&
-    max_accel_x > 6.320068
-  ) {
-    return 'f';
-  }
-
-  if (
-    sma_gyro <= 1.451563 &&
-    min_accel_z <= 5.699127 &&
-    rms_gyro_x <= 0.116403 &&
-    mean_magn_smv > 44.756947 &&
-    max_magn_y <= -25.730896
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 1.451563 &&
-    min_accel_z <= 5.699127 &&
-    min_gyro_z > -0.016799 &&
-    min_gyro_y <= -0.012939
-  ) {
-    return 'd';
-  }
-
-  if (
-    sma_gyro <= 1.451563 &&
-    min_accel_z <= 5.699127 &&
-    mean_accel_smv <= 8.966253
-  ) {
-    return 'a';
-  }
-
-  if (
-    sma_gyro <= 1.450332 &&
-    std_accel_y <= 0.638212 &&
-    max_accel_z > 7.869981 &&
-    max_gyro_y <= 0.030136
-  ) {
-    return 'c';
-  }
-
-  if (
-    sma_gyro <= 1.450332 &&
-    std_accel_y <= 0.638212 &&
-    mean_accel_y <= 7.082364 &&
-    max_accel_z > 7.869981 &&
-    max_accel_x > 1.732205 &&
-    mean_accel_smv <= 9.908131
-  ) {
-    return 'f';
-  }
-
-  if (
-    sma_gyro <= 1.450332 &&
-    std_accel_y <= 0.638212 &&
-    mean_accel_y <= 7.082364 &&
-    max_accel_z > 7.869981 &&
-    max_accel_x <= 1.732205 &&
-    std_gyro_z <= 0.50043 &&
-    rms_gyro_x > 0.079922 &&
-    max_magn_smv > 39.418035 &&
-    entropy_gyro <= 2.265496
-  ) {
-    return 'e';
-  }
-
-  if (
-    sma_gyro <= 1.450332 &&
-    min_accel_z <= 6.763826 &&
-    min_magn_y <= -34.121704 &&
-    rms_gyro_x <= 0.855631 &&
-    rms_accel_x > 6.577477 &&
-    mean_magn_z <= 15.03
-  ) {
-    return 'c';
-  }
-
-  if (
-    sma_gyro <= 1.450332 &&
-    min_accel_z <= 6.763826 &&
-    mean_accel_y <= -6.391038 &&
-    std_magn_z > 1.432203 &&
-    max_accel_x > -2.236313 &&
-    mean_accel_z > 1.156853
-  ) {
-    return 'a';
-  }
-
-  if (
-    sma_gyro <= 1.450332 &&
-    mean_accel_y <= -6.391038 &&
-    std_gyro_y <= 0.362378
-  ) {
-    return 'c';
-  }
-
-  if (
-    sma_gyro <= 1.450332 &&
-    mean_accel_smv > 11.159099 &&
-    range_magn_x > 6.156921
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_x <= 2.228525 &&
-    min_magn_y <= -33.952332 &&
-    min_accel_y > 0.965515 &&
-    mean_magn_z <= 27.03064 &&
-    min_magn_y <= -34.121704 &&
-    min_gyro_y > -0.056908 &&
-    std_accel_y > 0.839403
-  ) {
-    return 'e';
-  }
-
-  if (
-    std_accel_x <= 2.228525 &&
-    min_magn_y <= -33.952332 &&
-    min_accel_y > 0.965515 &&
-    mean_magn_z <= 27.03064 &&
-    min_magn_y <= -34.121704 &&
-    min_gyro_smv <= 0.124703 &&
-    max_accel_x <= 1.763901 &&
-    sma_magn > 66.473999
-  ) {
-    return 'a';
-  }
-
-  if (
-    sma_gyro <= 1.450332 &&
-    std_gyro_z <= 0.043716 &&
-    rms_accel_x > 0.526384
-  ) {
-    return 'f';
-  }
-
-  if (
-    sma_gyro <= 1.450332 &&
-    max_accel_smv > 17.181614 &&
-    max_magn_y <= 9.828568 &&
-    std_accel_smv <= 11.158714 &&
-    mean_accel_y <= 3.280635
-  ) {
-    return 'd';
-  }
-
-  if (
-    std_accel_x > 2.220728 &&
-    min_gyro_smv > 0.104316 &&
-    max_accel_z > 3.799714 &&
-    min_accel_y > -6.044708 &&
-    std_magn_z <= 17.725828
+    sma_gyro > 1.334993 &&
+    std_accel_x > 2.787185 &&
+    min_gyro_z > -4.657053 &&
+    mean_accel_y > -1.842886 &&
+    sma_magn > 47.147999 &&
+    mean_magn_z <= -34.314 &&
+    mean_magn_smv <= 50.112351 &&
+    min_gyro_y <= -0.512482
   ) {
     return 'b';
   }
 
   if (
-    mean_accel_y > 7.8707 &&
-    max_accel_x <= 2.221887 &&
-    std_gyro_y > 0.12944
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.405851 &&
+    std_accel_smv > 11.72715 &&
+    range_magn_y > 2.970886 &&
+    std_accel_x <= 3.033906 &&
+    std_magn_z <= 8.438806 &&
+    range_magn_x <= 31.157001
   ) {
-    return 'c';
+    return 'a';
   }
 
   if (
-    mean_accel_y > 7.877164 &&
-    min_accel_x > -3.037979 &&
-    max_magn_y > -32.847595
+    min_accel_z <= 4.081558 &&
+    std_accel_smv > 11.815294 &&
+    std_accel_x > 3.007815 &&
+    range_magn_y <= 2.424004 &&
+    mean_accel_z > 1.275751
   ) {
     return 'd';
   }
 
   if (
-    max_accel_y > 9.847687 &&
-    mean_accel_y <= 7.72848 &&
-    entropy_gyro <= 2.269561 &&
-    max_accel_z <= 11.141418 &&
-    entropy_gyro > 2.250953
+    min_accel_z <= 4.081558 &&
+    std_accel_smv > 11.815294 &&
+    std_accel_x > 3.007815 &&
+    max_magn_y <= 6.300003 &&
+    std_gyro_z <= 0.232656
   ) {
     return 'a';
   }
 
   if (
-    max_accel_y > 9.847687 &&
-    mean_accel_y <= 7.72848 &&
-    entropy_gyro > 2.223713
-  ) {
-    return 'c';
-  }
-
-  if (
-    entropy_accel > 2.075459 &&
-    max_magn_smv > 44.386061 &&
-    std_accel_z <= 5.122086
+    min_accel_z <= 4.081558 &&
+    std_accel_smv > 11.815294 &&
+    mean_accel_y > -1.592911 &&
+    std_accel_x > 3.007815 &&
+    max_magn_y <= 5.073997 &&
+    min_accel_smv <= 3.736484 &&
+    mean_magn_smv > 45.885762 &&
+    rms_gyro_x <= 1.665219 &&
+    mean_accel_z <= 6.350352 &&
+    min_accel_y > -2.358361 &&
+    std_magn_z <= 8.892674
   ) {
     return 'a';
   }
 
   if (
-    mean_magn_smv > 58.289065 &&
-    mean_accel_z > -4.562032 &&
-    mean_magn_z <= 43.274002
+    min_accel_z <= 4.081558 &&
+    std_accel_smv > 11.815294 &&
+    mean_accel_y > -1.592911 &&
+    std_accel_x > 3.007815 &&
+    max_magn_y <= 5.073997 &&
+    min_accel_smv <= 3.736484 &&
+    max_gyro_z <= 3.335794 &&
+    range_magn_x <= 45 &&
+    std_accel_x > 3.574058 &&
+    min_gyro_y > -0.820557
   ) {
-    return 'e';
+    return 'b';
   }
 
-  if (mean_magn_z > 27.8109 && mean_accel_z <= -0.835889) {
+  if (
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.816123 &&
+    range_accel_x <= 9.476242 &&
+    max_accel_z > -2.067393 &&
+    range_magn_x > 2.980042 &&
+    mean_magn_smv <= 65.053022 &&
+    rms_accel_x <= 8.112414 &&
+    std_gyro_y > 0.533754 &&
+    max_accel_smv <= 21.296353 &&
+    mean_accel_smv > 9.014856 &&
+    max_magn_y > 23.16 &&
+    std_gyro_z <= 0.851601 &&
+    mean_magn_z > -17.238 &&
+    range_magn_y <= 26.046001
+  ) {
     return 'a';
   }
 
-  if (mean_magn_z > 27.8109 && std_magn_z <= 2.354421) {
-    return 'e';
+  if (
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.816123 &&
+    sma_gyro > 2.565288 &&
+    max_gyro_y <= 6.787617 &&
+    min_gyro_z > -4.233261 &&
+    std_accel_x > 1.57841 &&
+    mean_magn_z > -12.024 &&
+    max_accel_z <= 10.718292
+  ) {
+    return 'a';
   }
 
   if (
-    mean_magn_z <= 27.8109 &&
-    std_gyro_z <= 0.096579 &&
-    max_accel_z > 8.087613 &&
-    std_magn_z <= 5.122103 &&
-    max_accel_x > -0.25592 &&
-    mean_accel_y <= 6.54048
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.819835 &&
+    sma_gyro > 2.65559 &&
+    std_gyro_z > 2.030375 &&
+    mean_accel_smv <= 10.270198
   ) {
     return 'e';
   }
 
   if (
-    mean_magn_z <= 27.8109 &&
-    sma_magn <= 48.419999 &&
-    max_gyro_x <= 0.250218
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.819835 &&
+    sma_gyro > 2.592256 &&
+    mean_magn_z <= 67.776337 &&
+    std_gyro_z <= 2.030375 &&
+    range_magn_x > 12.084961 &&
+    mean_accel_y <= 10.318277 &&
+    max_magn_y <= 12.663269 &&
+    range_magn_x <= 24.159
+  ) {
+    return 'b';
+  }
+
+  if (
+    min_accel_z > 4.878186 &&
+    std_gyro_z <= 0.305535 &&
+    range_magn_y <= 0.819969 &&
+    mean_accel_y <= 3.408386
   ) {
     return 'd';
   }
 
   if (
-    mean_magn_z <= 27.8109 &&
-    range_accel_y > 7.981072 &&
-    entropy_gyro <= 2.208407
-  ) {
-    return 'c';
-  }
-
-  if (mean_magn_z > 27.8109) {
-    return 'd';
-  }
-
-  if (range_accel_y > 7.854179 && mean_accel_y <= -3.469438) {
-    return 'f';
-  }
-
-  if (range_accel_y > 7.379155 && mean_magn_z > -20.524597) {
-    return 'e';
-  }
-
-  if (entropy_accel > 1.888298 && std_accel_y <= 2.428641) {
-    return 'a';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    range_magn_z <= 2.204895 &&
-    mean_accel_y > 2.774866
-  ) {
-    return 'e';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    mean_magn_z > -42.115326 &&
-    min_magn_y <= -34.98 &&
-    std_accel_smv <= 7.045051 &&
-    mean_magn_smv > 42.149021 &&
-    range_accel_z <= 4.956009
-  ) {
-    return 'c';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    mean_magn_z > -42.115326 &&
-    mean_accel_smv > 10.517529 &&
-    std_accel_y <= 1.474727
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.819835 &&
+    std_accel_x <= 2.332756 &&
+    max_accel_z > -2.067393 &&
+    rms_accel_x > 8.512805 &&
+    max_accel_z <= 6.252197 &&
+    range_accel_z > 1.659424 &&
+    std_magn_z <= 16.941713 &&
+    min_accel_y <= -2.059013
   ) {
     return 'a';
   }
 
   if (
-    std_accel_y <= 2.461446 &&
-    mean_accel_smv <= 10.733615 &&
-    min_magn_y <= -30.465698 &&
-    mean_magn_z <= -3.4228 &&
-    std_accel_z <= 1.919735 &&
-    std_accel_y > 0.856435
-  ) {
-    return 'e';
-  }
-
-  if (std_accel_y <= 2.461446 && mean_accel_smv > 10.733615) {
-    return 'c';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    mean_accel_z > 8.339498 &&
-    range_accel_x > 5.226547 &&
-    std_accel_y <= 1.73702
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    mean_accel_z > 8.339498 &&
-    std_gyro_z <= 0.930221 &&
-    min_accel_x > -4.113617 &&
-    max_accel_x <= 0.377087 &&
-    mean_magn_smv <= 46.107031
-  ) {
-    return 'f';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    mean_accel_z > 8.339498 &&
-    std_gyro_z <= 0.920678 &&
-    std_accel_x <= 1.554248 &&
-    max_accel_x > 0.262165 &&
-    min_gyro_x > -0.734684 &&
-    max_magn_smv <= 49.571242
-  ) {
-    return 'c';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    mean_magn_z > -44.429447 &&
-    max_accel_z <= -0.081955 &&
-    max_accel_x > 1.033098
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    mean_accel_z > -3.08038 &&
-    mean_magn_z > -44.429447 &&
-    max_gyro_y <= 0.122344 &&
-    mean_accel_y <= 6.02046
+    min_accel_z > 4.853195 &&
+    std_gyro_z <= 0.305535 &&
+    max_magn_smv <= 53.813375 &&
+    min_accel_z <= 9.035172 &&
+    mean_accel_y <= 6.619212 &&
+    std_accel_y <= 0.948033 &&
+    max_gyro_z > 0.041111 &&
+    max_gyro_y <= 0.177021 &&
+    mean_magn_smv <= 43.730371 &&
+    max_gyro_x > 0.011002 &&
+    min_accel_smv <= 8.335969 &&
+    range_magn_z > 1.74
   ) {
     return 'e';
   }
 
   if (
-    std_accel_y <= 2.461446 &&
-    mean_accel_z > -3.08038 &&
-    mean_magn_z > -44.429447 &&
-    max_accel_x <= 1.987248 &&
-    min_accel_smv <= 5.587044
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    mean_accel_z > -3.08038 &&
-    min_gyro_smv <= 0.007711
-  ) {
-    return 'a';
-  }
-
-  if (std_accel_y <= 2.461446 && mean_accel_z <= -3.08038) {
-    return 'c';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    max_gyro_y <= 0.216033 &&
-    std_accel_y > 0.916215
-  ) {
-    return 'c';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    max_accel_x <= 1.727417 &&
-    min_gyro_x > -0.438296 &&
-    mean_magn_smv > 40.331151 &&
-    mean_accel_y <= 5.023428
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    mean_accel_smv > 10.304673 &&
-    mean_accel_y <= 1.431058
-  ) {
-    return 'c';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    rms_accel_z <= 2.243579 &&
-    max_accel_z > 1.460463
-  ) {
-    return 'a';
-  }
-
-  if (
-    std_accel_y <= 2.461446 &&
-    min_gyro_x > -0.452346 &&
-    entropy_gyro > 2.208582 &&
-    std_gyro_z <= 0.291412
+    max_magn_smv <= 44.912233 &&
+    min_gyro_smv > 0.083673 &&
+    rms_accel_x <= 0.716815 &&
+    min_gyro_smv <= 0.170655
   ) {
     return 'f';
   }
 
   if (
-    std_accel_y <= 2.461446 &&
-    sma_gyro <= 0.577946 &&
-    max_accel_x > 1.899689
+    max_magn_smv <= 44.912233 &&
+    min_gyro_smv > 0.083673 &&
+    max_magn_y > 20.5 &&
+    range_magn_x > 4.348755
   ) {
-    return 'c';
-  }
-
-  if (std_accel_y <= 2.461446 && min_magn_y <= -28.853035) {
     return 'a';
   }
 
   if (
-    std_accel_y <= 2.386676 &&
-    min_accel_smv <= 5.569756 &&
-    mean_accel_y <= 4.370509
+    max_magn_smv <= 44.80795 &&
+    std_accel_smv <= 6.699972 &&
+    max_accel_y > 2.24217 &&
+    max_magn_y <= -32.984543 &&
+    mean_accel_y > 7.408139
+  ) {
+    return 'c';
+  }
+
+  if (
+    max_magn_smv <= 44.80795 &&
+    std_accel_smv <= 6.699972 &&
+    max_accel_y > 2.24217 &&
+    std_magn_z <= 4.566065 &&
+    mean_magn_smv <= 41.030089 &&
+    mean_magn_z <= 9.818268 &&
+    mean_accel_z <= 9.448883 &&
+    mean_accel_y <= 6.819613 &&
+    sma_magn > 24.29 &&
+    max_accel_y > 5.184644 &&
+    range_magn_z <= 11.615002 &&
+    max_accel_y > 8.831238 &&
+    max_accel_x <= 1.233276
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.80795 &&
+    std_accel_smv <= 6.699972 &&
+    max_accel_y > 2.24217 &&
+    std_magn_z <= 4.566065 &&
+    mean_magn_smv <= 41.030089 &&
+    mean_magn_z <= 9.818268 &&
+    mean_accel_z <= 9.448883 &&
+    mean_accel_y <= 6.819613 &&
+    sma_magn > 24.29 &&
+    max_accel_y > 5.184644 &&
+    range_magn_z <= 11.615002 &&
+    mean_magn_smv > 24.494179 &&
+    range_magn_x <= 3.748001 &&
+    std_magn_z > 0.682935 &&
+    min_accel_z <= 7.599428 &&
+    rms_accel_x > 0.629172
   ) {
     return 'f';
   }
 
-  if (min_accel_smv <= 5.569756 && std_accel_y > 2.13706) {
+  if (
+    max_magn_smv <= 44.80795 &&
+    max_accel_smv <= 13.913059 &&
+    mean_accel_y > 0.96618 &&
+    min_gyro_smv <= 0.076596 &&
+    mean_accel_y <= 6.626635 &&
+    std_accel_smv > 1.91673 &&
+    range_magn_x > 1.61438 &&
+    std_gyro_z > 1.41629
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.80795 &&
+    max_accel_smv <= 13.913059 &&
+    mean_accel_y > 0.96618 &&
+    min_gyro_smv <= 0.076596 &&
+    mean_accel_y <= 6.626635 &&
+    std_accel_smv > 1.91673 &&
+    range_magn_x > 1.61438 &&
+    sma_magn <= 21.342 &&
+    min_accel_z > 6.997055
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.811308 &&
+    max_accel_smv <= 13.913059 &&
+    mean_accel_z > 9.520355 &&
+    rms_accel_x <= 0.471173
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.811308 &&
+    mean_accel_z <= 9.520355 &&
+    sma_gyro <= 0.7034 &&
+    mean_accel_z <= -8.642829 &&
+    sma_gyro <= 0.129194
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_magn_smv <= 44.811308 &&
+    sma_gyro <= 0.670728 &&
+    mean_accel_z <= 9.465691 &&
+    max_accel_y > -1.228225 &&
+    max_accel_x > 9.42626 &&
+    max_gyro_x <= 0.389744 &&
+    mean_accel_z > 0.357695
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.811308 &&
+    sma_gyro <= 0.670728 &&
+    rms_accel_x > 8.882913 &&
+    mean_accel_z > -1.224757
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_magn_smv <= 44.811308 &&
+    sma_gyro <= 0.670728 &&
+    mean_accel_z <= 9.465691 &&
+    max_accel_y > -2.477999 &&
+    std_gyro_y <= 0.060564 &&
+    max_gyro_x <= 0.012706
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.811308 &&
+    sma_gyro <= 0.670728 &&
+    mean_accel_z <= 9.465691 &&
+    max_magn_y <= 24.80011 &&
+    std_gyro_y <= 0.054035 &&
+    range_magn_y > 1.039314 &&
+    std_accel_x <= 2.268966 &&
+    std_accel_y > 0.131472 &&
+    min_accel_z <= 6.747787 &&
+    max_gyro_z <= 0.059037
+  ) {
     return 'd';
   }
 
   if (
-    min_accel_smv > 5.569756 &&
-    entropy_gyro > 2.188055 &&
-    min_magn_y <= 4.445999 &&
-    min_accel_z > 5.446975 &&
-    mean_accel_z <= 9.531078
+    max_magn_smv <= 44.80795 &&
+    sma_gyro <= 0.670728 &&
+    mean_accel_z <= 9.465691 &&
+    max_accel_y > -2.477999 &&
+    range_magn_y <= 21.480001 &&
+    std_accel_y > 0.109469 &&
+    max_magn_smv <= 43.57983 &&
+    std_gyro_y <= 0.054035 &&
+    std_gyro_z > 0.025978 &&
+    max_accel_y > 3.251648 &&
+    range_accel_z <= 1.261749
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.80795 &&
+    sma_gyro <= 0.670728 &&
+    mean_accel_z <= 9.465691 &&
+    max_accel_y > -2.477999 &&
+    range_magn_y <= 21.480001 &&
+    mean_magn_z <= -30.533799 &&
+    rms_gyro_x > 0.071758 &&
+    mean_magn_smv <= 41.182226
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.80795 &&
+    sma_gyro <= 0.670728 &&
+    mean_accel_z <= 9.465691 &&
+    mean_accel_y > -5.424854 &&
+    mean_magn_z <= -29.709167 &&
+    mean_accel_smv <= 9.991924
   ) {
     return 'f';
   }
 
   if (
-    min_accel_smv > 5.569756 &&
-    max_accel_z > 2.58519 &&
-    entropy_gyro > 2.194031 &&
-    std_accel_z > 0.632513
+    max_magn_smv <= 44.811308 &&
+    sma_gyro <= 0.670728 &&
+    mean_accel_z <= 9.465691 &&
+    mean_accel_y > -5.424854 &&
+    range_magn_y <= 21.922874 &&
+    max_magn_smv <= 43.359897 &&
+    std_accel_y <= 0.140872
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.811308 &&
+    sma_gyro <= 0.670728 &&
+    mean_accel_z <= 9.465691 &&
+    max_accel_y > -4.769395 &&
+    range_magn_y <= 21.480001 &&
+    std_gyro_y > 0.322669 &&
+    max_gyro_x > 0.148685 &&
+    sma_magn <= 52.991999 &&
+    max_gyro_x > 0.375397
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 44.811308 &&
+    sma_gyro <= 0.670728 &&
+    mean_accel_z <= 9.465691 &&
+    min_accel_y <= -8.734589 &&
+    mean_accel_smv <= 10.197962
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_magn_smv <= 44.811308 &&
+    sma_gyro <= 0.670728 &&
+    mean_accel_z <= 9.465691 &&
+    range_magn_y <= 21.480001 &&
+    min_gyro_smv <= 0.045442 &&
+    min_accel_y <= 6.199785 &&
+    max_gyro_y <= 0.033676 &&
+    max_accel_smv <= 12.184401 &&
+    sma_gyro <= 0.068317
   ) {
     return 'e';
   }
 
-  if (min_accel_x <= 5.142902 && min_gyro_x <= -0.712654) {
-    return 'a';
-  }
-
-  if (mean_accel_y <= -0.127012) {
+  if (
+    max_magn_smv <= 44.811308 &&
+    sma_gyro <= 0.670728 &&
+    mean_accel_z <= 9.465691 &&
+    range_magn_y <= 21.480001 &&
+    min_gyro_smv <= 0.045442 &&
+    min_gyro_z > -0.016616 &&
+    max_magn_smv <= 34.092569
+  ) {
     return 'f';
   }
 
-  return 'c';
+  if (
+    max_magn_smv <= 44.811308 &&
+    sma_gyro <= 0.670728 &&
+    mean_accel_z <= 9.324191 &&
+    range_magn_y <= 21.480001 &&
+    min_gyro_smv <= 0.045442 &&
+    min_accel_y <= 6.199785 &&
+    max_gyro_y > 0.046861 &&
+    max_accel_y <= 9.055147 &&
+    range_accel_z > 6.703969 &&
+    range_magn_z <= 8.332825 &&
+    rms_accel_x <= 6.034128
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.840188 &&
+    std_accel_x <= 2.332756 &&
+    max_accel_z > -2.067393 &&
+    std_magn_z <= 0.752596 &&
+    max_magn_y <= 3.800003 &&
+    mean_accel_smv <= 10.302293
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.840188 &&
+    std_accel_x <= 2.332756 &&
+    max_accel_z > -2.067393 &&
+    mean_magn_z <= 29.139252 &&
+    mean_accel_y <= 8.925331 &&
+    mean_accel_smv <= 8.970918 &&
+    max_gyro_y > 0.300326 &&
+    mean_accel_z > -1.625064
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 4.081558 &&
+    mean_magn_smv > 39.840188 &&
+    std_accel_x <= 2.332756 &&
+    max_accel_z > -2.067393 &&
+    mean_magn_smv <= 65.053022 &&
+    mean_accel_y <= 8.874577 &&
+    max_accel_x > -5.620389 &&
+    rms_accel_x > 1.629638 &&
+    min_accel_x <= 7.587225 &&
+    max_gyro_y <= 1.080773 &&
+    range_magn_z > 3.990746 &&
+    std_accel_z <= 2.636889 &&
+    min_accel_x > -7.846038 &&
+    min_accel_y > -9.898605 &&
+    mean_accel_z <= 6.89659 &&
+    range_magn_x > 2.253 &&
+    mean_magn_z <= 26.660728 &&
+    rms_accel_x > 4.735086
+  ) {
+    return 'c';
+  }
+
+  if (
+    std_accel_y > 0.784356 &&
+    max_magn_smv > 44.811308 &&
+    max_gyro_y > 0.153857 &&
+    max_accel_smv > 22.003231 &&
+    mean_accel_y > -1.567747 &&
+    std_accel_x > 3.007815 &&
+    max_magn_smv <= 60.413146 &&
+    min_accel_smv <= 3.620907 &&
+    min_gyro_z > -1.593893 &&
+    std_gyro_y > 0.546201
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_y <= 0.784356 &&
+    min_accel_y <= -7.473501 &&
+    mean_magn_smv <= 65.612365 &&
+    max_gyro_x <= 1.071457 &&
+    max_magn_y > 30.128998 &&
+    max_gyro_z <= 0.452072 &&
+    mean_accel_z > -2.016516 &&
+    mean_accel_smv <= 10.107141
+  ) {
+    return 'c';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    mean_accel_y > 7.957835 &&
+    range_accel_y > 0.827197 &&
+    max_gyro_z <= 1.01086 &&
+    min_gyro_smv > 0.004553 &&
+    std_gyro_y > 0.094841 &&
+    mean_accel_z > -0.58517 &&
+    mean_magn_smv > 39.165658 &&
+    max_accel_x <= 3.060364
+  ) {
+    return 'c';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    rms_accel_x > 8.514168 &&
+    std_accel_smv <= 2.977709
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_accel_y <= -7.826004 &&
+    rms_accel_x > 3.635866
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    max_accel_z <= -7.824524 &&
+    max_accel_y > 0.912842
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_gyro_smv <= 0.113059 &&
+    max_accel_x <= -7.005648 &&
+    mean_accel_smv > 9.752931
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_gyro_smv <= 0.152509 &&
+    max_magn_y > -23.132324 &&
+    max_accel_smv > 10.190441 &&
+    mean_accel_z > 0.646169 &&
+    mean_magn_z <= 2.769999 &&
+    max_magn_y > 43.42804 &&
+    max_accel_x <= -0.750582
+  ) {
+    return 'c';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_gyro_smv <= 0.152509 &&
+    max_magn_y > -23.132324 &&
+    max_accel_smv > 10.190441 &&
+    mean_accel_z > 0.646169 &&
+    max_accel_y <= 1.684321 &&
+    mean_magn_smv > 30.20598 &&
+    sma_magn > 71.8805
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_gyro_smv <= 0.113059 &&
+    min_gyro_smv <= 0.0035 &&
+    range_accel_z > 1.218658 &&
+    std_accel_x > 0.591042
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_gyro_smv <= 0.113059 &&
+    sma_magn <= 74.112854 &&
+    min_accel_z <= 9.186279 &&
+    max_accel_y > -7.09816 &&
+    min_gyro_smv <= 0.002938 &&
+    mean_magn_z > -22.511999 &&
+    std_accel_x <= 0.392221
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_gyro_smv <= 0.113059 &&
+    sma_magn <= 74.112854 &&
+    min_accel_z <= 9.186279 &&
+    max_accel_y > -7.09816 &&
+    max_gyro_y <= 0.040314 &&
+    std_accel_y > 0.095817 &&
+    sma_gyro > 0.045924 &&
+    min_accel_x > -0.811634
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_gyro_smv <= 0.113059 &&
+    sma_magn <= 74.112854 &&
+    min_accel_y > 0.778763 &&
+    min_accel_y <= 6.199785 &&
+    mean_magn_z <= -28.859999 &&
+    max_accel_smv <= 11.212345 &&
+    max_accel_y <= 4.812492
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_gyro_smv <= 0.113059 &&
+    sma_magn <= 74.112854 &&
+    min_accel_y > 1.937698 &&
+    min_accel_y <= 6.199785 &&
+    mean_accel_z > 9.311458 &&
+    std_accel_x > 0.346453 &&
+    std_accel_x <= 1.056033
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_gyro_smv <= 0.113059 &&
+    sma_magn <= 74.112854 &&
+    mean_accel_z <= 9.315288 &&
+    max_accel_y > -7.09816 &&
+    min_accel_y <= 6.199785 &&
+    rms_accel_x > 7.969366 &&
+    min_accel_z > -0.828419
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_gyro_smv <= 0.112308 &&
+    sma_magn <= 74.112854 &&
+    mean_accel_z <= 9.315288 &&
+    max_accel_y > -7.09816 &&
+    min_accel_y <= 6.199785 &&
+    max_accel_x <= 7.575486 &&
+    range_magn_x <= 28.699999 &&
+    max_magn_smv > 21.747873 &&
+    range_magn_y <= 13.35907 &&
+    mean_magn_z <= -36.821999 &&
+    std_accel_y > 0.233424
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    mean_magn_smv <= 46.231695 &&
+    min_gyro_smv > 0.160864 &&
+    rms_accel_x > 0.668439 &&
+    mean_accel_z <= 8.882041
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    mean_magn_smv <= 46.231695 &&
+    min_accel_z <= 8.941788 &&
+    min_accel_z > 0.102954 &&
+    max_gyro_x <= 1.271638 &&
+    range_magn_x <= 25.112915 &&
+    sma_magn <= 24.5933 &&
+    max_magn_y > -3.577232
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    mean_magn_smv <= 46.231695 &&
+    min_accel_z <= 8.941788 &&
+    min_accel_z > 0.102954 &&
+    range_magn_y <= 13.35907 &&
+    max_gyro_x <= 1.249097 &&
+    min_gyro_smv <= 0.141284 &&
+    mean_accel_y <= 6.739405 &&
+    mean_accel_smv <= 9.932772 &&
+    mean_magn_smv > 44.059032 &&
+    sma_magn <= 73.817999
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    mean_magn_smv <= 45.752806 &&
+    min_accel_z <= 9.03452 &&
+    mean_accel_smv <= 10.076304 &&
+    mean_magn_z <= 5.9915 &&
+    range_magn_y <= 30.252838 &&
+    mean_accel_z > 7.177557 &&
+    max_magn_y > -22.900002 &&
+    range_magn_z > 12.205505 &&
+    std_accel_z <= 0.725571 &&
+    range_magn_y > 8.283997
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    mean_magn_smv <= 45.752806 &&
+    min_accel_z <= 9.03452 &&
+    min_accel_z > 0.102954 &&
+    range_magn_y <= 22.808838 &&
+    max_gyro_x <= 1.249097 &&
+    min_gyro_smv > 0.141284 &&
+    mean_accel_smv <= 9.795311
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_gyro_smv > 0.112308 &&
+    sma_magn > 53.960002 &&
+    min_accel_z > 8.01459
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    min_gyro_smv > 0.112308 &&
+    sma_magn > 53.960002 &&
+    mean_magn_z <= 17.0371 &&
+    min_gyro_y <= -0.542252
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    mean_magn_smv <= 46.231695 &&
+    min_accel_z <= 8.941788 &&
+    max_accel_z > 1.953728 &&
+    range_magn_y <= 13.767624 &&
+    max_gyro_x <= 1.249097 &&
+    range_magn_x > 17.800903 &&
+    max_gyro_z <= 0.333105
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    max_magn_y > -23.132324 &&
+    std_accel_smv > 2.073385 &&
+    min_accel_y > 0.640671 &&
+    max_accel_y <= 7.858967 &&
+    mean_magn_z > 18.1934 &&
+    mean_accel_smv <= 10.029733 &&
+    mean_accel_smv <= 9.830517
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    max_magn_y > -23.132324 &&
+    std_accel_smv > 2.073385 &&
+    min_accel_y > 0.640671 &&
+    max_accel_y <= 7.858967 &&
+    mean_accel_smv <= 9.847978 &&
+    min_accel_z > 8.370385 &&
+    range_accel_z > 0.59855
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    max_magn_y > -23.132324 &&
+    std_accel_smv > 2.073385 &&
+    mean_accel_y > 1.577626 &&
+    max_accel_y <= 7.858967 &&
+    mean_accel_z > 9.067119 &&
+    range_accel_z <= 8.224091 &&
+    min_gyro_z > -0.708208 &&
+    std_accel_x <= 0.537768 &&
+    mean_magn_smv > 37.896108
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    max_magn_y > -23.132324 &&
+    std_accel_smv > 2.073385 &&
+    mean_accel_z > 0.995863 &&
+    min_accel_y > 1.937698 &&
+    rms_gyro_x > 1.05773 &&
+    std_accel_y > 0.500402
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    max_magn_y > -23.132324 &&
+    std_accel_smv > 2.073385 &&
+    mean_accel_z > 0.995863 &&
+    min_accel_y > 1.937698 &&
+    max_accel_y <= 7.858967 &&
+    mean_magn_smv > 39.373052 &&
+    rms_gyro_x > 0.034951 &&
+    mean_accel_y > 3.353032 &&
+    rms_accel_x > 0.468407 &&
+    mean_magn_z > -26.349335
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 44.80795 &&
+    mean_accel_z <= 9.4192 &&
+    sma_gyro <= 0.7034 &&
+    std_accel_smv > 8.611548 &&
+    min_gyro_smv <= 0.022323
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    sma_magn <= 65.889998 &&
+    min_accel_z <= 9.03452 &&
+    min_accel_y <= -8.309077 &&
+    mean_accel_y <= -9.195563
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    sma_magn <= 65.889998 &&
+    min_accel_z <= 9.03452 &&
+    mean_accel_smv > 10.074067 &&
+    std_accel_x > 0.276383 &&
+    mean_accel_y <= 6.813867 &&
+    range_magn_x > 1.826477 &&
+    min_gyro_z > -0.966474
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    sma_magn <= 65.889998 &&
+    min_accel_z <= 9.03452 &&
+    mean_accel_smv > 10.074067 &&
+    std_accel_x > 0.276383
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    sma_magn <= 65.889998 &&
+    min_accel_z <= 9.03452 &&
+    mean_magn_z <= -0.2 &&
+    range_magn_y > 37.773003 &&
+    std_accel_x > 0.29396
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    sma_magn <= 65.889998 &&
+    min_accel_z <= 9.03452 &&
+    std_gyro_y <= 0.047697 &&
+    std_accel_smv <= 3.245731
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    sma_magn <= 64.860725 &&
+    min_accel_z <= 9.03452 &&
+    std_gyro_y <= 0.047446 &&
+    min_gyro_y > -0.065595
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 44.80795 &&
+    mean_accel_z <= 9.315288 &&
+    sma_gyro <= 0.7034 &&
+    std_accel_smv <= 8.517597 &&
+    min_accel_smv <= 5.890528 &&
+    min_accel_smv > 2.804388 &&
+    max_gyro_x <= 0.308604
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    sma_magn <= 64.860725 &&
+    min_accel_z <= 8.604761 &&
+    mean_magn_z <= -0.2 &&
+    max_accel_y > 5.179855 &&
+    max_accel_smv <= 11.572068 &&
+    std_accel_z > 0.536905 &&
+    mean_accel_y <= 8.338135 &&
+    mean_magn_z <= -7.9183 &&
+    mean_magn_smv > 25.12184
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_y <= 0.700605 &&
+    mean_magn_smv <= 48.332114 &&
+    min_accel_z <= 8.552089 &&
+    sma_magn <= 65.64682 &&
+    max_magn_y <= 13.428001 &&
+    max_magn_smv <= 52.583488 &&
+    std_magn_z <= 2.185841 &&
+    mean_accel_z > 5.438835 &&
+    std_magn_z > 0.45353 &&
+    range_magn_y > 1.579285 &&
+    mean_accel_y > 3.861726 &&
+    min_accel_z <= 7.93199 &&
+    max_accel_y <= 7.762787 &&
+    max_gyro_z <= 0.286281 &&
+    range_magn_x <= 7.985 &&
+    mean_accel_z <= 8.529844
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.76769 &&
+    sma_magn <= 64.860725 &&
+    min_accel_z <= 9.03452 &&
+    std_magn_z <= 2.185841 &&
+    max_magn_y <= -2.16 &&
+    max_magn_y > -22.956848 &&
+    range_accel_z <= 3.423706 &&
+    mean_accel_y <= 7.154952 &&
+    std_magn_z > 0.45353
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_y <= 0.700605 &&
+    min_accel_z > 9.461334 &&
+    std_accel_x > 0.232247 &&
+    mean_accel_smv <= 10.016473
+  ) {
+    return 'c';
+  }
+
+  if (
+    std_accel_y <= 0.700605 &&
+    mean_magn_smv <= 47.385817 &&
+    sma_magn <= 64.860725 &&
+    max_accel_x > -0.976864 &&
+    std_accel_z <= 0.184981 &&
+    mean_magn_z <= -6.92 &&
+    mean_accel_y <= 5.018639
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 0.700605 &&
+    mean_magn_smv <= 47.385817 &&
+    sma_magn <= 64.860725 &&
+    max_accel_x > -0.976864 &&
+    std_accel_z <= 0.184108 &&
+    max_accel_x > 0.096965
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.700605 &&
+    std_accel_z <= 0.184991 &&
+    rms_accel_x <= 0.697939 &&
+    max_gyro_y <= 0.920492 &&
+    max_magn_y <= 26.119995
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_y <= 0.700605 &&
+    mean_magn_smv <= 47.385817 &&
+    sma_magn <= 64.860725 &&
+    max_accel_x > -0.976864 &&
+    std_accel_x <= 0.383583 &&
+    min_gyro_smv <= 0.013169 &&
+    max_accel_x > 0.356747 &&
+    mean_magn_z <= -10.188
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.700605 &&
+    mean_magn_smv > 52.58517 &&
+    mean_magn_z > -51.150665 &&
+    max_accel_x > -1.49675 &&
+    mean_accel_z > -4.671806 &&
+    rms_accel_x > 0.589326
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_y <= 0.700605 &&
+    mean_magn_z <= -34.367999 &&
+    std_accel_z > 0.282744 &&
+    std_accel_z > 0.561447
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_y <= 0.700605 &&
+    sma_magn <= 64.860725 &&
+    max_accel_x > -0.976864 &&
+    mean_accel_smv > 10.033437
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.700605 &&
+    sma_magn <= 64.860725 &&
+    max_accel_x > -0.976864 &&
+    mean_accel_smv <= 9.951029 &&
+    range_magn_x > 24.96 &&
+    min_gyro_y <= -0.530121
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_y <= 0.700605 &&
+    sma_gyro <= 0.05313 &&
+    min_accel_smv > 8.774033
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv > 44.811308 &&
+    sma_gyro > 0.693172 &&
+    std_accel_y > 7.433055 &&
+    min_accel_smv <= 4.002073 &&
+    min_accel_y <= 0.90686 &&
+    max_magn_smv <= 64.984371 &&
+    rms_gyro_x > 0.855527
+  ) {
+    return 'b';
+  }
+
+  if (
+    mean_magn_smv > 38.271083 &&
+    sma_gyro > 0.693172 &&
+    mean_magn_smv > 46.581232 &&
+    mean_accel_z <= 8.886199 &&
+    mean_magn_z > 28.6648 &&
+    mean_magn_z <= 43.083248 &&
+    min_accel_y <= 1.709512
+  ) {
+    return 'a';
+  }
+
+  if (
+    mean_magn_smv > 38.271083 &&
+    sma_gyro > 0.693172 &&
+    mean_magn_z > 31.4755 &&
+    mean_accel_z > -2.557367
+  ) {
+    return 'd';
+  }
+
+  if (
+    mean_magn_smv > 38.271083 &&
+    sma_gyro > 1.050327 &&
+    mean_magn_smv > 46.581232 &&
+    sma_magn <= 90.932465 &&
+    min_accel_x > -3.126827 &&
+    std_accel_x <= 4.076842 &&
+    min_gyro_y > -1.967291 &&
+    rms_gyro_x > 0.733189 &&
+    sma_magn > 71.692322 &&
+    mean_accel_z <= 7.119616
+  ) {
+    return 'c';
+  }
+
+  if (
+    mean_magn_smv > 38.271083 &&
+    sma_gyro > 1.051467 &&
+    sma_magn > 87.9832 &&
+    std_magn_z > 1.82478 &&
+    max_accel_z <= 11.530828
+  ) {
+    return 'a';
+  }
+
+  if (
+    mean_magn_smv > 38.271083 &&
+    sma_gyro > 1.051467 &&
+    rms_gyro_x <= 0.508712 &&
+    min_accel_y <= -8.172607 &&
+    mean_magn_smv > 47.958437
+  ) {
+    return 'c';
+  }
+
+  if (
+    mean_magn_smv > 38.271083 &&
+    sma_gyro > 1.051467 &&
+    min_accel_smv > 1.83137 &&
+    mean_magn_smv <= 40.735567 &&
+    std_magn_z <= 16.001877 &&
+    max_gyro_y <= 1.875132 &&
+    std_gyro_y > 0.408862
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_magn_smv > 44.811308 &&
+    min_gyro_smv > 0.062642 &&
+    std_gyro_y > 1.232475 &&
+    min_gyro_z > -7.374511 &&
+    mean_accel_y <= 5.595899
+  ) {
+    return 'a';
+  }
+
+  if (
+    mean_magn_smv > 38.561301 &&
+    sma_gyro > 0.693172 &&
+    std_accel_x > 2.210155 &&
+    min_gyro_smv > 0.007138 &&
+    max_accel_x <= 18.328705 &&
+    min_accel_x > 1.119289 &&
+    mean_accel_y > 0.821298 &&
+    min_accel_z > -7.303512
+  ) {
+    return 'c';
+  }
+
+  if (
+    mean_magn_smv > 38.561301 &&
+    sma_gyro > 1.050327 &&
+    sma_magn > 87.105713 &&
+    mean_accel_smv <= 9.919347
+  ) {
+    return 'd';
+  }
+
+  if (
+    mean_magn_smv > 38.561301 &&
+    sma_gyro > 1.050327 &&
+    max_gyro_y <= 2.327376 &&
+    min_accel_smv > 1.83137 &&
+    mean_magn_z > -31.9719 &&
+    min_gyro_y <= -0.341596 &&
+    range_accel_y <= 22.987433 &&
+    range_magn_z <= 19.151306 &&
+    max_accel_z > 0.782904 &&
+    std_accel_smv <= 9.376957 &&
+    max_accel_y <= 9.836029 &&
+    max_gyro_z <= 1.128158 &&
+    std_accel_z > 0.79939
+  ) {
+    return 'a';
+  }
+
+  if (
+    mean_magn_smv > 38.561301 &&
+    std_accel_smv > 7.905124 &&
+    mean_magn_z > -41.731598 &&
+    sma_magn <= 89.293957 &&
+    max_accel_x <= 17.019182 &&
+    range_magn_y > 3.311157 &&
+    max_gyro_x > 0.044626 &&
+    mean_accel_y <= -5.886214 &&
+    max_magn_y > 36.188 &&
+    range_accel_z <= 7.438785
+  ) {
+    return 'c';
+  }
+
+  if (
+    mean_magn_smv > 38.561301 &&
+    std_accel_smv > 7.905124 &&
+    mean_magn_z > -41.731598 &&
+    sma_magn <= 89.293957 &&
+    max_accel_x <= 17.019182 &&
+    range_magn_y > 3.311157 &&
+    max_gyro_x > 0.069516 &&
+    rms_gyro_x <= 0.566415 &&
+    min_accel_smv <= 4.772838
+  ) {
+    return 'a';
+  }
+
+  if (
+    mean_magn_smv > 38.561301 &&
+    sma_gyro > 1.050327 &&
+    std_accel_x <= 2.210155 &&
+    mean_magn_smv <= 55.954758 &&
+    min_gyro_smv <= 0.039253 &&
+    mean_magn_smv > 43.050582
+  ) {
+    return 'c';
+  }
+
+  if (
+    mean_magn_smv <= 38.561301 &&
+    sma_gyro > 1.574214 &&
+    max_accel_y > 10.788605
+  ) {
+    return 'a';
+  }
+
+  if (mean_magn_smv <= 38.561301 && std_gyro_z <= 0.013108) {
+    return 'd';
+  }
+
+  if (
+    mean_magn_smv <= 38.561301 &&
+    std_accel_smv > 6.873267 &&
+    min_gyro_smv <= 0.010472 &&
+    max_magn_smv > 36.904877 &&
+    mean_accel_y > 1.492186
+  ) {
+    return 'd';
+  }
+
+  if (
+    mean_magn_smv <= 38.561301 &&
+    max_magn_y > 27.443504 &&
+    max_accel_x <= 10.874796 &&
+    std_gyro_z > 0.131891 &&
+    min_accel_smv > 2.044048
+  ) {
+    return 'a';
+  }
+
+  if (
+    mean_magn_smv <= 38.561301 &&
+    rms_accel_x > 8.497211 &&
+    mean_accel_y <= -0.496812 &&
+    max_accel_z <= 1.368927
+  ) {
+    return 'f';
+  }
+
+  if (
+    mean_magn_smv <= 38.373391 &&
+    rms_accel_x > 8.497211 &&
+    max_gyro_y > 0.131622
+  ) {
+    return 'a';
+  }
+
+  if (
+    mean_magn_smv <= 38.373391 &&
+    max_accel_z > 12.239532 &&
+    min_gyro_smv > 0.011113 &&
+    mean_magn_z > -7.77 &&
+    max_accel_z <= 15.177308
+  ) {
+    return 'e';
+  }
+
+  if (
+    mean_magn_smv <= 38.373391 &&
+    max_accel_z > 12.220379 &&
+    mean_magn_z <= -5.79 &&
+    max_accel_x > 0.572861 &&
+    max_accel_z <= 15.316176 &&
+    min_accel_x <= -0.300472
+  ) {
+    return 'a';
+  }
+
+  if (
+    mean_magn_smv <= 38.373391 &&
+    max_magn_y <= 32.900002 &&
+    min_accel_z > 8.680832 &&
+    min_accel_x <= -2.074576
+  ) {
+    return 'c';
+  }
+
+  if (
+    mean_magn_smv <= 38.373391 &&
+    max_magn_y <= 32.900002 &&
+    mean_magn_z <= 3.475 &&
+    range_magn_y > 36.546898 &&
+    mean_magn_smv > 28.533205 &&
+    max_magn_y > 9.473999 &&
+    min_gyro_smv > 0.01805
+  ) {
+    return 'e';
+  }
+
+  if (mean_magn_smv <= 38.373391 && max_magn_y > 32.900002) {
+    return 'c';
+  }
+
+  if (
+    mean_magn_smv <= 38.373391 &&
+    min_accel_z <= -5.578476 &&
+    std_accel_smv <= 6.107204 &&
+    mean_accel_y > 6.665747
+  ) {
+    return 'c';
+  }
+
+  if (
+    mean_magn_smv <= 38.373391 &&
+    mean_magn_z <= 4.188 &&
+    range_magn_y > 39.719998 &&
+    mean_accel_z > 6.907243
+  ) {
+    return 'c';
+  }
+
+  if (
+    mean_magn_smv <= 38.373391 &&
+    mean_magn_z <= 4.188 &&
+    max_magn_smv <= 47.612069 &&
+    min_gyro_smv > 0.038416 &&
+    range_magn_y <= 24.194336 &&
+    min_accel_x <= -0.248428 &&
+    std_accel_smv <= 6.029569 &&
+    std_accel_x <= 1.047854 &&
+    std_accel_y > 0.446802
+  ) {
+    return 'e';
+  }
+
+  if (
+    mean_magn_smv <= 38.373391 &&
+    mean_magn_z <= 4.188 &&
+    range_accel_y <= 2.965225 &&
+    max_magn_smv > 45.059734
+  ) {
+    return 'f';
+  }
+
+  if (
+    mean_magn_smv <= 38.373391 &&
+    mean_magn_z <= 4.188 &&
+    max_magn_smv > 40.696897 &&
+    mean_accel_y <= 8.029523 &&
+    std_gyro_y <= 0.298236 &&
+    min_gyro_smv > 0.004021
+  ) {
+    return 'e';
+  }
+
+  if (
+    mean_magn_smv <= 38.373391 &&
+    range_magn_y > 25.380001 &&
+    mean_magn_smv > 30.034443
+  ) {
+    return 'a';
+  }
+
+  if (
+    mean_magn_smv <= 38.373391 &&
+    mean_magn_z <= 4.188 &&
+    mean_accel_smv <= 9.416175 &&
+    min_gyro_smv > 0.051482
+  ) {
+    return 'e';
+  }
+
+  if (
+    mean_magn_smv <= 38.345637 &&
+    mean_magn_z <= 4.188 &&
+    mean_accel_smv > 9.39576 &&
+    min_accel_z > -5.370194 &&
+    mean_magn_smv > 33.899039 &&
+    mean_magn_z > -26.947632 &&
+    min_gyro_y > -1.100101
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 43.745846 &&
+    mean_magn_smv <= 30.7036 &&
+    min_accel_x > -0.842785 &&
+    mean_accel_smv <= 10.337904 &&
+    max_accel_z <= 9.314642 &&
+    min_gyro_smv > 0.020517
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 41.063489 &&
+    mean_magn_z <= 1.6813 &&
+    mean_accel_y > 2.087527 &&
+    mean_accel_smv > 10.030293 &&
+    std_accel_smv <= 10.852582 &&
+    max_magn_smv <= 39.925559
+  ) {
+    return 'e';
+  }
+
+  if (
+    sma_magn <= 47.267999 &&
+    mean_magn_smv > 36.962824 &&
+    std_accel_x <= 0.801385
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 41.063489 &&
+    max_magn_y <= -12.556999 &&
+    mean_accel_z > -2.154662 &&
+    range_magn_z <= 18.125002 &&
+    max_magn_smv <= 39.277138 &&
+    max_magn_y > -22.210312 &&
+    range_magn_z > 3.216995 &&
+    max_accel_smv > 12.584538
+  ) {
+    return 'd';
+  }
+
+  if (
+    sma_magn <= 47.219999 &&
+    mean_magn_smv <= 38.207606 &&
+    range_magn_y <= 25.140381 &&
+    mean_accel_y > 7.508336 &&
+    max_magn_smv <= 33.403891
+  ) {
+    return 'd';
+  }
+
+  if (
+    sma_magn <= 47.219999 &&
+    mean_magn_smv <= 38.207606 &&
+    range_magn_y <= 25.140381 &&
+    mean_accel_y > 6.697744 &&
+    mean_magn_z <= -4.27
+  ) {
+    return 'e';
+  }
+
+  if (
+    sma_magn <= 46.853999 &&
+    mean_accel_y > 6.628789 &&
+    range_magn_x <= 15.660002
+  ) {
+    return 'a';
+  }
+
+  if (
+    sma_magn <= 46.853999 &&
+    max_accel_y > -4.522003 &&
+    range_magn_y <= 25.140381 &&
+    min_gyro_smv <= 0.063346 &&
+    max_accel_z > 11.121994 &&
+    sma_magn > 39.000601
+  ) {
+    return 'f';
+  }
+
+  if (
+    sma_magn <= 46.853999 &&
+    max_accel_y > -4.522003 &&
+    range_magn_y > 25.140381
+  ) {
+    return 'd';
+  }
+
+  if (
+    sma_magn <= 45.92 &&
+    max_accel_z <= 11.154586 &&
+    std_accel_y <= 4.649759 &&
+    range_accel_y > 6.59004
+  ) {
+    return 'e';
+  }
+
+  if (
+    sma_magn <= 45.92 &&
+    min_gyro_smv <= 0.058991 &&
+    mean_magn_z <= 5.01236 &&
+    mean_magn_z <= -19.524 &&
+    mean_magn_smv <= 28.626452 &&
+    max_gyro_z <= 0.220566
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 43.745846 &&
+    std_accel_z <= 1.605017 &&
+    range_magn_z <= 8.645004 &&
+    max_magn_y <= -21.934509 &&
+    mean_magn_smv <= 33.691614
+  ) {
+    return 'f';
+  }
+
+  if (
+    max_magn_smv <= 43.745846 &&
+    sma_gyro <= 0.710976 &&
+    range_accel_z <= 7.696161 &&
+    mean_accel_z > 8.602965 &&
+    max_accel_x > -0.070629 &&
+    range_magn_y > 1.422119
+  ) {
+    return 'e';
+  }
+
+  if (
+    max_magn_smv <= 43.745846 &&
+    mean_accel_z > 8.649796 &&
+    min_gyro_smv <= 0.044732
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_gyro_smv > 0.062642 &&
+    max_magn_smv > 43.659471 &&
+    sma_magn <= 81.0745 &&
+    min_accel_smv <= 1.83137 &&
+    std_accel_x <= 6.427868 &&
+    std_gyro_z <= 0.580256 &&
+    mean_accel_smv <= 11.161416
+  ) {
+    return 'a';
+  }
+
+  if (
+    mean_accel_smv > 11.098412 &&
+    min_accel_smv > 1.804479 &&
+    max_magn_smv <= 59.238763 &&
+    std_accel_y <= 6.882399 &&
+    min_accel_y > 1.594864 &&
+    range_magn_x > 4.136658 &&
+    mean_accel_smv > 11.128068 &&
+    std_magn_z <= 5.45096
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_magn_smv <= 43.745846 &&
+    mean_magn_z <= 6.8923 &&
+    max_magn_y > 12.42 &&
+    range_magn_y > 5.683002 &&
+    mean_accel_z <= 6.74156
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_magn_smv <= 43.745846 &&
+    std_accel_smv <= 6.699972 &&
+    min_accel_y <= 5.631334 &&
+    mean_magn_z <= 8.643951 &&
+    min_gyro_y > -0.103272 &&
+    mean_magn_z <= -10.3756
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_magn_smv <= 43.745846 &&
+    mean_magn_z <= 6.8923 &&
+    mean_magn_z > -33.04023 &&
+    range_magn_z <= 8.28 &&
+    range_magn_y > 4.135002
+  ) {
+    return 'e';
+  }
+
+  if (
+    sma_gyro > 1.049959 &&
+    mean_magn_smv > 38.561301 &&
+    max_gyro_y <= 2.281039 &&
+    min_accel_smv > 1.797994 &&
+    mean_accel_z <= 6.762629 &&
+    mean_accel_smv > 9.388082 &&
+    min_accel_x > -10.448044 &&
+    max_gyro_z <= 1.3135 &&
+    max_accel_z > 0.512359 &&
+    min_gyro_y <= -0.541846 &&
+    min_accel_z <= 1.580221 &&
+    max_magn_smv > 54.294862 &&
+    min_gyro_z > -0.863596
+  ) {
+    return 'c';
+  }
+
+  if (
+    sma_gyro > 1.049959 &&
+    mean_magn_smv > 38.561301 &&
+    std_accel_x <= 2.213909 &&
+    mean_magn_smv <= 55.954758 &&
+    std_gyro_z <= 0.489163 &&
+    mean_accel_y > 4.115998 &&
+    std_gyro_z <= 0.276059
+  ) {
+    return 'c';
+  }
+
+  if (
+    mean_accel_smv > 11.554817 &&
+    max_accel_z <= 7.199203 &&
+    min_accel_smv > 1.583316 &&
+    range_magn_x <= 36.780998 &&
+    min_gyro_z > -0.96254
+  ) {
+    return 'a';
+  }
+
+  if (
+    sma_gyro > 1.049959 &&
+    mean_magn_smv > 38.561301 &&
+    sma_magn > 80.28595 &&
+    range_magn_z > 14.820002
+  ) {
+    return 'c';
+  }
+
+  if (
+    sma_gyro > 1.049959 &&
+    mean_magn_smv > 38.561301 &&
+    std_accel_x <= 2.213909 &&
+    mean_magn_smv <= 55.954758 &&
+    range_accel_z > 1.59813 &&
+    max_accel_z > 1.677138 &&
+    rms_gyro_x <= 0.97714 &&
+    rms_gyro_x > 0.540668 &&
+    range_magn_y <= 15.440369
+  ) {
+    return 'a';
+  }
+
+  if (
+    sma_gyro > 1.04901 &&
+    mean_magn_smv > 38.561301 &&
+    std_accel_x > 2.213909 &&
+    range_magn_y > 3.283691 &&
+    mean_accel_y > -8.671106 &&
+    max_accel_x <= 21.241358 &&
+    max_gyro_y > 2.799473
+  ) {
+    return 'b';
+  }
+
+  if (
+    mean_accel_y > 9.140671 &&
+    max_magn_y > -23.571396 &&
+    max_gyro_z <= 1.304661 &&
+    mean_magn_smv > 42.080732
+  ) {
+    return 'd';
+  }
+
+  if (
+    sma_gyro > 1.04901 &&
+    mean_magn_smv > 38.561301 &&
+    sma_magn <= 90.027999 &&
+    range_magn_y <= 3.787231 &&
+    std_accel_z <= 2.174381
+  ) {
+    return 'c';
+  }
+
+  if (
+    sma_gyro > 1.04901 &&
+    mean_magn_smv > 38.561301 &&
+    sma_magn <= 90.027999 &&
+    std_accel_x > 2.213184 &&
+    range_magn_y > 5.280003 &&
+    mean_accel_y > -8.671106 &&
+    min_accel_y > 1.818396 &&
+    mean_magn_z > -24.371999
+  ) {
+    return 'a';
+  }
+
+  if (
+    sma_gyro <= 1.04901 &&
+    max_magn_smv > 89.202163 &&
+    max_accel_z > 5.601181 &&
+    max_magn_smv > 102.716004
+  ) {
+    return 'e';
+  }
+
+  if (
+    sma_gyro <= 1.04901 &&
+    range_accel_y <= 1.927392 &&
+    min_gyro_smv > 0.008378 &&
+    min_accel_z > 8.513782 &&
+    std_gyro_z > 0.027469
+  ) {
+    return 'd';
+  }
+
+  if (mean_magn_smv <= 38.561301 && range_accel_z <= 1.177277) {
+    return 'e';
+  }
+
+  if (
+    std_accel_x <= 2.213909 &&
+    range_accel_y <= 1.927392 &&
+    min_gyro_smv > 0.008558 &&
+    range_accel_z <= 2.322388 &&
+    sma_magn <= 57.551998 &&
+    std_magn_z <= 3.646208
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_x <= 2.213909 &&
+    min_gyro_z > -0.012863 &&
+    range_accel_y <= 7.458166 &&
+    rms_accel_x > 0.808784
+  ) {
+    return 'd';
+  }
+
+  if (
+    std_accel_x <= 2.213909 &&
+    range_accel_y > 1.927392 &&
+    max_magn_smv > 44.821566 &&
+    std_gyro_z <= 0.017943 &&
+    rms_accel_x <= 2.403672
+  ) {
+    return 'f';
+  }
+
+  if (
+    std_accel_x <= 2.213909 &&
+    range_accel_y > 1.927392 &&
+    max_magn_smv > 44.821566 &&
+    mean_accel_z <= 6.720969 &&
+    rms_accel_x <= 5.908912 &&
+    mean_magn_z > -29.963999 &&
+    min_accel_z > -7.119159 &&
+    sma_magn > 89.753326 &&
+    mean_accel_y > -1.27168
+  ) {
+    return 'e';
+  }
+
+  if (
+    std_accel_x <= 2.161642 &&
+    range_accel_y > 1.927392 &&
+    max_magn_smv > 44.821566 &&
+    mean_accel_z <= 6.720969 &&
+    rms_accel_x <= 5.908912 &&
+    mean_magn_z > -29.963999 &&
+    min_accel_x > 3.365311 &&
+    mean_accel_z > -5.626254
+  ) {
+    return 'a';
+  }
+
+  if (
+    std_accel_x <= 2.161642 &&
+    range_accel_y > 1.927392 &&
+    max_magn_smv > 44.821566 &&
+    mean_accel_z <= 6.720969 &&
+    rms_accel_x <= 5.908912 &&
+    min_accel_z > 0.674622 &&
+    range_accel_x <= 4.913052 &&
+    rms_accel_x > 1.222598 &&
+    range_accel_y > 2.916227
+  ) {
+    return 'c';
+  }
+
+  if (
+    sma_gyro <= 1.072481 &&
+    max_accel_y > 8.986636 &&
+    min_gyro_smv <= 0.003887
+  ) {
+    return 'd';
+  }
+
+  if (
+    sma_gyro <= 1.072481 &&
+    max_accel_y > 8.986636 &&
+    mean_magn_z <= -41.293301 &&
+    mean_accel_z <= 3.560526
+  ) {
+    return 'd';
+  }
+
+  if (
+    sma_gyro <= 1.072481 &&
+    max_accel_y > 8.986636 &&
+    max_accel_x <= 1.643509 &&
+    mean_accel_y > 7.10956 &&
+    sma_magn <= 74.199998 &&
+    max_gyro_x > 0.347321
+  ) {
+    return 'c';
+  }
+
+  if (
+    sma_gyro > 1.540233 &&
+    max_gyro_y <= 3.579011 &&
+    mean_accel_z <= -1.86209 &&
+    mean_accel_smv > 9.415625
+  ) {
+    return 'c';
+  }
+
+  if (
+    sma_gyro > 1.540233 &&
+    max_gyro_y <= 3.579011 &&
+    max_accel_z > 0.890643 &&
+    std_gyro_z <= 2.109845 &&
+    max_gyro_x <= 3.670868 &&
+    sma_magn > 57.617999 &&
+    mean_magn_smv <= 42.009024 &&
+    max_accel_z <= 11.936935
+  ) {
+    return 'b';
+  }
+
+  if (min_accel_y <= -9.681824 && max_magn_y <= 3.310997) {
+    return 'd';
+  }
+
+  if (
+    mean_accel_y <= -5.652539 &&
+    max_magn_smv <= 50.207991 &&
+    std_accel_y > 0.8047
+  ) {
+    return 'a';
+  }
+
+  if (
+    mean_accel_y <= -5.652539 &&
+    mean_magn_smv <= 53.412173 &&
+    mean_magn_smv > 48.337885
+  ) {
+    return 'c';
+  }
+
+  if (
+    min_gyro_smv > 0.062482 &&
+    sma_magn <= 46.853999 &&
+    min_accel_x > -3.446453
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_gyro_smv > 0.062482 &&
+    max_accel_x > 16.571466 &&
+    mean_accel_y <= -1.567747
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_gyro_smv > 0.062482 &&
+    min_accel_smv > 7.377188 &&
+    std_accel_y > 0.584807 &&
+    mean_magn_z <= 25.3007 &&
+    range_magn_z > 3.457642 &&
+    min_accel_y <= 8.006455 &&
+    range_accel_z > 2.209916 &&
+    std_accel_z <= 1.108781
+  ) {
+    return 'c';
+  }
+
+  if (
+    min_gyro_smv > 0.062482 &&
+    max_gyro_z <= 0.195336 &&
+    std_accel_z <= 2.443566 &&
+    range_accel_z > 4.257021
+  ) {
+    return 'c';
+  }
+
+  if (
+    min_gyro_smv > 0.062482 &&
+    max_accel_z > 14.125183 &&
+    std_accel_x > 1.019967 &&
+    std_magn_z <= 13.788143 &&
+    range_accel_y <= 12.148179 &&
+    std_accel_x > 1.997374 &&
+    max_magn_y > -23.898315
+  ) {
+    return 'b';
+  }
+
+  if (
+    min_gyro_smv > 0.048884 &&
+    mean_magn_z <= -43.650208 &&
+    std_accel_x <= 1.253501
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_gyro_smv > 0.048884 &&
+    std_accel_smv > 4.688046 &&
+    mean_accel_z > -2.764106 &&
+    min_accel_y > 6.927216 &&
+    mean_magn_z <= -9.994499
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_gyro_smv > 0.048884 &&
+    min_accel_y <= 6.927216 &&
+    std_accel_smv > 4.688046 &&
+    mean_accel_z > -2.764106 &&
+    min_accel_smv > 3.069478 &&
+    max_gyro_y <= 0.525263 &&
+    range_magn_x > 4.799999 &&
+    sma_gyro > 0.673517
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    max_magn_smv <= 43.466443 &&
+    min_gyro_smv <= 0.028465 &&
+    std_magn_z > 0.627022
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    sma_gyro > 1.010252 &&
+    max_gyro_y <= 3.579011 &&
+    sma_magn > 57.617999 &&
+    std_gyro_z <= 0.320728 &&
+    std_accel_y > 1.967826
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    sma_gyro > 1.310551 &&
+    max_gyro_y <= 3.579011 &&
+    sma_magn > 57.617999 &&
+    mean_magn_smv > 42.370171 &&
+    rms_gyro_x <= 0.589088 &&
+    std_gyro_y > 0.734949
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    max_accel_smv > 14.25706 &&
+    mean_accel_z <= -3.701795 &&
+    mean_accel_smv <= 10.895103
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    max_accel_smv > 14.25706 &&
+    mean_magn_z <= -42.036812 &&
+    mean_accel_y <= 3.420222
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    min_accel_y > 6.615509 &&
+    std_accel_x > 1.027405 &&
+    mean_accel_smv <= 10.821406 &&
+    mean_magn_z > -9.27
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    max_accel_smv > 14.25706 &&
+    min_gyro_smv <= 0.004553 &&
+    rms_accel_x <= 4.959404
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    max_accel_smv > 14.25706 &&
+    sma_magn > 59.603999 &&
+    range_magn_z > 3.63369 &&
+    min_accel_smv > 1.613995 &&
+    mean_accel_z > -2.835573 &&
+    std_magn_z > 2.039917 &&
+    max_accel_smv > 16.863033 &&
+    max_magn_smv <= 70.434854
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    min_accel_smv > 3.035756 &&
+    max_accel_y > 8.986636 &&
+    mean_magn_z > -41.885999 &&
+    max_gyro_y <= 2.78645 &&
+    mean_accel_smv <= 10.800747 &&
+    std_accel_x > 0.705702 &&
+    mean_accel_z <= 7.033661 &&
+    mean_accel_smv > 9.982835 &&
+    mean_accel_smv <= 10.468973
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z > 6.763826 &&
+    mean_accel_smv <= 9.781496 &&
+    mean_accel_z > 8.238807
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_accel_smv > 3.035756 &&
+    max_accel_y > 8.986636 &&
+    mean_magn_z <= -41.885999
+  ) {
+    return 'f';
+  }
+
+  if (
+    min_accel_smv > 3.035756 &&
+    max_accel_y > 8.986636 &&
+    max_gyro_y <= 2.78645 &&
+    max_accel_z <= 1.248306 &&
+    max_accel_x > 2.624313
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_accel_y > 8.889999 &&
+    mean_magn_smv > 38.171446 &&
+    min_accel_smv > 1.62352 &&
+    min_accel_z > -5.037554 &&
+    range_magn_x > 2.500002 &&
+    range_magn_y > 4.201996 &&
+    min_accel_x > -8.482916 &&
+    min_gyro_y > -1.444684
+  ) {
+    return 'c';
+  }
+
+  if (
+    max_accel_y > 11.837585 &&
+    sma_magn <= 74.853439 &&
+    range_magn_x <= 39.048767
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_accel_y <= 11.837585 &&
+    min_accel_z <= 6.763826 &&
+    max_accel_y <= -3.985149 &&
+    std_accel_smv <= 7.271425
+  ) {
+    return 'c';
+  }
+
+  if (
+    max_accel_y <= 11.837585 &&
+    min_accel_z <= 6.763826 &&
+    mean_magn_z <= 32.8837 &&
+    mean_accel_y > 7.586713 &&
+    max_gyro_x <= 1.440582 &&
+    max_gyro_y > 0.22452
+  ) {
+    return 'c';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    max_accel_y <= 11.837585 &&
+    mean_magn_z <= 32.8837 &&
+    max_gyro_y <= 0.114682 &&
+    std_gyro_z > 0.030213 &&
+    mean_accel_smv > 9.611404 &&
+    std_gyro_y <= 0.250618
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    max_accel_y <= 11.837585 &&
+    mean_magn_z > 32.8837
+  ) {
+    return 'e';
+  }
+
+  if (min_accel_z <= 6.763826 && max_accel_y > 11.837585) {
+    return 'b';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    mean_magn_smv > 42.404743 &&
+    std_gyro_y > 0.751966 &&
+    mean_magn_smv <= 44.126225
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    mean_magn_smv > 42.404743 &&
+    std_gyro_y > 0.751966 &&
+    mean_accel_z > 4.584557
+  ) {
+    return 'b';
+  }
+
+  if (min_accel_z <= 6.763826 && range_accel_x <= 0.859545) {
+    return 'd';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    std_accel_z > 5.599729 &&
+    mean_accel_z > 0.000453
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_z <= 6.763826 &&
+    mean_magn_smv > 42.404743 &&
+    min_accel_smv > 3.405269 &&
+    std_accel_smv > 6.229945 &&
+    mean_magn_z > -39.548698 &&
+    max_gyro_x > 0.034837 &&
+    mean_magn_smv > 48.233416
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_z <= 6.790164 &&
+    std_accel_z <= 6.209623 &&
+    max_magn_smv > 32.893738 &&
+    min_accel_x > -1.386612 &&
+    max_magn_y > -15.509033 &&
+    mean_accel_smv > 9.776082 &&
+    max_accel_x <= 14.767887 &&
+    range_accel_z <= 7.49147
+  ) {
+    return 'a';
+  }
+
+  if (
+    mean_accel_z > 9.293022 &&
+    max_accel_x > 2.4767 &&
+    mean_accel_y <= 2.258998
+  ) {
+    return 'c';
+  }
+
+  if (
+    mean_accel_z > 9.314726 &&
+    max_accel_x <= 2.70066 &&
+    min_gyro_smv <= 0.060833 &&
+    max_accel_y <= 4.249838 &&
+    mean_accel_z <= 9.969576
+  ) {
+    return 'd';
+  }
+
+  if (
+    max_accel_y <= 0.84635 &&
+    min_accel_y > -8.768112 &&
+    min_accel_z > -5.501282
+  ) {
+    return 'f';
+  }
+
+  if (
+    mean_accel_smv <= 9.372874 &&
+    max_gyro_x > 0.379225 &&
+    min_gyro_smv > 0.037932
+  ) {
+    return 'a';
+  }
+
+  if (
+    max_accel_x > 5.8508 &&
+    min_accel_x <= 4.195838 &&
+    range_magn_y > 4.08783 &&
+    mean_magn_smv <= 44.569694
+  ) {
+    return 'a';
+  }
+
+  if (
+    min_accel_smv <= 2.945249 &&
+    max_accel_x > 6.549911 &&
+    mean_accel_y > 0.053
+  ) {
+    return 'c';
+  }
+
+  if (
+    min_accel_smv <= 3.529064 &&
+    max_magn_smv > 43.466443 &&
+    std_accel_x <= 5.648057
+  ) {
+    return 'd';
+  }
+
+  if (
+    min_accel_x <= -2.700742 &&
+    mean_magn_z > 5.74 &&
+    mean_magn_smv <= 43.798309 &&
+    mean_accel_y <= 6.165258
+  ) {
+    return 'e';
+  }
+
+  if (
+    mean_magn_smv <= 39.257101 &&
+    std_accel_z > 0.679411 &&
+    max_gyro_y <= 1.13164
+  ) {
+    return 'e';
+  }
+
+  if (
+    min_accel_x <= -2.679193 &&
+    mean_magn_z > 0.6549 &&
+    std_accel_y > 0.938582
+  ) {
+    return 'c';
+  }
+
+  if (
+    min_accel_x <= -2.877918 &&
+    std_accel_y > 1.11271 &&
+    range_accel_y <= 8.214508 &&
+    max_gyro_z <= 0.56279
+  ) {
+    return 'a';
+  }
+
+  if (min_gyro_smv <= 0.005252 && mean_accel_z <= 7.789534) {
+    return 'a';
+  }
+
+  if (
+    min_accel_x > -0.051475 &&
+    mean_accel_smv <= 10.930152 &&
+    min_accel_y <= 4.252899
+  ) {
+    return 'c';
+  }
+
+  if (
+    std_gyro_y > 0.173587 &&
+    max_magn_y <= -17.503357 &&
+    max_gyro_z > 0.383531 &&
+    max_accel_x > 1.075029
+  ) {
+    return 'a';
+  }
+
+  if (min_gyro_smv <= 0.005141 && mean_accel_z <= 8.365117) {
+    return 'd';
+  }
+
+  if (mean_magn_smv > 51.173682 && mean_magn_smv > 57.152936) {
+    return 'e';
+  }
+
+  if (mean_magn_smv > 51.173682 && std_accel_x <= 0.522624) {
+    return 'c';
+  }
+
+  if (
+    mean_magn_smv <= 51.173682 &&
+    min_accel_z > 8.088913 &&
+    std_accel_y <= 0.794358
+  ) {
+    return 'd';
+  }
+
+  if (
+    mean_magn_smv <= 51.173682 &&
+    mean_magn_z > -9.09 &&
+    min_gyro_smv <= 0.166652 &&
+    mean_accel_y > -0.361775
+  ) {
+    return 'e';
+  }
+
+  if (
+    mean_magn_smv <= 51.173682 &&
+    max_accel_z <= 9.103952 &&
+    std_magn_z <= 8.234839 &&
+    mean_accel_smv > 9.673654
+  ) {
+    return 'f';
+  }
+
+  if (mean_magn_smv <= 50.540796 && max_gyro_x <= 0.123243) {
+    return 'c';
+  }
+
+  if (
+    mean_magn_smv <= 50.540796 &&
+    std_gyro_z > 0.451993 &&
+    min_accel_x > -3.519852 &&
+    std_accel_z > 1.895646
+  ) {
+    return 'f';
+  }
+
+  if (
+    mean_magn_smv <= 50.540796 &&
+    std_gyro_z > 0.451993 &&
+    std_accel_x <= 1.312281
+  ) {
+    return 'c';
+  }
+
+  if (
+    mean_magn_smv <= 50.540796 &&
+    std_gyro_y <= 0.28214 &&
+    min_accel_y > 1.564611
+  ) {
+    return 'e';
+  }
+
+  if (
+    mean_magn_smv <= 50.540796 &&
+    range_magn_y <= 6.275002 &&
+    min_accel_x > -2.660039
+  ) {
+    return 'f';
+  }
+
+  if (range_magn_y <= 6.275002 && min_accel_x > -4.119224) {
+    return 'd';
+  }
+
+  if (
+    range_magn_y > 8.709999 &&
+    min_gyro_smv <= 0.125277 &&
+    std_gyro_y <= 0.517398
+  ) {
+    return 'a';
+  }
+
+  if (range_magn_y <= 12.268066 && std_accel_z <= 1.933925) {
+    return 'e';
+  }
+
+  if (min_accel_y <= 2.423006) {
+    return 'f';
+  }
+
+  return 'a';
 };

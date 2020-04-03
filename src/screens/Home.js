@@ -45,6 +45,10 @@ export const Home = ({navigation}) => {
     setIsTrackingActivityChecked,
   ] = React.useState(false);
   const [activityType, setActivityType] = React.useState('None');
+  const [
+    timerUntilNextAutomaticDetection,
+    setTimerUntilNextAutomaticDetection,
+  ] = React.useState(0);
 
   const [
     isAccelerometerDataReady,
@@ -57,7 +61,10 @@ export const Home = ({navigation}) => {
 
   React.useEffect(() => {
     // console.log('1.React.useEffect(): MOUNTED');
-
+    var interval = setInterval(
+      () => setTimerUntilNextAutomaticDetection(currentTime => currentTime + 1),
+      1000,
+    );
     const accelerometerSubscription = accelerometer.subscribe(({x, y, z}) => {
       if (accelerometerX.length < 10) {
         //console.log('A is not full yet.');
@@ -104,6 +111,8 @@ export const Home = ({navigation}) => {
       accelerometerSubscription.unsubscribe();
       gyroscopeSubscription.unsubscribe();
       magnetometerSubscription.unsubscribe();
+      clearInterval(interval);
+      setTimerUntilNextAutomaticDetection(0);
     }
 
     return () => {
@@ -111,6 +120,18 @@ export const Home = ({navigation}) => {
       accelerometerSubscription.unsubscribe();
       gyroscopeSubscription.unsubscribe();
       magnetometerSubscription.unsubscribe();
+
+      accelerometerX.length = 0;
+      accelerometerY.length = 0;
+      accelerometerZ.length = 0;
+      gyroscopeX.length = 0;
+      gyroscopeY.length = 0;
+      gyroscopeZ.length = 0;
+      magnetometerX.length = 0;
+      magnetometerY.length = 0;
+      magnetometerZ.length = 0;
+      clearInterval(interval);
+      setTimerUntilNextAutomaticDetection(0);
     };
   }, [isTrackingActivityChecked]);
 
@@ -131,7 +152,7 @@ export const Home = ({navigation}) => {
         magnetometerX,
         magnetometerY,
         magnetometerZ,
-      ).then(() => {
+      ).then(activity => {
         accelerometerX.length = 0;
         accelerometerY.length = 0;
         accelerometerZ.length = 0;
@@ -141,6 +162,9 @@ export const Home = ({navigation}) => {
         magnetometerX.length = 0;
         magnetometerY.length = 0;
         magnetometerZ.length = 0;
+        setTimerUntilNextAutomaticDetection(0);
+        setActivityType(activity);
+        console.log(activity);
         setIsAccelerometerDataReady(false);
         setIsGyroscopeDataReady(false);
         setIsMagnetometerDataReady(false);
@@ -201,6 +225,7 @@ export const Home = ({navigation}) => {
     <SafeAreaView style={{flex: 1}}>
       <TopNavigation rightControls={renderSettingsAction()} />
       <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text category="h1">{timerUntilNextAutomaticDetection}</Text>
         <Text category="h1">{activityType}</Text>
         <Toggle
           checked={isTrackingActivityChecked}
