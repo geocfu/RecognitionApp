@@ -19,28 +19,21 @@ export const AutomaticActivityRecognitionRules = (
   range_accel_y,
   range_accel_z,
   rms_accel_x,
-  rms_accel_z,
-  entropy_accel,
-  energy_accel,
   std_gyro_y,
   std_gyro_z,
   max_gyro_x,
   max_gyro_y,
   max_gyro_z,
-  min_gyro_x,
   min_gyro_y,
   min_gyro_z,
   min_gyro_smv,
   rms_gyro_x,
   sma_gyro,
-  entropy_gyro,
   mean_magn_z,
   mean_magn_smv,
   std_magn_z,
-  std_magn_smv,
   max_magn_y,
   max_magn_smv,
-  min_magn_y,
   range_magn_x,
   range_magn_y,
   range_magn_z,
@@ -5691,5 +5684,6 @@ export const AutomaticActivityRecognitionRules = (
   if (mean_accel_y <= -0.127012) {
     return 'f';
   }
+
   return 'c';
 };
