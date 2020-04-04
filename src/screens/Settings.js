@@ -13,7 +13,7 @@ import {
 
 import {ThemeContext} from '../hooks/theme-context';
 
-const BackIcon = style => <Icon {...style} name="arrow-back" />;
+const BackIcon = (style) => <Icon {...style} name="arrow-back" />;
 
 export const Settings = ({navigation}) => {
   const themeContext = React.useContext(ThemeContext);
@@ -37,7 +37,7 @@ export const Settings = ({navigation}) => {
     />
   );
 
-  const onCheckedChange = index => {
+  const onCheckedChange = (index) => {
     setSelectedIndex(index);
     themeContext.toggleTheme();
   };

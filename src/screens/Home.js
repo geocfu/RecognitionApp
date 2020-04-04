@@ -15,17 +15,17 @@ import {
   setUpdateIntervalForType,
   SensorTypes,
 } from 'react-native-sensors';
-
 import VIForegroundService from '@voximplant/react-native-foreground-service';
+import realm from '../hooks/realm-database';
 import {CalculateWindowFeatures} from '../components/CalculateWindowFeatures';
 
 setUpdateIntervalForType(SensorTypes.accelerometer, 400);
 setUpdateIntervalForType(SensorTypes.gyroscope, 400);
 setUpdateIntervalForType(SensorTypes.magnetometer, 400);
 
-const SettingsIcon = style => <Icon {...style} name="settings-outline" />;
+const SettingsIcon = (style) => <Icon {...style} name="settings-outline" />;
 
-const SettingsAction = props => (
+const SettingsAction = (props) => (
   <TopNavigationAction {...props} icon={SettingsIcon} />
 );
 
@@ -61,8 +61,9 @@ export const Home = ({navigation}) => {
   );
 
   React.useEffect(() => {
-    var interval = setInterval(
-      () => setTimerUntilNextAutomaticDetection(currentTime => currentTime + 1),
+    const interval = setInterval(
+      () =>
+        setTimerUntilNextAutomaticDetection((currentTime) => currentTime + 1),
       1000,
     );
     const accelerometerSubscription = accelerometer.subscribe(({x, y, z}) => {
@@ -147,7 +148,7 @@ export const Home = ({navigation}) => {
         magnetometerX,
         magnetometerY,
         magnetometerZ,
-      ).then(activity => {
+      ).then((activity) => {
         accelerometerX.length = 0;
         accelerometerY.length = 0;
         accelerometerZ.length = 0;
@@ -157,10 +158,19 @@ export const Home = ({navigation}) => {
         magnetometerX.length = 0;
         magnetometerY.length = 0;
         magnetometerZ.length = 0;
-        setTimerUntilNextAutomaticDetection(0);
-        setActivityType(activity);
-        console.log(activity);
 
+        realm.write(() => {
+          let currentDate = new Date();
+          let currentTime = currentDate.getTime();
+          realm.create('Activity', {
+            type: activity,
+            date: currentDate.toISOString().substring(0, 10),
+            time: String(currentTime),
+          });
+        });
+
+        setActivityType(activity);
+        setTimerUntilNextAutomaticDetection(0);
         setIsAccelerometerDataReady(false);
         setIsGyroscopeDataReady(false);
         setIsMagnetometerDataReady(false);
@@ -209,7 +219,7 @@ export const Home = ({navigation}) => {
     await VIForegroundService.stopService();
   };
 
-  const automaticActivityTracking = isChecked => {
+  const automaticActivityTracking = (isChecked) => {
     if (isChecked) {
       setToggleText('Tracking');
       startService();
