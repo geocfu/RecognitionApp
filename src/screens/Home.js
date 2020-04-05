@@ -50,12 +50,11 @@ export const Home = ({navigation}) => {
     setIsTrackingActivityChecked,
   ] = React.useState(false);
   const [toggleText, setToggleText] = React.useState('Not Tracking');
-  const [activityType, setActivityType] = React.useState('None');
-  const [
-    timerUntilNextAutomaticDetection,
-    setTimerUntilNextAutomaticDetection,
-  ] = React.useState(0);
 
+  const [activityType, setActivityType] = React.useState('None');
+  const [timerUntilNextDetection, setTimerUntilNextDetection] = React.useState(
+    0,
+  );
   const [
     isAccelerometerDataReady,
     setIsAccelerometerDataReady,
@@ -65,15 +64,10 @@ export const Home = ({navigation}) => {
     false,
   );
 
-  const previousIsTrackingStateReference = React.useRef();
-
   React.useEffect(() => {
-    previousIsTrackingStateReference.current = isTrackingActivityChecked;
-
-    if (isTrackingActivityChecked === true) {
+    if (isTrackingActivityChecked) {
       interval = setInterval(
-        () =>
-          setTimerUntilNextAutomaticDetection((currentTime) => currentTime + 1),
+        () => setTimerUntilNextDetection((currentTime) => currentTime + 1),
         1000,
       );
       accelerometerSubscription = accelerometer.subscribe(({x, y, z}) => {
@@ -83,6 +77,7 @@ export const Home = ({navigation}) => {
             accelerometerX.push(x);
             accelerometerY.push(y);
             accelerometerZ.push(z);
+            console.log(x);
           }
         } else {
           setIsAccelerometerDataReady(true);
@@ -115,21 +110,6 @@ export const Home = ({navigation}) => {
 
       startService();
     }
-    if (isTrackingActivityChecked === false) {
-      // If previously tracking, stop it gracefully
-      // Edge case for every re-render that the toggle is off
-      // and previously was also off
-      if (previousIsTrackingStateReference.current) {
-        accelerometerSubscription.unsubscribe();
-        gyroscopeSubscription.unsubscribe();
-        magnetometerSubscription.unsubscribe();
-        clearInterval(interval);
-        setTimerUntilNextAutomaticDetection(0);
-        setActivityType('None');
-
-        stopService();
-      }
-    }
 
     return () => {
       if (isTrackingActivityChecked) {
@@ -138,7 +118,6 @@ export const Home = ({navigation}) => {
         magnetometerSubscription.unsubscribe();
         stopService();
       }
-
       accelerometerX.length = 0;
       accelerometerY.length = 0;
       accelerometerZ.length = 0;
@@ -149,7 +128,7 @@ export const Home = ({navigation}) => {
       magnetometerY.length = 0;
       magnetometerZ.length = 0;
       clearInterval(interval);
-      setTimerUntilNextAutomaticDetection(0);
+      setTimerUntilNextDetection(0);
       setActivityType('None');
     };
   }, [isTrackingActivityChecked]);
@@ -193,7 +172,8 @@ export const Home = ({navigation}) => {
         });
 
         setActivityType(activity);
-        setTimerUntilNextAutomaticDetection(0);
+        setTimerUntilNextDetection(0);
+
         setIsAccelerometerDataReady(false);
         setIsGyroscopeDataReady(false);
         setIsMagnetometerDataReady(false);
@@ -269,7 +249,7 @@ export const Home = ({navigation}) => {
         <Text style={{marginTop: 30, marginBottom: 10}}>
           Time taken to calculate the next sensor measurement
         </Text>
-        <Text category="p1">{timerUntilNextAutomaticDetection}</Text>
+        <Text category="p1">{timerUntilNextDetection}</Text>
       </Layout>
     </SafeAreaView>
   );
