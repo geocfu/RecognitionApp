@@ -5,8 +5,11 @@ const AutomaticDataRecognitionSchema = {
   properties: {
     type: 'string',
     date: 'string',
-    time: 'string',
+    time: 'int',
   },
 };
 
-export default new Realm({schema: [AutomaticDataRecognitionSchema]});
+export default new Realm({
+  schema: [AutomaticDataRecognitionSchema],
+  deleteRealmIfMigrationNeeded: true,
+});
