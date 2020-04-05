@@ -10,11 +10,13 @@ import {
 } from '@ui-kitten/components';
 
 import {Home} from '../screens/Home';
-import {Statistics} from '../screens/Statistics';
 import {Settings} from '../screens/Settings';
+import {Statistics} from '../screens/Statistics';
+import {StatisticsViewMonth} from '../screens/StatisticsViewMonth';
+import {StatisticsViewDay} from '../screens/StatisticsViewDay';
 
-const HomeIcon = style => <Icon {...style} name="home" />;
-const StatisticsIcon = style => <Icon {...style} name="pie-chart" />;
+const HomeIcon = (style) => <Icon {...style} name="home" />;
+const StatisticsIcon = (style) => <Icon {...style} name="pie-chart" />;
 
 const Stack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -26,8 +28,16 @@ const HomeNavigator = () => (
   </Stack.Navigator>
 );
 
+const StatisticsNavigator = () => (
+  <Stack.Navigator headerMode="none">
+    <Stack.Screen name="Statistics" component={Statistics} />
+    <Stack.Screen name="StatisticsViewMonth" component={StatisticsViewMonth} />
+    <Stack.Screen name="StatisticsViewDay" component={StatisticsViewDay} />
+  </Stack.Navigator>
+);
+
 const BottomTabBar = ({navigation, state}) => {
-  const onSelect = index => {
+  const onSelect = (index) => {
     navigation.navigate(state.routeNames[index]);
   };
 
@@ -42,9 +52,9 @@ const BottomTabBar = ({navigation, state}) => {
 };
 
 const TabNavigator = () => (
-  <BottomTab.Navigator tabBar={props => <BottomTabBar {...props} />}>
+  <BottomTab.Navigator tabBar={(props) => <BottomTabBar {...props} />}>
     <BottomTab.Screen name="Home" component={HomeNavigator} />
-    <BottomTab.Screen name="Statistics" component={Statistics} />
+    <BottomTab.Screen name="Statistics" component={StatisticsNavigator} />
   </BottomTab.Navigator>
 );
 
