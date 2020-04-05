@@ -77,7 +77,6 @@ export const Home = ({navigation}) => {
             accelerometerX.push(x);
             accelerometerY.push(y);
             accelerometerZ.push(z);
-            console.log(x);
           }
         } else {
           setIsAccelerometerDataReady(true);
@@ -116,6 +115,9 @@ export const Home = ({navigation}) => {
         accelerometerSubscription.unsubscribe();
         gyroscopeSubscription.unsubscribe();
         magnetometerSubscription.unsubscribe();
+        clearInterval(interval);
+        setTimerUntilNextDetection(0);
+        setActivityType('None');
         stopService();
       }
       accelerometerX.length = 0;
@@ -127,9 +129,6 @@ export const Home = ({navigation}) => {
       magnetometerX.length = 0;
       magnetometerY.length = 0;
       magnetometerZ.length = 0;
-      clearInterval(interval);
-      setTimerUntilNextDetection(0);
-      setActivityType('None');
     };
   }, [isTrackingActivityChecked]);
 
@@ -150,15 +149,7 @@ export const Home = ({navigation}) => {
         magnetometerY,
         magnetometerZ,
       ).then((activity) => {
-        accelerometerX.length = 0;
-        accelerometerY.length = 0;
-        accelerometerZ.length = 0;
-        gyroscopeX.length = 0;
-        gyroscopeY.length = 0;
-        gyroscopeZ.length = 0;
-        magnetometerX.length = 0;
-        magnetometerY.length = 0;
-        magnetometerZ.length = 0;
+        setActivityType(activity);
 
         realm.write(() => {
           let currentDate = new Date();
@@ -171,9 +162,17 @@ export const Home = ({navigation}) => {
           // realm.deleteAll();
         });
 
-        setActivityType(activity);
-        setTimerUntilNextDetection(0);
+        accelerometerX.length = 0;
+        accelerometerY.length = 0;
+        accelerometerZ.length = 0;
+        gyroscopeX.length = 0;
+        gyroscopeY.length = 0;
+        gyroscopeZ.length = 0;
+        magnetometerX.length = 0;
+        magnetometerY.length = 0;
+        magnetometerZ.length = 0;
 
+        setTimerUntilNextDetection(0);
         setIsAccelerometerDataReady(false);
         setIsGyroscopeDataReady(false);
         setIsMagnetometerDataReady(false);
