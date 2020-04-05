@@ -39,6 +39,11 @@ var magnetometerX = [];
 var magnetometerY = [];
 var magnetometerZ = [];
 
+var interval;
+var accelerometerSubscription;
+var gyroscopeSubscription;
+var magnetometerSubscription;
+
 export const Home = ({navigation}) => {
   const [
     isTrackingActivityChecked,
@@ -60,62 +65,79 @@ export const Home = ({navigation}) => {
     false,
   );
 
-  React.useEffect(() => {
-    const interval = setInterval(
-      () =>
-        setTimerUntilNextAutomaticDetection((currentTime) => currentTime + 1),
-      1000,
-    );
-    const accelerometerSubscription = accelerometer.subscribe(({x, y, z}) => {
-      if (accelerometerX.length < 10) {
-        if (x != 0 && x !== currentAccelerometerX) {
-          currentAccelerometerX = x;
-          accelerometerX.push(x);
-          accelerometerY.push(y);
-          accelerometerZ.push(z);
-        }
-      } else {
-        setIsAccelerometerDataReady(true);
-      }
-    });
-    const gyroscopeSubscription = gyroscope.subscribe(({x, y, z}) => {
-      if (gyroscopeX.length < 10) {
-        if (x != 0 && x !== currentGyroscopeX) {
-          currentGyroscopeX = x;
-          gyroscopeX.push(x);
-          gyroscopeY.push(y);
-          gyroscopeZ.push(z);
-        }
-      } else {
-        setIsGyroscopeDataReady(true);
-      }
-    });
-    const magnetometerSubscription = magnetometer.subscribe(({x, y, z}) => {
-      if (magnetometerX.length < 10) {
-        if (x != 0 && x !== currentMagnetometerX) {
-          currentMagnetometerX = x;
-          magnetometerX.push(x);
-          magnetometerY.push(y);
-          magnetometerZ.push(z);
-        }
-      } else {
-        setIsMagnetometerDataReady(true);
-      }
-    });
+  const previousIsTrackingStateReference = React.useRef();
 
+  React.useEffect(() => {
+    previousIsTrackingStateReference.current = isTrackingActivityChecked;
+
+    if (isTrackingActivityChecked === true) {
+      interval = setInterval(
+        () =>
+          setTimerUntilNextAutomaticDetection((currentTime) => currentTime + 1),
+        1000,
+      );
+      accelerometerSubscription = accelerometer.subscribe(({x, y, z}) => {
+        if (accelerometerX.length < 10) {
+          if (x != 0 && x !== currentAccelerometerX) {
+            currentAccelerometerX = x;
+            accelerometerX.push(x);
+            accelerometerY.push(y);
+            accelerometerZ.push(z);
+          }
+        } else {
+          setIsAccelerometerDataReady(true);
+        }
+      });
+      gyroscopeSubscription = gyroscope.subscribe(({x, y, z}) => {
+        if (gyroscopeX.length < 10) {
+          if (x != 0 && x !== currentGyroscopeX) {
+            currentGyroscopeX = x;
+            gyroscopeX.push(x);
+            gyroscopeY.push(y);
+            gyroscopeZ.push(z);
+          }
+        } else {
+          setIsGyroscopeDataReady(true);
+        }
+      });
+      magnetometerSubscription = magnetometer.subscribe(({x, y, z}) => {
+        if (magnetometerX.length < 10) {
+          if (x != 0 && x !== currentMagnetometerX) {
+            currentMagnetometerX = x;
+            magnetometerX.push(x);
+            magnetometerY.push(y);
+            magnetometerZ.push(z);
+          }
+        } else {
+          setIsMagnetometerDataReady(true);
+        }
+      });
+
+      startService();
+    }
     if (isTrackingActivityChecked === false) {
-      accelerometerSubscription.unsubscribe();
-      gyroscopeSubscription.unsubscribe();
-      magnetometerSubscription.unsubscribe();
-      clearInterval(interval);
-      setTimerUntilNextAutomaticDetection(0);
-      setActivityType('None');
+      // If previously tracking, stop it gracefully
+      // Edge case for every re-render that the toggle is off
+      // and previously was also off
+      if (previousIsTrackingStateReference.current) {
+        accelerometerSubscription.unsubscribe();
+        gyroscopeSubscription.unsubscribe();
+        magnetometerSubscription.unsubscribe();
+        clearInterval(interval);
+        setTimerUntilNextAutomaticDetection(0);
+        setActivityType('None');
+
+        stopService();
+      }
     }
 
     return () => {
-      accelerometerSubscription.unsubscribe();
-      gyroscopeSubscription.unsubscribe();
-      magnetometerSubscription.unsubscribe();
+      if (isTrackingActivityChecked) {
+        accelerometerSubscription.unsubscribe();
+        gyroscopeSubscription.unsubscribe();
+        magnetometerSubscription.unsubscribe();
+        stopService();
+      }
 
       accelerometerX.length = 0;
       accelerometerY.length = 0;
@@ -165,8 +187,9 @@ export const Home = ({navigation}) => {
           realm.create('Activity', {
             type: activity,
             date: currentDate.toISOString().substring(0, 10),
-            time: String(currentTime),
+            time: currentTime,
           });
+          // realm.deleteAll();
         });
 
         setActivityType(activity);
@@ -204,13 +227,13 @@ export const Home = ({navigation}) => {
     }
     const notificationConfig = {
       id: 3456,
-      title: 'RecognitionApp1',
+      title: 'RecognitionApp',
       text: 'RecognitionApp background service is running',
       icon: 'ic_notification',
       priority: 0,
     };
     if (Platform.Version >= 26) {
-      notificationConfig.channelId = 'ForegroundServiceChannel';
+      notificationConfig.channelId = 'RecognitionAppNotificationChannel';
     }
     await VIForegroundService.startService(notificationConfig);
   };
@@ -222,10 +245,8 @@ export const Home = ({navigation}) => {
   const automaticActivityTracking = (isChecked) => {
     if (isChecked) {
       setToggleText('Tracking');
-      startService();
     } else {
       setToggleText('Not Tracking');
-      stopService();
     }
     setIsTrackingActivityChecked(isChecked);
   };
