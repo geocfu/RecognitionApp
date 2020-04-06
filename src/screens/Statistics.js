@@ -59,11 +59,8 @@ export const Statistics = ({navigation}) => {
     let numberOfStatisticsForThisMonthAndYear = realm
       .objects('Activity')
       .sorted('yearAndMonth')
-      .filtered(
-        'yearAndMonth == $0 AND day == $1',
-        item.yearAndMonth,
-        item.day,
-      );
+      .filtered('yearAndMonth == $0', item.yearAndMonth)
+      .filtered('TRUEPREDICATE DISTINCT(day)');
     return (
       <ListItem
         style={{
