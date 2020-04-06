@@ -95,19 +95,19 @@ export const Statistics = ({navigation}) => {
         value: Object.keys(
           realm.objects('Activity').filtered('type == $0', 'Walking'),
         ).length,
-        label: 'Walk',
+        label: 'Walking',
       },
       {
         value: Object.keys(
           realm.objects('Activity').filtered('type == $0', 'Running'),
         ).length,
-        label: 'Run',
+        label: 'Running',
       },
       {
         value: Object.keys(
           realm.objects('Activity').filtered('type == $0', 'Bicycling'),
         ).length,
-        label: 'Bike Ride',
+        label: 'Bicycling',
       },
       {
         value: Object.keys(
