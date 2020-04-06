@@ -5,7 +5,7 @@ import * as scale from 'd3-scale';
 
 import {Text} from '@ui-kitten/components';
 
-export const HorizontalChartWithTheYAxisNamed = (props) => {
+export const HorizontalBarChartWithTheYAxisNamed = (props) => {
   const contentInset = {top: 10, bottom: 10};
 
   const gridStrokeColor = props.theme == 'dark' ? '#FFF' : '#000';
