@@ -9,6 +9,8 @@ import {
   Divider,
 } from '@ui-kitten/components';
 import realm from '../hooks/realm-database';
+import {ThemeContext} from '../hooks/theme-context';
+import {HorizontalChartWithTheYAxisNamed} from '../components/HorizontalChartWithTheYAxisNamed';
 
 const monthsOfTheYear = [
   'January',
@@ -26,6 +28,8 @@ const monthsOfTheYear = [
 ];
 
 export const Statistics = ({navigation}) => {
+  const themeContext = React.useContext(ThemeContext);
+
   const [historyData, setHistoryData] = React.useState(
     realm
       .objects('Activity')
@@ -33,6 +37,44 @@ export const Statistics = ({navigation}) => {
       .filtered('TRUEPREDICATE DISTINCT(yearAndMonth)'),
   );
 
+  const [graphData, setGraphData] = React.useState([
+    {
+      value: Object.keys(
+        realm.objects('Activity').filtered('type == $0', 'Walking'),
+      ).length,
+      label: 'Walking',
+    },
+    {
+      value: Object.keys(
+        realm.objects('Activity').filtered('type == $0', 'Running'),
+      ).length,
+      label: 'Running',
+    },
+    {
+      value: Object.keys(
+        realm.objects('Activity').filtered('type == $0', 'Bicycling'),
+      ).length,
+      label: 'Bicycling',
+    },
+    {
+      value: Object.keys(
+        realm.objects('Activity').filtered('type == $0', 'Car Ride'),
+      ).length,
+      label: 'Car Ride',
+    },
+    {
+      value: Object.keys(
+        realm.objects('Activity').filtered('type == $0', 'Bus Ride'),
+      ).length,
+      label: 'Bus Ride',
+    },
+    {
+      value: Object.keys(
+        realm.objects('Activity').filtered('type == $0', 'Train Ride'),
+      ).length,
+      label: 'Train Ride',
+    },
+  ]);
   React.useEffect(() => {
     realm.addListener('change', updateUIFromRealmQuery);
 
@@ -48,6 +90,44 @@ export const Statistics = ({navigation}) => {
         .sorted('yearAndMonth')
         .filtered('TRUEPREDICATE DISTINCT(yearAndMonth)'),
     );
+    setGraphData([
+      {
+        value: Object.keys(
+          realm.objects('Activity').filtered('type == $0', 'Walking'),
+        ).length,
+        label: 'Walk',
+      },
+      {
+        value: Object.keys(
+          realm.objects('Activity').filtered('type == $0', 'Running'),
+        ).length,
+        label: 'Run',
+      },
+      {
+        value: Object.keys(
+          realm.objects('Activity').filtered('type == $0', 'Bicycling'),
+        ).length,
+        label: 'Bike Ride',
+      },
+      {
+        value: Object.keys(
+          realm.objects('Activity').filtered('type == $0', 'Car Ride'),
+        ).length,
+        label: 'Car Ride',
+      },
+      {
+        value: Object.keys(
+          realm.objects('Activity').filtered('type == $0', 'Bus Ride'),
+        ).length,
+        label: 'Bus Ride',
+      },
+      {
+        value: Object.keys(
+          realm.objects('Activity').filtered('type == $0', 'Train Ride'),
+        ).length,
+        label: 'Train Ride',
+      },
+    ]);
   };
 
   const renderItemIcon = (style) => <Icon {...style} name="folder" />;
@@ -93,13 +173,28 @@ export const Statistics = ({navigation}) => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <Layout style={{flex: 1}}>
-        <View style={{alignItems: 'center'}}>
-          <Text category="h1">Graph</Text>
-          <Text style={{justifyContent: 'center'}} appearance="hint">
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginLeft: 10,
+            marginRight: 10,
+          }}>
+          <Text category="h3">Global Statistics</Text>
+          <Divider />
+          <Text style={{textAlign: 'center'}} appearance="hint">
+            Each horizontal bar is representing the global frequency for this
+            activity
+          </Text>
+          <HorizontalChartWithTheYAxisNamed
+            data={graphData}
+            theme={themeContext.theme}
+          />
+          <Divider />
+          <Text style={{textAlign: 'center'}} appearance="hint">
             Press on a month to view it's detailed statistics
           </Text>
         </View>
-
         <List
           data={historyData}
           renderItem={renderItem}
