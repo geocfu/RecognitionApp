@@ -46,6 +46,45 @@ export const StatisticsViewMonth = ({route, navigation}) => {
       .filtered('TRUEPREDICATE DISTINCT(day)'),
   );
 
+  // const [graphData, setGraphData] = React.useState([
+  //   {
+  //     value: Object.keys(
+  //       realm.objects('Activity').filtered('type == $0', 'Walking'),
+  //     ).length,
+  //     label: 'Walking',
+  //   },
+  //   {
+  //     value: Object.keys(
+  //       realm.objects('Activity').filtered('type == $0', 'Running'),
+  //     ).length,
+  //     label: 'Running',
+  //   },
+  //   {
+  //     value: Object.keys(
+  //       realm.objects('Activity').filtered('type == $0', 'Bicycling'),
+  //     ).length,
+  //     label: 'Bicycling',
+  //   },
+  //   {
+  //     value: Object.keys(
+  //       realm.objects('Activity').filtered('type == $0', 'Car Ride'),
+  //     ).length,
+  //     label: 'Car Ride',
+  //   },
+  //   {
+  //     value: Object.keys(
+  //       realm.objects('Activity').filtered('type == $0', 'Bus Ride'),
+  //     ).length,
+  //     label: 'Bus Ride',
+  //   },
+  //   {
+  //     value: Object.keys(
+  //       realm.objects('Activity').filtered('type == $0', 'Train Ride'),
+  //     ).length,
+  //     label: 'Train Ride',
+  //   },
+  // ]);
+
   React.useEffect(() => {
     realm.addListener('change', updateUIFromRealmQuery);
 
@@ -150,9 +189,18 @@ export const StatisticsViewMonth = ({route, navigation}) => {
         leftControl={BackAction()}
       />
       <Layout style={{flex: 1}}>
-        <View style={{alignItems: 'center'}}>
-          <Text category="h1">Graph</Text>
-          <Text style={{justifyContent: 'center'}} appearance="hint">
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginLeft: 10,
+            marginRight: 10,
+          }}>
+          <Text category="h3">Month Graph</Text>
+          <Divider />
+
+          <Divider />
+          <Text style={{textAlign: 'center'}} appearance="hint">
             Press on a day to view it's detailed statistics
           </Text>
         </View>
