@@ -4,8 +4,9 @@ const AutomaticDataRecognitionSchema = {
   name: 'Activity',
   properties: {
     type: 'string',
-    date: 'string',
-    time: 'int',
+    yearAndMonth: 'string',
+    day: 'string',
+    //time: 'string',
   },
 };
 
