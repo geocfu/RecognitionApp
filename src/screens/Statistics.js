@@ -10,7 +10,7 @@ import {
 } from '@ui-kitten/components';
 import realm from '../hooks/realm-database';
 import {ThemeContext} from '../hooks/theme-context';
-import {HorizontalChartWithTheYAxisNamed} from '../components/HorizontalChartWithTheYAxisNamed';
+import {HorizontalBarChartWithTheYAxisNamed} from '../components/HorizontalBarChartWithTheYAxisNamed';
 
 const monthsOfTheYear = [
   'January',
@@ -186,7 +186,7 @@ export const Statistics = ({navigation}) => {
             Each horizontal bar is representing the global frequency for this
             activity
           </Text>
-          <HorizontalChartWithTheYAxisNamed
+          <HorizontalBarChartWithTheYAxisNamed
             data={graphData}
             theme={themeContext.theme}
           />
