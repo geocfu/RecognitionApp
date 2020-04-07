@@ -13,20 +13,18 @@ import {
 
 import {ThemeContext} from '../hooks/theme-context';
 
-const BackIcon = (style) => <Icon {...style} name="arrow-back" />;
+const BackIcon = style => <Icon {...style} name="arrow-back" />;
 
 export const Settings = ({navigation}) => {
   const themeContext = React.useContext(ThemeContext);
 
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
-
-  React.useEffect(() => {
+  const [selectedIndex, setSelectedIndex] = React.useState(() => {
     if (themeContext.theme === 'light') {
-      setSelectedIndex(0);
+      return 0;
     } else {
-      setSelectedIndex(1);
+      return 1;
     }
-  }, [themeContext.theme]);
+  });
 
   const BackAction = () => (
     <TopNavigationAction
@@ -37,9 +35,11 @@ export const Settings = ({navigation}) => {
     />
   );
 
-  const onCheckedChange = (index) => {
-    setSelectedIndex(index);
-    themeContext.toggleTheme();
+  const onCheckedChange = index => {
+    if (selectedIndex != index) {
+      themeContext.toggleTheme();
+      setSelectedIndex(index);
+    }
   };
 
   return (
