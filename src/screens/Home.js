@@ -248,8 +248,8 @@ export const Home = ({navigation}) => {
           checked={isTrackingActivityChecked}
           onChange={automaticActivityTracking}
         />
-        <Text style={{marginTop: 30, marginBottom: 10}}>
-          Time taken to calculate the next sensor measurement
+        <Text style={{marginTop: 30, marginBottom: 10, textAlign: 'center'}}>
+          Time taken to calculate the current sensor measurement
         </Text>
         <Text category="p1">{timerUntilNextDetection}</Text>
       </Layout>
