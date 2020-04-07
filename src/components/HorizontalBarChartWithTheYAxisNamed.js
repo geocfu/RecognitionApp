@@ -5,7 +5,7 @@ import * as scale from 'd3-scale';
 
 import {Text} from '@ui-kitten/components';
 
-export const HorizontalBarChartWithTheYAxisNamed = (props) => {
+export const HorizontalBarChartWithTheYAxisNamed = props => {
   const contentInset = {top: 10, bottom: 10};
 
   const gridStrokeColor = props.theme == 'dark' ? '#FFF' : '#000';
@@ -19,7 +19,7 @@ export const HorizontalBarChartWithTheYAxisNamed = (props) => {
         scale={scale.scaleBand}
         contentInset={contentInset}
         spacing={0.2}
-        formatLabel={(index) => (
+        formatLabel={index => (
           <Text style={{marginTop: 2, marginBottom: 2}}>
             {props.data[index].label}
           </Text>

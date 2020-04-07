@@ -23,9 +23,9 @@ setUpdateIntervalForType(SensorTypes.accelerometer, 400);
 setUpdateIntervalForType(SensorTypes.gyroscope, 400);
 setUpdateIntervalForType(SensorTypes.magnetometer, 400);
 
-const SettingsIcon = (style) => <Icon {...style} name="settings-outline" />;
+const SettingsIcon = style => <Icon {...style} name="settings-outline" />;
 
-const SettingsAction = (props) => (
+const SettingsAction = props => (
   <TopNavigationAction {...props} icon={SettingsIcon} />
 );
 
@@ -67,7 +67,7 @@ export const Home = ({navigation}) => {
   React.useEffect(() => {
     if (isTrackingActivityChecked) {
       interval = setInterval(
-        () => setTimerUntilNextDetection((currentTime) => currentTime + 1),
+        () => setTimerUntilNextDetection(currentTime => currentTime + 1),
         1000,
       );
       accelerometerSubscription = accelerometer.subscribe(({x, y, z}) => {
@@ -148,7 +148,7 @@ export const Home = ({navigation}) => {
         magnetometerX,
         magnetometerY,
         magnetometerZ,
-      ).then((activity) => {
+      ).then(activity => {
         setActivityType(activity);
 
         realm.write(() => {
@@ -222,7 +222,7 @@ export const Home = ({navigation}) => {
     await VIForegroundService.stopService();
   };
 
-  const automaticActivityTracking = (isChecked) => {
+  const automaticActivityTracking = isChecked => {
     if (isChecked) {
       setToggleText('Tracking');
     } else {

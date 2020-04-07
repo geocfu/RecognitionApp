@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
+import {SafeAreaView, ScrollView, View} from 'react-native';
 import {
   Layout,
   Text,
@@ -130,7 +130,7 @@ export const Statistics = ({navigation}) => {
     ]);
   };
 
-  const renderItemIcon = (style) => <Icon {...style} name="folder" />;
+  const renderItemIcon = style => <Icon {...style} name="folder" />;
   const renderItem = ({item}) => {
     let extractYear = item.yearAndMonth.substring(0, 4);
     let extractMonth = item.yearAndMonth.substring(5, 7).startsWith('0')
@@ -181,20 +181,34 @@ export const Statistics = ({navigation}) => {
             marginRight: 10,
           }}>
           <Text category="h3">Global Statistics</Text>
-          <Divider />
-          <Text style={{textAlign: 'center'}} appearance="hint">
-            Each horizontal bar is representing the global frequency for this
-            activity
-          </Text>
-          <HorizontalBarChartWithTheYAxisNamed
-            data={graphData}
-            theme={themeContext.theme}
-          />
-          <Divider />
-          <Text style={{textAlign: 'center'}} appearance="hint">
-            Press on a month to view it's detailed statistics
-          </Text>
         </View>
+
+        <View style={{height: '37%'}}>
+          <ScrollView>
+            <View
+              style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginLeft: 10,
+                marginRight: 10,
+              }}>
+              <Divider />
+              <Text style={{textAlign: 'center'}} appearance="hint">
+                Each horizontal bar is representing the global frequency for
+                this activity
+              </Text>
+              <HorizontalBarChartWithTheYAxisNamed
+                data={graphData}
+                theme={themeContext.theme}
+              />
+            </View>
+          </ScrollView>
+        </View>
+
+        <Text style={{textAlign: 'center', marginBottom: 1}} appearance="hint">
+          Press on a month to view it's detailed statistics
+        </Text>
+
         <List
           data={historyData}
           renderItem={renderItem}
