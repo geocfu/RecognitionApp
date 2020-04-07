@@ -18,7 +18,7 @@ export const LineChartWithTheXAxisNamed = props => {
         <XAxis
           style={{marginHorizontal: -10}}
           data={props.data}
-          formatLabel={(value, index) => index}
+          formatLabel={(value, index) => index + 1}
           contentInset={{left: 10, right: 10}}
           svg={{fontSize: 10, fill: gridStrokeColor}}
         />
