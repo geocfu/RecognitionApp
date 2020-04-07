@@ -35,7 +35,7 @@ export const HorizontalBarChartWithTheYAxisNamed = props => {
         spacing={0.2}
         gridMin={0}>
         <Grid
-          svg={{strokeWidth: 0.2, stroke: gridStrokeColor}}
+          svg={{strokeWidth: 0.1, stroke: gridStrokeColor}}
           direction={Grid.Direction.VERTICAL}
         />
       </BarChart>
