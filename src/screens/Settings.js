@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {SafeAreaView, Linking} from 'react-native';
 import {
   Divider,
   Icon,
@@ -9,12 +9,13 @@ import {
   TopNavigationAction,
   Radio,
   RadioGroup,
+  ListItem,
 } from '@ui-kitten/components';
 
 import {ThemeContext} from '../hooks/theme-context';
 
 const BackIcon = style => <Icon {...style} name="arrow-back" />;
-
+const PersonIcon = style => <Icon {...style} name="person" />;
 export const Settings = ({navigation}) => {
   const themeContext = React.useContext(ThemeContext);
 
@@ -42,6 +43,18 @@ export const Settings = ({navigation}) => {
     }
   };
 
+  const ListItemWithIconShowcase = () => (
+    <ListItem
+      title="George Mantellos"
+      style={{marginTop: 30}}
+      description="App Developer"
+      icon={PersonIcon}
+      onPress={() => {
+        Linking.openURL('https://github.com/geocfu/AlzheimersDSS/');
+      }}
+    />
+  );
+
   return (
     <SafeAreaView style={{flex: 1}}>
       <TopNavigation
@@ -53,7 +66,13 @@ export const Settings = ({navigation}) => {
       <Layout style={{flex: 1}} level="2">
         <Text
           category="h5"
-          style={{top: 10, left: 10, bottom: 10, right: 10, fontWeight: '700'}}>
+          style={{
+            top: 10,
+            left: 10,
+            bottom: 10,
+            right: 10,
+            fontWeight: 'bold',
+          }}>
           Theme
         </Text>
         <RadioGroup
@@ -73,9 +92,16 @@ export const Settings = ({navigation}) => {
         </RadioGroup>
         <Text
           category="h5"
-          style={{top: 20, left: 10, bottom: 10, right: 10, fontWeight: '700'}}>
+          style={{
+            top: 20,
+            left: 10,
+            bottom: 10,
+            right: 10,
+            fontWeight: 'bold',
+          }}>
           About
         </Text>
+        <ListItemWithIconShowcase />
       </Layout>
     </SafeAreaView>
   );
