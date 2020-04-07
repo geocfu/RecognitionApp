@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
+import {SafeAreaView, ScrollView, View, Dimensions} from 'react-native';
 import {
   Layout,
   Text,
@@ -11,6 +11,9 @@ import {
   Divider,
 } from '@ui-kitten/components';
 import realm from '../hooks/realm-database';
+import {ThemeContext} from '../hooks/theme-context';
+
+import {LineChartWithTheXAxisNamed} from '../components/LineChartWithTheXAxisNamed';
 
 const monthsOfTheYear = [
   'January',
@@ -27,13 +30,14 @@ const monthsOfTheYear = [
   'December',
 ];
 
-const BackIcon = (style) => <Icon {...style} name="arrow-back" />;
+const BackIcon = style => <Icon {...style} name="arrow-back" />;
 
 export const StatisticsViewMonth = ({route, navigation}) => {
+  const themeContext = React.useContext(ThemeContext);
+
   const [historyData, setHistoryData] = React.useState(
     realm
       .objects('Activity')
-      .sorted('yearAndMonth')
       .filtered(
         'yearAndMonth == $0',
         route.params['year'].concat(
@@ -46,52 +50,52 @@ export const StatisticsViewMonth = ({route, navigation}) => {
       .filtered('TRUEPREDICATE DISTINCT(day)'),
   );
 
-  // const [graphData, setGraphData] = React.useState([
-  //   {
-  //     value: Object.keys(
-  //       realm.objects('Activity').filtered('type == $0', 'Walking'),
-  //     ).length,
-  //     label: 'Walking',
-  //   },
-  //   {
-  //     value: Object.keys(
-  //       realm.objects('Activity').filtered('type == $0', 'Running'),
-  //     ).length,
-  //     label: 'Running',
-  //   },
-  //   {
-  //     value: Object.keys(
-  //       realm.objects('Activity').filtered('type == $0', 'Bicycling'),
-  //     ).length,
-  //     label: 'Bicycling',
-  //   },
-  //   {
-  //     value: Object.keys(
-  //       realm.objects('Activity').filtered('type == $0', 'Car Ride'),
-  //     ).length,
-  //     label: 'Car Ride',
-  //   },
-  //   {
-  //     value: Object.keys(
-  //       realm.objects('Activity').filtered('type == $0', 'Bus Ride'),
-  //     ).length,
-  //     label: 'Bus Ride',
-  //   },
-  //   {
-  //     value: Object.keys(
-  //       realm.objects('Activity').filtered('type == $0', 'Train Ride'),
-  //     ).length,
-  //     label: 'Train Ride',
-  //   },
-  // ]);
+  const [isOrientationPortrait, setIsOrientationPortrait] = React.useState(
+    () => {
+      if (Dimensions.get('screen').height >= Dimensions.get('screen').width) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  );
+  const monthSizeInDays = new Date(
+    route.params['year'],
+    route.params['month'] + 1,
+    0,
+  );
+  const [graphData, setGraphData] = React.useState(
+    //we create an empty array with the number of this month's days, as the size
+    Array.from(Array(monthSizeInDays.getDate()), (element, index) => {
+      let thisDayWasActive = 0;
+      historyData.forEach(item => {
+        if (index + 1 != item['day']) {
+          return;
+        } else {
+          thisDayWasActive = 1;
+        }
+      });
+      return thisDayWasActive;
+    }),
+  );
 
   React.useEffect(() => {
+    Dimensions.addEventListener('change', updateUIFromDimensions);
     realm.addListener('change', updateUIFromRealmQuery);
 
     return () => {
       realm.removeListener('change', updateUIFromRealmQuery);
+      Dimensions.removeEventListener('change', updateUIFromDimensions);
     };
   });
+
+  const updateUIFromDimensions = () => {
+    if (Dimensions.get('screen').height >= Dimensions.get('screen').width) {
+      setIsOrientationPortrait(true);
+    } else {
+      setIsOrientationPortrait(false);
+    }
+  };
 
   const updateUIFromRealmQuery = () => {
     setHistoryData(
@@ -109,6 +113,12 @@ export const StatisticsViewMonth = ({route, navigation}) => {
         )
         .filtered('TRUEPREDICATE DISTINCT(day)'),
     );
+    // itterate the graph and update the day if needed
+    historyData.forEach(item => {
+      if (graphData[item['day']] !== 1) {
+        graphData[item['day']] = 1;
+      }
+    });
   };
 
   const BackAction = () => (
@@ -120,7 +130,7 @@ export const StatisticsViewMonth = ({route, navigation}) => {
     />
   );
 
-  const renderItemIcon = (style) => <Icon {...style} name="folder" />;
+  const renderItemIcon = style => <Icon {...style} name="folder" />;
   const renderItem = ({item}) => {
     let extractYear = item.yearAndMonth.substring(0, 4);
     let extractMonth = item.yearAndMonth.substring(5, 7).startsWith('0')
@@ -191,19 +201,33 @@ export const StatisticsViewMonth = ({route, navigation}) => {
       <Layout style={{flex: 1}}>
         <View
           style={{
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginLeft: 10,
-            marginRight: 10,
+            height: '40%',
           }}>
-          <Text category="h3">Month Graph</Text>
-          <Divider />
-
-          <Divider />
-          <Text style={{textAlign: 'center'}} appearance="hint">
-            Press on a day to view it's detailed statistics
-          </Text>
+          <ScrollView>
+            <ScrollView horizontal={isOrientationPortrait}>
+              <View
+                style={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginLeft: 10,
+                  marginRight: 10,
+                }}>
+                <Text style={{textAlign: 'center'}} appearance="hint">
+                  Each peak is representing if that specific day of the month
+                  was active
+                </Text>
+                <LineChartWithTheXAxisNamed
+                  data={graphData}
+                  theme={themeContext.theme}
+                />
+              </View>
+            </ScrollView>
+          </ScrollView>
         </View>
+
+        <Text style={{textAlign: 'center', marginBottom: 1}} appearance="hint">
+          Press on a day to view it's detailed statistics
+        </Text>
 
         <List
           data={historyData}
