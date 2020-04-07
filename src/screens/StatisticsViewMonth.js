@@ -38,6 +38,7 @@ export const StatisticsViewMonth = ({route, navigation}) => {
   const [historyData, setHistoryData] = React.useState(
     realm
       .objects('Activity')
+      .sorted('yearAndMonth')
       .filtered(
         'yearAndMonth == $0',
         route.params['year'].concat(
@@ -113,12 +114,20 @@ export const StatisticsViewMonth = ({route, navigation}) => {
         )
         .filtered('TRUEPREDICATE DISTINCT(day)'),
     );
-    // itterate the graph and update the day if needed
-    historyData.forEach(item => {
-      if (graphData[item['day']] !== 1) {
-        graphData[item['day']] = 1;
-      }
-    });
+
+    setGraphData(
+      Array.from(Array(monthSizeInDays.getDate()), (element, index) => {
+        let thisDayWasActive = 0;
+        historyData.forEach(item => {
+          if (index + 1 != item['day']) {
+            return;
+          } else {
+            thisDayWasActive = 1;
+          }
+        });
+        return thisDayWasActive;
+      }),
+    );
   };
 
   const BackAction = () => (

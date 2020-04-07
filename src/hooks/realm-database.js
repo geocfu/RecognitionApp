@@ -6,7 +6,7 @@ const AutomaticDataRecognitionSchema = {
     type: 'string',
     yearAndMonth: 'string',
     day: 'string',
-    //time: 'string',
+    timestamp: 'string',
   },
 };
 

@@ -152,13 +152,15 @@ export const Home = ({navigation}) => {
         setActivityType(activity);
 
         realm.write(() => {
-          let currentDate = new Date('2020-04-07');
+          let currentDate = new Date();
           let currentYearAndMonth = currentDate.toISOString().substring(0, 7);
           let currentDay = currentDate.getDate();
+          let currentTimestamp = currentDate.getTime();
           realm.create('Activity', {
             type: activity,
             yearAndMonth: currentYearAndMonth,
             day: String(currentDay),
+            timestamp: String(currentTimestamp),
           });
           // realm.deleteAll();
         });

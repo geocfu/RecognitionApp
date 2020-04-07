@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
+import {SafeAreaView, ScrollView, View} from 'react-native';
 import {
   Layout,
   Text,
@@ -12,8 +12,9 @@ import {
   Divider,
 } from '@ui-kitten/components';
 import realm from '../hooks/realm-database';
-
-const BackIcon = (style) => <Icon {...style} name="arrow-back" />;
+import {ThemeContext} from '../hooks/theme-context';
+import {HorizontalBarChartWithTheYAxisNamed} from '../components/HorizontalBarChartWithTheYAxisNamed';
+const BackIcon = style => <Icon {...style} name="arrow-back" />;
 
 const monthsOfTheYear = [
   'January',
@@ -31,6 +32,7 @@ const monthsOfTheYear = [
 ];
 
 export const StatisticsViewDay = ({route, navigation}) => {
+  const themeContext = React.useContext(ThemeContext);
   const [historyData, setHistoryData] = React.useState(
     realm
       .objects('Activity')
@@ -47,6 +49,129 @@ export const StatisticsViewDay = ({route, navigation}) => {
         route.params['day'],
       ),
   );
+
+  const [graphData, setGraphData] = React.useState([
+    {
+      value: Object.keys(
+        realm
+          .objects('Activity')
+          .sorted('yearAndMonth')
+          .sorted('day')
+          .filtered(
+            'yearAndMonth == $0 AND day == $1 AND type == $2',
+            route.params['year'].concat(
+              '-',
+              route.params['month'].length == 1
+                ? '0' + route.params['month']
+                : route.params['month'],
+            ),
+            route.params['day'],
+            'Walking',
+          ),
+      ).length,
+      label: 'Walking',
+    },
+    {
+      value: Object.keys(
+        realm
+          .objects('Activity')
+          .sorted('yearAndMonth')
+          .sorted('day')
+          .filtered(
+            'yearAndMonth == $0 AND day == $1 AND type == $2',
+            route.params['year'].concat(
+              '-',
+              route.params['month'].length == 1
+                ? '0' + route.params['month']
+                : route.params['month'],
+            ),
+            route.params['day'],
+            'Running',
+          ),
+      ).length,
+      label: 'Running',
+    },
+    {
+      value: Object.keys(
+        realm
+          .objects('Activity')
+          .sorted('yearAndMonth')
+          .sorted('day')
+          .filtered(
+            'yearAndMonth == $0 AND day == $1 AND type == $2',
+            route.params['year'].concat(
+              '-',
+              route.params['month'].length == 1
+                ? '0' + route.params['month']
+                : route.params['month'],
+            ),
+            route.params['day'],
+            'Bicycling',
+          ),
+      ).length,
+      label: 'Bicycling',
+    },
+    {
+      value: Object.keys(
+        realm
+          .objects('Activity')
+          .sorted('yearAndMonth')
+          .sorted('day')
+          .filtered(
+            'yearAndMonth == $0 AND day == $1 AND type == $2',
+            route.params['year'].concat(
+              '-',
+              route.params['month'].length == 1
+                ? '0' + route.params['month']
+                : route.params['month'],
+            ),
+            route.params['day'],
+            'Car Ride',
+          ),
+      ).length,
+      label: 'Car Ride',
+    },
+    {
+      value: Object.keys(
+        realm
+          .objects('Activity')
+          .sorted('yearAndMonth')
+          .sorted('day')
+          .filtered(
+            'yearAndMonth == $0 AND day == $1 AND type == $2',
+            route.params['year'].concat(
+              '-',
+              route.params['month'].length == 1
+                ? '0' + route.params['month']
+                : route.params['month'],
+            ),
+            route.params['day'],
+            'Bus Ride',
+          ),
+      ).length,
+      label: 'Bus Ride',
+    },
+    {
+      value: Object.keys(
+        realm
+          .objects('Activity')
+          .sorted('yearAndMonth')
+          .sorted('day')
+          .filtered(
+            'yearAndMonth == $0 AND day == $1 AND type == $2',
+            route.params['year'].concat(
+              '-',
+              route.params['month'].length == 1
+                ? '0' + route.params['month']
+                : route.params['month'],
+            ),
+            route.params['day'],
+            'Train Ride',
+          ),
+      ).length,
+      label: 'Train Ride',
+    },
+  ]);
 
   React.useEffect(() => {
     realm.addListener('change', updateUIFromRealmQuery);
@@ -72,6 +197,128 @@ export const StatisticsViewDay = ({route, navigation}) => {
           route.params['day'],
         ),
     );
+    setGraphData([
+      {
+        value: Object.keys(
+          realm
+            .objects('Activity')
+            .sorted('yearAndMonth')
+            .sorted('day')
+            .filtered(
+              'yearAndMonth == $0 AND day == $1 AND type == $2',
+              route.params['year'].concat(
+                '-',
+                route.params['month'].length == 1
+                  ? '0' + route.params['month']
+                  : route.params['month'],
+              ),
+              route.params['day'],
+              'Walking',
+            ),
+        ).length,
+        label: 'Walking',
+      },
+      {
+        value: Object.keys(
+          realm
+            .objects('Activity')
+            .sorted('yearAndMonth')
+            .sorted('day')
+            .filtered(
+              'yearAndMonth == $0 AND day == $1 AND type == $2',
+              route.params['year'].concat(
+                '-',
+                route.params['month'].length == 1
+                  ? '0' + route.params['month']
+                  : route.params['month'],
+              ),
+              route.params['day'],
+              'Running',
+            ),
+        ).length,
+        label: 'Running',
+      },
+      {
+        value: Object.keys(
+          realm
+            .objects('Activity')
+            .sorted('yearAndMonth')
+            .sorted('day')
+            .filtered(
+              'yearAndMonth == $0 AND day == $1 AND type == $2',
+              route.params['year'].concat(
+                '-',
+                route.params['month'].length == 1
+                  ? '0' + route.params['month']
+                  : route.params['month'],
+              ),
+              route.params['day'],
+              'Bicycling',
+            ),
+        ).length,
+        label: 'Bicycling',
+      },
+      {
+        value: Object.keys(
+          realm
+            .objects('Activity')
+            .sorted('yearAndMonth')
+            .sorted('day')
+            .filtered(
+              'yearAndMonth == $0 AND day == $1 AND type == $2',
+              route.params['year'].concat(
+                '-',
+                route.params['month'].length == 1
+                  ? '0' + route.params['month']
+                  : route.params['month'],
+              ),
+              route.params['day'],
+              'Car Ride',
+            ),
+        ).length,
+        label: 'Car Ride',
+      },
+      {
+        value: Object.keys(
+          realm
+            .objects('Activity')
+            .sorted('yearAndMonth')
+            .sorted('day')
+            .filtered(
+              'yearAndMonth == $0 AND day == $1 AND type == $2',
+              route.params['year'].concat(
+                '-',
+                route.params['month'].length == 1
+                  ? '0' + route.params['month']
+                  : route.params['month'],
+              ),
+              route.params['day'],
+              'Bus Ride',
+            ),
+        ).length,
+        label: 'Bus Ride',
+      },
+      {
+        value: Object.keys(
+          realm
+            .objects('Activity')
+            .sorted('yearAndMonth')
+            .sorted('day')
+            .filtered(
+              'yearAndMonth == $0 AND day == $1 AND type == $2',
+              route.params['year'].concat(
+                '-',
+                route.params['month'].length == 1
+                  ? '0' + route.params['month']
+                  : route.params['month'],
+              ),
+              route.params['day'],
+              'Train Ride',
+            ),
+        ).length,
+        label: 'Train Ride',
+      },
+    ]);
   };
   const BackAction = () => (
     <TopNavigationAction
@@ -82,22 +329,30 @@ export const StatisticsViewDay = ({route, navigation}) => {
     />
   );
 
-  const renderItemIcon = (style) => <Icon {...style} name="file" />;
-  const renderItemAccessory = (style) => (
-    <Button
-      status="danger"
-      onPress={() => {
-        realm.write(() => {
-          let currentActivity = realm.objects('Activity').filtered('');
-
-          realm.delete(currentActivity);
-        });
-      }}>
-      DELETE
-    </Button>
-  );
+  const renderItemIcon = style => <Icon {...style} name="file-outline" />;
 
   const renderItem = ({item, index}) => {
+    const renderItemAccessory = style => (
+      <Button
+        status="danger"
+        onPress={() => {
+          realm.write(() => {
+            let currentActivity = realm
+              .objects('Activity')
+              .filtered('timestamp == $0', item.timestamp);
+            realm.delete(currentActivity);
+          });
+        }}>
+        DELETE
+      </Button>
+    );
+
+    let date = new Date(parseInt(item.timestamp));
+    let hours = date.getHours();
+    let minutes = '0' + date.getMinutes();
+    let seconds = '0' + date.getSeconds();
+    let formattedTime = `${hours}:${minutes.substr(-2)}:${seconds.substr(-2)}`;
+
     return (
       <ListItem
         style={{
@@ -107,7 +362,7 @@ export const StatisticsViewDay = ({route, navigation}) => {
         titleStyle={{fontSize: 18}}
         descriptionStyle={{fontSize: 14}}
         title={index + 1 + '. ' + item.type}
-        description={'timestamp'}
+        description={formattedTime}
         icon={renderItemIcon}
         disabled={true}
         accessory={renderItemAccessory}
@@ -135,9 +390,27 @@ export const StatisticsViewDay = ({route, navigation}) => {
         leftControl={BackAction()}
       />
       <Layout style={{flex: 1}}>
-        <View style={{alignItems: 'center'}}>
-          <Text category="h1">Graph</Text>
+        <View style={{height: '37%'}}>
+          <ScrollView>
+            <View
+              style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginLeft: 10,
+                marginRight: 10,
+              }}>
+              <Text style={{textAlign: 'center'}} appearance="hint">
+                Each horizontal bar is representing the daily frequency for this
+                activity
+              </Text>
+              <HorizontalBarChartWithTheYAxisNamed
+                data={graphData}
+                theme={themeContext.theme}
+              />
+            </View>
+          </ScrollView>
         </View>
+
         <List
           data={historyData}
           renderItem={renderItem}
