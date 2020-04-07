@@ -192,7 +192,6 @@ export const Statistics = ({navigation}) => {
                 marginLeft: 10,
                 marginRight: 10,
               }}>
-              <Divider />
               <Text style={{textAlign: 'center'}} appearance="hint">
                 Each horizontal bar is representing the global frequency for
                 this activity
