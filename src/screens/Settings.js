@@ -50,7 +50,7 @@ export const Settings = ({navigation}) => {
       description="App Developer"
       icon={PersonIcon}
       onPress={() => {
-        Linking.openURL('https://github.com/geocfu/AlzheimersDSS/');
+        Linking.openURL('https://github.com/geocfu/');
       }}
     />
   );
