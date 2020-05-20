@@ -80,6 +80,30 @@ export const StatisticsViewMonth = ({route, navigation}) => {
     }),
   );
 
+  const [co2Data, setCo2Data] = React.useState(() => {
+    if (
+      Object.keys(
+        realm
+          .objects('Activity')
+          .sorted('yearAndMonth')
+          .filtered(
+            'yearAndMonth == $0',
+            route.params['year'].concat(
+              '-',
+              route.params['month'].length == 1
+                ? '0' + route.params['month']
+                : route.params['month'],
+            ),
+          )
+          .filtered('type == $0', 'Car Ride'),
+      ).length > 9000
+    ) {
+      return 'High';
+    } else {
+      return 'Low';
+    }
+  });
+
   React.useEffect(() => {
     Dimensions.addEventListener('change', updateUIFromDimensions);
     realm.addListener('change', updateUIFromRealmQuery);
@@ -128,6 +152,30 @@ export const StatisticsViewMonth = ({route, navigation}) => {
         return thisDayWasActive;
       }),
     );
+
+    setCo2Data(() => {
+      if (
+        Object.keys(
+          realm
+            .objects('Activity')
+            .sorted('yearAndMonth')
+            .filtered(
+              'yearAndMonth == $0',
+              route.params['year'].concat(
+                '-',
+                route.params['month'].length == 1
+                  ? '0' + route.params['month']
+                  : route.params['month'],
+              ),
+            )
+            .filtered('type == $0', 'Car Ride'),
+        ).length > 9000
+      ) {
+        return 'High';
+      } else {
+        return 'Low';
+      }
+    });
   };
 
   const BackAction = () => (
@@ -210,8 +258,14 @@ export const StatisticsViewMonth = ({route, navigation}) => {
       <Layout style={{flex: 1}}>
         <View
           style={{
-            height: '40%',
+            height: '50%',
           }}>
+          <Text style={{textAlign: 'center'}} category="h5">
+            CO2 Footprint
+          </Text>
+          <Text style={{textAlign: 'center'}} category="h6">
+            {co2Data}
+          </Text>
           <ScrollView>
             <ScrollView horizontal={isOrientationPortrait}>
               <View

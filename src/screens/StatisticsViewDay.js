@@ -173,6 +173,32 @@ export const StatisticsViewDay = ({route, navigation}) => {
     },
   ]);
 
+  const [co2Data, setCo2Data] = React.useState(() => {
+    if (
+      Object.keys(
+        realm
+          .objects('Activity')
+          .sorted('yearAndMonth')
+          .sorted('day')
+          .filtered(
+            'yearAndMonth == $0 AND day == $1',
+            route.params['year'].concat(
+              '-',
+              route.params['month'].length == 1
+                ? '0' + route.params['month']
+                : route.params['month'],
+            ),
+            route.params['day'],
+          )
+          .filtered('type == $0', 'Car Ride'),
+      ).length > 450
+    ) {
+      return 'High';
+    } else {
+      return 'Low';
+    }
+  });
+
   React.useEffect(() => {
     realm.addListener('change', updateUIFromRealmQuery);
 
@@ -319,6 +345,32 @@ export const StatisticsViewDay = ({route, navigation}) => {
         label: 'Train Ride',
       },
     ]);
+
+    setCo2Data(() => {
+      if (
+        Object.keys(
+          realm
+            .objects('Activity')
+            .sorted('yearAndMonth')
+            .sorted('day')
+            .filtered(
+              'yearAndMonth == $0 AND day == $1',
+              route.params['year'].concat(
+                '-',
+                route.params['month'].length == 1
+                  ? '0' + route.params['month']
+                  : route.params['month'],
+              ),
+              route.params['day'],
+            )
+            .filtered('type == $0', 'Car Ride'),
+        ).length > 450
+      ) {
+        return 'High';
+      } else {
+        return 'Low';
+      }
+    });
   };
   const BackAction = () => (
     <TopNavigationAction
@@ -390,6 +442,12 @@ export const StatisticsViewDay = ({route, navigation}) => {
         leftControl={BackAction()}
       />
       <Layout style={{flex: 1}}>
+        <Text style={{textAlign: 'center'}} category="h5">
+          CO2 Footprint
+        </Text>
+        <Text style={{textAlign: 'center'}} category="h6">
+          {co2Data}
+        </Text>
         <View style={{height: '37%'}}>
           <ScrollView>
             <View
