@@ -75,6 +75,7 @@ export const Statistics = ({navigation}) => {
       label: 'Train Ride',
     },
   ]);
+
   React.useEffect(() => {
     realm.addListener('change', updateUIFromRealmQuery);
 
@@ -90,6 +91,7 @@ export const Statistics = ({navigation}) => {
         .sorted('yearAndMonth')
         .filtered('TRUEPREDICATE DISTINCT(yearAndMonth)'),
     );
+
     setGraphData([
       {
         value: Object.keys(
